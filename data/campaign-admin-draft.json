@@ -1,0 +1,2706 @@
+{
+  "matches": [
+    {
+      "dateLabel": "JUN 11",
+      "time": "06:00",
+      "timeSuffix": "GST",
+      "home": {
+        "name": "Korea Republic",
+        "flag": "https://flagcdn.com/w160/kr.png"
+      },
+      "away": {
+        "name": "Czechia",
+        "flag": "https://flagcdn.com/w160/cz.png"
+      },
+      "venueIds": [
+        "mcgettigans-dubai"
+      ]
+    },
+    {
+      "dateLabel": "JUN 11",
+      "time": "23:00",
+      "timeSuffix": "GST",
+      "home": {
+        "name": "Mexico",
+        "flag": "https://flagcdn.com/w160/mx.png"
+      },
+      "away": {
+        "name": "South Africa",
+        "flag": "https://flagcdn.com/w160/za.png"
+      },
+      "venueIds": [
+        "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "bla-bla-dubai",
+        "mist-dubai",
+        "loui-dubai",
+        "anzeera-dubai"
+      ]
+    },
+    {
+      "dateLabel": "JUN 12",
+      "time": "05:00",
+      "timeSuffix": "GST",
+      "home": {
+        "name": "USA",
+        "flag": "https://flagcdn.com/w160/us.png"
+      },
+      "away": {
+        "name": "Paraguay",
+        "flag": "https://flagcdn.com/w160/py.png"
+      },
+      "venueIds": [
+        "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "bla-bla-dubai",
+        "mist-dubai",
+        "loui-dubai",
+        "anzeera-dubai"
+      ]
+    },
+    {
+      "dateLabel": "JUN 12",
+      "time": "23:00",
+      "timeSuffix": "GST",
+      "home": {
+        "name": "Canada",
+        "flag": "https://flagcdn.com/w160/ca.png"
+      },
+      "away": {
+        "name": "Bosnia and Herzegovina",
+        "flag": "https://flagcdn.com/w160/ba.png"
+      },
+      "venueIds": [
+        "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "bla-bla-dubai",
+        "mist-dubai",
+        "loui-dubai",
+        "anzeera-dubai"
+      ]
+    },
+    {
+      "dateLabel": "JUN 13",
+      "time": "02:00",
+      "timeSuffix": "GST",
+      "home": {
+        "name": "Brazil",
+        "flag": "https://flagcdn.com/w160/br.png"
+      },
+      "away": {
+        "name": "Morocco",
+        "flag": "https://flagcdn.com/w160/ma.png"
+      },
+      "venueIds": [
+        "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "bla-bla-dubai",
+        "mist-dubai",
+        "loui-dubai",
+        "anzeera-dubai"
+      ]
+    },
+    {
+      "dateLabel": "JUN 13",
+      "time": "05:00",
+      "timeSuffix": "GST",
+      "home": {
+        "name": "Haiti",
+        "flag": "https://flagcdn.com/w160/ht.png"
+      },
+      "away": {
+        "name": "Scotland",
+        "flag": "https://flagcdn.com/w160/gb-sct.png"
+      },
+      "venueIds": [
+        "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "bla-bla-dubai",
+        "mist-dubai",
+        "loui-dubai",
+        "anzeera-dubai"
+      ]
+    },
+    {
+      "dateLabel": "JUN 13",
+      "time": "08:00",
+      "timeSuffix": "GST",
+      "home": {
+        "name": "Australia",
+        "flag": "https://flagcdn.com/w160/au.png"
+      },
+      "away": {
+        "name": "Türkiye",
+        "flag": "https://flagcdn.com/w160/tr.png"
+      },
+      "venueIds": [
+        "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "bla-bla-dubai",
+        "mist-dubai",
+        "loui-dubai",
+        "anzeera-dubai"
+      ]
+    },
+    {
+      "dateLabel": "JUN 13",
+      "time": "23:00",
+      "timeSuffix": "GST",
+      "home": {
+        "name": "Qatar",
+        "flag": "https://flagcdn.com/w160/qa.png"
+      },
+      "away": {
+        "name": "Switzerland",
+        "flag": "https://flagcdn.com/w160/ch.png"
+      },
+      "venueIds": [
+        "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "bla-bla-dubai",
+        "mist-dubai",
+        "loui-dubai",
+        "anzeera-dubai"
+      ]
+    },
+    {
+      "dateLabel": "JUN 14",
+      "time": "00:00",
+      "timeSuffix": "GST",
+      "home": {
+        "name": "Netherlands",
+        "flag": "https://flagcdn.com/w160/nl.png"
+      },
+      "away": {
+        "name": "Japan",
+        "flag": "https://flagcdn.com/w160/jp.png"
+      },
+      "venueIds": [
+        "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "bla-bla-dubai",
+        "mist-dubai",
+        "loui-dubai",
+        "anzeera-dubai"
+      ]
+    },
+    {
+      "dateLabel": "JUN 14",
+      "time": "03:00",
+      "timeSuffix": "GST",
+      "home": {
+        "name": "Côte d'Ivoire",
+        "flag": "https://flagcdn.com/w160/ci.png"
+      },
+      "away": {
+        "name": "Ecuador",
+        "flag": "https://flagcdn.com/w160/ec.png"
+      },
+      "venueIds": [
+        "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "bla-bla-dubai",
+        "mist-dubai",
+        "loui-dubai",
+        "anzeera-dubai"
+      ]
+    },
+    {
+      "dateLabel": "JUN 14",
+      "time": "06:00",
+      "timeSuffix": "GST",
+      "home": {
+        "name": "Sweden",
+        "flag": "https://flagcdn.com/w160/se.png"
+      },
+      "away": {
+        "name": "Tunisia",
+        "flag": "https://flagcdn.com/w160/tn.png"
+      },
+      "venueIds": [
+        "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "bla-bla-dubai",
+        "mist-dubai",
+        "loui-dubai",
+        "anzeera-dubai"
+      ]
+    },
+    {
+      "dateLabel": "JUN 14",
+      "time": "21:00",
+      "timeSuffix": "GST",
+      "home": {
+        "name": "Germany",
+        "flag": "https://flagcdn.com/w160/de.png"
+      },
+      "away": {
+        "name": "Curaçao",
+        "flag": "https://flagcdn.com/w160/cw.png"
+      },
+      "venueIds": [
+        "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "bla-bla-dubai",
+        "mist-dubai",
+        "loui-dubai",
+        "anzeera-dubai"
+      ]
+    },
+    {
+      "dateLabel": "JUN 15",
+      "time": "02:00",
+      "timeSuffix": "GST",
+      "home": {
+        "name": "Saudi Arabia",
+        "flag": "https://flagcdn.com/w160/sa.png"
+      },
+      "away": {
+        "name": "Uruguay",
+        "flag": "https://flagcdn.com/w160/uy.png"
+      },
+      "venueIds": [
+        "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "bla-bla-dubai",
+        "mist-dubai",
+        "loui-dubai",
+        "anzeera-dubai"
+      ]
+    },
+    {
+      "dateLabel": "JUN 15",
+      "time": "05:00",
+      "timeSuffix": "GST",
+      "home": {
+        "name": "IR Iran",
+        "flag": "https://flagcdn.com/w160/ir.png"
+      },
+      "away": {
+        "name": "New Zealand",
+        "flag": "https://flagcdn.com/w160/nz.png"
+      },
+      "venueIds": [
+        "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "bla-bla-dubai",
+        "mist-dubai",
+        "loui-dubai",
+        "anzeera-dubai"
+      ]
+    },
+    {
+      "dateLabel": "JUN 15",
+      "time": "20:00",
+      "timeSuffix": "GST",
+      "home": {
+        "name": "Spain",
+        "flag": "https://flagcdn.com/w160/es.png"
+      },
+      "away": {
+        "name": "Cabo Verde",
+        "flag": "https://flagcdn.com/w160/cv.png"
+      },
+      "venueIds": [
+        "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "bla-bla-dubai",
+        "mist-dubai",
+        "loui-dubai",
+        "anzeera-dubai"
+      ]
+    },
+    {
+      "dateLabel": "JUN 15",
+      "time": "23:00",
+      "timeSuffix": "GST",
+      "home": {
+        "name": "Belgium",
+        "flag": "https://flagcdn.com/w160/be.png"
+      },
+      "away": {
+        "name": "Egypt",
+        "flag": "https://flagcdn.com/w160/eg.png"
+      },
+      "venueIds": [
+        "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "bla-bla-dubai",
+        "mist-dubai",
+        "loui-dubai",
+        "anzeera-dubai"
+      ]
+    },
+    {
+      "dateLabel": "JUN 16",
+      "time": "02:00",
+      "timeSuffix": "GST",
+      "home": {
+        "name": "Iraq",
+        "flag": "https://flagcdn.com/w160/iq.png"
+      },
+      "away": {
+        "name": "Norway",
+        "flag": "https://flagcdn.com/w160/no.png"
+      },
+      "venueIds": [
+        "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "bla-bla-dubai",
+        "mist-dubai",
+        "loui-dubai",
+        "anzeera-dubai"
+      ]
+    },
+    {
+      "dateLabel": "JUN 16",
+      "time": "05:00",
+      "timeSuffix": "GST",
+      "home": {
+        "name": "Argentina",
+        "flag": "https://flagcdn.com/w160/ar.png"
+      },
+      "away": {
+        "name": "Algeria",
+        "flag": "https://flagcdn.com/w160/dz.png"
+      },
+      "venueIds": [
+        "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "bla-bla-dubai",
+        "mist-dubai",
+        "loui-dubai",
+        "anzeera-dubai"
+      ]
+    },
+    {
+      "dateLabel": "JUN 16",
+      "time": "08:00",
+      "timeSuffix": "GST",
+      "home": {
+        "name": "Austria",
+        "flag": "https://flagcdn.com/w160/at.png"
+      },
+      "away": {
+        "name": "Jordan",
+        "flag": "https://flagcdn.com/w160/jo.png"
+      },
+      "venueIds": [
+        "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "bla-bla-dubai",
+        "mist-dubai",
+        "loui-dubai",
+        "anzeera-dubai"
+      ]
+    },
+    {
+      "dateLabel": "JUN 16",
+      "time": "23:00",
+      "timeSuffix": "GST",
+      "home": {
+        "name": "France",
+        "flag": "https://flagcdn.com/w160/fr.png"
+      },
+      "away": {
+        "name": "Senegal",
+        "flag": "https://flagcdn.com/w160/sn.png"
+      },
+      "venueIds": [
+        "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "bla-bla-dubai",
+        "mist-dubai",
+        "loui-dubai",
+        "anzeera-dubai"
+      ]
+    },
+    {
+      "dateLabel": "JUN 17",
+      "time": "00:00",
+      "timeSuffix": "GST",
+      "home": {
+        "name": "England",
+        "flag": "https://flagcdn.com/w160/gb-eng.png"
+      },
+      "away": {
+        "name": "Croatia",
+        "flag": "https://flagcdn.com/w160/hr.png"
+      },
+      "venueIds": [
+        "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "bla-bla-dubai",
+        "mist-dubai",
+        "loui-dubai",
+        "anzeera-dubai"
+      ]
+    },
+    {
+      "dateLabel": "JUN 17",
+      "time": "03:00",
+      "timeSuffix": "GST",
+      "home": {
+        "name": "Ghana",
+        "flag": "https://flagcdn.com/w160/gh.png"
+      },
+      "away": {
+        "name": "Panama",
+        "flag": "https://flagcdn.com/w160/pa.png"
+      },
+      "venueIds": [
+        "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "bla-bla-dubai",
+        "mist-dubai",
+        "loui-dubai",
+        "anzeera-dubai"
+      ]
+    },
+    {
+      "dateLabel": "JUN 17",
+      "time": "06:00",
+      "timeSuffix": "GST",
+      "home": {
+        "name": "Uzbekistan",
+        "flag": "https://flagcdn.com/w160/uz.png"
+      },
+      "away": {
+        "name": "Colombia",
+        "flag": "https://flagcdn.com/w160/co.png"
+      },
+      "venueIds": [
+        "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "bla-bla-dubai",
+        "mist-dubai",
+        "loui-dubai",
+        "anzeera-dubai"
+      ]
+    },
+    {
+      "dateLabel": "JUN 17",
+      "time": "21:00",
+      "timeSuffix": "GST",
+      "home": {
+        "name": "Portugal",
+        "flag": "https://flagcdn.com/w160/pt.png"
+      },
+      "away": {
+        "name": "Congo DR",
+        "flag": "https://flagcdn.com/w160/cd.png"
+      },
+      "venueIds": [
+        "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "bla-bla-dubai",
+        "mist-dubai",
+        "loui-dubai",
+        "anzeera-dubai"
+      ]
+    },
+    {
+      "dateLabel": "JUN 18",
+      "time": "02:00",
+      "timeSuffix": "GST",
+      "home": {
+        "name": "Canada",
+        "flag": "https://flagcdn.com/w160/ca.png"
+      },
+      "away": {
+        "name": "Qatar",
+        "flag": "https://flagcdn.com/w160/qa.png"
+      },
+      "venueIds": [
+        "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "bla-bla-dubai",
+        "mist-dubai",
+        "loui-dubai",
+        "anzeera-dubai"
+      ]
+    },
+    {
+      "dateLabel": "JUN 18",
+      "time": "05:00",
+      "timeSuffix": "GST",
+      "home": {
+        "name": "Mexico",
+        "flag": "https://flagcdn.com/w160/mx.png"
+      },
+      "away": {
+        "name": "Korea Republic",
+        "flag": "https://flagcdn.com/w160/kr.png"
+      },
+      "venueIds": [
+        "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "bla-bla-dubai",
+        "mist-dubai",
+        "loui-dubai",
+        "anzeera-dubai"
+      ]
+    },
+    {
+      "dateLabel": "JUN 18",
+      "time": "20:00",
+      "timeSuffix": "GST",
+      "home": {
+        "name": "Czechia",
+        "flag": "https://flagcdn.com/w160/cz.png"
+      },
+      "away": {
+        "name": "South Africa",
+        "flag": "https://flagcdn.com/w160/za.png"
+      },
+      "venueIds": [
+        "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "bla-bla-dubai",
+        "mist-dubai",
+        "loui-dubai",
+        "anzeera-dubai"
+      ]
+    },
+    {
+      "dateLabel": "JUN 18",
+      "time": "23:00",
+      "timeSuffix": "GST",
+      "home": {
+        "name": "Switzerland",
+        "flag": "https://flagcdn.com/w160/ch.png"
+      },
+      "away": {
+        "name": "Bosnia and Herzegovina",
+        "flag": "https://flagcdn.com/w160/ba.png"
+      },
+      "venueIds": [
+        "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "bla-bla-dubai",
+        "mist-dubai",
+        "loui-dubai",
+        "anzeera-dubai"
+      ]
+    },
+    {
+      "dateLabel": "JUN 19",
+      "time": "02:00",
+      "timeSuffix": "GST",
+      "home": {
+        "name": "Scotland",
+        "flag": "https://flagcdn.com/w160/gb-sct.png"
+      },
+      "away": {
+        "name": "Morocco",
+        "flag": "https://flagcdn.com/w160/ma.png"
+      },
+      "venueIds": [
+        "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "bla-bla-dubai",
+        "mist-dubai",
+        "loui-dubai",
+        "anzeera-dubai"
+      ]
+    },
+    {
+      "dateLabel": "JUN 19",
+      "time": "04:30",
+      "timeSuffix": "GST",
+      "home": {
+        "name": "Brazil",
+        "flag": "https://flagcdn.com/w160/br.png"
+      },
+      "away": {
+        "name": "Haiti",
+        "flag": "https://flagcdn.com/w160/ht.png"
+      },
+      "venueIds": [
+        "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "bla-bla-dubai",
+        "mist-dubai",
+        "loui-dubai",
+        "anzeera-dubai"
+      ]
+    },
+    {
+      "dateLabel": "JUN 19",
+      "time": "07:00",
+      "timeSuffix": "GST",
+      "home": {
+        "name": "Türkiye",
+        "flag": "https://flagcdn.com/w160/tr.png"
+      },
+      "away": {
+        "name": "Paraguay",
+        "flag": "https://flagcdn.com/w160/py.png"
+      },
+      "venueIds": [
+        "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "bla-bla-dubai",
+        "mist-dubai",
+        "loui-dubai",
+        "anzeera-dubai"
+      ]
+    },
+    {
+      "dateLabel": "JUN 19",
+      "time": "23:00",
+      "timeSuffix": "GST",
+      "home": {
+        "name": "USA",
+        "flag": "https://flagcdn.com/w160/us.png"
+      },
+      "away": {
+        "name": "Australia",
+        "flag": "https://flagcdn.com/w160/au.png"
+      },
+      "venueIds": [
+        "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "bla-bla-dubai",
+        "mist-dubai",
+        "loui-dubai",
+        "anzeera-dubai"
+      ]
+    },
+    {
+      "dateLabel": "JUN 20",
+      "time": "00:00",
+      "timeSuffix": "GST",
+      "home": {
+        "name": "Germany",
+        "flag": "https://flagcdn.com/w160/de.png"
+      },
+      "away": {
+        "name": "Côte d'Ivoire",
+        "flag": "https://flagcdn.com/w160/ci.png"
+      },
+      "venueIds": [
+        "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "bla-bla-dubai",
+        "mist-dubai",
+        "loui-dubai",
+        "anzeera-dubai"
+      ]
+    },
+    {
+      "dateLabel": "JUN 20",
+      "time": "04:00",
+      "timeSuffix": "GST",
+      "home": {
+        "name": "Ecuador",
+        "flag": "https://flagcdn.com/w160/ec.png"
+      },
+      "away": {
+        "name": "Curaçao",
+        "flag": "https://flagcdn.com/w160/cw.png"
+      },
+      "venueIds": [
+        "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "bla-bla-dubai",
+        "mist-dubai",
+        "loui-dubai",
+        "anzeera-dubai"
+      ]
+    },
+    {
+      "dateLabel": "JUN 20",
+      "time": "08:00",
+      "timeSuffix": "GST",
+      "home": {
+        "name": "Tunisia",
+        "flag": "https://flagcdn.com/w160/tn.png"
+      },
+      "away": {
+        "name": "Japan",
+        "flag": "https://flagcdn.com/w160/jp.png"
+      },
+      "venueIds": [
+        "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "bla-bla-dubai",
+        "mist-dubai",
+        "loui-dubai",
+        "anzeera-dubai"
+      ]
+    },
+    {
+      "dateLabel": "JUN 20",
+      "time": "21:00",
+      "timeSuffix": "GST",
+      "home": {
+        "name": "Netherlands",
+        "flag": "https://flagcdn.com/w160/nl.png"
+      },
+      "away": {
+        "name": "Sweden",
+        "flag": "https://flagcdn.com/w160/se.png"
+      },
+      "venueIds": [
+        "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "bla-bla-dubai",
+        "mist-dubai",
+        "loui-dubai",
+        "anzeera-dubai"
+      ]
+    },
+    {
+      "dateLabel": "JUN 21",
+      "time": "02:00",
+      "timeSuffix": "GST",
+      "home": {
+        "name": "Uruguay",
+        "flag": "https://flagcdn.com/w160/uy.png"
+      },
+      "away": {
+        "name": "Cabo Verde",
+        "flag": "https://flagcdn.com/w160/cv.png"
+      },
+      "venueIds": [
+        "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "bla-bla-dubai",
+        "mist-dubai",
+        "loui-dubai",
+        "anzeera-dubai"
+      ]
+    },
+    {
+      "dateLabel": "JUN 21",
+      "time": "05:00",
+      "timeSuffix": "GST",
+      "home": {
+        "name": "New Zealand",
+        "flag": "https://flagcdn.com/w160/nz.png"
+      },
+      "away": {
+        "name": "Egypt",
+        "flag": "https://flagcdn.com/w160/eg.png"
+      },
+      "venueIds": [
+        "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "bla-bla-dubai",
+        "mist-dubai",
+        "loui-dubai",
+        "anzeera-dubai"
+      ]
+    },
+    {
+      "dateLabel": "JUN 21",
+      "time": "20:00",
+      "timeSuffix": "GST",
+      "home": {
+        "name": "Spain",
+        "flag": "https://flagcdn.com/w160/es.png"
+      },
+      "away": {
+        "name": "Saudi Arabia",
+        "flag": "https://flagcdn.com/w160/sa.png"
+      },
+      "venueIds": [
+        "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "bla-bla-dubai",
+        "mist-dubai",
+        "loui-dubai",
+        "anzeera-dubai"
+      ]
+    },
+    {
+      "dateLabel": "JUN 21",
+      "time": "23:00",
+      "timeSuffix": "GST",
+      "home": {
+        "name": "Belgium",
+        "flag": "https://flagcdn.com/w160/be.png"
+      },
+      "away": {
+        "name": "IR Iran",
+        "flag": "https://flagcdn.com/w160/ir.png"
+      },
+      "venueIds": [
+        "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "bla-bla-dubai",
+        "mist-dubai",
+        "loui-dubai",
+        "anzeera-dubai"
+      ]
+    },
+    {
+      "dateLabel": "JUN 22",
+      "time": "01:00",
+      "timeSuffix": "GST",
+      "home": {
+        "name": "France",
+        "flag": "https://flagcdn.com/w160/fr.png"
+      },
+      "away": {
+        "name": "Iraq",
+        "flag": "https://flagcdn.com/w160/iq.png"
+      },
+      "venueIds": [
+        "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "bla-bla-dubai",
+        "mist-dubai",
+        "loui-dubai",
+        "anzeera-dubai"
+      ]
+    },
+    {
+      "dateLabel": "JUN 22",
+      "time": "04:00",
+      "timeSuffix": "GST",
+      "home": {
+        "name": "Norway",
+        "flag": "https://flagcdn.com/w160/no.png"
+      },
+      "away": {
+        "name": "Senegal",
+        "flag": "https://flagcdn.com/w160/sn.png"
+      },
+      "venueIds": [
+        "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "bla-bla-dubai",
+        "mist-dubai",
+        "loui-dubai",
+        "anzeera-dubai"
+      ]
+    },
+    {
+      "dateLabel": "JUN 22",
+      "time": "07:00",
+      "timeSuffix": "GST",
+      "home": {
+        "name": "Jordan",
+        "flag": "https://flagcdn.com/w160/jo.png"
+      },
+      "away": {
+        "name": "Algeria",
+        "flag": "https://flagcdn.com/w160/dz.png"
+      },
+      "venueIds": [
+        "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "bla-bla-dubai",
+        "mist-dubai",
+        "loui-dubai",
+        "anzeera-dubai"
+      ]
+    },
+    {
+      "dateLabel": "JUN 22",
+      "time": "21:00",
+      "timeSuffix": "GST",
+      "home": {
+        "name": "Argentina",
+        "flag": "https://flagcdn.com/w160/ar.png"
+      },
+      "away": {
+        "name": "Austria",
+        "flag": "https://flagcdn.com/w160/at.png"
+      },
+      "venueIds": [
+        "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "bla-bla-dubai",
+        "mist-dubai",
+        "loui-dubai",
+        "anzeera-dubai"
+      ]
+    },
+    {
+      "dateLabel": "JUN 23",
+      "time": "00:00",
+      "timeSuffix": "GST",
+      "home": {
+        "name": "England",
+        "flag": "https://flagcdn.com/w160/gb-eng.png"
+      },
+      "away": {
+        "name": "Ghana",
+        "flag": "https://flagcdn.com/w160/gh.png"
+      },
+      "venueIds": [
+        "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "bla-bla-dubai",
+        "mist-dubai",
+        "loui-dubai",
+        "anzeera-dubai"
+      ]
+    },
+    {
+      "dateLabel": "JUN 23",
+      "time": "03:00",
+      "timeSuffix": "GST",
+      "home": {
+        "name": "Panama",
+        "flag": "https://flagcdn.com/w160/pa.png"
+      },
+      "away": {
+        "name": "Croatia",
+        "flag": "https://flagcdn.com/w160/hr.png"
+      },
+      "venueIds": [
+        "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "bla-bla-dubai",
+        "mist-dubai",
+        "loui-dubai",
+        "anzeera-dubai"
+      ]
+    },
+    {
+      "dateLabel": "JUN 23",
+      "time": "06:00",
+      "timeSuffix": "GST",
+      "home": {
+        "name": "Colombia",
+        "flag": "https://flagcdn.com/w160/co.png"
+      },
+      "away": {
+        "name": "Congo DR",
+        "flag": "https://flagcdn.com/w160/cd.png"
+      },
+      "venueIds": [
+        "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "bla-bla-dubai",
+        "mist-dubai",
+        "loui-dubai",
+        "anzeera-dubai"
+      ]
+    },
+    {
+      "dateLabel": "JUN 23",
+      "time": "21:00",
+      "timeSuffix": "GST",
+      "home": {
+        "name": "Portugal",
+        "flag": "https://flagcdn.com/w160/pt.png"
+      },
+      "away": {
+        "name": "Uzbekistan",
+        "flag": "https://flagcdn.com/w160/uz.png"
+      },
+      "venueIds": [
+        "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "bla-bla-dubai",
+        "mist-dubai",
+        "loui-dubai",
+        "anzeera-dubai"
+      ]
+    },
+    {
+      "dateLabel": "JUN 24",
+      "time": "02:00",
+      "timeSuffix": "GST",
+      "home": {
+        "name": "Scotland",
+        "flag": "https://flagcdn.com/w160/gb-sct.png"
+      },
+      "away": {
+        "name": "Brazil",
+        "flag": "https://flagcdn.com/w160/br.png"
+      },
+      "venueIds": [
+        "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "bla-bla-dubai",
+        "mist-dubai",
+        "loui-dubai",
+        "anzeera-dubai"
+      ]
+    },
+    {
+      "dateLabel": "JUN 24",
+      "time": "02:00",
+      "timeSuffix": "GST",
+      "home": {
+        "name": "Morocco",
+        "flag": "https://flagcdn.com/w160/ma.png"
+      },
+      "away": {
+        "name": "Haiti",
+        "flag": "https://flagcdn.com/w160/ht.png"
+      },
+      "venueIds": [
+        "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "bla-bla-dubai",
+        "mist-dubai",
+        "loui-dubai",
+        "anzeera-dubai"
+      ]
+    },
+    {
+      "dateLabel": "JUN 24",
+      "time": "05:00",
+      "timeSuffix": "GST",
+      "home": {
+        "name": "Czechia",
+        "flag": "https://flagcdn.com/w160/cz.png"
+      },
+      "away": {
+        "name": "Mexico",
+        "flag": "https://flagcdn.com/w160/mx.png"
+      },
+      "venueIds": [
+        "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "bla-bla-dubai",
+        "mist-dubai",
+        "loui-dubai",
+        "anzeera-dubai"
+      ]
+    },
+    {
+      "dateLabel": "JUN 24",
+      "time": "05:00",
+      "timeSuffix": "GST",
+      "home": {
+        "name": "South Africa",
+        "flag": "https://flagcdn.com/w160/za.png"
+      },
+      "away": {
+        "name": "Korea Republic",
+        "flag": "https://flagcdn.com/w160/kr.png"
+      },
+      "venueIds": [
+        "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "bla-bla-dubai",
+        "mist-dubai",
+        "loui-dubai",
+        "anzeera-dubai"
+      ]
+    },
+    {
+      "dateLabel": "JUN 24",
+      "time": "23:00",
+      "timeSuffix": "GST",
+      "home": {
+        "name": "Switzerland",
+        "flag": "https://flagcdn.com/w160/ch.png"
+      },
+      "away": {
+        "name": "Canada",
+        "flag": "https://flagcdn.com/w160/ca.png"
+      },
+      "venueIds": [
+        "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "bla-bla-dubai",
+        "mist-dubai",
+        "loui-dubai",
+        "anzeera-dubai"
+      ]
+    },
+    {
+      "dateLabel": "JUN 24",
+      "time": "23:00",
+      "timeSuffix": "GST",
+      "home": {
+        "name": "Bosnia and Herzegovina",
+        "flag": "https://flagcdn.com/w160/ba.png"
+      },
+      "away": {
+        "name": "Qatar",
+        "flag": "https://flagcdn.com/w160/qa.png"
+      },
+      "venueIds": [
+        "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "bla-bla-dubai",
+        "mist-dubai",
+        "loui-dubai",
+        "anzeera-dubai"
+      ]
+    },
+    {
+      "dateLabel": "JUN 25",
+      "time": "00:00",
+      "timeSuffix": "GST",
+      "home": {
+        "name": "Curaçao",
+        "flag": "https://flagcdn.com/w160/cw.png"
+      },
+      "away": {
+        "name": "Côte d'Ivoire",
+        "flag": "https://flagcdn.com/w160/ci.png"
+      },
+      "venueIds": [
+        "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "bla-bla-dubai",
+        "mist-dubai",
+        "loui-dubai",
+        "anzeera-dubai"
+      ]
+    },
+    {
+      "dateLabel": "JUN 25",
+      "time": "00:00",
+      "timeSuffix": "GST",
+      "home": {
+        "name": "Ecuador",
+        "flag": "https://flagcdn.com/w160/ec.png"
+      },
+      "away": {
+        "name": "Germany",
+        "flag": "https://flagcdn.com/w160/de.png"
+      },
+      "venueIds": [
+        "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "bla-bla-dubai",
+        "mist-dubai",
+        "loui-dubai",
+        "anzeera-dubai"
+      ]
+    },
+    {
+      "dateLabel": "JUN 25",
+      "time": "03:00",
+      "timeSuffix": "GST",
+      "home": {
+        "name": "Japan",
+        "flag": "https://flagcdn.com/w160/jp.png"
+      },
+      "away": {
+        "name": "Sweden",
+        "flag": "https://flagcdn.com/w160/se.png"
+      },
+      "venueIds": [
+        "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "bla-bla-dubai",
+        "mist-dubai",
+        "loui-dubai",
+        "anzeera-dubai"
+      ]
+    },
+    {
+      "dateLabel": "JUN 25",
+      "time": "03:00",
+      "timeSuffix": "GST",
+      "home": {
+        "name": "Tunisia",
+        "flag": "https://flagcdn.com/w160/tn.png"
+      },
+      "away": {
+        "name": "Netherlands",
+        "flag": "https://flagcdn.com/w160/nl.png"
+      },
+      "venueIds": [
+        "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "bla-bla-dubai",
+        "mist-dubai",
+        "loui-dubai",
+        "anzeera-dubai"
+      ]
+    },
+    {
+      "dateLabel": "JUN 25",
+      "time": "06:00",
+      "timeSuffix": "GST",
+      "home": {
+        "name": "Türkiye",
+        "flag": "https://flagcdn.com/w160/tr.png"
+      },
+      "away": {
+        "name": "USA",
+        "flag": "https://flagcdn.com/w160/us.png"
+      },
+      "venueIds": [
+        "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "bla-bla-dubai",
+        "mist-dubai",
+        "loui-dubai",
+        "anzeera-dubai"
+      ]
+    },
+    {
+      "dateLabel": "JUN 25",
+      "time": "06:00",
+      "timeSuffix": "GST",
+      "home": {
+        "name": "Paraguay",
+        "flag": "https://flagcdn.com/w160/py.png"
+      },
+      "away": {
+        "name": "Australia",
+        "flag": "https://flagcdn.com/w160/au.png"
+      },
+      "venueIds": [
+        "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "bla-bla-dubai",
+        "mist-dubai",
+        "loui-dubai",
+        "anzeera-dubai"
+      ]
+    },
+    {
+      "dateLabel": "JUN 26",
+      "time": "04:00",
+      "timeSuffix": "GST",
+      "home": {
+        "name": "Cabo Verde",
+        "flag": "https://flagcdn.com/w160/cv.png"
+      },
+      "away": {
+        "name": "Saudi Arabia",
+        "flag": "https://flagcdn.com/w160/sa.png"
+      },
+      "venueIds": [
+        "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "bla-bla-dubai",
+        "mist-dubai",
+        "loui-dubai",
+        "anzeera-dubai"
+      ]
+    },
+    {
+      "dateLabel": "JUN 26",
+      "time": "04:00",
+      "timeSuffix": "GST",
+      "home": {
+        "name": "Uruguay",
+        "flag": "https://flagcdn.com/w160/uy.png"
+      },
+      "away": {
+        "name": "Spain",
+        "flag": "https://flagcdn.com/w160/es.png"
+      },
+      "venueIds": [
+        "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "bla-bla-dubai",
+        "mist-dubai",
+        "loui-dubai",
+        "anzeera-dubai"
+      ]
+    },
+    {
+      "dateLabel": "JUN 26",
+      "time": "07:00",
+      "timeSuffix": "GST",
+      "home": {
+        "name": "Egypt",
+        "flag": "https://flagcdn.com/w160/eg.png"
+      },
+      "away": {
+        "name": "IR Iran",
+        "flag": "https://flagcdn.com/w160/ir.png"
+      },
+      "venueIds": [
+        "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "bla-bla-dubai",
+        "mist-dubai",
+        "loui-dubai",
+        "anzeera-dubai"
+      ]
+    },
+    {
+      "dateLabel": "JUN 26",
+      "time": "07:00",
+      "timeSuffix": "GST",
+      "home": {
+        "name": "New Zealand",
+        "flag": "https://flagcdn.com/w160/nz.png"
+      },
+      "away": {
+        "name": "Belgium",
+        "flag": "https://flagcdn.com/w160/be.png"
+      },
+      "venueIds": [
+        "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "bla-bla-dubai",
+        "mist-dubai",
+        "loui-dubai",
+        "anzeera-dubai"
+      ]
+    },
+    {
+      "dateLabel": "JUN 26",
+      "time": "23:00",
+      "timeSuffix": "GST",
+      "home": {
+        "name": "Norway",
+        "flag": "https://flagcdn.com/w160/no.png"
+      },
+      "away": {
+        "name": "France",
+        "flag": "https://flagcdn.com/w160/fr.png"
+      },
+      "venueIds": [
+        "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "bla-bla-dubai",
+        "mist-dubai",
+        "loui-dubai",
+        "anzeera-dubai"
+      ]
+    },
+    {
+      "dateLabel": "JUN 26",
+      "time": "23:00",
+      "timeSuffix": "GST",
+      "home": {
+        "name": "Senegal",
+        "flag": "https://flagcdn.com/w160/sn.png"
+      },
+      "away": {
+        "name": "Iraq",
+        "flag": "https://flagcdn.com/w160/iq.png"
+      },
+      "venueIds": [
+        "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "bla-bla-dubai",
+        "mist-dubai",
+        "loui-dubai",
+        "anzeera-dubai"
+      ]
+    },
+    {
+      "dateLabel": "JUN 27",
+      "time": "01:00",
+      "timeSuffix": "GST",
+      "home": {
+        "name": "Panama",
+        "flag": "https://flagcdn.com/w160/pa.png"
+      },
+      "away": {
+        "name": "England",
+        "flag": "https://flagcdn.com/w160/gb-eng.png"
+      },
+      "venueIds": [
+        "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "bla-bla-dubai",
+        "mist-dubai",
+        "loui-dubai",
+        "anzeera-dubai"
+      ]
+    },
+    {
+      "dateLabel": "JUN 27",
+      "time": "01:00",
+      "timeSuffix": "GST",
+      "home": {
+        "name": "Croatia",
+        "flag": "https://flagcdn.com/w160/hr.png"
+      },
+      "away": {
+        "name": "Ghana",
+        "flag": "https://flagcdn.com/w160/gh.png"
+      },
+      "venueIds": [
+        "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "bla-bla-dubai",
+        "mist-dubai",
+        "loui-dubai",
+        "anzeera-dubai"
+      ]
+    },
+    {
+      "dateLabel": "JUN 27",
+      "time": "03:30",
+      "timeSuffix": "GST",
+      "home": {
+        "name": "Colombia",
+        "flag": "https://flagcdn.com/w160/co.png"
+      },
+      "away": {
+        "name": "Portugal",
+        "flag": "https://flagcdn.com/w160/pt.png"
+      },
+      "venueIds": [
+        "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "bla-bla-dubai",
+        "mist-dubai",
+        "loui-dubai",
+        "anzeera-dubai"
+      ]
+    },
+    {
+      "dateLabel": "JUN 27",
+      "time": "03:30",
+      "timeSuffix": "GST",
+      "home": {
+        "name": "Congo DR",
+        "flag": "https://flagcdn.com/w160/cd.png"
+      },
+      "away": {
+        "name": "Uzbekistan",
+        "flag": "https://flagcdn.com/w160/uz.png"
+      },
+      "venueIds": [
+        "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "bla-bla-dubai",
+        "mist-dubai",
+        "loui-dubai",
+        "anzeera-dubai"
+      ]
+    },
+    {
+      "dateLabel": "JUN 27",
+      "time": "06:00",
+      "timeSuffix": "GST",
+      "home": {
+        "name": "Algeria",
+        "flag": "https://flagcdn.com/w160/dz.png"
+      },
+      "away": {
+        "name": "Austria",
+        "flag": "https://flagcdn.com/w160/at.png"
+      },
+      "venueIds": [
+        "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "bla-bla-dubai",
+        "mist-dubai",
+        "loui-dubai",
+        "anzeera-dubai"
+      ]
+    },
+    {
+      "dateLabel": "JUN 27",
+      "time": "06:00",
+      "timeSuffix": "GST",
+      "home": {
+        "name": "Jordan",
+        "flag": "https://flagcdn.com/w160/jo.png"
+      },
+      "away": {
+        "name": "Argentina",
+        "flag": "https://flagcdn.com/w160/ar.png"
+      },
+      "venueIds": [
+        "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "bla-bla-dubai",
+        "mist-dubai",
+        "loui-dubai",
+        "anzeera-dubai"
+      ]
+    },
+    {
+      "dateLabel": "JUN 28",
+      "time": "23:00",
+      "timeSuffix": "GST",
+      "home": {
+        "name": "Group A runners-up",
+        "flag": "/assets/imgs/football.png"
+      },
+      "away": {
+        "name": "Group B runners-up",
+        "flag": "/assets/imgs/football.png"
+      },
+      "venueIds": [
+        "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "bla-bla-dubai",
+        "mist-dubai",
+        "loui-dubai",
+        "anzeera-dubai"
+      ]
+    },
+    {
+      "dateLabel": "JUN 29",
+      "time": "21:00",
+      "timeSuffix": "GST",
+      "home": {
+        "name": "Group C winners",
+        "flag": "/assets/imgs/football.png"
+      },
+      "away": {
+        "name": "Group F runners-up",
+        "flag": "/assets/imgs/football.png"
+      },
+      "venueIds": [
+        "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "bla-bla-dubai",
+        "mist-dubai",
+        "loui-dubai",
+        "anzeera-dubai"
+      ]
+    },
+    {
+      "dateLabel": "JUN 30",
+      "time": "00:30",
+      "timeSuffix": "GST",
+      "home": {
+        "name": "Group E winners",
+        "flag": "/assets/imgs/football.png"
+      },
+      "away": {
+        "name": "Group A/B/C/D/F third place",
+        "flag": "/assets/imgs/football.png"
+      },
+      "venueIds": [
+        "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "bla-bla-dubai",
+        "mist-dubai",
+        "loui-dubai",
+        "anzeera-dubai"
+      ]
+    },
+    {
+      "dateLabel": "JUN 30",
+      "time": "05:00",
+      "timeSuffix": "GST",
+      "home": {
+        "name": "Group F winners",
+        "flag": "/assets/imgs/football.png"
+      },
+      "away": {
+        "name": "Group C runners-up",
+        "flag": "/assets/imgs/football.png"
+      },
+      "venueIds": [
+        "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "bla-bla-dubai",
+        "mist-dubai",
+        "loui-dubai",
+        "anzeera-dubai"
+      ]
+    },
+    {
+      "dateLabel": "JUN 30",
+      "time": "21:00",
+      "timeSuffix": "GST",
+      "home": {
+        "name": "Group E runners-up",
+        "flag": "/assets/imgs/football.png"
+      },
+      "away": {
+        "name": "Group I runners-up",
+        "flag": "/assets/imgs/football.png"
+      },
+      "venueIds": [
+        "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "bla-bla-dubai",
+        "mist-dubai",
+        "loui-dubai",
+        "anzeera-dubai"
+      ]
+    },
+    {
+      "dateLabel": "JUL 1",
+      "time": "01:00",
+      "timeSuffix": "GST",
+      "home": {
+        "name": "Group I winners",
+        "flag": "/assets/imgs/football.png"
+      },
+      "away": {
+        "name": "Group C/D/F/G/H third place",
+        "flag": "/assets/imgs/football.png"
+      },
+      "venueIds": [
+        "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "bla-bla-dubai",
+        "mist-dubai",
+        "loui-dubai",
+        "anzeera-dubai"
+      ]
+    },
+    {
+      "dateLabel": "JUL 1",
+      "time": "05:00",
+      "timeSuffix": "GST",
+      "home": {
+        "name": "Group A winners",
+        "flag": "/assets/imgs/football.png"
+      },
+      "away": {
+        "name": "Group C/E/F/H/I third place",
+        "flag": "/assets/imgs/football.png"
+      },
+      "venueIds": [
+        "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "bla-bla-dubai",
+        "mist-dubai",
+        "loui-dubai",
+        "anzeera-dubai"
+      ]
+    },
+    {
+      "dateLabel": "JUL 1",
+      "time": "20:00",
+      "timeSuffix": "GST",
+      "home": {
+        "name": "Group L winners",
+        "flag": "/assets/imgs/football.png"
+      },
+      "away": {
+        "name": "Group E/H/I/J/K third place",
+        "flag": "/assets/imgs/football.png"
+      },
+      "venueIds": [
+        "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "bla-bla-dubai",
+        "mist-dubai",
+        "loui-dubai",
+        "anzeera-dubai"
+      ]
+    },
+    {
+      "dateLabel": "JUL 2",
+      "time": "00:00",
+      "timeSuffix": "GST",
+      "home": {
+        "name": "Group G winners",
+        "flag": "/assets/imgs/football.png"
+      },
+      "away": {
+        "name": "Group A/E/H/I/J third place",
+        "flag": "/assets/imgs/football.png"
+      },
+      "venueIds": [
+        "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "bla-bla-dubai",
+        "mist-dubai",
+        "loui-dubai",
+        "anzeera-dubai"
+      ]
+    },
+    {
+      "dateLabel": "JUL 2",
+      "time": "04:00",
+      "timeSuffix": "GST",
+      "home": {
+        "name": "Group D winners",
+        "flag": "/assets/imgs/football.png"
+      },
+      "away": {
+        "name": "Group B/E/F/I/J third place",
+        "flag": "/assets/imgs/football.png"
+      },
+      "venueIds": [
+        "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "bla-bla-dubai",
+        "mist-dubai",
+        "loui-dubai",
+        "anzeera-dubai"
+      ]
+    },
+    {
+      "dateLabel": "JUL 2",
+      "time": "23:00",
+      "timeSuffix": "GST",
+      "home": {
+        "name": "Group H winners",
+        "flag": "/assets/imgs/football.png"
+      },
+      "away": {
+        "name": "Group J runners-up",
+        "flag": "/assets/imgs/football.png"
+      },
+      "venueIds": [
+        "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "bla-bla-dubai",
+        "mist-dubai",
+        "loui-dubai",
+        "anzeera-dubai"
+      ]
+    },
+    {
+      "dateLabel": "JUL 3",
+      "time": "03:00",
+      "timeSuffix": "GST",
+      "home": {
+        "name": "Group K runners-up",
+        "flag": "/assets/imgs/football.png"
+      },
+      "away": {
+        "name": "Group L runners-up",
+        "flag": "/assets/imgs/football.png"
+      },
+      "venueIds": [
+        "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "bla-bla-dubai",
+        "mist-dubai",
+        "loui-dubai",
+        "anzeera-dubai"
+      ]
+    },
+    {
+      "dateLabel": "JUL 3",
+      "time": "07:00",
+      "timeSuffix": "GST",
+      "home": {
+        "name": "Group B winners",
+        "flag": "/assets/imgs/football.png"
+      },
+      "away": {
+        "name": "Group E/F/G/I/J third place",
+        "flag": "/assets/imgs/football.png"
+      },
+      "venueIds": [
+        "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "bla-bla-dubai",
+        "mist-dubai",
+        "loui-dubai",
+        "anzeera-dubai"
+      ]
+    },
+    {
+      "dateLabel": "JUL 3",
+      "time": "22:00",
+      "timeSuffix": "GST",
+      "home": {
+        "name": "Group D runners-up",
+        "flag": "/assets/imgs/football.png"
+      },
+      "away": {
+        "name": "Group G runners-up",
+        "flag": "/assets/imgs/football.png"
+      },
+      "venueIds": [
+        "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "bla-bla-dubai",
+        "mist-dubai",
+        "loui-dubai",
+        "anzeera-dubai"
+      ]
+    },
+    {
+      "dateLabel": "JUL 4",
+      "time": "02:00",
+      "timeSuffix": "GST",
+      "home": {
+        "name": "Group J winners",
+        "flag": "/assets/imgs/football.png"
+      },
+      "away": {
+        "name": "Group H runners-up",
+        "flag": "/assets/imgs/football.png"
+      },
+      "venueIds": [
+        "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "bla-bla-dubai",
+        "mist-dubai",
+        "loui-dubai",
+        "anzeera-dubai"
+      ]
+    },
+    {
+      "dateLabel": "JUL 4",
+      "time": "05:30",
+      "timeSuffix": "GST",
+      "home": {
+        "name": "Group K winners",
+        "flag": "/assets/imgs/football.png"
+      },
+      "away": {
+        "name": "Group D/E/I/J/L third place",
+        "flag": "/assets/imgs/football.png"
+      },
+      "venueIds": [
+        "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "bla-bla-dubai",
+        "mist-dubai",
+        "loui-dubai",
+        "anzeera-dubai"
+      ]
+    },
+    {
+      "dateLabel": "JUL 4",
+      "time": "21:00",
+      "timeSuffix": "GST",
+      "home": {
+        "name": "Winner Match 73",
+        "flag": "/assets/imgs/football.png"
+      },
+      "away": {
+        "name": "Winner Match 75",
+        "flag": "/assets/imgs/football.png"
+      },
+      "venueIds": [
+        "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "bla-bla-dubai",
+        "mist-dubai",
+        "loui-dubai",
+        "anzeera-dubai"
+      ]
+    },
+    {
+      "dateLabel": "JUL 5",
+      "time": "01:00",
+      "timeSuffix": "GST",
+      "home": {
+        "name": "Winner Match 74",
+        "flag": "/assets/imgs/football.png"
+      },
+      "away": {
+        "name": "Winner Match 77",
+        "flag": "/assets/imgs/football.png"
+      },
+      "venueIds": [
+        "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "bla-bla-dubai",
+        "mist-dubai",
+        "loui-dubai",
+        "anzeera-dubai"
+      ]
+    },
+    {
+      "dateLabel": "JUL 6",
+      "time": "00:00",
+      "timeSuffix": "GST",
+      "home": {
+        "name": "Winner Match 76",
+        "flag": "/assets/imgs/football.png"
+      },
+      "away": {
+        "name": "Winner Match 78",
+        "flag": "/assets/imgs/football.png"
+      },
+      "venueIds": [
+        "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "bla-bla-dubai",
+        "mist-dubai",
+        "loui-dubai",
+        "anzeera-dubai"
+      ]
+    },
+    {
+      "dateLabel": "JUL 6",
+      "time": "04:00",
+      "timeSuffix": "GST",
+      "home": {
+        "name": "Winner Match 79",
+        "flag": "/assets/imgs/football.png"
+      },
+      "away": {
+        "name": "Winner Match 80",
+        "flag": "/assets/imgs/football.png"
+      },
+      "venueIds": [
+        "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "bla-bla-dubai",
+        "mist-dubai",
+        "loui-dubai",
+        "anzeera-dubai"
+      ]
+    },
+    {
+      "dateLabel": "JUL 6",
+      "time": "23:00",
+      "timeSuffix": "GST",
+      "home": {
+        "name": "Winner Match 83",
+        "flag": "/assets/imgs/football.png"
+      },
+      "away": {
+        "name": "Winner Match 84",
+        "flag": "/assets/imgs/football.png"
+      },
+      "venueIds": [
+        "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "bla-bla-dubai",
+        "mist-dubai",
+        "loui-dubai",
+        "anzeera-dubai"
+      ]
+    },
+    {
+      "dateLabel": "JUL 7",
+      "time": "04:00",
+      "timeSuffix": "GST",
+      "home": {
+        "name": "Winner Match 81",
+        "flag": "/assets/imgs/football.png"
+      },
+      "away": {
+        "name": "Winner Match 82",
+        "flag": "/assets/imgs/football.png"
+      },
+      "venueIds": [
+        "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "bla-bla-dubai",
+        "mist-dubai",
+        "loui-dubai",
+        "anzeera-dubai"
+      ]
+    },
+    {
+      "dateLabel": "JUL 7",
+      "time": "20:00",
+      "timeSuffix": "GST",
+      "home": {
+        "name": "Winner Match 86",
+        "flag": "/assets/imgs/football.png"
+      },
+      "away": {
+        "name": "Winner Match 88",
+        "flag": "/assets/imgs/football.png"
+      },
+      "venueIds": [
+        "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "bla-bla-dubai",
+        "mist-dubai",
+        "loui-dubai",
+        "anzeera-dubai"
+      ]
+    },
+    {
+      "dateLabel": "JUL 8",
+      "time": "00:00",
+      "timeSuffix": "GST",
+      "home": {
+        "name": "Winner Match 85",
+        "flag": "/assets/imgs/football.png"
+      },
+      "away": {
+        "name": "Winner Match 87",
+        "flag": "/assets/imgs/football.png"
+      },
+      "venueIds": [
+        "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "bla-bla-dubai",
+        "mist-dubai",
+        "loui-dubai",
+        "anzeera-dubai"
+      ]
+    },
+    {
+      "dateLabel": "JUL 10",
+      "time": "00:00",
+      "timeSuffix": "GST",
+      "home": {
+        "name": "Winner Match 89",
+        "flag": "/assets/imgs/football.png"
+      },
+      "away": {
+        "name": "Winner Match 90",
+        "flag": "/assets/imgs/football.png"
+      },
+      "venueIds": [
+        "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "bla-bla-dubai",
+        "mist-dubai",
+        "loui-dubai",
+        "anzeera-dubai"
+      ]
+    },
+    {
+      "dateLabel": "JUL 10",
+      "time": "23:00",
+      "timeSuffix": "GST",
+      "home": {
+        "name": "Winner Match 93",
+        "flag": "/assets/imgs/football.png"
+      },
+      "away": {
+        "name": "Winner Match 94",
+        "flag": "/assets/imgs/football.png"
+      },
+      "venueIds": [
+        "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "bla-bla-dubai",
+        "mist-dubai",
+        "loui-dubai",
+        "anzeera-dubai"
+      ]
+    },
+    {
+      "dateLabel": "JUL 12",
+      "time": "01:00",
+      "timeSuffix": "GST",
+      "home": {
+        "name": "Winner Match 91",
+        "flag": "/assets/imgs/football.png"
+      },
+      "away": {
+        "name": "Winner Match 92",
+        "flag": "/assets/imgs/football.png"
+      },
+      "venueIds": [
+        "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "bla-bla-dubai",
+        "mist-dubai",
+        "loui-dubai",
+        "anzeera-dubai"
+      ]
+    },
+    {
+      "dateLabel": "JUL 12",
+      "time": "05:00",
+      "timeSuffix": "GST",
+      "home": {
+        "name": "Winner Match 95",
+        "flag": "/assets/imgs/football.png"
+      },
+      "away": {
+        "name": "Winner Match 96",
+        "flag": "/assets/imgs/football.png"
+      },
+      "venueIds": [
+        "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "bla-bla-dubai",
+        "mist-dubai",
+        "loui-dubai",
+        "anzeera-dubai"
+      ]
+    },
+    {
+      "dateLabel": "JUL 14",
+      "time": "23:00",
+      "timeSuffix": "GST",
+      "home": {
+        "name": "Winner Match 97",
+        "flag": "/assets/imgs/football.png"
+      },
+      "away": {
+        "name": "Winner Match 98",
+        "flag": "/assets/imgs/football.png"
+      },
+      "venueIds": [
+        "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "bla-bla-dubai",
+        "mist-dubai",
+        "loui-dubai",
+        "anzeera-dubai"
+      ]
+    },
+    {
+      "dateLabel": "JUL 15",
+      "time": "23:00",
+      "timeSuffix": "GST",
+      "home": {
+        "name": "Winner Match 99",
+        "flag": "/assets/imgs/football.png"
+      },
+      "away": {
+        "name": "Winner Match 100",
+        "flag": "/assets/imgs/football.png"
+      },
+      "venueIds": [
+        "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "bla-bla-dubai",
+        "mist-dubai",
+        "loui-dubai",
+        "anzeera-dubai"
+      ]
+    },
+    {
+      "dateLabel": "JUL 19",
+      "time": "01:00",
+      "timeSuffix": "GST",
+      "home": {
+        "name": "Runner-up Match 101",
+        "flag": "/assets/imgs/football.png"
+      },
+      "away": {
+        "name": "Runner-up Match 102",
+        "flag": "/assets/imgs/football.png"
+      },
+      "venueIds": [
+        "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "bla-bla-dubai",
+        "mist-dubai",
+        "loui-dubai",
+        "anzeera-dubai"
+      ]
+    },
+    {
+      "dateLabel": "JUL 19",
+      "time": "23:00",
+      "timeSuffix": "GST",
+      "home": {
+        "name": "Winner Match 101",
+        "flag": "/assets/imgs/football.png"
+      },
+      "away": {
+        "name": "Winner Match 102",
+        "flag": "/assets/imgs/football.png"
+      },
+      "venueIds": [
+        "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "bla-bla-dubai",
+        "mist-dubai",
+        "loui-dubai",
+        "anzeera-dubai"
+      ]
+    }
+  ],
+  "teams": [
+    {
+      "name": "Algeria",
+      "flag": "https://flagcdn.com/w160/dz.png"
+    },
+    {
+      "name": "Argentina",
+      "flag": "https://flagcdn.com/w160/ar.png"
+    },
+    {
+      "name": "Australia",
+      "flag": "https://flagcdn.com/w160/au.png"
+    },
+    {
+      "name": "Austria",
+      "flag": "https://flagcdn.com/w160/at.png"
+    },
+    {
+      "name": "Belgium",
+      "flag": "https://flagcdn.com/w160/be.png"
+    },
+    {
+      "name": "Bosnia and Herzegovina",
+      "flag": "https://flagcdn.com/w160/ba.png"
+    },
+    {
+      "name": "Brazil",
+      "flag": "https://flagcdn.com/w160/br.png"
+    },
+    {
+      "name": "Cabo Verde",
+      "flag": "https://flagcdn.com/w160/cv.png"
+    },
+    {
+      "name": "Canada",
+      "flag": "https://flagcdn.com/w160/ca.png"
+    },
+    {
+      "name": "Colombia",
+      "flag": "https://flagcdn.com/w160/co.png"
+    },
+    {
+      "name": "Congo DR",
+      "flag": "https://flagcdn.com/w160/cd.png"
+    },
+    {
+      "name": "Côte d'Ivoire",
+      "flag": "https://flagcdn.com/w160/ci.png"
+    },
+    {
+      "name": "Croatia",
+      "flag": "https://flagcdn.com/w160/hr.png"
+    },
+    {
+      "name": "Curaçao",
+      "flag": "https://flagcdn.com/w160/cw.png"
+    },
+    {
+      "name": "Czechia",
+      "flag": "https://flagcdn.com/w160/cz.png"
+    },
+    {
+      "name": "Ecuador",
+      "flag": "https://flagcdn.com/w160/ec.png"
+    },
+    {
+      "name": "Egypt",
+      "flag": "https://flagcdn.com/w160/eg.png"
+    },
+    {
+      "name": "England",
+      "flag": "https://flagcdn.com/w160/gb-eng.png"
+    },
+    {
+      "name": "France",
+      "flag": "https://flagcdn.com/w160/fr.png"
+    },
+    {
+      "name": "Germany",
+      "flag": "https://flagcdn.com/w160/de.png"
+    },
+    {
+      "name": "Ghana",
+      "flag": "https://flagcdn.com/w160/gh.png"
+    },
+    {
+      "name": "Group A runners-up",
+      "flag": "/assets/imgs/football.png"
+    },
+    {
+      "name": "Group A winners",
+      "flag": "/assets/imgs/football.png"
+    },
+    {
+      "name": "Group A/B/C/D/F third place",
+      "flag": "/assets/imgs/football.png"
+    },
+    {
+      "name": "Group A/E/H/I/J third place",
+      "flag": "/assets/imgs/football.png"
+    },
+    {
+      "name": "Group B runners-up",
+      "flag": "/assets/imgs/football.png"
+    },
+    {
+      "name": "Group B winners",
+      "flag": "/assets/imgs/football.png"
+    },
+    {
+      "name": "Group B/E/F/I/J third place",
+      "flag": "/assets/imgs/football.png"
+    },
+    {
+      "name": "Group C runners-up",
+      "flag": "/assets/imgs/football.png"
+    },
+    {
+      "name": "Group C winners",
+      "flag": "/assets/imgs/football.png"
+    },
+    {
+      "name": "Group C/D/F/G/H third place",
+      "flag": "/assets/imgs/football.png"
+    },
+    {
+      "name": "Group C/E/F/H/I third place",
+      "flag": "/assets/imgs/football.png"
+    },
+    {
+      "name": "Group D runners-up",
+      "flag": "/assets/imgs/football.png"
+    },
+    {
+      "name": "Group D winners",
+      "flag": "/assets/imgs/football.png"
+    },
+    {
+      "name": "Group D/E/I/J/L third place",
+      "flag": "/assets/imgs/football.png"
+    },
+    {
+      "name": "Group E runners-up",
+      "flag": "/assets/imgs/football.png"
+    },
+    {
+      "name": "Group E winners",
+      "flag": "/assets/imgs/football.png"
+    },
+    {
+      "name": "Group E/F/G/I/J third place",
+      "flag": "/assets/imgs/football.png"
+    },
+    {
+      "name": "Group E/H/I/J/K third place",
+      "flag": "/assets/imgs/football.png"
+    },
+    {
+      "name": "Group F runners-up",
+      "flag": "/assets/imgs/football.png"
+    },
+    {
+      "name": "Group F winners",
+      "flag": "/assets/imgs/football.png"
+    },
+    {
+      "name": "Group G runners-up",
+      "flag": "/assets/imgs/football.png"
+    },
+    {
+      "name": "Group G winners",
+      "flag": "/assets/imgs/football.png"
+    },
+    {
+      "name": "Group H runners-up",
+      "flag": "/assets/imgs/football.png"
+    },
+    {
+      "name": "Group H winners",
+      "flag": "/assets/imgs/football.png"
+    },
+    {
+      "name": "Group I runners-up",
+      "flag": "/assets/imgs/football.png"
+    },
+    {
+      "name": "Group I winners",
+      "flag": "/assets/imgs/football.png"
+    },
+    {
+      "name": "Group J runners-up",
+      "flag": "/assets/imgs/football.png"
+    },
+    {
+      "name": "Group J winners",
+      "flag": "/assets/imgs/football.png"
+    },
+    {
+      "name": "Group K runners-up",
+      "flag": "/assets/imgs/football.png"
+    },
+    {
+      "name": "Group K winners",
+      "flag": "/assets/imgs/football.png"
+    },
+    {
+      "name": "Group L runners-up",
+      "flag": "/assets/imgs/football.png"
+    },
+    {
+      "name": "Group L winners",
+      "flag": "/assets/imgs/football.png"
+    },
+    {
+      "name": "Haiti",
+      "flag": "https://flagcdn.com/w160/ht.png"
+    },
+    {
+      "name": "IR Iran",
+      "flag": "https://flagcdn.com/w160/ir.png"
+    },
+    {
+      "name": "Iraq",
+      "flag": "https://flagcdn.com/w160/iq.png"
+    },
+    {
+      "name": "Japan",
+      "flag": "https://flagcdn.com/w160/jp.png"
+    },
+    {
+      "name": "Jordan",
+      "flag": "https://flagcdn.com/w160/jo.png"
+    },
+    {
+      "name": "Korea Republic",
+      "flag": "https://flagcdn.com/w160/kr.png"
+    },
+    {
+      "name": "Mexico",
+      "flag": "https://flagcdn.com/w160/mx.png"
+    },
+    {
+      "name": "Morocco",
+      "flag": "https://flagcdn.com/w160/ma.png"
+    },
+    {
+      "name": "Netherlands",
+      "flag": "https://flagcdn.com/w160/nl.png"
+    },
+    {
+      "name": "New Zealand",
+      "flag": "https://flagcdn.com/w160/nz.png"
+    },
+    {
+      "name": "Norway",
+      "flag": "https://flagcdn.com/w160/no.png"
+    },
+    {
+      "name": "Panama",
+      "flag": "https://flagcdn.com/w160/pa.png"
+    },
+    {
+      "name": "Paraguay",
+      "flag": "https://flagcdn.com/w160/py.png"
+    },
+    {
+      "name": "Portugal",
+      "flag": "https://flagcdn.com/w160/pt.png"
+    },
+    {
+      "name": "Qatar",
+      "flag": "https://flagcdn.com/w160/qa.png"
+    },
+    {
+      "name": "Runner-up Match 101",
+      "flag": "/assets/imgs/football.png"
+    },
+    {
+      "name": "Runner-up Match 102",
+      "flag": "/assets/imgs/football.png"
+    },
+    {
+      "name": "Saudi Arabia",
+      "flag": "https://flagcdn.com/w160/sa.png"
+    },
+    {
+      "name": "Scotland",
+      "flag": "https://flagcdn.com/w160/gb-sct.png"
+    },
+    {
+      "name": "Senegal",
+      "flag": "https://flagcdn.com/w160/sn.png"
+    },
+    {
+      "name": "South Africa",
+      "flag": "https://flagcdn.com/w160/za.png"
+    },
+    {
+      "name": "Spain",
+      "flag": "https://flagcdn.com/w160/es.png"
+    },
+    {
+      "name": "Sweden",
+      "flag": "https://flagcdn.com/w160/se.png"
+    },
+    {
+      "name": "Switzerland",
+      "flag": "https://flagcdn.com/w160/ch.png"
+    },
+    {
+      "name": "Tunisia",
+      "flag": "https://flagcdn.com/w160/tn.png"
+    },
+    {
+      "name": "Türkiye",
+      "flag": "https://flagcdn.com/w160/tr.png"
+    },
+    {
+      "name": "Uruguay",
+      "flag": "https://flagcdn.com/w160/uy.png"
+    },
+    {
+      "name": "USA",
+      "flag": "https://flagcdn.com/w160/us.png"
+    },
+    {
+      "name": "Uzbekistan",
+      "flag": "https://flagcdn.com/w160/uz.png"
+    },
+    {
+      "name": "Winner Match 100",
+      "flag": "/assets/imgs/football.png"
+    },
+    {
+      "name": "Winner Match 101",
+      "flag": "/assets/imgs/football.png"
+    },
+    {
+      "name": "Winner Match 102",
+      "flag": "/assets/imgs/football.png"
+    },
+    {
+      "name": "Winner Match 73",
+      "flag": "/assets/imgs/football.png"
+    },
+    {
+      "name": "Winner Match 74",
+      "flag": "/assets/imgs/football.png"
+    },
+    {
+      "name": "Winner Match 75",
+      "flag": "/assets/imgs/football.png"
+    },
+    {
+      "name": "Winner Match 76",
+      "flag": "/assets/imgs/football.png"
+    },
+    {
+      "name": "Winner Match 77",
+      "flag": "/assets/imgs/football.png"
+    },
+    {
+      "name": "Winner Match 78",
+      "flag": "/assets/imgs/football.png"
+    },
+    {
+      "name": "Winner Match 79",
+      "flag": "/assets/imgs/football.png"
+    },
+    {
+      "name": "Winner Match 80",
+      "flag": "/assets/imgs/football.png"
+    },
+    {
+      "name": "Winner Match 81",
+      "flag": "/assets/imgs/football.png"
+    },
+    {
+      "name": "Winner Match 82",
+      "flag": "/assets/imgs/football.png"
+    },
+    {
+      "name": "Winner Match 83",
+      "flag": "/assets/imgs/football.png"
+    },
+    {
+      "name": "Winner Match 84",
+      "flag": "/assets/imgs/football.png"
+    },
+    {
+      "name": "Winner Match 85",
+      "flag": "/assets/imgs/football.png"
+    },
+    {
+      "name": "Winner Match 86",
+      "flag": "/assets/imgs/football.png"
+    },
+    {
+      "name": "Winner Match 87",
+      "flag": "/assets/imgs/football.png"
+    },
+    {
+      "name": "Winner Match 88",
+      "flag": "/assets/imgs/football.png"
+    },
+    {
+      "name": "Winner Match 89",
+      "flag": "/assets/imgs/football.png"
+    },
+    {
+      "name": "Winner Match 90",
+      "flag": "/assets/imgs/football.png"
+    },
+    {
+      "name": "Winner Match 91",
+      "flag": "/assets/imgs/football.png"
+    },
+    {
+      "name": "Winner Match 92",
+      "flag": "/assets/imgs/football.png"
+    },
+    {
+      "name": "Winner Match 93",
+      "flag": "/assets/imgs/football.png"
+    },
+    {
+      "name": "Winner Match 94",
+      "flag": "/assets/imgs/football.png"
+    },
+    {
+      "name": "Winner Match 95",
+      "flag": "/assets/imgs/football.png"
+    },
+    {
+      "name": "Winner Match 96",
+      "flag": "/assets/imgs/football.png"
+    },
+    {
+      "name": "Winner Match 97",
+      "flag": "/assets/imgs/football.png"
+    },
+    {
+      "name": "Winner Match 98",
+      "flag": "/assets/imgs/football.png"
+    },
+    {
+      "name": "Winner Match 99",
+      "flag": "/assets/imgs/football.png"
+    }
+  ],
+  "restaurants": [
+    {
+      "id": "mcgettigans-dubai",
+      "src": "/assets/imgs/company-logo-1-1.svg",
+      "alt": "McGettigan's",
+      "logoWidth": 299.14,
+      "logoHeight": 38,
+      "locationUrl": "https://www.google.com/maps/search/?api=1&query=McGettigan's+Dubai",
+      "enabled": true,
+      "city": "Dubai"
+    },
+    {
+      "id": "mcgettigans-abu-dhabi",
+      "src": "/assets/imgs/company-logo-1-1.svg",
+      "alt": "McGettigan's",
+      "subtitleImage": {
+        "src": "/assets/imgs/reem-mall-abu-dhabi.png",
+        "width": 272.68,
+        "height": 14.45,
+        "alt": "Reem Mall – Abu Dhabi"
+      },
+      "logoWidth": 299.14,
+      "logoHeight": 38,
+      "locationUrl": "https://www.google.com/maps/search/?api=1&query=McGettigan's+Reem+Mall+Abu+Dhabi",
+      "enabled": true,
+      "city": "Abu Dhabi"
+    },
+    {
+      "id": "bla-bla-dubai",
+      "src": "/assets/imgs/company-logo-2.svg",
+      "alt": "Bla Bla",
+      "logoWidth": 105.07,
+      "logoHeight": 92.21,
+      "locationUrl": "https://www.google.com/maps/search/?api=1&query=Bla+Bla+Dubai",
+      "enabled": true,
+      "city": "Dubai"
+    },
+    {
+      "id": "mist-dubai",
+      "src": "/assets/imgs/company-logo-3.svg",
+      "alt": "mist",
+      "logoWidth": 133.54,
+      "logoHeight": 85.63,
+      "locationUrl": "https://www.google.com/maps/search/?api=1&query=mist+Dubai",
+      "enabled": true,
+      "city": "Dubai"
+    },
+    {
+      "id": "loui-dubai",
+      "src": "/assets/imgs/company-logo-4.svg",
+      "alt": "Loui Restaurant & Cafe",
+      "logoWidth": 137.06,
+      "logoHeight": 64.21,
+      "locationUrl": "https://www.google.com/maps/search/?api=1&query=Loui+Restaurant+Cafe+Dubai",
+      "enabled": true,
+      "city": "Dubai"
+    },
+    {
+      "id": "anzeera-dubai",
+      "src": "/assets/imgs/company-logo-5.svg",
+      "alt": "Anzeera",
+      "logoWidth": 189.13,
+      "logoHeight": 34.32,
+      "locationUrl": "https://www.google.com/maps/search/?api=1&query=Anzeera+Dubai",
+      "enabled": true,
+      "city": "Dubai"
+    }
+  ],
+  "tracking": {
+    "googleTagManagerId": "",
+    "googleAnalyticsId": "",
+    "microsoftClarityId": ""
+  }
+}

@@ -1,0 +1,376 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+.font-lays {
+  font-family: var(--font-lays), "Lays", Arial, Helvetica, sans-serif;
+}
+
+.font-m-plus-1 {
+  font-family: var(--font-m-plus-1), "M PLUS 1", sans-serif;
+}
+
+.font-cairo {
+  font-family: var(--font-cairo), "Cairo", sans-serif;
+}
+
+html[dir="rtl"] body {
+  font-family: var(--font-cairo), "Cairo", sans-serif;
+}
+
+html[dir="ltr"] body {
+  font-family: var(--font-lays), "Lays", Arial, Helvetica, sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+/* Match timings — panel height (desktop default; mobile overrides below) */
+.match-timings-section {
+  /* Mobile-first: full content width; desktop overrides below */
+  --mt-panel-width: 100%;
+  --mt-panel-height: max(298px, calc(661 / 1600 * 100vw));
+  --mt-panel-inset: clamp(32px, 2.5vw, 48px);
+  --mt-action-btn-width: clamp(200px, 15.625vw, 250px);
+  --mt-other-matches-btn-width: clamp(320px, 28vw, 448px);
+  --mt-action-btn-height: clamp(40px, 3.505vw, 56.08px);
+  --mt-action-btn-font-size: clamp(12px, 1vw, 16px);
+  --mt-action-btn-gap: clamp(12px, 1vw, 16px);
+  --mt-card-pad: clamp(20px, 2.5vw, 32px);
+  --mt-date-top: clamp(12px, 1.25vw, 16px);
+  --mt-match-item-gap: clamp(12px, 1.5vw, 18px);
+  --mt-team-flag-name-gap: clamp(6px, 0.75vw, 8px);
+  /* 210px @ 1600px design — scales with viewport only */
+  --mt-football-size: clamp(92px, 13.125vw, 210px);
+  /* White logos 2–4 (Bla Bla, mist, Loui) — scales with viewport */
+  --mt-venue-logo-height-alt: clamp(52px, 5.75vw, 92px);
+}
+
+/* Match cards — circular flags; shadow on its own round layer (not clipped square) */
+.match-timings-section .mt-team-flag,
+.match-timings-section .mt-team-flag-shadow,
+.match-timings-section .mt-team-flag-ring,
+.match-timings-section .mt-team-flag-img,
+.match-timings-section .mt-team-flag-ring img {
+  border-radius: 50%;
+}
+
+.match-timings-section .mt-team-flag-shadow {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+/* Sharp flag rendering (avoid soft scaling blur) */
+.match-timings-section .mt-team-flag-img,
+.match-timings-section .mt-team-flag-ring img {
+  image-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+}
+
+.match-timings-section .mt-team-flag-ring {
+  transform: translateZ(0);
+}
+
+/* Match timings — desktop card (date top tab, teams + GST vertically centered) */
+@media (min-width: 1024px) {
+  .match-timings-section {
+    --mt-panel-width: max(635px, calc(1411 / 1600 * 100vw));
+    --mt-card-pad: clamp(36px, 3.75vw, 60px);
+    --mt-date-top: clamp(14px, 1vw, 20px);
+    --mt-match-item-gap: clamp(20px, 1.75vw, 32px);
+    --mt-team-flag-name-gap: clamp(8px, 0.5vw, 10px);
+    --mt-team-name-max-width: clamp(100px, 7.375vw, 118px);
+    --mt-venue-logo-height-alt: clamp(58px, 5.75vw, 92px);
+  }
+
+  .match-timings-section .mt-team-column {
+    flex: 0 0 var(--mt-team-name-max-width);
+  }
+}
+
+/* Match timings — card row may bleed to viewport edge (do not clip horizontally) */
+.match-timings-panel-wrap,
+.match-timings-panel,
+.match-timings-panel-inner,
+.match-timings-match-row-bleed {
+  overflow-x: visible;
+  overflow-y: visible;
+}
+
+/* Match timings — equal inset/gaps (1600px and below) */
+@media (max-width: 1600px) {
+  .match-timings-panel {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    min-height: 0;
+  }
+
+  .match-timings-panel-inner {
+    box-sizing: border-box;
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    justify-content: flex-start;
+    gap: var(--mt-panel-inset);
+    padding: var(--mt-panel-inset);
+  }
+}
+
+/* Match timings — mobile-only layout & sizing (max-lg / 1023px) */
+@media (max-width: 1023px) {
+  .match-timings-panel-outer {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 100%;
+    margin-inline: 0;
+  }
+
+  .match-timings-panel {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .match-timings-section {
+    --mt-panel-width: 100%;
+    --mt-panel-height: max(544px, calc(704 / 1600 * 100vw));
+    --mt-card-width: clamp(300px, 48vw, 360px) !important;
+    --mt-card-height: clamp(158px, 25vw, 188px) !important;
+    --mt-card-gap: clamp(14px, 2.2vw, 20px) !important;
+    --mt-card-row-padding: clamp(16px, 2.5vw, 28px) !important;
+    --mt-card-pad: clamp(14px, 3.5vw, 22px) !important;
+    --mt-date-top: clamp(10px, 2vw, 14px) !important;
+    --mt-match-item-gap: clamp(10px, 2.5vw, 16px) !important;
+    --mt-team-flag-name-gap: clamp(3px, 0.8vw, 5px) !important;
+    --mt-flag-size: clamp(52px, 8vw, 64px) !important;
+    --mt-team-name-max-width: clamp(80px, 12vw, 96px) !important;
+    --mt-date-label-top: clamp(10px, 1.6vw, 14px);
+    --mt-date-font-size: clamp(13px, 2vw, 16px);
+    --mt-team-name-font-size: clamp(10px, 1.5vw, 12px) !important;
+    --mt-time-badge-width: clamp(62px, 9.5vw, 74px);
+    --mt-time-badge-height: clamp(54px, 8.2vw, 64px);
+    --mt-time-badge-font-size: clamp(14px, 2.1vw, 17px);
+    --mt-venue-logo-height: clamp(44px, 6.8vw, 54px);
+    --mt-venue-logo-height-alt: clamp(56px, 8.5vw, 80px) !important;
+    --mt-action-btn-width: min(100%, clamp(260px, 42vw, 300px));
+    --mt-other-matches-btn-width: min(100%, clamp(260px, 42vw, 300px));
+    --mt-actions-padding-x: clamp(16px, 4vw, 24px);
+    --mt-action-btn-height: clamp(52px, 10vw, 60px);
+    --mt-action-btn-font-size: 12px;
+    --mt-action-btn-gap: 12px;
+    --mt-panel-section-gap: clamp(20px, 3.2vw, 32px);
+    --mt-panel-inset: clamp(22px, 4vw, 28px);
+  }
+
+  .match-timings-card-track {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-rows: repeat(2, auto);
+    align-items: end;
+  }
+
+  .match-timings-scroll--two-rows {
+    overflow-x: auto;
+    overflow-y: visible;
+    -webkit-overflow-scrolling: touch;
+    touch-action: pan-x;
+  }
+
+  .match-timings-scroll--venue-only {
+    --mt-card-width: clamp(272px, 34vw, 310px) !important;
+    --mt-card-height: clamp(142px, 18vw, 168px) !important;
+    --mt-card-gap: clamp(8px, 1.25vw, 12px) !important;
+    --mt-card-row-padding: 0px !important;
+    --mt-card-pad: clamp(12px, 3vw, 18px) !important;
+    --mt-date-top: clamp(8px, 1.8vw, 11px) !important;
+    --mt-match-item-gap: clamp(8px, 2vw, 12px) !important;
+    --mt-team-flag-name-gap: clamp(2px, 0.6vw, 4px) !important;
+    --mt-flag-size: clamp(46px, 5.8vw, 54px) !important;
+    --mt-team-name-max-width: clamp(72px, 9vw, 84px) !important;
+    --mt-date-label-top: clamp(8px, 1.1vw, 11px);
+    --mt-date-font-size: clamp(12px, 1.5vw, 14px);
+    --mt-team-name-font-size: clamp(9px, 1.2vw, 11px) !important;
+    --mt-time-badge-width: clamp(54px, 6.8vw, 62px);
+    --mt-time-badge-height: clamp(48px, 6vw, 54px);
+    --mt-time-badge-font-size: clamp(12px, 1.5vw, 14px);
+  }
+
+  .match-timings-panel-wrap {
+    padding-bottom: clamp(38px, 9.6vw, 58px);
+  }
+
+  .match-timings-section [data-gsap-actions] {
+    box-sizing: border-box;
+    width: 100%;
+    padding-left: var(--mt-actions-padding-x);
+    padding-right: var(--mt-actions-padding-x);
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .match-timings-section [data-gsap-actions] a,
+  .match-timings-section [data-gsap-actions] button {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .match-timings-section .match-timings-full-schedule,
+  .match-timings-section [data-gsap-full-schedule] {
+    box-sizing: border-box;
+    width: 100%;
+    padding-left: var(--mt-actions-padding-x);
+    padding-right: var(--mt-actions-padding-x);
+    justify-content: stretch;
+  }
+
+  .match-timings-section .match-timings-full-schedule a,
+  .match-timings-section [data-gsap-full-schedule] a {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  /* White venue logos 2–4 (company-logo-2/3/4 white) — responsive height */
+  .match-timings-section [data-gsap-venue-logo][data-venue-id="bla-bla-dubai"],
+  .match-timings-section [data-gsap-venue-logo][data-venue-id="mist-dubai"],
+  .match-timings-section [data-gsap-venue-logo][data-venue-id="loui-dubai"] {
+    height: var(--mt-venue-logo-height-alt) !important;
+    width: auto !important;
+    max-height: none;
+  }
+
+  /* Match cards: circular flag + rounded shadow */
+  .match-timings-section .mt-team-flag,
+  .match-timings-section .mt-team-flag-shadow,
+  .match-timings-section .mt-team-flag-ring,
+  .match-timings-section .mt-team-flag-img,
+  .match-timings-section .mt-team-flag-ring img {
+    border-radius: 50% !important;
+  }
+
+  .match-timings-section .mt-team-flag-shadow {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25) !important;
+  }
+}
+
+/* Where to watch — venue popup shell */
+.venue-modal {
+  width: clamp(420px, 33vw, 500px) !important;
+  max-width: calc(100vw - 32px) !important;
+}
+
+/* Where to watch — venue popup spacing */
+.venue-modal-content {
+  gap: clamp(36px, 3.5vw, 56px);
+}
+
+.venue-modal-actions {
+  gap: clamp(14px, 1.2vw, 20px);
+}
+
+/* Where to watch — venue popup logos 2–4 (Bla Bla, mist, Loui) */
+.venue-modal-logo--alt {
+  width: auto !important;
+  height: clamp(96px, 12vw, 156px) !important;
+  max-width: 92% !important;
+}
+
+/* Taller card for larger logos 2–4 (matches logo height delta at design) */
+.venue-modal--alt {
+  height: clamp(330px, 48vw, 380px) !important;
+  min-height: clamp(330px, 48vw, 380px);
+}
+
+@media (max-width: 1023px) {
+  .venue-modal {
+    width: min(90vw, 400px) !important;
+  }
+
+  .venue-modal-content {
+    gap: clamp(28px, 5.5vw, 40px) !important;
+  }
+
+  .venue-modal-actions {
+    gap: clamp(14px, 2.8vw, 18px) !important;
+  }
+
+  .venue-modal:not(.venue-modal--alt) {
+    height: clamp(258px, 40vw, 284px) !important;
+    min-height: clamp(258px, 40vw, 284px);
+    padding: clamp(18px, 4vw, 22px) !important;
+  }
+
+  .venue-modal-logo--alt {
+    height: clamp(52px, 7.5vw, 72px) !important;
+    max-width: 85% !important;
+  }
+
+  .venue-modal--alt {
+    height: clamp(268px, 42vw, 296px) !important;
+    min-height: clamp(268px, 42vw, 296px);
+    padding: clamp(18px, 4vw, 22px) !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  .venue-modal {
+    width: clamp(440px, 30vw, 500px) !important;
+    padding: clamp(28px, 2vw, 32px) !important;
+  }
+
+  .venue-modal-content {
+    gap: clamp(48px, 3.75vw, 64px) !important;
+  }
+
+  .venue-modal-actions {
+    gap: clamp(18px, 1.35vw, 22px) !important;
+  }
+
+  .venue-modal:not(.venue-modal--alt) {
+    height: clamp(298px, 19vw, 316px) !important;
+    min-height: clamp(298px, 19vw, 316px);
+  }
+
+  .venue-modal-logo--alt {
+    height: clamp(112px, 9.75vw, 156px) !important;
+  }
+
+  /* Logo 4 (Loui) — wider mark; slightly smaller on desktop */
+  .venue-modal-logo--alt[data-venue-id="loui-dubai"] {
+    height: clamp(84px, 6.75vw, 108px) !important;
+    max-width: 86% !important;
+  }
+
+  .venue-modal--alt {
+    height: clamp(388px, 25.5vw, 408px) !important;
+    min-height: clamp(388px, 25.5vw, 408px);
+  }
+}
