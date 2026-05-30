@@ -1,12 +1,18 @@
 import {
-  ADMIN_SESSION_COOKIE,
-  adminSessionToken,
+  buildAdminSessionCookie,
+  getAdminAuthMisconfiguration,
   isValidAdminLogin,
 } from "@/app/lib/adminAuth";
 
 export const dynamic = "force-dynamic";
 
 export async function POST(request: Request) {
+  const misconfiguration = getAdminAuthMisconfiguration();
+  if (misconfiguration) {
+    console.error("Admin auth misconfigured:", misconfiguration);
+    return Response.json({ error: "Admin login is not configured" }, { status: 503 });
+  }
+
   const body = (await request.json().catch(() => null)) as
     | { username?: string; password?: string }
     | null;
@@ -18,9 +24,7 @@ export async function POST(request: Request) {
   const response = Response.json({ ok: true });
   response.headers.append(
     "Set-Cookie",
-    `${ADMIN_SESSION_COOKIE}=${encodeURIComponent(
-      adminSessionToken(),
-    )}; Path=/; HttpOnly; SameSite=Lax; Max-Age=${60 * 60 * 24 * 7}`,
+    buildAdminSessionCookie(60 * 60 * 24 * 7),
   );
   return response;
 }

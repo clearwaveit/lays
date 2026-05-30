@@ -487,8 +487,8 @@ export default function MatchTimings() {
   const searchParams = useSearchParams();
   const venueId = searchParams.get("venue");
   const dateParam = searchParams.get("date");
-  const activeDateLabel = resolveDateLabelFromParam(dateParam);
   const adminDraft = useAdminCampaignDraft();
+  const activeDateLabel = resolveDateLabelFromParam(dateParam, adminDraft?.matches);
   const fallbackVenue = getVenueById(venueId);
   const venue =
     adminDraft?.restaurants.find((restaurant) => restaurant.id === fallbackVenue.id) ??

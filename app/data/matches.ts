@@ -1,17 +1,25 @@
 /**
  * FIFA World Cup 2026 fixtures (GST).
- * Group stage: fifa_world_cup_2026_fixtures_teams_date_time_gst_corrected.xlsx
- * Knockout: fifa_world_cup_2026_calendar_import_gst_knockout_only.xlsx
+ * Schedule date/time source: app/data/uae-schedule.ts (FIFA UTC -> UAE/GST).
  */
 
 import { getTeamFlagSrc } from "@/app/data/team-flags";
+import { UAE_SCHEDULE_BY_MATCH_NO } from "@/app/data/uae-schedule";
 
 export type Team = {
   name: string;
   flag: string;
 };
 
+type MatchFixtureBase = {
+  matchNo: number;
+  home: Team;
+  away: Team;
+  venueIds?: string[];
+};
+
 export type MatchFixture = {
+  matchNo: number;
   dateLabel: string;
   time: string;
   timeSuffix: string;
@@ -29,741 +37,553 @@ function team(name: string): Team {
   };
 }
 
-export const MATCHES: MatchFixture[] = [
-  {
-    dateLabel: "JUN 11",
-    time: "06:00",
+function buildMatch(fixture: MatchFixtureBase): MatchFixture {
+  const schedule = UAE_SCHEDULE_BY_MATCH_NO[fixture.matchNo];
+  if (!schedule) {
+    throw new Error(`Missing UAE schedule for match ${fixture.matchNo}`);
+  }
+  return {
+    ...fixture,
+    dateLabel: schedule.date,
+    time: schedule.time,
     timeSuffix: "GST",
+  };
+}
+
+const MATCH_FIXTURES: MatchFixtureBase[] = [
+  {
+    matchNo: 2,
     home: team("Korea Republic"),
     away: team("Czechia"),
   },
   {
-    dateLabel: "JUN 11",
-    time: "23:00",
-    timeSuffix: "GST",
+    matchNo: 1,
     home: team("Mexico"),
     away: team("South Africa"),
   },
   {
-    dateLabel: "JUN 12",
-    time: "05:00",
-    timeSuffix: "GST",
+    matchNo: 4,
     home: team("USA"),
     away: team("Paraguay"),
   },
   {
-    dateLabel: "JUN 12",
-    time: "23:00",
-    timeSuffix: "GST",
+    matchNo: 3,
     home: team("Canada"),
     away: team("Bosnia and Herzegovina"),
   },
   {
-    dateLabel: "JUN 13",
-    time: "02:00",
-    timeSuffix: "GST",
+    matchNo: 7,
     home: team("Brazil"),
     away: team("Morocco"),
   },
   {
-    dateLabel: "JUN 13",
-    time: "05:00",
-    timeSuffix: "GST",
+    matchNo: 5,
     home: team("Haiti"),
     away: team("Scotland"),
   },
   {
-    dateLabel: "JUN 13",
-    time: "08:00",
-    timeSuffix: "GST",
+    matchNo: 6,
     home: team("Australia"),
     away: team("Türkiye"),
   },
   {
-    dateLabel: "JUN 13",
-    time: "23:00",
-    timeSuffix: "GST",
+    matchNo: 8,
     home: team("Qatar"),
     away: team("Switzerland"),
   },
   {
-    dateLabel: "JUN 14",
-    time: "00:00",
-    timeSuffix: "GST",
+    matchNo: 11,
     home: team("Netherlands"),
     away: team("Japan"),
   },
   {
-    dateLabel: "JUN 14",
-    time: "03:00",
-    timeSuffix: "GST",
-    home: team("Côte d\'Ivoire"),
+    matchNo: 9,
+    home: team("Côte d\\'Ivoire"),
     away: team("Ecuador"),
   },
   {
-    dateLabel: "JUN 14",
-    time: "06:00",
-    timeSuffix: "GST",
+    matchNo: 12,
     home: team("Sweden"),
     away: team("Tunisia"),
   },
   {
-    dateLabel: "JUN 14",
-    time: "21:00",
-    timeSuffix: "GST",
+    matchNo: 10,
     home: team("Germany"),
     away: team("Curaçao"),
   },
   {
-    dateLabel: "JUN 15",
-    time: "02:00",
-    timeSuffix: "GST",
+    matchNo: 13,
     home: team("Saudi Arabia"),
     away: team("Uruguay"),
   },
   {
-    dateLabel: "JUN 15",
-    time: "05:00",
-    timeSuffix: "GST",
+    matchNo: 15,
     home: team("IR Iran"),
     away: team("New Zealand"),
   },
   {
-    dateLabel: "JUN 15",
-    time: "20:00",
-    timeSuffix: "GST",
+    matchNo: 14,
     home: team("Spain"),
     away: team("Cabo Verde"),
   },
   {
-    dateLabel: "JUN 15",
-    time: "23:00",
-    timeSuffix: "GST",
+    matchNo: 16,
     home: team("Belgium"),
     away: team("Egypt"),
   },
   {
-    dateLabel: "JUN 16",
-    time: "02:00",
-    timeSuffix: "GST",
+    matchNo: 18,
     home: team("Iraq"),
     away: team("Norway"),
   },
   {
-    dateLabel: "JUN 16",
-    time: "05:00",
-    timeSuffix: "GST",
+    matchNo: 19,
     home: team("Argentina"),
     away: team("Algeria"),
   },
   {
-    dateLabel: "JUN 16",
-    time: "08:00",
-    timeSuffix: "GST",
+    matchNo: 20,
     home: team("Austria"),
     away: team("Jordan"),
   },
   {
-    dateLabel: "JUN 16",
-    time: "23:00",
-    timeSuffix: "GST",
+    matchNo: 17,
     home: team("France"),
     away: team("Senegal"),
   },
   {
-    dateLabel: "JUN 17",
-    time: "00:00",
-    timeSuffix: "GST",
+    matchNo: 22,
     home: team("England"),
     away: team("Croatia"),
   },
   {
-    dateLabel: "JUN 17",
-    time: "03:00",
-    timeSuffix: "GST",
+    matchNo: 21,
     home: team("Ghana"),
     away: team("Panama"),
   },
   {
-    dateLabel: "JUN 17",
-    time: "06:00",
-    timeSuffix: "GST",
+    matchNo: 24,
     home: team("Uzbekistan"),
     away: team("Colombia"),
   },
   {
-    dateLabel: "JUN 17",
-    time: "21:00",
-    timeSuffix: "GST",
+    matchNo: 23,
     home: team("Portugal"),
     away: team("Congo DR"),
   },
   {
-    dateLabel: "JUN 18",
-    time: "02:00",
-    timeSuffix: "GST",
+    matchNo: 27,
     home: team("Canada"),
     away: team("Qatar"),
   },
   {
-    dateLabel: "JUN 18",
-    time: "05:00",
-    timeSuffix: "GST",
+    matchNo: 28,
     home: team("Mexico"),
     away: team("Korea Republic"),
   },
   {
-    dateLabel: "JUN 18",
-    time: "20:00",
-    timeSuffix: "GST",
+    matchNo: 25,
     home: team("Czechia"),
     away: team("South Africa"),
   },
   {
-    dateLabel: "JUN 18",
-    time: "23:00",
-    timeSuffix: "GST",
+    matchNo: 26,
     home: team("Switzerland"),
     away: team("Bosnia and Herzegovina"),
   },
   {
-    dateLabel: "JUN 19",
-    time: "02:00",
-    timeSuffix: "GST",
+    matchNo: 30,
     home: team("Scotland"),
     away: team("Morocco"),
   },
   {
-    dateLabel: "JUN 19",
-    time: "04:30",
-    timeSuffix: "GST",
+    matchNo: 29,
     home: team("Brazil"),
     away: team("Haiti"),
   },
   {
-    dateLabel: "JUN 19",
-    time: "07:00",
-    timeSuffix: "GST",
+    matchNo: 31,
     home: team("Türkiye"),
     away: team("Paraguay"),
   },
   {
-    dateLabel: "JUN 19",
-    time: "23:00",
-    timeSuffix: "GST",
+    matchNo: 32,
     home: team("USA"),
     away: team("Australia"),
   },
   {
-    dateLabel: "JUN 20",
-    time: "00:00",
-    timeSuffix: "GST",
+    matchNo: 33,
     home: team("Germany"),
-    away: team("Côte d\'Ivoire"),
+    away: team("Côte d\\'Ivoire"),
   },
   {
-    dateLabel: "JUN 20",
-    time: "04:00",
-    timeSuffix: "GST",
+    matchNo: 34,
     home: team("Ecuador"),
     away: team("Curaçao"),
   },
   {
-    dateLabel: "JUN 20",
-    time: "08:00",
-    timeSuffix: "GST",
+    matchNo: 36,
     home: team("Tunisia"),
     away: team("Japan"),
   },
   {
-    dateLabel: "JUN 20",
-    time: "21:00",
-    timeSuffix: "GST",
+    matchNo: 35,
     home: team("Netherlands"),
     away: team("Sweden"),
   },
   {
-    dateLabel: "JUN 21",
-    time: "02:00",
-    timeSuffix: "GST",
+    matchNo: 37,
     home: team("Uruguay"),
     away: team("Cabo Verde"),
   },
   {
-    dateLabel: "JUN 21",
-    time: "05:00",
-    timeSuffix: "GST",
+    matchNo: 40,
     home: team("New Zealand"),
     away: team("Egypt"),
   },
   {
-    dateLabel: "JUN 21",
-    time: "20:00",
-    timeSuffix: "GST",
+    matchNo: 38,
     home: team("Spain"),
     away: team("Saudi Arabia"),
   },
   {
-    dateLabel: "JUN 21",
-    time: "23:00",
-    timeSuffix: "GST",
+    matchNo: 39,
     home: team("Belgium"),
     away: team("IR Iran"),
   },
   {
-    dateLabel: "JUN 22",
-    time: "01:00",
-    timeSuffix: "GST",
+    matchNo: 42,
     home: team("France"),
     away: team("Iraq"),
   },
   {
-    dateLabel: "JUN 22",
-    time: "04:00",
-    timeSuffix: "GST",
+    matchNo: 41,
     home: team("Norway"),
     away: team("Senegal"),
   },
   {
-    dateLabel: "JUN 22",
-    time: "07:00",
-    timeSuffix: "GST",
+    matchNo: 44,
     home: team("Jordan"),
     away: team("Algeria"),
   },
   {
-    dateLabel: "JUN 22",
-    time: "21:00",
-    timeSuffix: "GST",
+    matchNo: 43,
     home: team("Argentina"),
     away: team("Austria"),
   },
   {
-    dateLabel: "JUN 23",
-    time: "00:00",
-    timeSuffix: "GST",
+    matchNo: 45,
     home: team("England"),
     away: team("Ghana"),
   },
   {
-    dateLabel: "JUN 23",
-    time: "03:00",
-    timeSuffix: "GST",
+    matchNo: 46,
     home: team("Panama"),
     away: team("Croatia"),
   },
   {
-    dateLabel: "JUN 23",
-    time: "06:00",
-    timeSuffix: "GST",
+    matchNo: 48,
     home: team("Colombia"),
     away: team("Congo DR"),
   },
   {
-    dateLabel: "JUN 23",
-    time: "21:00",
-    timeSuffix: "GST",
+    matchNo: 47,
     home: team("Portugal"),
     away: team("Uzbekistan"),
   },
   {
-    dateLabel: "JUN 24",
-    time: "02:00",
-    timeSuffix: "GST",
+    matchNo: 49,
     home: team("Scotland"),
     away: team("Brazil"),
   },
   {
-    dateLabel: "JUN 24",
-    time: "02:00",
-    timeSuffix: "GST",
+    matchNo: 50,
     home: team("Morocco"),
     away: team("Haiti"),
   },
   {
-    dateLabel: "JUN 24",
-    time: "05:00",
-    timeSuffix: "GST",
+    matchNo: 53,
     home: team("Czechia"),
     away: team("Mexico"),
   },
   {
-    dateLabel: "JUN 24",
-    time: "05:00",
-    timeSuffix: "GST",
+    matchNo: 54,
     home: team("South Africa"),
     away: team("Korea Republic"),
   },
   {
-    dateLabel: "JUN 24",
-    time: "23:00",
-    timeSuffix: "GST",
+    matchNo: 51,
     home: team("Switzerland"),
     away: team("Canada"),
   },
   {
-    dateLabel: "JUN 24",
-    time: "23:00",
-    timeSuffix: "GST",
+    matchNo: 52,
     home: team("Bosnia and Herzegovina"),
     away: team("Qatar"),
   },
   {
-    dateLabel: "JUN 25",
-    time: "00:00",
-    timeSuffix: "GST",
+    matchNo: 55,
     home: team("Curaçao"),
-    away: team("Côte d\'Ivoire"),
+    away: team("Côte d\\'Ivoire"),
   },
   {
-    dateLabel: "JUN 25",
-    time: "00:00",
-    timeSuffix: "GST",
+    matchNo: 56,
     home: team("Ecuador"),
     away: team("Germany"),
   },
   {
-    dateLabel: "JUN 25",
-    time: "03:00",
-    timeSuffix: "GST",
+    matchNo: 57,
     home: team("Japan"),
     away: team("Sweden"),
   },
   {
-    dateLabel: "JUN 25",
-    time: "03:00",
-    timeSuffix: "GST",
+    matchNo: 58,
     home: team("Tunisia"),
     away: team("Netherlands"),
   },
   {
-    dateLabel: "JUN 25",
-    time: "06:00",
-    timeSuffix: "GST",
+    matchNo: 59,
     home: team("Türkiye"),
     away: team("USA"),
   },
   {
-    dateLabel: "JUN 25",
-    time: "06:00",
-    timeSuffix: "GST",
+    matchNo: 60,
     home: team("Paraguay"),
     away: team("Australia"),
   },
   {
-    dateLabel: "JUN 26",
-    time: "04:00",
-    timeSuffix: "GST",
+    matchNo: 65,
     home: team("Cabo Verde"),
     away: team("Saudi Arabia"),
   },
   {
-    dateLabel: "JUN 26",
-    time: "04:00",
-    timeSuffix: "GST",
+    matchNo: 66,
     home: team("Uruguay"),
     away: team("Spain"),
   },
   {
-    dateLabel: "JUN 26",
-    time: "07:00",
-    timeSuffix: "GST",
+    matchNo: 63,
     home: team("Egypt"),
     away: team("IR Iran"),
   },
   {
-    dateLabel: "JUN 26",
-    time: "07:00",
-    timeSuffix: "GST",
+    matchNo: 64,
     home: team("New Zealand"),
     away: team("Belgium"),
   },
   {
-    dateLabel: "JUN 26",
-    time: "23:00",
-    timeSuffix: "GST",
+    matchNo: 61,
     home: team("Norway"),
     away: team("France"),
   },
   {
-    dateLabel: "JUN 26",
-    time: "23:00",
-    timeSuffix: "GST",
+    matchNo: 62,
     home: team("Senegal"),
     away: team("Iraq"),
   },
   {
-    dateLabel: "JUN 27",
-    time: "01:00",
-    timeSuffix: "GST",
+    matchNo: 67,
     home: team("Panama"),
     away: team("England"),
   },
   {
-    dateLabel: "JUN 27",
-    time: "01:00",
-    timeSuffix: "GST",
+    matchNo: 68,
     home: team("Croatia"),
     away: team("Ghana"),
   },
   {
-    dateLabel: "JUN 27",
-    time: "03:30",
-    timeSuffix: "GST",
+    matchNo: 71,
     home: team("Colombia"),
     away: team("Portugal"),
   },
   {
-    dateLabel: "JUN 27",
-    time: "03:30",
-    timeSuffix: "GST",
+    matchNo: 72,
     home: team("Congo DR"),
     away: team("Uzbekistan"),
   },
   {
-    dateLabel: "JUN 27",
-    time: "06:00",
-    timeSuffix: "GST",
+    matchNo: 69,
     home: team("Algeria"),
     away: team("Austria"),
   },
   {
-    dateLabel: "JUN 27",
-    time: "06:00",
-    timeSuffix: "GST",
+    matchNo: 70,
     home: team("Jordan"),
     away: team("Argentina"),
   },
   {
-    dateLabel: "JUN 28",
-    time: "23:00",
-    timeSuffix: "GST",
+    matchNo: 73,
     home: team("Group A runners-up"),
     away: team("Group B runners-up"),
   },
   {
-    dateLabel: "JUN 29",
-    time: "21:00",
-    timeSuffix: "GST",
+    matchNo: 76,
     home: team("Group C winners"),
     away: team("Group F runners-up"),
   },
   {
-    dateLabel: "JUN 30",
-    time: "00:30",
-    timeSuffix: "GST",
+    matchNo: 74,
     home: team("Group E winners"),
     away: team("Group A/B/C/D/F third place"),
   },
   {
-    dateLabel: "JUN 30",
-    time: "05:00",
-    timeSuffix: "GST",
+    matchNo: 75,
     home: team("Group F winners"),
     away: team("Group C runners-up"),
   },
   {
-    dateLabel: "JUN 30",
-    time: "21:00",
-    timeSuffix: "GST",
+    matchNo: 78,
     home: team("Group E runners-up"),
     away: team("Group I runners-up"),
   },
   {
-    dateLabel: "JUL 1",
-    time: "01:00",
-    timeSuffix: "GST",
+    matchNo: 77,
     home: team("Group I winners"),
     away: team("Group C/D/F/G/H third place"),
   },
   {
-    dateLabel: "JUL 1",
-    time: "05:00",
-    timeSuffix: "GST",
+    matchNo: 79,
     home: team("Group A winners"),
     away: team("Group C/E/F/H/I third place"),
   },
   {
-    dateLabel: "JUL 1",
-    time: "20:00",
-    timeSuffix: "GST",
+    matchNo: 80,
     home: team("Group L winners"),
     away: team("Group E/H/I/J/K third place"),
   },
   {
-    dateLabel: "JUL 2",
-    time: "00:00",
-    timeSuffix: "GST",
+    matchNo: 82,
     home: team("Group G winners"),
     away: team("Group A/E/H/I/J third place"),
   },
   {
-    dateLabel: "JUL 2",
-    time: "04:00",
-    timeSuffix: "GST",
+    matchNo: 81,
     home: team("Group D winners"),
     away: team("Group B/E/F/I/J third place"),
   },
   {
-    dateLabel: "JUL 2",
-    time: "23:00",
-    timeSuffix: "GST",
+    matchNo: 84,
     home: team("Group H winners"),
     away: team("Group J runners-up"),
   },
   {
-    dateLabel: "JUL 3",
-    time: "03:00",
-    timeSuffix: "GST",
+    matchNo: 83,
     home: team("Group K runners-up"),
     away: team("Group L runners-up"),
   },
   {
-    dateLabel: "JUL 3",
-    time: "07:00",
-    timeSuffix: "GST",
+    matchNo: 85,
     home: team("Group B winners"),
     away: team("Group E/F/G/I/J third place"),
   },
   {
-    dateLabel: "JUL 3",
-    time: "22:00",
-    timeSuffix: "GST",
+    matchNo: 88,
     home: team("Group D runners-up"),
     away: team("Group G runners-up"),
   },
   {
-    dateLabel: "JUL 4",
-    time: "02:00",
-    timeSuffix: "GST",
+    matchNo: 86,
     home: team("Group J winners"),
     away: team("Group H runners-up"),
   },
   {
-    dateLabel: "JUL 4",
-    time: "05:30",
-    timeSuffix: "GST",
+    matchNo: 87,
     home: team("Group K winners"),
     away: team("Group D/E/I/J/L third place"),
   },
   {
-    dateLabel: "JUL 4",
-    time: "21:00",
-    timeSuffix: "GST",
+    matchNo: 90,
     home: team("Winner Match 73"),
     away: team("Winner Match 75"),
   },
   {
-    dateLabel: "JUL 5",
-    time: "01:00",
-    timeSuffix: "GST",
+    matchNo: 89,
     home: team("Winner Match 74"),
     away: team("Winner Match 77"),
   },
   {
-    dateLabel: "JUL 6",
-    time: "00:00",
-    timeSuffix: "GST",
+    matchNo: 91,
     home: team("Winner Match 76"),
     away: team("Winner Match 78"),
   },
   {
-    dateLabel: "JUL 6",
-    time: "04:00",
-    timeSuffix: "GST",
+    matchNo: 92,
     home: team("Winner Match 79"),
     away: team("Winner Match 80"),
   },
   {
-    dateLabel: "JUL 6",
-    time: "23:00",
-    timeSuffix: "GST",
+    matchNo: 93,
     home: team("Winner Match 83"),
     away: team("Winner Match 84"),
   },
   {
-    dateLabel: "JUL 7",
-    time: "04:00",
-    timeSuffix: "GST",
+    matchNo: 94,
     home: team("Winner Match 81"),
     away: team("Winner Match 82"),
   },
   {
-    dateLabel: "JUL 7",
-    time: "20:00",
-    timeSuffix: "GST",
+    matchNo: 95,
     home: team("Winner Match 86"),
     away: team("Winner Match 88"),
   },
   {
-    dateLabel: "JUL 8",
-    time: "00:00",
-    timeSuffix: "GST",
+    matchNo: 96,
     home: team("Winner Match 85"),
     away: team("Winner Match 87"),
   },
   {
-    dateLabel: "JUL 10",
-    time: "00:00",
-    timeSuffix: "GST",
+    matchNo: 97,
     home: team("Winner Match 89"),
     away: team("Winner Match 90"),
   },
   {
-    dateLabel: "JUL 10",
-    time: "23:00",
-    timeSuffix: "GST",
+    matchNo: 98,
     home: team("Winner Match 93"),
     away: team("Winner Match 94"),
   },
   {
-    dateLabel: "JUL 12",
-    time: "01:00",
-    timeSuffix: "GST",
+    matchNo: 99,
     home: team("Winner Match 91"),
     away: team("Winner Match 92"),
   },
   {
-    dateLabel: "JUL 12",
-    time: "05:00",
-    timeSuffix: "GST",
+    matchNo: 100,
     home: team("Winner Match 95"),
     away: team("Winner Match 96"),
   },
   {
-    dateLabel: "JUL 14",
-    time: "23:00",
-    timeSuffix: "GST",
+    matchNo: 101,
     home: team("Winner Match 97"),
     away: team("Winner Match 98"),
   },
   {
-    dateLabel: "JUL 15",
-    time: "23:00",
-    timeSuffix: "GST",
+    matchNo: 102,
     home: team("Winner Match 99"),
     away: team("Winner Match 100"),
   },
   {
-    dateLabel: "JUL 19",
-    time: "01:00",
-    timeSuffix: "GST",
+    matchNo: 103,
     home: team("Runner-up Match 101"),
     away: team("Runner-up Match 102"),
   },
   {
-    dateLabel: "JUL 19",
-    time: "23:00",
-    timeSuffix: "GST",
+    matchNo: 104,
     home: team("Winner Match 101"),
     away: team("Winner Match 102"),
   },
 ];
 
+export const MATCHES: MatchFixture[] = MATCH_FIXTURES.map(buildMatch);
+
 const MONTH_ABBREV_TO_INDEX: Record<string, number> = {
   JAN: 0, FEB: 1, MAR: 2, APR: 3, MAY: 4, JUN: 5,
   JUL: 6, AUG: 7, SEP: 8, OCT: 9, NOV: 10, DEC: 11,
 };
+
+const MONTH_DISPLAY_ABBREVS = [
+  "JAN", "FEB", "MAR", "APR", "MAY", "JUN",
+  "JUL", "AUG", "SEP", "OCT", "NOV", "DEC",
+] as const;
 
 export type MatchCalendarDate = {
   dateLabel: string;
@@ -772,8 +592,39 @@ export type MatchCalendarDate = {
   day: number;
 };
 
+const ISO_DATE_LABEL_RE = /^(\d{4})-(\d{1,2})-(\d{1,2})$/;
+
+/** Canonical YYYY-MM-DD, or the original label for legacy month abbrev formats. */
+export function normalizeMatchDateLabel(dateLabel: string): string {
+  const trimmed = dateLabel.trim();
+  const iso = trimmed.match(ISO_DATE_LABEL_RE);
+  if (!iso) return trimmed;
+
+  const year = iso[1];
+  const month = (iso[2] ?? "").padStart(2, "0");
+  const day = (iso[3] ?? "").padStart(2, "0");
+  return `${year}-${month}-${day}`;
+}
+
 export function parseMatchDateLabel(dateLabel: string): { month: number; day: number } {
-  const parts = dateLabel.trim().split(/\s+/);
+  const trimmed = dateLabel.trim();
+  const iso = trimmed.match(ISO_DATE_LABEL_RE);
+  if (iso) {
+    const month = Number.parseInt(iso[2] ?? "", 10) - 1;
+    const day = Number.parseInt(iso[3] ?? "", 10);
+    if (
+      Number.isNaN(month) ||
+      Number.isNaN(day) ||
+      month < 0 ||
+      month > 11 ||
+      day < 1 ||
+      day > 31
+    ) {
+      throw new Error(`Invalid UAE match date: ${dateLabel}`);
+    }
+    return { month, day };
+  }
+  const parts = trimmed.split(/\s+/);
   const month = MONTH_ABBREV_TO_INDEX[parts[0]?.toUpperCase() ?? ""];
   const day = Number.parseInt(parts[1] ?? "", 10);
   if (month === undefined || Number.isNaN(day)) {
@@ -782,10 +633,10 @@ export function parseMatchDateLabel(dateLabel: string): { month: number; day: nu
   return { month, day };
 }
 
-export function getUniqueMatchDates(): string[] {
+export function getUniqueMatchDates(matches: MatchFixture[] = MATCHES): string[] {
   const seen = new Set<string>();
   const dates: string[] = [];
-  for (const match of MATCHES) {
+  for (const match of matches) {
     if (seen.has(match.dateLabel)) continue;
     seen.add(match.dateLabel);
     dates.push(match.dateLabel);
@@ -794,11 +645,14 @@ export function getUniqueMatchDates(): string[] {
 }
 
 /** Unique match dates with calendar coordinates for the date picker. */
-export function getMatchCalendarDates(): MatchCalendarDate[] {
-  return getUniqueMatchDates()
+export function getMatchCalendarDates(matches: MatchFixture[] = MATCHES): MatchCalendarDate[] {
+  return getUniqueMatchDates(matches)
     .map((dateLabel) => {
       const { month, day } = parseMatchDateLabel(dateLabel);
-      return { dateLabel, year: MATCH_CALENDAR_YEAR, month, day };
+      const year = ISO_DATE_LABEL_RE.test(dateLabel.trim())
+        ? Number.parseInt(dateLabel.slice(0, 4), 10)
+        : MATCH_CALENDAR_YEAR;
+      return { dateLabel, year, month, day };
     })
     .sort((a, b) => {
       if (a.month !== b.month) return a.month - b.month;
@@ -835,24 +689,58 @@ export function getMatchesSortedChronologically(
   return [...matches].sort(compareMatchesChronologically);
 }
 
-export function resolveDateLabelFromParam(param: string | null): string | null {
+export function resolveDateLabelFromParam(
+  param: string | null,
+  matches: MatchFixture[] = MATCHES,
+): string | null {
   if (!param) return null;
+  return migrateLegacyDateLabel(decodeDateParam(param), matches);
+}
+
+export function decodeDateParam(param: string): string {
   let decoded = param.replace(/\+/g, " ");
   try {
     decoded = decodeURIComponent(decoded);
   } catch {
     decoded = param;
   }
-  const normalized = decoded.trim().replace(/\s+/g, " ");
-  const upper = normalized.toUpperCase();
-  for (const label of getUniqueMatchDates()) {
+  return decoded.trim();
+}
+
+/** Map legacy labels like "JUN 11" to current UAE date keys such as "2026-06-11". */
+export function migrateLegacyDateLabel(
+  date: string | null,
+  matches: MatchFixture[] = MATCHES,
+): string | null {
+  if (!date) return null;
+  const normalized = date.trim();
+  if (ISO_DATE_LABEL_RE.test(normalized)) {
+    try {
+      parseMatchDateLabel(normalized);
+      return normalizeMatchDateLabel(normalized);
+    } catch {
+      return null;
+    }
+  }
+
+  const spaced = normalized.replace(/\s+/g, " ");
+  const upper = spaced.toUpperCase();
+  for (const label of getUniqueMatchDates(matches)) {
     if (label.toUpperCase() === upper) return label;
   }
+
   const parts = upper.match(/^([A-Z]{3})\s+(\d{1,2})$/);
   if (!parts) return null;
-  const candidate = `${parts[1]} ${Number.parseInt(parts[2] ?? "", 10)}`;
+
+  const monthIndex = MONTH_ABBREV_TO_INDEX[parts[1] ?? ""];
+  const day = Number.parseInt(parts[2] ?? "", 10);
+  if (monthIndex === undefined || Number.isNaN(day)) return null;
+
   return (
-    getUniqueMatchDates().find((label) => label.toUpperCase() === candidate) ?? null
+    getUniqueMatchDates(matches).find((label) => {
+      const parsed = parseMatchDateLabel(label);
+      return parsed.month === monthIndex && parsed.day === day;
+    }) ?? null
   );
 }
 
@@ -915,7 +803,7 @@ export function formatMatchDateDisplay(
   if (language === "ar") {
     return `${day} ${MONTH_NAMES_AR[month]}`;
   }
-  return dateLabel;
+  return `${MONTH_DISPLAY_ABBREVS[month]} ${day}`;
 }
 
 /** e.g. "JUN 17" → "17TH JUNE 2026" or "17 يونيو 2026" */

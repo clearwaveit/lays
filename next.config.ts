@@ -28,6 +28,11 @@ const nextConfig: NextConfig = {
   /** Hides `X-Powered-By: Next.js` in production (cosmetic / minor hardening). */
   poweredByHeader: false,
 
+  experimental: {
+    /** Admin save/upload can exceed the default 10MB when proxy.ts is enabled. */
+    proxyClientMaxBodySize: "25mb",
+  },
+
   /**
    * Avoid repeated browser warnings from <Image quality={100}> usages.
    * Next 16 defaults to [75], so explicitly allow both project qualities.

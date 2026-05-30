@@ -1,33 +1,35 @@
 {
   "matches": [
     {
-      "dateLabel": "JUN 11",
-      "time": "06:00",
-      "timeSuffix": "GST",
+      "matchNo": 2,
       "home": {
         "name": "Korea Republic",
-        "flag": "https://flagcdn.com/w160/kr.png"
+        "flag": "https://flagcdn.com/w320/kr.png"
       },
       "away": {
         "name": "Czechia",
-        "flag": "https://flagcdn.com/w160/cz.png"
+        "flag": "https://flagcdn.com/w320/cz.png"
       },
+      "dateLabel": "2026-06-12",
+      "time": "06:00",
+      "timeSuffix": "GST",
       "venueIds": [
         "mcgettigans-dubai"
       ]
     },
     {
-      "dateLabel": "JUN 11",
-      "time": "23:00",
-      "timeSuffix": "GST",
+      "matchNo": 1,
       "home": {
         "name": "Mexico",
-        "flag": "https://flagcdn.com/w160/mx.png"
+        "flag": "https://flagcdn.com/w320/mx.png"
       },
       "away": {
         "name": "South Africa",
-        "flag": "https://flagcdn.com/w160/za.png"
+        "flag": "https://flagcdn.com/w320/za.png"
       },
+      "dateLabel": "2026-06-11",
+      "time": "23:00",
+      "timeSuffix": "GST",
       "venueIds": [
         "mcgettigans-dubai",
         "mcgettigans-abu-dhabi",
@@ -38,17 +40,18 @@
       ]
     },
     {
-      "dateLabel": "JUN 12",
-      "time": "05:00",
-      "timeSuffix": "GST",
+      "matchNo": 4,
       "home": {
         "name": "USA",
-        "flag": "https://flagcdn.com/w160/us.png"
+        "flag": "https://flagcdn.com/w320/us.png"
       },
       "away": {
         "name": "Paraguay",
-        "flag": "https://flagcdn.com/w160/py.png"
+        "flag": "https://flagcdn.com/w320/py.png"
       },
+      "dateLabel": "2026-06-13",
+      "time": "05:00",
+      "timeSuffix": "GST",
       "venueIds": [
         "mcgettigans-dubai",
         "mcgettigans-abu-dhabi",
@@ -59,17 +62,18 @@
       ]
     },
     {
-      "dateLabel": "JUN 12",
-      "time": "23:00",
-      "timeSuffix": "GST",
+      "matchNo": 3,
       "home": {
         "name": "Canada",
-        "flag": "https://flagcdn.com/w160/ca.png"
+        "flag": "https://flagcdn.com/w320/ca.png"
       },
       "away": {
         "name": "Bosnia and Herzegovina",
-        "flag": "https://flagcdn.com/w160/ba.png"
+        "flag": "https://flagcdn.com/w320/ba.png"
       },
+      "dateLabel": "2026-06-12",
+      "time": "23:00",
+      "timeSuffix": "GST",
       "venueIds": [
         "mcgettigans-dubai",
         "mcgettigans-abu-dhabi",
@@ -80,17 +84,18 @@
       ]
     },
     {
-      "dateLabel": "JUN 13",
-      "time": "02:00",
-      "timeSuffix": "GST",
+      "matchNo": 7,
       "home": {
         "name": "Brazil",
-        "flag": "https://flagcdn.com/w160/br.png"
+        "flag": "https://flagcdn.com/w320/br.png"
       },
       "away": {
         "name": "Morocco",
-        "flag": "https://flagcdn.com/w160/ma.png"
+        "flag": "https://flagcdn.com/w320/ma.png"
       },
+      "dateLabel": "2026-06-14",
+      "time": "02:00",
+      "timeSuffix": "GST",
       "venueIds": [
         "mcgettigans-dubai",
         "mcgettigans-abu-dhabi",
@@ -101,17 +106,18 @@
       ]
     },
     {
-      "dateLabel": "JUN 13",
-      "time": "05:00",
-      "timeSuffix": "GST",
+      "matchNo": 5,
       "home": {
         "name": "Haiti",
-        "flag": "https://flagcdn.com/w160/ht.png"
+        "flag": "https://flagcdn.com/w320/ht.png"
       },
       "away": {
         "name": "Scotland",
-        "flag": "https://flagcdn.com/w160/gb-sct.png"
+        "flag": "https://flagcdn.com/w320/gb-sct.png"
       },
+      "dateLabel": "2026-06-14",
+      "time": "05:00",
+      "timeSuffix": "GST",
       "venueIds": [
         "mcgettigans-dubai",
         "mcgettigans-abu-dhabi",
@@ -122,17 +128,18 @@
       ]
     },
     {
-      "dateLabel": "JUN 13",
-      "time": "08:00",
-      "timeSuffix": "GST",
+      "matchNo": 6,
       "home": {
         "name": "Australia",
-        "flag": "https://flagcdn.com/w160/au.png"
+        "flag": "https://flagcdn.com/w320/au.png"
       },
       "away": {
         "name": "Türkiye",
-        "flag": "https://flagcdn.com/w160/tr.png"
+        "flag": "https://flagcdn.com/w320/tr.png"
       },
+      "dateLabel": "2026-06-14",
+      "time": "08:00",
+      "timeSuffix": "GST",
       "venueIds": [
         "mcgettigans-dubai",
         "mcgettigans-abu-dhabi",
@@ -143,17 +150,18 @@
       ]
     },
     {
-      "dateLabel": "JUN 13",
-      "time": "23:00",
-      "timeSuffix": "GST",
+      "matchNo": 8,
       "home": {
         "name": "Qatar",
-        "flag": "https://flagcdn.com/w160/qa.png"
+        "flag": "https://flagcdn.com/w320/qa.png"
       },
       "away": {
         "name": "Switzerland",
-        "flag": "https://flagcdn.com/w160/ch.png"
+        "flag": "https://flagcdn.com/w320/ch.png"
       },
+      "dateLabel": "2026-06-13",
+      "time": "23:00",
+      "timeSuffix": "GST",
       "venueIds": [
         "mcgettigans-dubai",
         "mcgettigans-abu-dhabi",
@@ -164,17 +172,18 @@
       ]
     },
     {
-      "dateLabel": "JUN 14",
-      "time": "00:00",
-      "timeSuffix": "GST",
+      "matchNo": 11,
       "home": {
         "name": "Netherlands",
-        "flag": "https://flagcdn.com/w160/nl.png"
+        "flag": "https://flagcdn.com/w320/nl.png"
       },
       "away": {
         "name": "Japan",
-        "flag": "https://flagcdn.com/w160/jp.png"
+        "flag": "https://flagcdn.com/w320/jp.png"
       },
+      "dateLabel": "2026-06-15",
+      "time": "00:00",
+      "timeSuffix": "GST",
       "venueIds": [
         "mcgettigans-dubai",
         "mcgettigans-abu-dhabi",
@@ -185,17 +194,18 @@
       ]
     },
     {
-      "dateLabel": "JUN 14",
-      "time": "03:00",
-      "timeSuffix": "GST",
+      "matchNo": 9,
       "home": {
-        "name": "Côte d'Ivoire",
-        "flag": "https://flagcdn.com/w160/ci.png"
+        "name": "Côte d\\'Ivoire",
+        "flag": "/assets/imgs/football.png"
       },
       "away": {
         "name": "Ecuador",
-        "flag": "https://flagcdn.com/w160/ec.png"
+        "flag": "https://flagcdn.com/w320/ec.png"
       },
+      "dateLabel": "2026-06-15",
+      "time": "03:00",
+      "timeSuffix": "GST",
       "venueIds": [
         "mcgettigans-dubai",
         "mcgettigans-abu-dhabi",
@@ -206,17 +216,18 @@
       ]
     },
     {
-      "dateLabel": "JUN 14",
-      "time": "06:00",
-      "timeSuffix": "GST",
+      "matchNo": 12,
       "home": {
         "name": "Sweden",
-        "flag": "https://flagcdn.com/w160/se.png"
+        "flag": "https://flagcdn.com/w320/se.png"
       },
       "away": {
         "name": "Tunisia",
-        "flag": "https://flagcdn.com/w160/tn.png"
+        "flag": "https://flagcdn.com/w320/tn.png"
       },
+      "dateLabel": "2026-06-15",
+      "time": "06:00",
+      "timeSuffix": "GST",
       "venueIds": [
         "mcgettigans-dubai",
         "mcgettigans-abu-dhabi",
@@ -227,17 +238,18 @@
       ]
     },
     {
-      "dateLabel": "JUN 14",
-      "time": "21:00",
-      "timeSuffix": "GST",
+      "matchNo": 10,
       "home": {
         "name": "Germany",
-        "flag": "https://flagcdn.com/w160/de.png"
+        "flag": "https://flagcdn.com/w320/de.png"
       },
       "away": {
         "name": "Curaçao",
-        "flag": "https://flagcdn.com/w160/cw.png"
+        "flag": "https://flagcdn.com/w320/cw.png"
       },
+      "dateLabel": "2026-06-14",
+      "time": "21:00",
+      "timeSuffix": "GST",
       "venueIds": [
         "mcgettigans-dubai",
         "mcgettigans-abu-dhabi",
@@ -248,17 +260,18 @@
       ]
     },
     {
-      "dateLabel": "JUN 15",
-      "time": "02:00",
-      "timeSuffix": "GST",
+      "matchNo": 13,
       "home": {
         "name": "Saudi Arabia",
-        "flag": "https://flagcdn.com/w160/sa.png"
+        "flag": "https://flagcdn.com/w320/sa.png"
       },
       "away": {
         "name": "Uruguay",
-        "flag": "https://flagcdn.com/w160/uy.png"
+        "flag": "https://flagcdn.com/w320/uy.png"
       },
+      "dateLabel": "2026-06-16",
+      "time": "02:00",
+      "timeSuffix": "GST",
       "venueIds": [
         "mcgettigans-dubai",
         "mcgettigans-abu-dhabi",
@@ -269,17 +282,18 @@
       ]
     },
     {
-      "dateLabel": "JUN 15",
-      "time": "05:00",
-      "timeSuffix": "GST",
+      "matchNo": 15,
       "home": {
         "name": "IR Iran",
-        "flag": "https://flagcdn.com/w160/ir.png"
+        "flag": "https://flagcdn.com/w320/ir.png"
       },
       "away": {
         "name": "New Zealand",
-        "flag": "https://flagcdn.com/w160/nz.png"
+        "flag": "https://flagcdn.com/w320/nz.png"
       },
+      "dateLabel": "2026-06-16",
+      "time": "05:00",
+      "timeSuffix": "GST",
       "venueIds": [
         "mcgettigans-dubai",
         "mcgettigans-abu-dhabi",
@@ -290,17 +304,18 @@
       ]
     },
     {
-      "dateLabel": "JUN 15",
-      "time": "20:00",
-      "timeSuffix": "GST",
+      "matchNo": 14,
       "home": {
         "name": "Spain",
-        "flag": "https://flagcdn.com/w160/es.png"
+        "flag": "https://flagcdn.com/w320/es.png"
       },
       "away": {
         "name": "Cabo Verde",
-        "flag": "https://flagcdn.com/w160/cv.png"
+        "flag": "https://flagcdn.com/w320/cv.png"
       },
+      "dateLabel": "2026-06-15",
+      "time": "20:00",
+      "timeSuffix": "GST",
       "venueIds": [
         "mcgettigans-dubai",
         "mcgettigans-abu-dhabi",
@@ -311,17 +326,18 @@
       ]
     },
     {
-      "dateLabel": "JUN 15",
-      "time": "23:00",
-      "timeSuffix": "GST",
+      "matchNo": 16,
       "home": {
         "name": "Belgium",
-        "flag": "https://flagcdn.com/w160/be.png"
+        "flag": "https://flagcdn.com/w320/be.png"
       },
       "away": {
         "name": "Egypt",
-        "flag": "https://flagcdn.com/w160/eg.png"
+        "flag": "https://flagcdn.com/w320/eg.png"
       },
+      "dateLabel": "2026-06-15",
+      "time": "23:00",
+      "timeSuffix": "GST",
       "venueIds": [
         "mcgettigans-dubai",
         "mcgettigans-abu-dhabi",
@@ -332,17 +348,18 @@
       ]
     },
     {
-      "dateLabel": "JUN 16",
-      "time": "02:00",
-      "timeSuffix": "GST",
+      "matchNo": 18,
       "home": {
         "name": "Iraq",
-        "flag": "https://flagcdn.com/w160/iq.png"
+        "flag": "https://flagcdn.com/w320/iq.png"
       },
       "away": {
         "name": "Norway",
-        "flag": "https://flagcdn.com/w160/no.png"
+        "flag": "https://flagcdn.com/w320/no.png"
       },
+      "dateLabel": "2026-06-17",
+      "time": "02:00",
+      "timeSuffix": "GST",
       "venueIds": [
         "mcgettigans-dubai",
         "mcgettigans-abu-dhabi",
@@ -353,17 +370,18 @@
       ]
     },
     {
-      "dateLabel": "JUN 16",
-      "time": "05:00",
-      "timeSuffix": "GST",
+      "matchNo": 19,
       "home": {
         "name": "Argentina",
-        "flag": "https://flagcdn.com/w160/ar.png"
+        "flag": "https://flagcdn.com/w320/ar.png"
       },
       "away": {
         "name": "Algeria",
-        "flag": "https://flagcdn.com/w160/dz.png"
+        "flag": "https://flagcdn.com/w320/dz.png"
       },
+      "dateLabel": "2026-06-17",
+      "time": "05:00",
+      "timeSuffix": "GST",
       "venueIds": [
         "mcgettigans-dubai",
         "mcgettigans-abu-dhabi",
@@ -374,17 +392,18 @@
       ]
     },
     {
-      "dateLabel": "JUN 16",
-      "time": "08:00",
-      "timeSuffix": "GST",
+      "matchNo": 20,
       "home": {
         "name": "Austria",
-        "flag": "https://flagcdn.com/w160/at.png"
+        "flag": "https://flagcdn.com/w320/at.png"
       },
       "away": {
         "name": "Jordan",
-        "flag": "https://flagcdn.com/w160/jo.png"
+        "flag": "https://flagcdn.com/w320/jo.png"
       },
+      "dateLabel": "2026-06-17",
+      "time": "08:00",
+      "timeSuffix": "GST",
       "venueIds": [
         "mcgettigans-dubai",
         "mcgettigans-abu-dhabi",
@@ -395,17 +414,18 @@
       ]
     },
     {
-      "dateLabel": "JUN 16",
-      "time": "23:00",
-      "timeSuffix": "GST",
+      "matchNo": 17,
       "home": {
         "name": "France",
-        "flag": "https://flagcdn.com/w160/fr.png"
+        "flag": "https://flagcdn.com/w320/fr.png"
       },
       "away": {
         "name": "Senegal",
-        "flag": "https://flagcdn.com/w160/sn.png"
+        "flag": "https://flagcdn.com/w320/sn.png"
       },
+      "dateLabel": "2026-06-16",
+      "time": "23:00",
+      "timeSuffix": "GST",
       "venueIds": [
         "mcgettigans-dubai",
         "mcgettigans-abu-dhabi",
@@ -416,17 +436,18 @@
       ]
     },
     {
-      "dateLabel": "JUN 17",
-      "time": "00:00",
-      "timeSuffix": "GST",
+      "matchNo": 22,
       "home": {
         "name": "England",
-        "flag": "https://flagcdn.com/w160/gb-eng.png"
+        "flag": "https://flagcdn.com/w320/gb-eng.png"
       },
       "away": {
         "name": "Croatia",
-        "flag": "https://flagcdn.com/w160/hr.png"
+        "flag": "https://flagcdn.com/w320/hr.png"
       },
+      "dateLabel": "2026-06-18",
+      "time": "00:00",
+      "timeSuffix": "GST",
       "venueIds": [
         "mcgettigans-dubai",
         "mcgettigans-abu-dhabi",
@@ -437,17 +458,18 @@
       ]
     },
     {
-      "dateLabel": "JUN 17",
-      "time": "03:00",
-      "timeSuffix": "GST",
+      "matchNo": 21,
       "home": {
         "name": "Ghana",
-        "flag": "https://flagcdn.com/w160/gh.png"
+        "flag": "https://flagcdn.com/w320/gh.png"
       },
       "away": {
         "name": "Panama",
-        "flag": "https://flagcdn.com/w160/pa.png"
+        "flag": "https://flagcdn.com/w320/pa.png"
       },
+      "dateLabel": "2026-06-18",
+      "time": "03:00",
+      "timeSuffix": "GST",
       "venueIds": [
         "mcgettigans-dubai",
         "mcgettigans-abu-dhabi",
@@ -458,17 +480,18 @@
       ]
     },
     {
-      "dateLabel": "JUN 17",
-      "time": "06:00",
-      "timeSuffix": "GST",
+      "matchNo": 24,
       "home": {
         "name": "Uzbekistan",
-        "flag": "https://flagcdn.com/w160/uz.png"
+        "flag": "https://flagcdn.com/w320/uz.png"
       },
       "away": {
         "name": "Colombia",
-        "flag": "https://flagcdn.com/w160/co.png"
+        "flag": "https://flagcdn.com/w320/co.png"
       },
+      "dateLabel": "2026-06-18",
+      "time": "06:00",
+      "timeSuffix": "GST",
       "venueIds": [
         "mcgettigans-dubai",
         "mcgettigans-abu-dhabi",
@@ -479,17 +502,18 @@
       ]
     },
     {
-      "dateLabel": "JUN 17",
-      "time": "21:00",
-      "timeSuffix": "GST",
+      "matchNo": 23,
       "home": {
         "name": "Portugal",
-        "flag": "https://flagcdn.com/w160/pt.png"
+        "flag": "https://flagcdn.com/w320/pt.png"
       },
       "away": {
         "name": "Congo DR",
-        "flag": "https://flagcdn.com/w160/cd.png"
+        "flag": "https://flagcdn.com/w320/cd.png"
       },
+      "dateLabel": "2026-06-17",
+      "time": "21:00",
+      "timeSuffix": "GST",
       "venueIds": [
         "mcgettigans-dubai",
         "mcgettigans-abu-dhabi",
@@ -500,17 +524,18 @@
       ]
     },
     {
-      "dateLabel": "JUN 18",
-      "time": "02:00",
-      "timeSuffix": "GST",
+      "matchNo": 27,
       "home": {
         "name": "Canada",
-        "flag": "https://flagcdn.com/w160/ca.png"
+        "flag": "https://flagcdn.com/w320/ca.png"
       },
       "away": {
         "name": "Qatar",
-        "flag": "https://flagcdn.com/w160/qa.png"
+        "flag": "https://flagcdn.com/w320/qa.png"
       },
+      "dateLabel": "2026-06-19",
+      "time": "02:00",
+      "timeSuffix": "GST",
       "venueIds": [
         "mcgettigans-dubai",
         "mcgettigans-abu-dhabi",
@@ -521,17 +546,18 @@
       ]
     },
     {
-      "dateLabel": "JUN 18",
-      "time": "05:00",
-      "timeSuffix": "GST",
+      "matchNo": 28,
       "home": {
         "name": "Mexico",
-        "flag": "https://flagcdn.com/w160/mx.png"
+        "flag": "https://flagcdn.com/w320/mx.png"
       },
       "away": {
         "name": "Korea Republic",
-        "flag": "https://flagcdn.com/w160/kr.png"
+        "flag": "https://flagcdn.com/w320/kr.png"
       },
+      "dateLabel": "2026-06-19",
+      "time": "05:00",
+      "timeSuffix": "GST",
       "venueIds": [
         "mcgettigans-dubai",
         "mcgettigans-abu-dhabi",
@@ -542,17 +568,18 @@
       ]
     },
     {
-      "dateLabel": "JUN 18",
-      "time": "20:00",
-      "timeSuffix": "GST",
+      "matchNo": 25,
       "home": {
         "name": "Czechia",
-        "flag": "https://flagcdn.com/w160/cz.png"
+        "flag": "https://flagcdn.com/w320/cz.png"
       },
       "away": {
         "name": "South Africa",
-        "flag": "https://flagcdn.com/w160/za.png"
+        "flag": "https://flagcdn.com/w320/za.png"
       },
+      "dateLabel": "2026-06-18",
+      "time": "20:00",
+      "timeSuffix": "GST",
       "venueIds": [
         "mcgettigans-dubai",
         "mcgettigans-abu-dhabi",
@@ -563,17 +590,18 @@
       ]
     },
     {
-      "dateLabel": "JUN 18",
-      "time": "23:00",
-      "timeSuffix": "GST",
+      "matchNo": 26,
       "home": {
         "name": "Switzerland",
-        "flag": "https://flagcdn.com/w160/ch.png"
+        "flag": "https://flagcdn.com/w320/ch.png"
       },
       "away": {
         "name": "Bosnia and Herzegovina",
-        "flag": "https://flagcdn.com/w160/ba.png"
+        "flag": "https://flagcdn.com/w320/ba.png"
       },
+      "dateLabel": "2026-06-18",
+      "time": "23:00",
+      "timeSuffix": "GST",
       "venueIds": [
         "mcgettigans-dubai",
         "mcgettigans-abu-dhabi",
@@ -584,17 +612,18 @@
       ]
     },
     {
-      "dateLabel": "JUN 19",
-      "time": "02:00",
-      "timeSuffix": "GST",
+      "matchNo": 30,
       "home": {
         "name": "Scotland",
-        "flag": "https://flagcdn.com/w160/gb-sct.png"
+        "flag": "https://flagcdn.com/w320/gb-sct.png"
       },
       "away": {
         "name": "Morocco",
-        "flag": "https://flagcdn.com/w160/ma.png"
+        "flag": "https://flagcdn.com/w320/ma.png"
       },
+      "dateLabel": "2026-06-20",
+      "time": "02:00",
+      "timeSuffix": "GST",
       "venueIds": [
         "mcgettigans-dubai",
         "mcgettigans-abu-dhabi",
@@ -605,17 +634,18 @@
       ]
     },
     {
-      "dateLabel": "JUN 19",
+      "matchNo": 29,
+      "home": {
+        "name": "Brazil",
+        "flag": "https://flagcdn.com/w320/br.png"
+      },
+      "away": {
+        "name": "Haiti",
+        "flag": "https://flagcdn.com/w320/ht.png"
+      },
+      "dateLabel": "2026-06-20",
       "time": "04:30",
       "timeSuffix": "GST",
-      "home": {
-        "name": "Brazil",
-        "flag": "https://flagcdn.com/w160/br.png"
-      },
-      "away": {
-        "name": "Haiti",
-        "flag": "https://flagcdn.com/w160/ht.png"
-      },
       "venueIds": [
         "mcgettigans-dubai",
         "mcgettigans-abu-dhabi",
@@ -626,17 +656,18 @@
       ]
     },
     {
-      "dateLabel": "JUN 19",
-      "time": "07:00",
-      "timeSuffix": "GST",
+      "matchNo": 31,
       "home": {
         "name": "Türkiye",
-        "flag": "https://flagcdn.com/w160/tr.png"
+        "flag": "https://flagcdn.com/w320/tr.png"
       },
       "away": {
         "name": "Paraguay",
-        "flag": "https://flagcdn.com/w160/py.png"
+        "flag": "https://flagcdn.com/w320/py.png"
       },
+      "dateLabel": "2026-06-20",
+      "time": "07:00",
+      "timeSuffix": "GST",
       "venueIds": [
         "mcgettigans-dubai",
         "mcgettigans-abu-dhabi",
@@ -647,17 +678,18 @@
       ]
     },
     {
-      "dateLabel": "JUN 19",
-      "time": "23:00",
-      "timeSuffix": "GST",
+      "matchNo": 32,
       "home": {
         "name": "USA",
-        "flag": "https://flagcdn.com/w160/us.png"
+        "flag": "https://flagcdn.com/w320/us.png"
       },
       "away": {
         "name": "Australia",
-        "flag": "https://flagcdn.com/w160/au.png"
+        "flag": "https://flagcdn.com/w320/au.png"
       },
+      "dateLabel": "2026-06-19",
+      "time": "23:00",
+      "timeSuffix": "GST",
       "venueIds": [
         "mcgettigans-dubai",
         "mcgettigans-abu-dhabi",
@@ -668,17 +700,18 @@
       ]
     },
     {
-      "dateLabel": "JUN 20",
-      "time": "00:00",
-      "timeSuffix": "GST",
+      "matchNo": 33,
       "home": {
         "name": "Germany",
-        "flag": "https://flagcdn.com/w160/de.png"
+        "flag": "https://flagcdn.com/w320/de.png"
       },
       "away": {
-        "name": "Côte d'Ivoire",
-        "flag": "https://flagcdn.com/w160/ci.png"
+        "name": "Côte d\\'Ivoire",
+        "flag": "/assets/imgs/football.png"
       },
+      "dateLabel": "2026-06-21",
+      "time": "00:00",
+      "timeSuffix": "GST",
       "venueIds": [
         "mcgettigans-dubai",
         "mcgettigans-abu-dhabi",
@@ -689,17 +722,18 @@
       ]
     },
     {
-      "dateLabel": "JUN 20",
-      "time": "04:00",
-      "timeSuffix": "GST",
+      "matchNo": 34,
       "home": {
         "name": "Ecuador",
-        "flag": "https://flagcdn.com/w160/ec.png"
+        "flag": "https://flagcdn.com/w320/ec.png"
       },
       "away": {
         "name": "Curaçao",
-        "flag": "https://flagcdn.com/w160/cw.png"
+        "flag": "https://flagcdn.com/w320/cw.png"
       },
+      "dateLabel": "2026-06-21",
+      "time": "04:00",
+      "timeSuffix": "GST",
       "venueIds": [
         "mcgettigans-dubai",
         "mcgettigans-abu-dhabi",
@@ -710,17 +744,18 @@
       ]
     },
     {
-      "dateLabel": "JUN 20",
-      "time": "08:00",
-      "timeSuffix": "GST",
+      "matchNo": 36,
       "home": {
         "name": "Tunisia",
-        "flag": "https://flagcdn.com/w160/tn.png"
+        "flag": "https://flagcdn.com/w320/tn.png"
       },
       "away": {
         "name": "Japan",
-        "flag": "https://flagcdn.com/w160/jp.png"
+        "flag": "https://flagcdn.com/w320/jp.png"
       },
+      "dateLabel": "2026-06-21",
+      "time": "08:00",
+      "timeSuffix": "GST",
       "venueIds": [
         "mcgettigans-dubai",
         "mcgettigans-abu-dhabi",
@@ -731,17 +766,18 @@
       ]
     },
     {
-      "dateLabel": "JUN 20",
-      "time": "21:00",
-      "timeSuffix": "GST",
+      "matchNo": 35,
       "home": {
         "name": "Netherlands",
-        "flag": "https://flagcdn.com/w160/nl.png"
+        "flag": "https://flagcdn.com/w320/nl.png"
       },
       "away": {
         "name": "Sweden",
-        "flag": "https://flagcdn.com/w160/se.png"
+        "flag": "https://flagcdn.com/w320/se.png"
       },
+      "dateLabel": "2026-06-20",
+      "time": "21:00",
+      "timeSuffix": "GST",
       "venueIds": [
         "mcgettigans-dubai",
         "mcgettigans-abu-dhabi",
@@ -752,17 +788,18 @@
       ]
     },
     {
-      "dateLabel": "JUN 21",
-      "time": "02:00",
-      "timeSuffix": "GST",
+      "matchNo": 37,
       "home": {
         "name": "Uruguay",
-        "flag": "https://flagcdn.com/w160/uy.png"
+        "flag": "https://flagcdn.com/w320/uy.png"
       },
       "away": {
         "name": "Cabo Verde",
-        "flag": "https://flagcdn.com/w160/cv.png"
+        "flag": "https://flagcdn.com/w320/cv.png"
       },
+      "dateLabel": "2026-06-22",
+      "time": "02:00",
+      "timeSuffix": "GST",
       "venueIds": [
         "mcgettigans-dubai",
         "mcgettigans-abu-dhabi",
@@ -773,17 +810,18 @@
       ]
     },
     {
-      "dateLabel": "JUN 21",
-      "time": "05:00",
-      "timeSuffix": "GST",
+      "matchNo": 40,
       "home": {
         "name": "New Zealand",
-        "flag": "https://flagcdn.com/w160/nz.png"
+        "flag": "https://flagcdn.com/w320/nz.png"
       },
       "away": {
         "name": "Egypt",
-        "flag": "https://flagcdn.com/w160/eg.png"
+        "flag": "https://flagcdn.com/w320/eg.png"
       },
+      "dateLabel": "2026-06-22",
+      "time": "05:00",
+      "timeSuffix": "GST",
       "venueIds": [
         "mcgettigans-dubai",
         "mcgettigans-abu-dhabi",
@@ -794,17 +832,18 @@
       ]
     },
     {
-      "dateLabel": "JUN 21",
-      "time": "20:00",
-      "timeSuffix": "GST",
+      "matchNo": 38,
       "home": {
         "name": "Spain",
-        "flag": "https://flagcdn.com/w160/es.png"
+        "flag": "https://flagcdn.com/w320/es.png"
       },
       "away": {
         "name": "Saudi Arabia",
-        "flag": "https://flagcdn.com/w160/sa.png"
+        "flag": "https://flagcdn.com/w320/sa.png"
       },
+      "dateLabel": "2026-06-21",
+      "time": "20:00",
+      "timeSuffix": "GST",
       "venueIds": [
         "mcgettigans-dubai",
         "mcgettigans-abu-dhabi",
@@ -815,17 +854,18 @@
       ]
     },
     {
-      "dateLabel": "JUN 21",
-      "time": "23:00",
-      "timeSuffix": "GST",
+      "matchNo": 39,
       "home": {
         "name": "Belgium",
-        "flag": "https://flagcdn.com/w160/be.png"
+        "flag": "https://flagcdn.com/w320/be.png"
       },
       "away": {
         "name": "IR Iran",
-        "flag": "https://flagcdn.com/w160/ir.png"
+        "flag": "https://flagcdn.com/w320/ir.png"
       },
+      "dateLabel": "2026-06-21",
+      "time": "23:00",
+      "timeSuffix": "GST",
       "venueIds": [
         "mcgettigans-dubai",
         "mcgettigans-abu-dhabi",
@@ -836,17 +876,18 @@
       ]
     },
     {
-      "dateLabel": "JUN 22",
-      "time": "01:00",
-      "timeSuffix": "GST",
+      "matchNo": 42,
       "home": {
         "name": "France",
-        "flag": "https://flagcdn.com/w160/fr.png"
+        "flag": "https://flagcdn.com/w320/fr.png"
       },
       "away": {
         "name": "Iraq",
-        "flag": "https://flagcdn.com/w160/iq.png"
+        "flag": "https://flagcdn.com/w320/iq.png"
       },
+      "dateLabel": "2026-06-23",
+      "time": "01:00",
+      "timeSuffix": "GST",
       "venueIds": [
         "mcgettigans-dubai",
         "mcgettigans-abu-dhabi",
@@ -857,17 +898,18 @@
       ]
     },
     {
-      "dateLabel": "JUN 22",
-      "time": "04:00",
-      "timeSuffix": "GST",
+      "matchNo": 41,
       "home": {
         "name": "Norway",
-        "flag": "https://flagcdn.com/w160/no.png"
+        "flag": "https://flagcdn.com/w320/no.png"
       },
       "away": {
         "name": "Senegal",
-        "flag": "https://flagcdn.com/w160/sn.png"
+        "flag": "https://flagcdn.com/w320/sn.png"
       },
+      "dateLabel": "2026-06-23",
+      "time": "04:00",
+      "timeSuffix": "GST",
       "venueIds": [
         "mcgettigans-dubai",
         "mcgettigans-abu-dhabi",
@@ -878,17 +920,18 @@
       ]
     },
     {
-      "dateLabel": "JUN 22",
-      "time": "07:00",
-      "timeSuffix": "GST",
+      "matchNo": 44,
       "home": {
         "name": "Jordan",
-        "flag": "https://flagcdn.com/w160/jo.png"
+        "flag": "https://flagcdn.com/w320/jo.png"
       },
       "away": {
         "name": "Algeria",
-        "flag": "https://flagcdn.com/w160/dz.png"
+        "flag": "https://flagcdn.com/w320/dz.png"
       },
+      "dateLabel": "2026-06-23",
+      "time": "07:00",
+      "timeSuffix": "GST",
       "venueIds": [
         "mcgettigans-dubai",
         "mcgettigans-abu-dhabi",
@@ -899,17 +942,18 @@
       ]
     },
     {
-      "dateLabel": "JUN 22",
-      "time": "21:00",
-      "timeSuffix": "GST",
+      "matchNo": 43,
       "home": {
         "name": "Argentina",
-        "flag": "https://flagcdn.com/w160/ar.png"
+        "flag": "https://flagcdn.com/w320/ar.png"
       },
       "away": {
         "name": "Austria",
-        "flag": "https://flagcdn.com/w160/at.png"
+        "flag": "https://flagcdn.com/w320/at.png"
       },
+      "dateLabel": "2026-06-22",
+      "time": "21:00",
+      "timeSuffix": "GST",
       "venueIds": [
         "mcgettigans-dubai",
         "mcgettigans-abu-dhabi",
@@ -920,17 +964,18 @@
       ]
     },
     {
-      "dateLabel": "JUN 23",
-      "time": "00:00",
-      "timeSuffix": "GST",
+      "matchNo": 45,
       "home": {
         "name": "England",
-        "flag": "https://flagcdn.com/w160/gb-eng.png"
+        "flag": "https://flagcdn.com/w320/gb-eng.png"
       },
       "away": {
         "name": "Ghana",
-        "flag": "https://flagcdn.com/w160/gh.png"
+        "flag": "https://flagcdn.com/w320/gh.png"
       },
+      "dateLabel": "2026-06-24",
+      "time": "00:00",
+      "timeSuffix": "GST",
       "venueIds": [
         "mcgettigans-dubai",
         "mcgettigans-abu-dhabi",
@@ -941,17 +986,18 @@
       ]
     },
     {
-      "dateLabel": "JUN 23",
-      "time": "03:00",
-      "timeSuffix": "GST",
+      "matchNo": 46,
       "home": {
         "name": "Panama",
-        "flag": "https://flagcdn.com/w160/pa.png"
+        "flag": "https://flagcdn.com/w320/pa.png"
       },
       "away": {
         "name": "Croatia",
-        "flag": "https://flagcdn.com/w160/hr.png"
+        "flag": "https://flagcdn.com/w320/hr.png"
       },
+      "dateLabel": "2026-06-24",
+      "time": "03:00",
+      "timeSuffix": "GST",
       "venueIds": [
         "mcgettigans-dubai",
         "mcgettigans-abu-dhabi",
@@ -962,17 +1008,18 @@
       ]
     },
     {
-      "dateLabel": "JUN 23",
-      "time": "06:00",
-      "timeSuffix": "GST",
+      "matchNo": 48,
       "home": {
         "name": "Colombia",
-        "flag": "https://flagcdn.com/w160/co.png"
+        "flag": "https://flagcdn.com/w320/co.png"
       },
       "away": {
         "name": "Congo DR",
-        "flag": "https://flagcdn.com/w160/cd.png"
+        "flag": "https://flagcdn.com/w320/cd.png"
       },
+      "dateLabel": "2026-06-24",
+      "time": "06:00",
+      "timeSuffix": "GST",
       "venueIds": [
         "mcgettigans-dubai",
         "mcgettigans-abu-dhabi",
@@ -983,17 +1030,18 @@
       ]
     },
     {
-      "dateLabel": "JUN 23",
-      "time": "21:00",
-      "timeSuffix": "GST",
+      "matchNo": 47,
       "home": {
         "name": "Portugal",
-        "flag": "https://flagcdn.com/w160/pt.png"
+        "flag": "https://flagcdn.com/w320/pt.png"
       },
       "away": {
         "name": "Uzbekistan",
-        "flag": "https://flagcdn.com/w160/uz.png"
+        "flag": "https://flagcdn.com/w320/uz.png"
       },
+      "dateLabel": "2026-06-23",
+      "time": "21:00",
+      "timeSuffix": "GST",
       "venueIds": [
         "mcgettigans-dubai",
         "mcgettigans-abu-dhabi",
@@ -1004,17 +1052,18 @@
       ]
     },
     {
-      "dateLabel": "JUN 24",
-      "time": "02:00",
-      "timeSuffix": "GST",
+      "matchNo": 49,
       "home": {
         "name": "Scotland",
-        "flag": "https://flagcdn.com/w160/gb-sct.png"
+        "flag": "https://flagcdn.com/w320/gb-sct.png"
       },
       "away": {
         "name": "Brazil",
-        "flag": "https://flagcdn.com/w160/br.png"
+        "flag": "https://flagcdn.com/w320/br.png"
       },
+      "dateLabel": "2026-06-25",
+      "time": "02:00",
+      "timeSuffix": "GST",
       "venueIds": [
         "mcgettigans-dubai",
         "mcgettigans-abu-dhabi",
@@ -1025,17 +1074,18 @@
       ]
     },
     {
-      "dateLabel": "JUN 24",
-      "time": "02:00",
-      "timeSuffix": "GST",
+      "matchNo": 50,
       "home": {
         "name": "Morocco",
-        "flag": "https://flagcdn.com/w160/ma.png"
+        "flag": "https://flagcdn.com/w320/ma.png"
       },
       "away": {
         "name": "Haiti",
-        "flag": "https://flagcdn.com/w160/ht.png"
+        "flag": "https://flagcdn.com/w320/ht.png"
       },
+      "dateLabel": "2026-06-25",
+      "time": "02:00",
+      "timeSuffix": "GST",
       "venueIds": [
         "mcgettigans-dubai",
         "mcgettigans-abu-dhabi",
@@ -1046,17 +1096,18 @@
       ]
     },
     {
-      "dateLabel": "JUN 24",
-      "time": "05:00",
-      "timeSuffix": "GST",
+      "matchNo": 53,
       "home": {
         "name": "Czechia",
-        "flag": "https://flagcdn.com/w160/cz.png"
+        "flag": "https://flagcdn.com/w320/cz.png"
       },
       "away": {
         "name": "Mexico",
-        "flag": "https://flagcdn.com/w160/mx.png"
+        "flag": "https://flagcdn.com/w320/mx.png"
       },
+      "dateLabel": "2026-06-25",
+      "time": "05:00",
+      "timeSuffix": "GST",
       "venueIds": [
         "mcgettigans-dubai",
         "mcgettigans-abu-dhabi",
@@ -1067,17 +1118,18 @@
       ]
     },
     {
-      "dateLabel": "JUN 24",
-      "time": "05:00",
-      "timeSuffix": "GST",
+      "matchNo": 54,
       "home": {
         "name": "South Africa",
-        "flag": "https://flagcdn.com/w160/za.png"
+        "flag": "https://flagcdn.com/w320/za.png"
       },
       "away": {
         "name": "Korea Republic",
-        "flag": "https://flagcdn.com/w160/kr.png"
+        "flag": "https://flagcdn.com/w320/kr.png"
       },
+      "dateLabel": "2026-06-25",
+      "time": "05:00",
+      "timeSuffix": "GST",
       "venueIds": [
         "mcgettigans-dubai",
         "mcgettigans-abu-dhabi",
@@ -1088,17 +1140,18 @@
       ]
     },
     {
-      "dateLabel": "JUN 24",
-      "time": "23:00",
-      "timeSuffix": "GST",
+      "matchNo": 51,
       "home": {
         "name": "Switzerland",
-        "flag": "https://flagcdn.com/w160/ch.png"
+        "flag": "https://flagcdn.com/w320/ch.png"
       },
       "away": {
         "name": "Canada",
-        "flag": "https://flagcdn.com/w160/ca.png"
+        "flag": "https://flagcdn.com/w320/ca.png"
       },
+      "dateLabel": "2026-06-24",
+      "time": "23:00",
+      "timeSuffix": "GST",
       "venueIds": [
         "mcgettigans-dubai",
         "mcgettigans-abu-dhabi",
@@ -1109,17 +1162,18 @@
       ]
     },
     {
-      "dateLabel": "JUN 24",
-      "time": "23:00",
-      "timeSuffix": "GST",
+      "matchNo": 52,
       "home": {
         "name": "Bosnia and Herzegovina",
-        "flag": "https://flagcdn.com/w160/ba.png"
+        "flag": "https://flagcdn.com/w320/ba.png"
       },
       "away": {
         "name": "Qatar",
-        "flag": "https://flagcdn.com/w160/qa.png"
+        "flag": "https://flagcdn.com/w320/qa.png"
       },
+      "dateLabel": "2026-06-24",
+      "time": "23:00",
+      "timeSuffix": "GST",
       "venueIds": [
         "mcgettigans-dubai",
         "mcgettigans-abu-dhabi",
@@ -1130,17 +1184,18 @@
       ]
     },
     {
-      "dateLabel": "JUN 25",
-      "time": "00:00",
-      "timeSuffix": "GST",
+      "matchNo": 55,
       "home": {
         "name": "Curaçao",
-        "flag": "https://flagcdn.com/w160/cw.png"
+        "flag": "https://flagcdn.com/w320/cw.png"
       },
       "away": {
-        "name": "Côte d'Ivoire",
-        "flag": "https://flagcdn.com/w160/ci.png"
+        "name": "Côte d\\'Ivoire",
+        "flag": "/assets/imgs/football.png"
       },
+      "dateLabel": "2026-06-26",
+      "time": "00:00",
+      "timeSuffix": "GST",
       "venueIds": [
         "mcgettigans-dubai",
         "mcgettigans-abu-dhabi",
@@ -1151,17 +1206,18 @@
       ]
     },
     {
-      "dateLabel": "JUN 25",
-      "time": "00:00",
-      "timeSuffix": "GST",
+      "matchNo": 56,
       "home": {
         "name": "Ecuador",
-        "flag": "https://flagcdn.com/w160/ec.png"
+        "flag": "https://flagcdn.com/w320/ec.png"
       },
       "away": {
         "name": "Germany",
-        "flag": "https://flagcdn.com/w160/de.png"
+        "flag": "https://flagcdn.com/w320/de.png"
       },
+      "dateLabel": "2026-06-26",
+      "time": "00:00",
+      "timeSuffix": "GST",
       "venueIds": [
         "mcgettigans-dubai",
         "mcgettigans-abu-dhabi",
@@ -1172,17 +1228,18 @@
       ]
     },
     {
-      "dateLabel": "JUN 25",
-      "time": "03:00",
-      "timeSuffix": "GST",
+      "matchNo": 57,
       "home": {
         "name": "Japan",
-        "flag": "https://flagcdn.com/w160/jp.png"
+        "flag": "https://flagcdn.com/w320/jp.png"
       },
       "away": {
         "name": "Sweden",
-        "flag": "https://flagcdn.com/w160/se.png"
+        "flag": "https://flagcdn.com/w320/se.png"
       },
+      "dateLabel": "2026-06-26",
+      "time": "03:00",
+      "timeSuffix": "GST",
       "venueIds": [
         "mcgettigans-dubai",
         "mcgettigans-abu-dhabi",
@@ -1193,17 +1250,18 @@
       ]
     },
     {
-      "dateLabel": "JUN 25",
-      "time": "03:00",
-      "timeSuffix": "GST",
+      "matchNo": 58,
       "home": {
         "name": "Tunisia",
-        "flag": "https://flagcdn.com/w160/tn.png"
+        "flag": "https://flagcdn.com/w320/tn.png"
       },
       "away": {
         "name": "Netherlands",
-        "flag": "https://flagcdn.com/w160/nl.png"
+        "flag": "https://flagcdn.com/w320/nl.png"
       },
+      "dateLabel": "2026-06-26",
+      "time": "03:00",
+      "timeSuffix": "GST",
       "venueIds": [
         "mcgettigans-dubai",
         "mcgettigans-abu-dhabi",
@@ -1214,17 +1272,18 @@
       ]
     },
     {
-      "dateLabel": "JUN 25",
-      "time": "06:00",
-      "timeSuffix": "GST",
+      "matchNo": 59,
       "home": {
         "name": "Türkiye",
-        "flag": "https://flagcdn.com/w160/tr.png"
+        "flag": "https://flagcdn.com/w320/tr.png"
       },
       "away": {
         "name": "USA",
-        "flag": "https://flagcdn.com/w160/us.png"
+        "flag": "https://flagcdn.com/w320/us.png"
       },
+      "dateLabel": "2026-06-26",
+      "time": "06:00",
+      "timeSuffix": "GST",
       "venueIds": [
         "mcgettigans-dubai",
         "mcgettigans-abu-dhabi",
@@ -1235,17 +1294,18 @@
       ]
     },
     {
-      "dateLabel": "JUN 25",
-      "time": "06:00",
-      "timeSuffix": "GST",
+      "matchNo": 60,
       "home": {
         "name": "Paraguay",
-        "flag": "https://flagcdn.com/w160/py.png"
+        "flag": "https://flagcdn.com/w320/py.png"
       },
       "away": {
         "name": "Australia",
-        "flag": "https://flagcdn.com/w160/au.png"
+        "flag": "https://flagcdn.com/w320/au.png"
       },
+      "dateLabel": "2026-06-26",
+      "time": "06:00",
+      "timeSuffix": "GST",
       "venueIds": [
         "mcgettigans-dubai",
         "mcgettigans-abu-dhabi",
@@ -1256,17 +1316,18 @@
       ]
     },
     {
-      "dateLabel": "JUN 26",
-      "time": "04:00",
-      "timeSuffix": "GST",
+      "matchNo": 65,
       "home": {
         "name": "Cabo Verde",
-        "flag": "https://flagcdn.com/w160/cv.png"
+        "flag": "https://flagcdn.com/w320/cv.png"
       },
       "away": {
         "name": "Saudi Arabia",
-        "flag": "https://flagcdn.com/w160/sa.png"
+        "flag": "https://flagcdn.com/w320/sa.png"
       },
+      "dateLabel": "2026-06-27",
+      "time": "04:00",
+      "timeSuffix": "GST",
       "venueIds": [
         "mcgettigans-dubai",
         "mcgettigans-abu-dhabi",
@@ -1277,17 +1338,18 @@
       ]
     },
     {
-      "dateLabel": "JUN 26",
-      "time": "04:00",
-      "timeSuffix": "GST",
+      "matchNo": 66,
       "home": {
         "name": "Uruguay",
-        "flag": "https://flagcdn.com/w160/uy.png"
+        "flag": "https://flagcdn.com/w320/uy.png"
       },
       "away": {
         "name": "Spain",
-        "flag": "https://flagcdn.com/w160/es.png"
+        "flag": "https://flagcdn.com/w320/es.png"
       },
+      "dateLabel": "2026-06-27",
+      "time": "04:00",
+      "timeSuffix": "GST",
       "venueIds": [
         "mcgettigans-dubai",
         "mcgettigans-abu-dhabi",
@@ -1298,17 +1360,18 @@
       ]
     },
     {
-      "dateLabel": "JUN 26",
-      "time": "07:00",
-      "timeSuffix": "GST",
+      "matchNo": 63,
       "home": {
         "name": "Egypt",
-        "flag": "https://flagcdn.com/w160/eg.png"
+        "flag": "https://flagcdn.com/w320/eg.png"
       },
       "away": {
         "name": "IR Iran",
-        "flag": "https://flagcdn.com/w160/ir.png"
+        "flag": "https://flagcdn.com/w320/ir.png"
       },
+      "dateLabel": "2026-06-27",
+      "time": "07:00",
+      "timeSuffix": "GST",
       "venueIds": [
         "mcgettigans-dubai",
         "mcgettigans-abu-dhabi",
@@ -1319,17 +1382,18 @@
       ]
     },
     {
-      "dateLabel": "JUN 26",
-      "time": "07:00",
-      "timeSuffix": "GST",
+      "matchNo": 64,
       "home": {
         "name": "New Zealand",
-        "flag": "https://flagcdn.com/w160/nz.png"
+        "flag": "https://flagcdn.com/w320/nz.png"
       },
       "away": {
         "name": "Belgium",
-        "flag": "https://flagcdn.com/w160/be.png"
+        "flag": "https://flagcdn.com/w320/be.png"
       },
+      "dateLabel": "2026-06-27",
+      "time": "07:00",
+      "timeSuffix": "GST",
       "venueIds": [
         "mcgettigans-dubai",
         "mcgettigans-abu-dhabi",
@@ -1340,17 +1404,18 @@
       ]
     },
     {
-      "dateLabel": "JUN 26",
-      "time": "23:00",
-      "timeSuffix": "GST",
+      "matchNo": 61,
       "home": {
         "name": "Norway",
-        "flag": "https://flagcdn.com/w160/no.png"
+        "flag": "https://flagcdn.com/w320/no.png"
       },
       "away": {
         "name": "France",
-        "flag": "https://flagcdn.com/w160/fr.png"
+        "flag": "https://flagcdn.com/w320/fr.png"
       },
+      "dateLabel": "2026-06-26",
+      "time": "23:00",
+      "timeSuffix": "GST",
       "venueIds": [
         "mcgettigans-dubai",
         "mcgettigans-abu-dhabi",
@@ -1361,17 +1426,18 @@
       ]
     },
     {
-      "dateLabel": "JUN 26",
-      "time": "23:00",
-      "timeSuffix": "GST",
+      "matchNo": 62,
       "home": {
         "name": "Senegal",
-        "flag": "https://flagcdn.com/w160/sn.png"
+        "flag": "https://flagcdn.com/w320/sn.png"
       },
       "away": {
         "name": "Iraq",
-        "flag": "https://flagcdn.com/w160/iq.png"
+        "flag": "https://flagcdn.com/w320/iq.png"
       },
+      "dateLabel": "2026-06-26",
+      "time": "23:00",
+      "timeSuffix": "GST",
       "venueIds": [
         "mcgettigans-dubai",
         "mcgettigans-abu-dhabi",
@@ -1382,17 +1448,18 @@
       ]
     },
     {
-      "dateLabel": "JUN 27",
-      "time": "01:00",
-      "timeSuffix": "GST",
+      "matchNo": 67,
       "home": {
         "name": "Panama",
-        "flag": "https://flagcdn.com/w160/pa.png"
+        "flag": "https://flagcdn.com/w320/pa.png"
       },
       "away": {
         "name": "England",
-        "flag": "https://flagcdn.com/w160/gb-eng.png"
+        "flag": "https://flagcdn.com/w320/gb-eng.png"
       },
+      "dateLabel": "2026-06-28",
+      "time": "01:00",
+      "timeSuffix": "GST",
       "venueIds": [
         "mcgettigans-dubai",
         "mcgettigans-abu-dhabi",
@@ -1403,17 +1470,18 @@
       ]
     },
     {
-      "dateLabel": "JUN 27",
-      "time": "01:00",
-      "timeSuffix": "GST",
+      "matchNo": 68,
       "home": {
         "name": "Croatia",
-        "flag": "https://flagcdn.com/w160/hr.png"
+        "flag": "https://flagcdn.com/w320/hr.png"
       },
       "away": {
         "name": "Ghana",
-        "flag": "https://flagcdn.com/w160/gh.png"
+        "flag": "https://flagcdn.com/w320/gh.png"
       },
+      "dateLabel": "2026-06-28",
+      "time": "01:00",
+      "timeSuffix": "GST",
       "venueIds": [
         "mcgettigans-dubai",
         "mcgettigans-abu-dhabi",
@@ -1424,17 +1492,18 @@
       ]
     },
     {
-      "dateLabel": "JUN 27",
-      "time": "03:30",
-      "timeSuffix": "GST",
+      "matchNo": 71,
       "home": {
         "name": "Colombia",
-        "flag": "https://flagcdn.com/w160/co.png"
+        "flag": "https://flagcdn.com/w320/co.png"
       },
       "away": {
         "name": "Portugal",
-        "flag": "https://flagcdn.com/w160/pt.png"
+        "flag": "https://flagcdn.com/w320/pt.png"
       },
+      "dateLabel": "2026-06-28",
+      "time": "03:30",
+      "timeSuffix": "GST",
       "venueIds": [
         "mcgettigans-dubai",
         "mcgettigans-abu-dhabi",
@@ -1445,17 +1514,18 @@
       ]
     },
     {
-      "dateLabel": "JUN 27",
-      "time": "03:30",
-      "timeSuffix": "GST",
+      "matchNo": 72,
       "home": {
         "name": "Congo DR",
-        "flag": "https://flagcdn.com/w160/cd.png"
+        "flag": "https://flagcdn.com/w320/cd.png"
       },
       "away": {
         "name": "Uzbekistan",
-        "flag": "https://flagcdn.com/w160/uz.png"
+        "flag": "https://flagcdn.com/w320/uz.png"
       },
+      "dateLabel": "2026-06-28",
+      "time": "03:30",
+      "timeSuffix": "GST",
       "venueIds": [
         "mcgettigans-dubai",
         "mcgettigans-abu-dhabi",
@@ -1466,17 +1536,18 @@
       ]
     },
     {
-      "dateLabel": "JUN 27",
-      "time": "06:00",
-      "timeSuffix": "GST",
+      "matchNo": 69,
       "home": {
         "name": "Algeria",
-        "flag": "https://flagcdn.com/w160/dz.png"
+        "flag": "https://flagcdn.com/w320/dz.png"
       },
       "away": {
         "name": "Austria",
-        "flag": "https://flagcdn.com/w160/at.png"
+        "flag": "https://flagcdn.com/w320/at.png"
       },
+      "dateLabel": "2026-06-28",
+      "time": "06:00",
+      "timeSuffix": "GST",
       "venueIds": [
         "mcgettigans-dubai",
         "mcgettigans-abu-dhabi",
@@ -1487,17 +1558,18 @@
       ]
     },
     {
-      "dateLabel": "JUN 27",
-      "time": "06:00",
-      "timeSuffix": "GST",
+      "matchNo": 70,
       "home": {
         "name": "Jordan",
-        "flag": "https://flagcdn.com/w160/jo.png"
+        "flag": "https://flagcdn.com/w320/jo.png"
       },
       "away": {
         "name": "Argentina",
-        "flag": "https://flagcdn.com/w160/ar.png"
+        "flag": "https://flagcdn.com/w320/ar.png"
       },
+      "dateLabel": "2026-06-28",
+      "time": "06:00",
+      "timeSuffix": "GST",
       "venueIds": [
         "mcgettigans-dubai",
         "mcgettigans-abu-dhabi",
@@ -1508,9 +1580,7 @@
       ]
     },
     {
-      "dateLabel": "JUN 28",
-      "time": "23:00",
-      "timeSuffix": "GST",
+      "matchNo": 73,
       "home": {
         "name": "Group A runners-up",
         "flag": "/assets/imgs/football.png"
@@ -1519,6 +1589,9 @@
         "name": "Group B runners-up",
         "flag": "/assets/imgs/football.png"
       },
+      "dateLabel": "2026-06-28",
+      "time": "23:00",
+      "timeSuffix": "GST",
       "venueIds": [
         "mcgettigans-dubai",
         "mcgettigans-abu-dhabi",
@@ -1529,9 +1602,7 @@
       ]
     },
     {
-      "dateLabel": "JUN 29",
-      "time": "21:00",
-      "timeSuffix": "GST",
+      "matchNo": 76,
       "home": {
         "name": "Group C winners",
         "flag": "/assets/imgs/football.png"
@@ -1540,6 +1611,9 @@
         "name": "Group F runners-up",
         "flag": "/assets/imgs/football.png"
       },
+      "dateLabel": "2026-06-29",
+      "time": "21:00",
+      "timeSuffix": "GST",
       "venueIds": [
         "mcgettigans-dubai",
         "mcgettigans-abu-dhabi",
@@ -1550,9 +1624,7 @@
       ]
     },
     {
-      "dateLabel": "JUN 30",
-      "time": "00:30",
-      "timeSuffix": "GST",
+      "matchNo": 74,
       "home": {
         "name": "Group E winners",
         "flag": "/assets/imgs/football.png"
@@ -1561,6 +1633,9 @@
         "name": "Group A/B/C/D/F third place",
         "flag": "/assets/imgs/football.png"
       },
+      "dateLabel": "2026-06-30",
+      "time": "00:30",
+      "timeSuffix": "GST",
       "venueIds": [
         "mcgettigans-dubai",
         "mcgettigans-abu-dhabi",
@@ -1571,9 +1646,7 @@
       ]
     },
     {
-      "dateLabel": "JUN 30",
-      "time": "05:00",
-      "timeSuffix": "GST",
+      "matchNo": 75,
       "home": {
         "name": "Group F winners",
         "flag": "/assets/imgs/football.png"
@@ -1582,6 +1655,9 @@
         "name": "Group C runners-up",
         "flag": "/assets/imgs/football.png"
       },
+      "dateLabel": "2026-06-30",
+      "time": "05:00",
+      "timeSuffix": "GST",
       "venueIds": [
         "mcgettigans-dubai",
         "mcgettigans-abu-dhabi",
@@ -1592,9 +1668,7 @@
       ]
     },
     {
-      "dateLabel": "JUN 30",
-      "time": "21:00",
-      "timeSuffix": "GST",
+      "matchNo": 78,
       "home": {
         "name": "Group E runners-up",
         "flag": "/assets/imgs/football.png"
@@ -1603,6 +1677,9 @@
         "name": "Group I runners-up",
         "flag": "/assets/imgs/football.png"
       },
+      "dateLabel": "2026-06-30",
+      "time": "21:00",
+      "timeSuffix": "GST",
       "venueIds": [
         "mcgettigans-dubai",
         "mcgettigans-abu-dhabi",
@@ -1613,9 +1690,7 @@
       ]
     },
     {
-      "dateLabel": "JUL 1",
-      "time": "01:00",
-      "timeSuffix": "GST",
+      "matchNo": 77,
       "home": {
         "name": "Group I winners",
         "flag": "/assets/imgs/football.png"
@@ -1624,6 +1699,9 @@
         "name": "Group C/D/F/G/H third place",
         "flag": "/assets/imgs/football.png"
       },
+      "dateLabel": "2026-07-01",
+      "time": "01:00",
+      "timeSuffix": "GST",
       "venueIds": [
         "mcgettigans-dubai",
         "mcgettigans-abu-dhabi",
@@ -1634,9 +1712,7 @@
       ]
     },
     {
-      "dateLabel": "JUL 1",
-      "time": "05:00",
-      "timeSuffix": "GST",
+      "matchNo": 79,
       "home": {
         "name": "Group A winners",
         "flag": "/assets/imgs/football.png"
@@ -1645,6 +1721,9 @@
         "name": "Group C/E/F/H/I third place",
         "flag": "/assets/imgs/football.png"
       },
+      "dateLabel": "2026-07-01",
+      "time": "05:00",
+      "timeSuffix": "GST",
       "venueIds": [
         "mcgettigans-dubai",
         "mcgettigans-abu-dhabi",
@@ -1655,9 +1734,7 @@
       ]
     },
     {
-      "dateLabel": "JUL 1",
-      "time": "20:00",
-      "timeSuffix": "GST",
+      "matchNo": 80,
       "home": {
         "name": "Group L winners",
         "flag": "/assets/imgs/football.png"
@@ -1666,6 +1743,9 @@
         "name": "Group E/H/I/J/K third place",
         "flag": "/assets/imgs/football.png"
       },
+      "dateLabel": "2026-07-01",
+      "time": "20:00",
+      "timeSuffix": "GST",
       "venueIds": [
         "mcgettigans-dubai",
         "mcgettigans-abu-dhabi",
@@ -1676,9 +1756,7 @@
       ]
     },
     {
-      "dateLabel": "JUL 2",
-      "time": "00:00",
-      "timeSuffix": "GST",
+      "matchNo": 82,
       "home": {
         "name": "Group G winners",
         "flag": "/assets/imgs/football.png"
@@ -1687,6 +1765,9 @@
         "name": "Group A/E/H/I/J third place",
         "flag": "/assets/imgs/football.png"
       },
+      "dateLabel": "2026-07-02",
+      "time": "00:00",
+      "timeSuffix": "GST",
       "venueIds": [
         "mcgettigans-dubai",
         "mcgettigans-abu-dhabi",
@@ -1697,9 +1778,7 @@
       ]
     },
     {
-      "dateLabel": "JUL 2",
-      "time": "04:00",
-      "timeSuffix": "GST",
+      "matchNo": 81,
       "home": {
         "name": "Group D winners",
         "flag": "/assets/imgs/football.png"
@@ -1708,6 +1787,9 @@
         "name": "Group B/E/F/I/J third place",
         "flag": "/assets/imgs/football.png"
       },
+      "dateLabel": "2026-07-02",
+      "time": "04:00",
+      "timeSuffix": "GST",
       "venueIds": [
         "mcgettigans-dubai",
         "mcgettigans-abu-dhabi",
@@ -1718,9 +1800,7 @@
       ]
     },
     {
-      "dateLabel": "JUL 2",
-      "time": "23:00",
-      "timeSuffix": "GST",
+      "matchNo": 84,
       "home": {
         "name": "Group H winners",
         "flag": "/assets/imgs/football.png"
@@ -1729,6 +1809,9 @@
         "name": "Group J runners-up",
         "flag": "/assets/imgs/football.png"
       },
+      "dateLabel": "2026-07-02",
+      "time": "23:00",
+      "timeSuffix": "GST",
       "venueIds": [
         "mcgettigans-dubai",
         "mcgettigans-abu-dhabi",
@@ -1739,9 +1822,7 @@
       ]
     },
     {
-      "dateLabel": "JUL 3",
-      "time": "03:00",
-      "timeSuffix": "GST",
+      "matchNo": 83,
       "home": {
         "name": "Group K runners-up",
         "flag": "/assets/imgs/football.png"
@@ -1750,6 +1831,9 @@
         "name": "Group L runners-up",
         "flag": "/assets/imgs/football.png"
       },
+      "dateLabel": "2026-07-03",
+      "time": "03:00",
+      "timeSuffix": "GST",
       "venueIds": [
         "mcgettigans-dubai",
         "mcgettigans-abu-dhabi",
@@ -1760,9 +1844,7 @@
       ]
     },
     {
-      "dateLabel": "JUL 3",
-      "time": "07:00",
-      "timeSuffix": "GST",
+      "matchNo": 85,
       "home": {
         "name": "Group B winners",
         "flag": "/assets/imgs/football.png"
@@ -1771,6 +1853,9 @@
         "name": "Group E/F/G/I/J third place",
         "flag": "/assets/imgs/football.png"
       },
+      "dateLabel": "2026-07-03",
+      "time": "07:00",
+      "timeSuffix": "GST",
       "venueIds": [
         "mcgettigans-dubai",
         "mcgettigans-abu-dhabi",
@@ -1781,9 +1866,7 @@
       ]
     },
     {
-      "dateLabel": "JUL 3",
-      "time": "22:00",
-      "timeSuffix": "GST",
+      "matchNo": 88,
       "home": {
         "name": "Group D runners-up",
         "flag": "/assets/imgs/football.png"
@@ -1792,6 +1875,9 @@
         "name": "Group G runners-up",
         "flag": "/assets/imgs/football.png"
       },
+      "dateLabel": "2026-07-03",
+      "time": "22:00",
+      "timeSuffix": "GST",
       "venueIds": [
         "mcgettigans-dubai",
         "mcgettigans-abu-dhabi",
@@ -1802,9 +1888,7 @@
       ]
     },
     {
-      "dateLabel": "JUL 4",
-      "time": "02:00",
-      "timeSuffix": "GST",
+      "matchNo": 86,
       "home": {
         "name": "Group J winners",
         "flag": "/assets/imgs/football.png"
@@ -1813,6 +1897,9 @@
         "name": "Group H runners-up",
         "flag": "/assets/imgs/football.png"
       },
+      "dateLabel": "2026-07-04",
+      "time": "02:00",
+      "timeSuffix": "GST",
       "venueIds": [
         "mcgettigans-dubai",
         "mcgettigans-abu-dhabi",
@@ -1823,9 +1910,7 @@
       ]
     },
     {
-      "dateLabel": "JUL 4",
-      "time": "05:30",
-      "timeSuffix": "GST",
+      "matchNo": 87,
       "home": {
         "name": "Group K winners",
         "flag": "/assets/imgs/football.png"
@@ -1834,6 +1919,9 @@
         "name": "Group D/E/I/J/L third place",
         "flag": "/assets/imgs/football.png"
       },
+      "dateLabel": "2026-07-04",
+      "time": "05:30",
+      "timeSuffix": "GST",
       "venueIds": [
         "mcgettigans-dubai",
         "mcgettigans-abu-dhabi",
@@ -1844,9 +1932,7 @@
       ]
     },
     {
-      "dateLabel": "JUL 4",
-      "time": "21:00",
-      "timeSuffix": "GST",
+      "matchNo": 90,
       "home": {
         "name": "Winner Match 73",
         "flag": "/assets/imgs/football.png"
@@ -1855,6 +1941,9 @@
         "name": "Winner Match 75",
         "flag": "/assets/imgs/football.png"
       },
+      "dateLabel": "2026-07-04",
+      "time": "21:00",
+      "timeSuffix": "GST",
       "venueIds": [
         "mcgettigans-dubai",
         "mcgettigans-abu-dhabi",
@@ -1865,9 +1954,7 @@
       ]
     },
     {
-      "dateLabel": "JUL 5",
-      "time": "01:00",
-      "timeSuffix": "GST",
+      "matchNo": 89,
       "home": {
         "name": "Winner Match 74",
         "flag": "/assets/imgs/football.png"
@@ -1876,6 +1963,9 @@
         "name": "Winner Match 77",
         "flag": "/assets/imgs/football.png"
       },
+      "dateLabel": "2026-07-05",
+      "time": "01:00",
+      "timeSuffix": "GST",
       "venueIds": [
         "mcgettigans-dubai",
         "mcgettigans-abu-dhabi",
@@ -1886,9 +1976,7 @@
       ]
     },
     {
-      "dateLabel": "JUL 6",
-      "time": "00:00",
-      "timeSuffix": "GST",
+      "matchNo": 91,
       "home": {
         "name": "Winner Match 76",
         "flag": "/assets/imgs/football.png"
@@ -1897,6 +1985,9 @@
         "name": "Winner Match 78",
         "flag": "/assets/imgs/football.png"
       },
+      "dateLabel": "2026-07-06",
+      "time": "00:00",
+      "timeSuffix": "GST",
       "venueIds": [
         "mcgettigans-dubai",
         "mcgettigans-abu-dhabi",
@@ -1907,9 +1998,7 @@
       ]
     },
     {
-      "dateLabel": "JUL 6",
-      "time": "04:00",
-      "timeSuffix": "GST",
+      "matchNo": 92,
       "home": {
         "name": "Winner Match 79",
         "flag": "/assets/imgs/football.png"
@@ -1918,6 +2007,9 @@
         "name": "Winner Match 80",
         "flag": "/assets/imgs/football.png"
       },
+      "dateLabel": "2026-07-06",
+      "time": "04:00",
+      "timeSuffix": "GST",
       "venueIds": [
         "mcgettigans-dubai",
         "mcgettigans-abu-dhabi",
@@ -1928,9 +2020,7 @@
       ]
     },
     {
-      "dateLabel": "JUL 6",
-      "time": "23:00",
-      "timeSuffix": "GST",
+      "matchNo": 93,
       "home": {
         "name": "Winner Match 83",
         "flag": "/assets/imgs/football.png"
@@ -1939,6 +2029,9 @@
         "name": "Winner Match 84",
         "flag": "/assets/imgs/football.png"
       },
+      "dateLabel": "2026-07-06",
+      "time": "23:00",
+      "timeSuffix": "GST",
       "venueIds": [
         "mcgettigans-dubai",
         "mcgettigans-abu-dhabi",
@@ -1949,9 +2042,7 @@
       ]
     },
     {
-      "dateLabel": "JUL 7",
-      "time": "04:00",
-      "timeSuffix": "GST",
+      "matchNo": 94,
       "home": {
         "name": "Winner Match 81",
         "flag": "/assets/imgs/football.png"
@@ -1960,6 +2051,9 @@
         "name": "Winner Match 82",
         "flag": "/assets/imgs/football.png"
       },
+      "dateLabel": "2026-07-07",
+      "time": "04:00",
+      "timeSuffix": "GST",
       "venueIds": [
         "mcgettigans-dubai",
         "mcgettigans-abu-dhabi",
@@ -1970,9 +2064,7 @@
       ]
     },
     {
-      "dateLabel": "JUL 7",
-      "time": "20:00",
-      "timeSuffix": "GST",
+      "matchNo": 95,
       "home": {
         "name": "Winner Match 86",
         "flag": "/assets/imgs/football.png"
@@ -1981,6 +2073,9 @@
         "name": "Winner Match 88",
         "flag": "/assets/imgs/football.png"
       },
+      "dateLabel": "2026-07-07",
+      "time": "20:00",
+      "timeSuffix": "GST",
       "venueIds": [
         "mcgettigans-dubai",
         "mcgettigans-abu-dhabi",
@@ -1991,9 +2086,7 @@
       ]
     },
     {
-      "dateLabel": "JUL 8",
-      "time": "00:00",
-      "timeSuffix": "GST",
+      "matchNo": 96,
       "home": {
         "name": "Winner Match 85",
         "flag": "/assets/imgs/football.png"
@@ -2002,6 +2095,9 @@
         "name": "Winner Match 87",
         "flag": "/assets/imgs/football.png"
       },
+      "dateLabel": "2026-07-08",
+      "time": "00:00",
+      "timeSuffix": "GST",
       "venueIds": [
         "mcgettigans-dubai",
         "mcgettigans-abu-dhabi",
@@ -2012,9 +2108,7 @@
       ]
     },
     {
-      "dateLabel": "JUL 10",
-      "time": "00:00",
-      "timeSuffix": "GST",
+      "matchNo": 97,
       "home": {
         "name": "Winner Match 89",
         "flag": "/assets/imgs/football.png"
@@ -2023,6 +2117,9 @@
         "name": "Winner Match 90",
         "flag": "/assets/imgs/football.png"
       },
+      "dateLabel": "2026-07-10",
+      "time": "00:00",
+      "timeSuffix": "GST",
       "venueIds": [
         "mcgettigans-dubai",
         "mcgettigans-abu-dhabi",
@@ -2033,9 +2130,7 @@
       ]
     },
     {
-      "dateLabel": "JUL 10",
-      "time": "23:00",
-      "timeSuffix": "GST",
+      "matchNo": 98,
       "home": {
         "name": "Winner Match 93",
         "flag": "/assets/imgs/football.png"
@@ -2044,6 +2139,9 @@
         "name": "Winner Match 94",
         "flag": "/assets/imgs/football.png"
       },
+      "dateLabel": "2026-07-10",
+      "time": "23:00",
+      "timeSuffix": "GST",
       "venueIds": [
         "mcgettigans-dubai",
         "mcgettigans-abu-dhabi",
@@ -2054,9 +2152,7 @@
       ]
     },
     {
-      "dateLabel": "JUL 12",
-      "time": "01:00",
-      "timeSuffix": "GST",
+      "matchNo": 99,
       "home": {
         "name": "Winner Match 91",
         "flag": "/assets/imgs/football.png"
@@ -2065,6 +2161,9 @@
         "name": "Winner Match 92",
         "flag": "/assets/imgs/football.png"
       },
+      "dateLabel": "2026-07-12",
+      "time": "01:00",
+      "timeSuffix": "GST",
       "venueIds": [
         "mcgettigans-dubai",
         "mcgettigans-abu-dhabi",
@@ -2075,9 +2174,7 @@
       ]
     },
     {
-      "dateLabel": "JUL 12",
-      "time": "05:00",
-      "timeSuffix": "GST",
+      "matchNo": 100,
       "home": {
         "name": "Winner Match 95",
         "flag": "/assets/imgs/football.png"
@@ -2086,6 +2183,9 @@
         "name": "Winner Match 96",
         "flag": "/assets/imgs/football.png"
       },
+      "dateLabel": "2026-07-12",
+      "time": "05:00",
+      "timeSuffix": "GST",
       "venueIds": [
         "mcgettigans-dubai",
         "mcgettigans-abu-dhabi",
@@ -2096,9 +2196,7 @@
       ]
     },
     {
-      "dateLabel": "JUL 14",
-      "time": "23:00",
-      "timeSuffix": "GST",
+      "matchNo": 101,
       "home": {
         "name": "Winner Match 97",
         "flag": "/assets/imgs/football.png"
@@ -2107,6 +2205,9 @@
         "name": "Winner Match 98",
         "flag": "/assets/imgs/football.png"
       },
+      "dateLabel": "2026-07-14",
+      "time": "23:00",
+      "timeSuffix": "GST",
       "venueIds": [
         "mcgettigans-dubai",
         "mcgettigans-abu-dhabi",
@@ -2117,9 +2218,7 @@
       ]
     },
     {
-      "dateLabel": "JUL 15",
-      "time": "23:00",
-      "timeSuffix": "GST",
+      "matchNo": 102,
       "home": {
         "name": "Winner Match 99",
         "flag": "/assets/imgs/football.png"
@@ -2128,6 +2227,9 @@
         "name": "Winner Match 100",
         "flag": "/assets/imgs/football.png"
       },
+      "dateLabel": "2026-07-15",
+      "time": "23:00",
+      "timeSuffix": "GST",
       "venueIds": [
         "mcgettigans-dubai",
         "mcgettigans-abu-dhabi",
@@ -2138,9 +2240,7 @@
       ]
     },
     {
-      "dateLabel": "JUL 19",
-      "time": "01:00",
-      "timeSuffix": "GST",
+      "matchNo": 103,
       "home": {
         "name": "Runner-up Match 101",
         "flag": "/assets/imgs/football.png"
@@ -2149,6 +2249,9 @@
         "name": "Runner-up Match 102",
         "flag": "/assets/imgs/football.png"
       },
+      "dateLabel": "2026-07-19",
+      "time": "01:00",
+      "timeSuffix": "GST",
       "venueIds": [
         "mcgettigans-dubai",
         "mcgettigans-abu-dhabi",
@@ -2159,9 +2262,7 @@
       ]
     },
     {
-      "dateLabel": "JUL 19",
-      "time": "23:00",
-      "timeSuffix": "GST",
+      "matchNo": 104,
       "home": {
         "name": "Winner Match 101",
         "flag": "/assets/imgs/football.png"
@@ -2170,6 +2271,9 @@
         "name": "Winner Match 102",
         "flag": "/assets/imgs/football.png"
       },
+      "dateLabel": "2026-07-19",
+      "time": "23:00",
+      "timeSuffix": "GST",
       "venueIds": [
         "mcgettigans-dubai",
         "mcgettigans-abu-dhabi",
