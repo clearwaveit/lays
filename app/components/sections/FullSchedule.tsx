@@ -1,23 +1,16 @@
 "use client";
 
 import SubpageTopBar from "@/app/components/ui/SubpageTopBar";
+import SubpagePageTitle from "@/app/components/ui/SubpagePageTitle";
 import SponsorBadge from "@/app/components/ui/SponsorBadge";
 import TournamentBracket from "@/app/components/sections/TournamentBracket";
-import { useLanguage } from "@/app/context/LanguageContext";
 import { laysFontFamily, laysTextClass } from "@/app/fonts";
 import { useTranslations } from "@/app/i18n/useTranslations";
 import { useGsapScope } from "@/app/hooks/useGsapScope";
 import { animateFullScheduleSection } from "@/app/lib/animations";
 import { useAdminCampaignDraft } from "@/app/lib/adminCampaignDraft";
 import Image from "next/image";
-import { useEffect, useState } from "react";
 
-const FULL_SCHEDULE_LOGO_EN_SRC = "/assets/imgs/full-schedule-logo.svg";
-const FULL_SCHEDULE_LOGO_AR_SRC = "/assets/imgs/full-schedule-logo-arabic.svg";
-const FULL_SCHEDULE_LOGO_EN_WIDTH_PX = 393.4;
-const FULL_SCHEDULE_LOGO_EN_HEIGHT_PX = 120;
-const FULL_SCHEDULE_LOGO_AR_WIDTH_PX = 439;
-const FULL_SCHEDULE_LOGO_AR_HEIGHT_PX = 237;
 const HEADLINE_RED = "#DF2027";
 const DESIGN_WIDTH = 1600;
 const PAGE_MAX_WIDTH = 1600;
@@ -28,15 +21,12 @@ function scale(px: number, minRatio = 0.45) {
   return `clamp(${Math.round(px * minRatio)}px, ${vw}vw, ${px}px)`;
 }
 
-const LOGO_OVERLAP_EN_PX = 56;
+const TITLE_OVERLAP_INTO_CONTENT_PX = 24;
 
-function logoOverlap(isArabic: boolean) {
-  const overlapPx = isArabic
-    ? LOGO_OVERLAP_EN_PX +
-      (FULL_SCHEDULE_LOGO_AR_HEIGHT_PX - FULL_SCHEDULE_LOGO_EN_HEIGHT_PX)
-    : LOGO_OVERLAP_EN_PX;
-  return scale(-overlapPx);
+function titleOverlapIntoContent() {
+  return scale(-TITLE_OVERLAP_INTO_CONTENT_PX);
 }
+
 const OVERLAY_INSET = scale(76);
 const HEADLINE_MARGIN_TOP = scale(100);
 const HEADLINE_WIDTH = scale(558);
@@ -47,60 +37,6 @@ const TROPHY_IMG = "/assets/imgs/trophy.svg";
 const TROPHY_WIDTH_PX = 78.65;
 const TROPHY_HEIGHT_PX = 206.44;
 const TROPHY_TOP = scale(367);
-
-function FullScheduleLogo({
-  alt,
-  isRtl,
-}: {
-  alt: string;
-  isRtl: boolean;
-}) {
-  const { language, isReady } = useLanguage();
-  const [mounted, setMounted] = useState(false);
-  const isArabic = language === "ar";
-  const logoWidthPx = isArabic
-    ? FULL_SCHEDULE_LOGO_AR_WIDTH_PX
-    : FULL_SCHEDULE_LOGO_EN_WIDTH_PX;
-  const logoHeightPx = isArabic
-    ? FULL_SCHEDULE_LOGO_AR_HEIGHT_PX
-    : FULL_SCHEDULE_LOGO_EN_HEIGHT_PX;
-  const logoSrc = isArabic ? FULL_SCHEDULE_LOGO_AR_SRC : FULL_SCHEDULE_LOGO_EN_SRC;
-  const overlap = logoOverlap(isArabic);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  if (!mounted || !isReady) {
-    return (
-      <span
-        aria-hidden
-        className="inline-block shrink-0"
-        style={{
-          width: scale(logoWidthPx),
-          height: scale(logoHeightPx),
-          marginBottom: overlap,
-        }}
-      />
-    );
-  }
-
-  return (
-    <img
-      src={logoSrc}
-      alt={alt}
-      width={logoWidthPx}
-      height={logoHeightPx}
-      decoding="async"
-      className={`relative z-20 shrink-0 object-contain ${isRtl ? "object-right" : "object-left"}`}
-      style={{
-        width: scale(logoWidthPx),
-        height: "auto",
-        marginBottom: overlap,
-      }}
-    />
-  );
-}
 
 export default function FullSchedule() {
   const { t, textClass, isRtl } = useTranslations();
@@ -171,17 +107,12 @@ export default function FullSchedule() {
         >
           <div className="px-[clamp(16px,2.5vw,40px)]">
             <SubpageTopBar brandOnEnd>
-              <div
-                className={`${textClass} flex min-w-0 shrink-0 flex-row items-center`}
-                style={{
-                  maxWidth: scale(
-                    isRtl
-                      ? FULL_SCHEDULE_LOGO_AR_WIDTH_PX
-                      : FULL_SCHEDULE_LOGO_EN_WIDTH_PX,
-                  ),
-                }}
-              >
-                <FullScheduleLogo alt={t.fullSchedule.logoAlt} isRtl={isRtl} />
+              <div className={`${textClass} flex min-w-0 shrink-0 flex-row items-center`}>
+                <SubpagePageTitle
+                  title={t.fullSchedule.pageTitle}
+                  isRtl={isRtl}
+                  overlapMargin={titleOverlapIntoContent()}
+                />
               </div>
             </SubpageTopBar>
           </div>
@@ -189,7 +120,7 @@ export default function FullSchedule() {
           <div className="flex w-full flex-1 flex-col items-center overflow-x-visible overflow-y-visible pb-[clamp(100px,12vh,140px)] pt-0">
             <div
               className="flex w-full flex-col items-center px-[clamp(16px,2.5vw,40px)]"
-              style={{ marginTop: logoOverlap(isRtl) }}
+              style={{ marginTop: titleOverlapIntoContent() }}
             >
               <h2
                 data-gsap-headline

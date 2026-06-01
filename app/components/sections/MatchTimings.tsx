@@ -1,6 +1,7 @@
 "use client";
 
 import SubpageTopBar from "@/app/components/ui/SubpageTopBar";
+import SubpagePageTitle from "@/app/components/ui/SubpagePageTitle";
 import SponsorBadge from "@/app/components/ui/SponsorBadge";
 import type { VenueModalData } from "@/app/components/ui/VenueModal";
 import { useCampaignSelection } from "@/app/context/CampaignSelectionContext";
@@ -25,7 +26,6 @@ import {
 } from "@/app/lib/adminCampaignDraft";
 import { gsap } from "@/app/lib/gsap";
 import { shouldAnimate } from "@/app/lib/motion";
-import { useLanguage } from "@/app/context/LanguageContext";
 import { laysFontFamily, laysTextClass } from "@/app/fonts";
 import { useTranslations } from "@/app/i18n/useTranslations";
 import Image from "next/image";
@@ -40,12 +40,6 @@ const DESIGN_WIDTH = 1600;
 const PAGE_MAX_WIDTH = 1600;
 const pageMaxWidth = `min(100%, ${((PAGE_MAX_WIDTH / DESIGN_WIDTH) * 100).toFixed(4)}vw)`;
 
-const MATCH_TIMING_LOGO_EN_SRC = "/assets/imgs/match-timing-logo.svg";
-const MATCH_TIMING_LOGO_AR_SRC = "/assets/imgs/match-timing-logo-arabic.svg";
-const MATCH_TIMING_LOGO_EN_WIDTH_PX = 393.4;
-const MATCH_TIMING_LOGO_EN_HEIGHT_PX = 120;
-const MATCH_TIMING_LOGO_AR_WIDTH_PX = 404;
-const MATCH_TIMING_LOGO_AR_HEIGHT_PX = 194;
 const TIMING_CARD_BG = "/assets/imgs/timing-card-bg.svg";
 
 const PANEL_HEIGHT_PX = 661;
@@ -94,15 +88,11 @@ function scaleFluid(px: number, minRatio = 0.45) {
   return `max(${minPx}px, calc(${px} / ${DESIGN_WIDTH} * 100vw))`;
 }
 
-/** Logo extends below the header row and overlaps the red panel in front. */
-const LOGO_OVERLAP_INTO_PANEL_EN_PX = 56;
+/** Space between page title and red panel (no overlap). */
+const TITLE_TO_PANEL_GAP_PX = 24;
 
-function logoOverlapIntoPanel(isArabic: boolean) {
-  const overlapPx = isArabic
-    ? LOGO_OVERLAP_INTO_PANEL_EN_PX +
-      (MATCH_TIMING_LOGO_AR_HEIGHT_PX - MATCH_TIMING_LOGO_EN_HEIGHT_PX)
-    : LOGO_OVERLAP_INTO_PANEL_EN_PX;
-  return scale(-overlapPx);
+function titleToPanelGap() {
+  return scale(TITLE_TO_PANEL_GAP_PX);
 }
 const PANEL_HEIGHT = scaleFluid(PANEL_HEIGHT_PX);
 const CARD_WIDTH = scale(CARD_WIDTH_PX);
@@ -427,60 +417,6 @@ function HorizontalMatchScroller({
   );
 }
 
-function MatchTimingLogo({
-  alt,
-  isRtl,
-}: {
-  alt: string;
-  isRtl: boolean;
-}) {
-  const { language, isReady } = useLanguage();
-  const [mounted, setMounted] = useState(false);
-  const isArabic = language === "ar";
-  const logoWidthPx = isArabic
-    ? MATCH_TIMING_LOGO_AR_WIDTH_PX
-    : MATCH_TIMING_LOGO_EN_WIDTH_PX;
-  const logoHeightPx = isArabic
-    ? MATCH_TIMING_LOGO_AR_HEIGHT_PX
-    : MATCH_TIMING_LOGO_EN_HEIGHT_PX;
-  const logoSrc = isArabic ? MATCH_TIMING_LOGO_AR_SRC : MATCH_TIMING_LOGO_EN_SRC;
-  const logoOverlap = logoOverlapIntoPanel(isArabic);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  if (!mounted || !isReady) {
-    return (
-      <span
-        aria-hidden
-        className="inline-block shrink-0"
-        style={{
-          width: scale(logoWidthPx),
-          height: scale(logoHeightPx),
-          marginBottom: logoOverlap,
-        }}
-      />
-    );
-  }
-
-  return (
-    <img
-      src={logoSrc}
-      alt={alt}
-      width={logoWidthPx}
-      height={logoHeightPx}
-      decoding="async"
-      className={`relative z-20 shrink-0 object-contain ${isRtl ? "object-right" : "object-left"}`}
-      style={{
-        width: scale(logoWidthPx),
-        height: "auto",
-        marginBottom: logoOverlap,
-      }}
-    />
-  );
-}
-
 export default function MatchTimings() {
   const { t, textClass, fontFamily, isRtl } = useTranslations();
   const router = useRouter();
@@ -602,7 +538,7 @@ export default function MatchTimings() {
       ref={sectionRef}
       className={`match-timings-section ${textClass} relative isolate flex min-h-dvh w-full max-w-full flex-col overflow-x-visible overflow-y-visible bg-[#f5c400]`}
       style={matchTimingsCssVars}
-      aria-label="Match timings"
+      aria-label={t.matchTimings.pageTitle}
     >
       <Image
         src="/assets/imgs/background-main.svg"
@@ -629,17 +565,8 @@ export default function MatchTimings() {
           style={{ maxWidth: pageMaxWidth, width: "100%" }}
         >
           <SubpageTopBar brandOnEnd>
-            <div
-              className={`${textClass} flex min-w-0 shrink-0 flex-row items-center`}
-              style={{
-                maxWidth: scale(
-                  isRtl
-                    ? MATCH_TIMING_LOGO_AR_WIDTH_PX
-                    : MATCH_TIMING_LOGO_EN_WIDTH_PX,
-                ),
-              }}
-            >
-              <MatchTimingLogo alt={t.matchTimings.logoAlt} isRtl={isRtl} />
+            <div className={`${textClass} flex min-w-0 shrink-0 flex-row items-center`}>
+              <SubpagePageTitle title={t.matchTimings.pageTitle} isRtl={isRtl} />
             </div>
           </SubpageTopBar>
 
@@ -648,9 +575,9 @@ export default function MatchTimings() {
               className="flex w-full min-h-0 flex-1 flex-col items-center justify-center overflow-x-visible max-lg:flex-1 lg:flex-none lg:justify-start"
             >
             <div
-              className="match-timings-panel-outer relative mx-auto w-full max-w-full overflow-visible max-[1600px]:!mt-0 min-[1024px]:w-[var(--mt-panel-width)]"
+              className="match-timings-panel-outer relative mx-auto w-full max-w-full overflow-visible min-[1024px]:w-[var(--mt-panel-width)]"
               style={{
-                marginTop: logoOverlapIntoPanel(isRtl),
+                marginTop: titleToPanelGap(),
               }}
             >
               <div className="match-timings-panel-wrap relative overflow-visible">

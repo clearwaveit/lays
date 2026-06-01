@@ -10,8 +10,8 @@ import { useTranslations } from "@/app/i18n/useTranslations";
 import Image from "next/image";
 import { useEffect } from "react";
 
-const HERO_HEADLINE_EN = "/assets/imgs/lays-img-2.svg";
-const HERO_HEADLINE_AR = "/assets/imgs/lays-img-arabic-2.svg";
+const HERO_HEADLINE_EN = "/assets/imgs/lays-img-2-new.svg";
+const HERO_HEADLINE_AR = "/assets/imgs/lays-img-arabic-2-new.svg";
 const HERO_PRODUCT_EN = "/assets/imgs/lays-img-1.png";
 const HERO_PRODUCT_AR = "/assets/imgs/lays-img-arabic.png";
 

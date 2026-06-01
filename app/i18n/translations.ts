@@ -25,6 +25,7 @@ export const translations = {
       viewMatchSchedule: "VIEW MATCH SCHEDULE",
     },
     matchMap: {
+      pageTitle: "Match Map",
       subtitle: "FIND OUT ALL THE PLACES SHOWING THE MATCH NEAR YOU",
       subtitleLine1: "",
       subtitleLine2: "",
@@ -33,6 +34,7 @@ export const translations = {
       abuDhabi: "ABU DHABI",
     },
     matchTimings: {
+      pageTitle: "Match timings",
       logoAlt: "Match timings",
       openLocation: "OPEN LOCATION",
       viewLocation: "VIEW LOCATION",
@@ -40,8 +42,9 @@ export const translations = {
       viewFullSchedule: "VIEW FULL SCHEDULE",
     },
     fullSchedule: {
+      pageTitle: "Full Schedule",
       pageAria: "Full schedule — knockout bracket",
-      logoAlt: "Full schedule",
+      logoAlt: "Full Schedule",
       headlineLine1: "WHO'S STILL",
       headlineLine2: "IN THE GAME?",
       datePrefix: "DATE:",
@@ -54,6 +57,7 @@ export const translations = {
       headlineAlt: "No Lay's No Game",
     },
     a11y: {
+      goBack: "Go back",
       close: "Close",
       openMenu: "Open menu",
       closeMenu: "Close menu",
@@ -87,6 +91,7 @@ export const translations = {
       viewMatchSchedule: "عرض جدول المباريات",
     },
     matchMap: {
+      pageTitle: "خريطة المباريات",
       subtitle: "اكتشف كل الأماكن القريبة منك التي تعرض المباراة",
       subtitleLine1: "اكتشف كل الأماكن القريبة",
       subtitleLine2: "منك التي تعرض المباراة",
@@ -95,6 +100,7 @@ export const translations = {
       abuDhabi: "أبوظبي",
     },
     matchTimings: {
+      pageTitle: "مواعيد المباراة",
       logoAlt: "مواعيد المباراة",
       openLocation: "فتح الموقع",
       viewLocation: "عرض الموقع",
@@ -102,6 +108,7 @@ export const translations = {
       viewFullSchedule: "عرض الجدول الكامل",
     },
     fullSchedule: {
+      pageTitle: "الجدول الكامل",
       pageAria: "الجدول الكامل — خريطة خروج المغلوب",
       logoAlt: "الجدول الكامل",
       headlineLine1: "من لا يزال",
@@ -116,6 +123,7 @@ export const translations = {
       headlineAlt: "بدون ليز ما في مباراة",
     },
     a11y: {
+      goBack: "رجوع",
       close: "إغلاق",
       openMenu: "فتح القائمة",
       closeMenu: "إغلاق القائمة",
