@@ -21,9 +21,8 @@ function TitleRow({
 }) {
   return (
     <div
-      className={`flex min-w-0 flex-1 flex-row items-center overflow-visible gap-[clamp(12px,2vw,20px)] ${
-        isRtl ? "flex-row-reverse" : ""
-      }`}
+      dir={isRtl ? "rtl" : "ltr"}
+      className="flex min-w-0 flex-1 flex-row items-center overflow-visible gap-[clamp(12px,2vw,20px)]"
     >
       <SubpageBackButton />
       {children}
