@@ -18,7 +18,7 @@ export const translations = {
     whenToWatchModal: {
       title: "WHEN TO WATCH",
       selectDate: "SELECT DATE",
-      whereToWatch: "View Locations",
+      whereToWatch: "Timetable",
     },
     venueModal: {
       openLocation: "OPEN LOCATION",
@@ -84,7 +84,7 @@ export const translations = {
     whenToWatchModal: {
       title: "مواعيد المشاهدة",
       selectDate: "اختر التاريخ",
-      whereToWatch: "أماكن المشاهدة",
+      whereToWatch: "الجدول الزمني",
     },
     venueModal: {
       openLocation: "فتح الموقع",
