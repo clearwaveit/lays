@@ -407,3 +407,53 @@ body {
     --subpage-back-icon: clamp(20px, calc(22 / 1600 * 100vw), 22px);
   }
 }
+
+/* Full schedule grid — 1px lines only (no doubled frame + cell borders) */
+.full-schedule-match-grid-frame {
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.full-schedule-match-grid-inner {
+  display: grid;
+  width: 100%;
+  gap: 0;
+  background: transparent;
+  border-top: 1px solid #df2027;
+  border-left: 1px solid #df2027;
+}
+
+.full-schedule-match-grid-inner > article {
+  box-sizing: border-box;
+  min-width: 0;
+  border-right: 1px solid #df2027;
+  border-bottom: 1px solid #df2027;
+  background: transparent;
+}
+
+.full-schedule-match-grid-scroll {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  overscroll-behavior: contain;
+  scrollbar-width: thin;
+  scrollbar-color: #df2027 rgba(0, 0, 0, 0.14);
+  -ms-overflow-style: scrollbar;
+}
+
+.full-schedule-match-grid-scroll::-webkit-scrollbar {
+  width: 8px;
+}
+
+.full-schedule-match-grid-scroll::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+}
+
+.full-schedule-match-grid-scroll::-webkit-scrollbar-thumb {
+  background: #df2027;
+  border-radius: 4px;
+}
+
+.full-schedule-match-grid-scroll::-webkit-scrollbar-thumb:hover {
+  background: #c41c22;
+}

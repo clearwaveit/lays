@@ -18,7 +18,7 @@ export const translations = {
     whenToWatchModal: {
       title: "WHEN TO WATCH",
       selectDate: "SELECT DATE",
-      whereToWatch: "View Locations",
+      whereToWatch: "Timetable",
     },
     venueModal: {
       openLocation: "OPEN LOCATION",
@@ -45,8 +45,6 @@ export const translations = {
       pageTitle: "Full Schedule",
       pageAria: "Full schedule — knockout bracket",
       logoAlt: "Full Schedule",
-      headlineLine1: "WHO'S STILL",
-      headlineLine2: "IN THE GAME?",
       datePrefix: "DATE:",
       whereToWatch: "WHERE TO WATCH?",
       zoomIn: "Zoom in",
@@ -84,7 +82,7 @@ export const translations = {
     whenToWatchModal: {
       title: "مواعيد المشاهدة",
       selectDate: "اختر التاريخ",
-      whereToWatch: "أماكن المشاهدة",
+      whereToWatch: "الجدول الزمني",
     },
     venueModal: {
       openLocation: "فتح الموقع",
@@ -111,8 +109,6 @@ export const translations = {
       pageTitle: "الجدول الكامل",
       pageAria: "الجدول الكامل — خريطة خروج المغلوب",
       logoAlt: "الجدول الكامل",
-      headlineLine1: "من لا يزال",
-      headlineLine2: "في المنافسة؟",
       datePrefix: "التاريخ:",
       whereToWatch: "أين تشاهد؟",
       zoomIn: "تكبير",
