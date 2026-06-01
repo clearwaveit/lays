@@ -466,7 +466,7 @@ function BracketSide({
   );
 }
 
-function BracketMatchTooltip({
+export function BracketMatchTooltip({
   state,
   onClose,
   onWhereToWatch,

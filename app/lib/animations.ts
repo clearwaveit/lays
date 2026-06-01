@@ -336,7 +336,12 @@ export function animateBracketScrollReveal(bracketRoot: HTMLElement) {
 
   gsap.set(slots, { autoAlpha: 0, scale: 0.88 });
 
+  const scroller =
+    bracketRoot.querySelector<HTMLElement>(".full-schedule-match-grid-scroll") ??
+    undefined;
+
   ScrollTrigger.batch(slots, {
+    scroller: scroller ?? window,
     start: "top 92%",
     once: true,
     onEnter: (batch) => {
