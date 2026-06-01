@@ -9,6 +9,7 @@ import {
   useState,
   type ReactNode,
 } from "react";
+import { migrateLegacyDateLabel } from "@/app/data/matches";
 
 const DATE_STORAGE_KEY = "lays-selected-date";
 const VENUE_STORAGE_KEY = "lays-selected-venue";
@@ -46,7 +47,7 @@ export function CampaignSelectionProvider({ children }: { children: ReactNode })
   const [isReady, setIsReady] = useState(false);
 
   useEffect(() => {
-    setSelectedDateState(readStorage(DATE_STORAGE_KEY));
+    setSelectedDateState(migrateLegacyDateLabel(readStorage(DATE_STORAGE_KEY)));
     setSelectedVenueIdState(readStorage(VENUE_STORAGE_KEY));
     setIsReady(true);
   }, []);

@@ -13,7 +13,7 @@
 }
 
 .font-lays {
-  font-family: var(--font-lays), "Lays", Arial, Helvetica, sans-serif;
+  font-family: var(--font-lays);
 }
 
 .font-m-plus-1 {
@@ -29,7 +29,7 @@ html[dir="rtl"] body {
 }
 
 html[dir="ltr"] body {
-  font-family: var(--font-lays), "Lays", Arial, Helvetica, sans-serif;
+  font-family: var(--font-lays);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -46,7 +46,7 @@ html {
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-lays);
   overflow-x: hidden;
   max-width: 100%;
 }
@@ -372,5 +372,38 @@ body {
   .venue-modal--alt {
     height: clamp(388px, 25.5vw, 408px) !important;
     min-height: clamp(388px, 25.5vw, 408px);
+  }
+}
+
+/* Subpage back button — scales with viewport; 44px min touch target on small screens */
+.subpage-back-btn {
+  --subpage-back-size: clamp(40px, 11vw, 44px);
+  --subpage-back-icon: clamp(20px, 5.5vw, 22px);
+  --subpage-back-ring: clamp(1px, 0.2vw, 1.5px);
+  width: var(--subpage-back-size);
+  height: var(--subpage-back-size);
+  min-width: var(--subpage-back-size);
+  min-height: var(--subpage-back-size);
+  border-width: var(--subpage-back-ring);
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.subpage-back-btn svg {
+  width: var(--subpage-back-icon);
+  height: var(--subpage-back-icon);
+}
+
+@media (max-width: 639px) {
+  .subpage-back-btn {
+    --subpage-back-size: max(40px, clamp(36px, 12vw, 40px));
+    --subpage-back-icon: clamp(18px, 5vw, 20px);
+  }
+}
+
+@media (min-width: 1024px) {
+  .subpage-back-btn {
+    --subpage-back-size: clamp(40px, calc(44 / 1600 * 100vw), 44px);
+    --subpage-back-icon: clamp(20px, calc(22 / 1600 * 100vw), 22px);
   }
 }

@@ -1,6 +1,7 @@
 "use client";
 
 import SubpageTopBar from "@/app/components/ui/SubpageTopBar";
+import SubpagePageTitle from "@/app/components/ui/SubpagePageTitle";
 import SponsorBadge from "@/app/components/ui/SponsorBadge";
 import VenueModal, {
   type VenueModalData,
@@ -12,7 +13,6 @@ import {
   mPlus1FontFamily,
   mPlus1TextClass,
 } from "@/app/fonts";
-import { useLanguage } from "@/app/context/LanguageContext";
 import { useTranslations } from "@/app/i18n/useTranslations";
 import { useCampaignSelection } from "@/app/context/CampaignSelectionContext";
 import { resolveDateLabelFromParam } from "@/app/data/matches";
@@ -190,12 +190,8 @@ const MATCH_MAP_RESPONSIVE_CSS = `
 const SUBTITLE_FONT_WEIGHT = 700;
 
 const TITLE_BLOCK_WIDTH = scale(625);
-const MATCH_MAP_LOGO_EN_SRC = "/assets/imgs/match-map-logo.svg";
-const MATCH_MAP_LOGO_AR_SRC = "/assets/imgs/match-map-logo-arabic.svg";
-const MATCH_MAP_LOGO_EN_WIDTH_PX = 312;
-const MATCH_MAP_LOGO_EN_HEIGHT_PX = 116;
-const MATCH_MAP_LOGO_AR_WIDTH_PX = 347;
-const MATCH_MAP_LOGO_AR_HEIGHT_PX = 118;
+/** Horizontal space between page title and “find out all…” subtitle (LTR). */
+const TITLE_SUBTITLE_GAP = scale(26);
 const SUBTITLE_FONT_SIZE = scale(16);
 const CITY_FONT_SIZE = scale(57.44);
 const CITY_COLUMNS_MARGIN_TOP = scale(80);
@@ -327,60 +323,6 @@ function VenueCard({
         />
       ) : null} */}
     </button>
-  );
-}
-
-function MatchMapLogo({
-  className = "",
-  alt,
-}: {
-  className?: string;
-  alt: string;
-}) {
-  const { language, isReady } = useLanguage();
-  const [mounted, setMounted] = useState(false);
-  const isArabic = language === "ar";
-  const logoWidthPx = isArabic
-    ? MATCH_MAP_LOGO_AR_WIDTH_PX
-    : MATCH_MAP_LOGO_EN_WIDTH_PX;
-  const logoSrc = isArabic ? MATCH_MAP_LOGO_AR_SRC : MATCH_MAP_LOGO_EN_SRC;
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  if (!mounted || !isReady) {
-    return (
-      <span
-        aria-hidden
-        className={`inline-block shrink-0 ${className}`}
-        style={{
-          width: scale(
-            isArabic ? MATCH_MAP_LOGO_AR_WIDTH_PX : MATCH_MAP_LOGO_EN_WIDTH_PX,
-          ),
-          height: scale(
-            isArabic
-              ? MATCH_MAP_LOGO_AR_HEIGHT_PX
-              : MATCH_MAP_LOGO_EN_HEIGHT_PX,
-          ),
-        }}
-      />
-    );
-  }
-
-  return (
-    <img
-      src={logoSrc}
-      alt={alt}
-      width={logoWidthPx}
-      height={isArabic ? MATCH_MAP_LOGO_AR_HEIGHT_PX : MATCH_MAP_LOGO_EN_HEIGHT_PX}
-      decoding="async"
-      className={`relative z-10 block max-w-full shrink-0 object-contain ${isArabic ? "object-right" : "object-left"} ${className}`}
-      style={{
-        width: scale(logoWidthPx),
-        height: "auto",
-      }}
-    />
   );
 }
 
@@ -605,15 +547,16 @@ export default function MatchMap() {
             <SubpageTopBar brandOnEnd>
               <div
                 className={`${textClass} flex w-full max-w-full shrink-0 flex-row items-center ${
-                  isRtl
-                    ? "justify-between gap-[clamp(16px,3vw,48px)]"
-                    : "w-fit gap-[clamp(8px,1.5vw,12px)]"
+                  isRtl ? "justify-between" : "w-fit"
                 }`}
-                style={{ maxWidth: TITLE_BLOCK_WIDTH }}
+                style={{
+                  maxWidth: TITLE_BLOCK_WIDTH,
+                  gap: isRtl ? "clamp(16px, 3vw, 48px)" : TITLE_SUBTITLE_GAP,
+                }}
               >
                 {isRtl ? (
                   <>
-                    <MatchMapLogo alt={t.matchMap.logoAlt} />
+                    <SubpagePageTitle title={t.matchMap.pageTitle} isRtl={isRtl} />
                     <p
                       className={`${textClass} min-w-0 shrink text-right font-normal leading-snug tracking-normal text-black`}
                       style={{
@@ -629,7 +572,7 @@ export default function MatchMap() {
                   </>
                 ) : (
                   <>
-                    <MatchMapLogo alt={t.matchMap.logoAlt} />
+                    <SubpagePageTitle title={t.matchMap.pageTitle} isRtl={isRtl} />
                     <p
                       className={`${mPlus1TextClass} min-w-0 font-bold uppercase leading-tight tracking-normal text-black`}
                       style={{

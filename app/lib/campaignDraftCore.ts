@@ -1,5 +1,11 @@
-import { MATCHES, type MatchFixture } from "@/app/data/matches";
+import {
+  MATCHES,
+  normalizeMatchDateLabel,
+  type MatchFixture,
+} from "@/app/data/matches";
+import { getTeamFlagSrc } from "@/app/data/team-flags";
 import { VENUES } from "@/app/data/venues";
+import { sanitizeStoredImageSrc } from "@/app/lib/sanitizeImageSrc";
 import type { VenueModalData } from "@/app/components/ui/VenueModal";
 
 export type AdminTeam = {
@@ -62,6 +68,55 @@ export function cityFromVenueId(id: string) {
   return "";
 }
 
+function matchIdentityKey(match: MatchFixture): string {
+  const home = match.home.name.trim().toLowerCase();
+  const away = match.away.name.trim().toLowerCase();
+  return home < away ? `${home}|${away}` : `${away}|${home}`;
+}
+
+function findDraftMatchForSource(
+  source: MatchFixture,
+  draftMatches: MatchFixture[],
+): MatchFixture | undefined {
+  if (source.matchNo) {
+    const byMatchNo = draftMatches.find((match) => match.matchNo === source.matchNo);
+    if (byMatchNo) return byMatchNo;
+  }
+
+  const sourceKey = matchIdentityKey(source);
+  return draftMatches.find((match) => matchIdentityKey(match) === sourceKey);
+}
+
+/** Merge admin-edited match fields onto the current MATCHES roster. */
+export function applySourceScheduleToDraftMatches(
+  draftMatches: MatchFixture[],
+): MatchFixture[] {
+  return MATCHES.map((source) => {
+    const draft = findDraftMatchForSource(source, draftMatches);
+    if (!draft) {
+      return {
+        ...source,
+        venueIds: matchVenueIds(source),
+      };
+    }
+    return {
+      ...source,
+      dateLabel: normalizeMatchDateLabel(draft.dateLabel),
+      time: draft.time,
+      timeSuffix: draft.timeSuffix || source.timeSuffix,
+      home: {
+        ...draft.home,
+        flag: sanitizeStoredImageSrc(draft.home.flag, source.home.flag),
+      },
+      away: {
+        ...draft.away,
+        flag: sanitizeStoredImageSrc(draft.away.flag, source.away.flag),
+      },
+      venueIds: matchVenueIds(draft),
+    };
+  });
+}
+
 export function initialAdminDraft(): AdminDraft {
   return {
     matches: MATCHES.map((match) => ({
@@ -80,19 +135,33 @@ export function initialAdminDraft(): AdminDraft {
 
 export function normalizeAdminDraft(draft: Partial<AdminDraft>): AdminDraft {
   const fallback = initialAdminDraft();
-  const restaurants = draft.restaurants ?? fallback.restaurants;
+  const restaurants = (draft.restaurants ?? fallback.restaurants).map((restaurant) => {
+    const fallbackVenue = VENUES[restaurant.id];
+    return {
+      ...restaurant,
+      src: sanitizeStoredImageSrc(restaurant.src, fallbackVenue?.src ?? restaurant.src),
+    };
+  });
   const allowedVenueIds = new Set(restaurants.map((restaurant) => restaurant.id));
-  const matches = (draft.matches ?? fallback.matches).map((match) => {
+  const syncedMatches = applySourceScheduleToDraftMatches(
+    draft.matches ?? fallback.matches,
+  );
+  const matches = syncedMatches.map((match) => {
     const venueIds = matchVenueIds(match).filter((id) => allowedVenueIds.has(id));
     return {
       ...match,
+      dateLabel: normalizeMatchDateLabel(match.dateLabel),
       venueIds: venueIds.length > 0 ? venueIds : restaurants.map((restaurant) => restaurant.id),
     };
   });
+  const teams = (draft.teams ?? uniqueTeamsFromMatches(matches)).map((team) => ({
+    ...team,
+    flag: sanitizeStoredImageSrc(team.flag, getTeamFlagSrc(team.name) ?? team.flag),
+  }));
 
   return {
     matches,
-    teams: draft.teams ?? uniqueTeamsFromMatches(matches),
+    teams,
     restaurants,
     tracking: { ...DEFAULT_TRACKING, ...(draft.tracking ?? {}) },
   };

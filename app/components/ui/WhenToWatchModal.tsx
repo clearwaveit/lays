@@ -3,6 +3,7 @@
 import { useCampaignSelection } from "@/app/context/CampaignSelectionContext";
 import { encodeDateParam } from "@/app/data/matches";
 import WhenToWatchDatePicker from "@/app/components/ui/WhenToWatchDatePicker";
+import { useAdminCampaignDraft } from "@/app/lib/adminCampaignDraft";
 import { useTranslations } from "@/app/i18n/useTranslations";
 import { useRouter } from "next/navigation";
 import { useGsapModal } from "@/app/hooks/useGsapModal";
@@ -38,6 +39,7 @@ export default function WhenToWatchModal() {
     selectedDate,
   } = useCampaignSelection();
   const { t, textClass, fontFamily, isRtl } = useTranslations();
+  const campaignDraft = useAdminCampaignDraft();
   const [mounted, setMounted] = useState(false);
   const [draftDate, setDraftDate] = useState("");
   const { backdropRef, dialogRef } = useGsapModal(whenToWatchModalOpen);
@@ -123,6 +125,7 @@ export default function WhenToWatchModal() {
           placeholder={t.whenToWatchModal.selectDate}
           fieldHeight={FIELD_HEIGHT}
           fieldFontSize={FIELD_FONT_SIZE}
+          matches={campaignDraft?.matches}
         />
 
         <button

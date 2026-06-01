@@ -9,14 +9,14 @@ const laysFont = localFont({
       style: "normal",
     },
     {
-      path: "../public/assets/fonts/LaysExtraBold.otf",
+      path: "../public/assets/fonts/Lays_ExtraBold.otf",
       weight: "800",
       style: "normal",
     },
   ],
   variable: "--font-lays",
   display: "swap",
-  fallback: ["Arial", "Helvetica", "sans-serif"],
+  adjustFontFallback: false,
 });
 
 /** Lay's brand font */
@@ -37,7 +37,7 @@ export const cairo = Cairo({
 /** Tailwind + inline style helper */
 export const laysTextClass = `${lays.className} font-lays`;
 
-export const laysFontFamily = 'var(--font-lays), "Lays", sans-serif';
+export const laysFontFamily = "var(--font-lays)";
 
 export const mPlus1TextClass = `${mPlus1.className} font-m-plus-1`;
 export const mPlus1FontFamily = 'var(--font-m-plus-1), "M PLUS 1", sans-serif';

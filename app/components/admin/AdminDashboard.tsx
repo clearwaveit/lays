@@ -1,6 +1,7 @@
 "use client";
 
 import type { MatchFixture } from "@/app/data/matches";
+import { parseMatchDateLabel } from "@/app/data/matches";
 import {
   ADMIN_DRAFT_STORAGE_KEY,
   type AdminDraft,
@@ -11,6 +12,7 @@ import {
   initialAdminDraft,
   normalizeAdminDraft,
   fetchAdminDraft,
+  persistCampaignDraftToStorage,
   saveAdminDraft,
 } from "@/app/lib/adminCampaignDraft";
 import { useEffect, useMemo, useState } from "react";
@@ -18,7 +20,8 @@ import { useEffect, useMemo, useState } from "react";
 type AdminTab = "overview" | "matches" | "teams" | "restaurants" | "schedule" | "tracking";
 
 const emptyMatch: MatchFixture = {
-  dateLabel: "JUN 11",
+  matchNo: 0,
+  dateLabel: "2026-06-11",
   time: "20:00",
   timeSuffix: "GST",
   home: { name: "Team A", flag: "/assets/imgs/football.png" },
@@ -27,14 +30,13 @@ const emptyMatch: MatchFixture = {
 };
 
 function stageForMatch(match: MatchFixture) {
-  const [month, dayText] = match.dateLabel.split(/\s+/);
-  const day = Number.parseInt(dayText ?? "", 10);
-  if (month === "JUL") {
+  const { month, day } = parseMatchDateLabel(match.dateLabel);
+  if (month === 6) {
     if (day >= 19) return "Final";
     if (day >= 14) return "Semi-final";
     if (day >= 9) return "Quarter-final";
   }
-  if (month === "JUL" || (month === "JUN" && day >= 28)) return "Knockout";
+  if (month === 6 || (month === 5 && day >= 28)) return "Knockout";
   return "Group / Round of 32";
 }
 
@@ -56,13 +58,20 @@ function downloadJson(filename: string, draft: AdminDraft) {
   URL.revokeObjectURL(url);
 }
 
-function readFileAsDataUrl(file: File) {
-  return new Promise<string>((resolve, reject) => {
-    const reader = new FileReader();
-    reader.onload = () => resolve(String(reader.result ?? ""));
-    reader.onerror = () => reject(reader.error);
-    reader.readAsDataURL(file);
-  });
+function uploadAdminImage(file: File) {
+  const formData = new FormData();
+  formData.append("file", file);
+  return fetch("/api/admin/upload", { method: "POST", body: formData }).then(
+    async (response) => {
+      if (!response.ok) {
+        const payload = (await response.json().catch(() => null)) as
+          | { error?: string }
+          | null;
+        throw new Error(payload?.error ?? "Unable to upload image");
+      }
+      return (await response.json()) as { path: string };
+    },
+  );
 }
 
 function Field({
@@ -130,6 +139,7 @@ function AdminDashboard() {
         setDraft(apiDraft);
         setSavedDraft(apiDraft);
         window.localStorage.setItem(ADMIN_DRAFT_STORAGE_KEY, JSON.stringify(apiDraft));
+        persistCampaignDraftToStorage(apiDraft);
         setLastSavedAt("Loaded from API");
       } catch {
         const stored = window.localStorage.getItem(ADMIN_DRAFT_STORAGE_KEY);
@@ -162,6 +172,7 @@ function AdminDashboard() {
       setDraft(saved);
       setSavedDraft(saved);
       window.localStorage.setItem(ADMIN_DRAFT_STORAGE_KEY, JSON.stringify(saved));
+      persistCampaignDraftToStorage(saved);
       setLastSavedAt(new Date().toLocaleTimeString());
     } catch {
       setSaveError("Could not save draft. Please try again.");
@@ -622,12 +633,20 @@ function AdminDashboard() {
                           Upload logo
                           <input
                             type="file"
-                            accept="image/*"
+                            accept="image/png,image/jpeg,image/gif,image/webp,image/svg+xml,.svg"
                             onChange={async (event) => {
                               const file = event.target.files?.[0];
                               if (!file) return;
-                              const src = await readFileAsDataUrl(file);
-                              updateRestaurant(realIndex, { src });
+                              try {
+                                const { path: src } = await uploadAdminImage(file);
+                                updateRestaurant(realIndex, { src });
+                              } catch (error) {
+                                setSaveError(
+                                  error instanceof Error
+                                    ? error.message
+                                    : "Could not upload logo.",
+                                );
+                              }
                               event.target.value = "";
                             }}
                             className="rounded-md border border-dashed border-slate-300 bg-white px-3 py-2 text-sm font-medium normal-case tracking-normal text-slate-700 file:mr-3 file:rounded-md file:border-0 file:bg-slate-950 file:px-3 file:py-2 file:text-sm file:font-bold file:text-white"

@@ -5,6 +5,7 @@ import {
   formatMatchDateDisplay,
   getMatchCalendarDates,
   type MatchCalendarDate,
+  type MatchFixture,
 } from "@/app/data/matches";
 import { useTranslations } from "@/app/i18n/useTranslations";
 import { useEffect, useMemo, useRef, useState } from "react";
@@ -21,6 +22,7 @@ type WhenToWatchDatePickerProps = {
   placeholder: string;
   fieldHeight: string;
   fieldFontSize: string;
+  matches?: MatchFixture[];
 };
 
 type CalendarCell = {
@@ -72,12 +74,13 @@ export default function WhenToWatchDatePicker({
   placeholder,
   fieldHeight,
   fieldFontSize,
+  matches,
 }: WhenToWatchDatePickerProps) {
   const { textClass, fontFamily, isRtl, dir, language } = useTranslations();
   const displayValue = value
     ? formatMatchDateDisplay(value, language)
     : null;
-  const calendarDates = useMemo(() => getMatchCalendarDates(), []);
+  const calendarDates = useMemo(() => getMatchCalendarDates(matches), [matches]);
   const containerRef = useRef<HTMLDivElement>(null);
 
   const selectableByDay = useMemo(() => {
