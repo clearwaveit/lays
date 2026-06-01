@@ -190,8 +190,10 @@ const MATCH_MAP_RESPONSIVE_CSS = `
 const SUBTITLE_FONT_WEIGHT = 700;
 
 const TITLE_BLOCK_WIDTH = scale(625);
-/** Horizontal space between page title and “find out all…” subtitle (LTR). */
-const TITLE_SUBTITLE_GAP = scale(26);
+/** Horizontal space between page title and subtitle (English). */
+const TITLE_SUBTITLE_GAP = scale(20);
+/** Extra space on both sides of Arabic subtitle lines only. */
+const SUBTITLE_INLINE_PADDING_AR = scale(16);
 const SUBTITLE_FONT_SIZE = scale(16);
 const CITY_FONT_SIZE = scale(57.44);
 const CITY_COLUMNS_MARGIN_TOP = scale(80);
@@ -546,12 +548,10 @@ export default function MatchMap() {
           >
             <SubpageTopBar brandOnEnd>
               <div
-                className={`${textClass} flex w-full max-w-full shrink-0 flex-row items-center ${
-                  isRtl ? "justify-between" : "w-fit"
-                }`}
+                className={`${textClass} flex w-fit max-w-full shrink-0 flex-row items-center`}
                 style={{
                   maxWidth: TITLE_BLOCK_WIDTH,
-                  gap: isRtl ? "clamp(16px, 3vw, 48px)" : TITLE_SUBTITLE_GAP,
+                  gap: TITLE_SUBTITLE_GAP,
                 }}
               >
                 {isRtl ? (
@@ -564,6 +564,8 @@ export default function MatchMap() {
                         fontFamily,
                         fontWeight: 400,
                         letterSpacing: 0,
+                        paddingInlineStart: SUBTITLE_INLINE_PADDING_AR,
+                        paddingInlineEnd: SUBTITLE_INLINE_PADDING_AR,
                       }}
                     >
                       <span className="block">{t.matchMap.subtitleLine1}</span>
