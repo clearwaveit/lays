@@ -1,6 +1,6 @@
 "use client";
 
-import type { MatchFixture } from "@/app/data/matches";
+import type { MatchFixture, MatchWinnerSide } from "@/app/data/matches";
 import { parseMatchDateLabel } from "@/app/data/matches";
 import {
   ADMIN_DRAFT_STORAGE_KEY,
@@ -94,6 +94,40 @@ function Field({
         onChange={(event) => onChange(event.target.value)}
         className="h-10 rounded-md border border-slate-200 bg-white px-3 text-sm font-medium normal-case tracking-normal text-slate-950 outline-none transition focus:border-red-500 focus:ring-2 focus:ring-red-100"
       />
+    </label>
+  );
+}
+
+function WinnerField({
+  label,
+  homeName,
+  awayName,
+  value,
+  onChange,
+}: {
+  label: string;
+  homeName: string;
+  awayName: string;
+  value: MatchWinnerSide | null | undefined;
+  onChange: (value: MatchWinnerSide | null) => void;
+}) {
+  const selectValue = value === "home" || value === "away" ? value : "";
+
+  return (
+    <label className="grid gap-1 text-xs font-semibold uppercase tracking-[0.12em] text-slate-500">
+      {label}
+      <select
+        value={selectValue}
+        onChange={(event) => {
+          const next = event.target.value;
+          onChange(next === "home" || next === "away" ? next : null);
+        }}
+        className="h-10 rounded-md border border-slate-200 bg-white px-3 text-sm font-medium normal-case tracking-normal text-slate-950 outline-none transition focus:border-red-500 focus:ring-2 focus:ring-red-100"
+      >
+        <option value="">Not played / no result</option>
+        <option value="home">{homeName} wins</option>
+        <option value="away">{awayName} wins</option>
+      </select>
     </label>
   );
 }
@@ -418,7 +452,7 @@ function AdminDashboard() {
                 <div className="flex flex-col gap-3 lg:flex-row lg:items-end lg:justify-between">
                   <SectionHeader
                     title="Matches"
-                    description="Edit match date, time, teams, and the restaurants that will show each match."
+                    description="Edit match date, time, teams, winner (for grey loser flags on the site), and restaurants."
                   />
                   <button
                     type="button"
@@ -440,8 +474,18 @@ function AdminDashboard() {
                     return (
                       <article
                         key={`${realIndex}-${match.dateLabel}-${match.time}`}
-                        className="grid gap-3 rounded-lg border border-slate-200 p-4 xl:grid-cols-[120px_110px_1fr_1fr_84px]"
+                        className="grid gap-3 rounded-lg border border-slate-200 p-4 xl:grid-cols-[72px_120px_110px_1fr_1fr_84px]"
                       >
+                        <Field
+                          label="Match #"
+                          value={match.matchNo || ""}
+                          onChange={(value) =>
+                            updateMatch(realIndex, {
+                              matchNo: Number.parseInt(value, 10) || 0,
+                            })
+                          }
+                          type="number"
+                        />
                         <Field
                           label="Date"
                           value={match.dateLabel}
@@ -474,7 +518,18 @@ function AdminDashboard() {
                         >
                           Delete
                         </button>
-                        <div className="grid gap-2 xl:col-span-5">
+                        <div className="xl:col-span-6">
+                          <WinnerField
+                            label="Match result (loser flag shows grey on site)"
+                            homeName={match.home.name}
+                            awayName={match.away.name}
+                            value={match.winnerSide}
+                            onChange={(winnerSide) =>
+                              updateMatch(realIndex, { winnerSide: winnerSide ?? undefined })
+                            }
+                          />
+                        </div>
+                        <div className="grid gap-2 xl:col-span-6">
                           <div className="flex items-center justify-between gap-3">
                             <p className="text-xs font-semibold uppercase tracking-[0.12em] text-slate-500">
                               Restaurants showing this match
@@ -673,7 +728,7 @@ function AdminDashboard() {
               <div className="grid gap-5">
                 <SectionHeader
                   title="Schedule"
-                  description="Read-only schedule grouping for now. Edit the actual match rows in the Matches tab."
+                  description="Grouped by round and date. Set the winner here to grey the losing team's flag on the public site."
                 />
                 <div className="grid gap-3">
                   {scheduleGroups.map(([group, matches]) => (
@@ -682,17 +737,40 @@ function AdminDashboard() {
                         {group} ({matches.length})
                       </summary>
                       <div className="mt-3 grid gap-2">
-                        {matches.map((match) => (
-                          <div
-                            key={`${group}-${match.time}-${match.home.name}-${match.away.name}`}
-                            className="flex flex-wrap items-center gap-2 rounded-md bg-slate-50 px-3 py-2 text-sm"
-                          >
-                            <span className="font-black">{match.time} {match.timeSuffix}</span>
-                            <span>{match.home.name}</span>
-                            <span className="text-slate-400">vs</span>
-                            <span>{match.away.name}</span>
-                          </div>
-                        ))}
+                        {matches.map((match) => {
+                          const realIndex = draft.matches.indexOf(match);
+                          return (
+                            <div
+                              key={`${group}-${match.matchNo}-${match.time}-${match.home.name}-${match.away.name}`}
+                              className="grid gap-2 rounded-md bg-slate-50 px-3 py-2 sm:grid-cols-[minmax(0,1fr)_minmax(180px,240px)] sm:items-center"
+                            >
+                              <div className="flex flex-wrap items-center gap-2 text-sm">
+                                <span className="text-xs font-bold text-slate-400">
+                                  #{match.matchNo}
+                                </span>
+                                <span className="font-black">
+                                  {match.time} {match.timeSuffix}
+                                </span>
+                                <span>{match.home.name}</span>
+                                <span className="text-slate-400">vs</span>
+                                <span>{match.away.name}</span>
+                              </div>
+                              {realIndex >= 0 ? (
+                                <WinnerField
+                                  label="Winner"
+                                  homeName={match.home.name}
+                                  awayName={match.away.name}
+                                  value={match.winnerSide}
+                                  onChange={(winnerSide) =>
+                                    updateMatch(realIndex, {
+                                      winnerSide: winnerSide ?? undefined,
+                                    })
+                                  }
+                                />
+                              ) : null}
+                            </div>
+                          );
+                        })}
                       </div>
                     </details>
                   ))}

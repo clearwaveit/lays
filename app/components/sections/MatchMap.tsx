@@ -215,6 +215,8 @@ const SUBTITLE_FONT_SIZE = scale(16);
 /** Arabic match-map subtitle — matches hero / design reference */
 const SUBTITLE_FONT_SIZE_AR = "26.28px";
 const SUBTITLE_LINE_HEIGHT_AR = "36.49px";
+const SUBTITLE_FONT_SIZE_AR_LINE2 = "23px";
+const SUBTITLE_LINE_HEIGHT_AR_LINE2 = "32px";
 const SUBTITLE_FONT_WEIGHT_AR = 800;
 const CITY_FONT_SIZE = scale(57.44);
 const CITY_COLUMNS_MARGIN_TOP = scale(80);
@@ -590,7 +592,15 @@ export default function MatchMap() {
                       }}
                     >
                       <span className="block">{t.matchMap.subtitleLine1}</span>
-                      <span className="block">{t.matchMap.subtitleLine2}</span>
+                      <span
+                        className="block"
+                        style={{
+                          fontSize: SUBTITLE_FONT_SIZE_AR_LINE2,
+                          lineHeight: SUBTITLE_LINE_HEIGHT_AR_LINE2,
+                        }}
+                      >
+                        {t.matchMap.subtitleLine2}
+                      </span>
                     </p>
                   </>
                 ) : (

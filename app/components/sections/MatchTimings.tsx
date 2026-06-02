@@ -16,6 +16,7 @@ import {
   type Team,
 } from "@/app/data/matches";
 import { isRemoteTeamFlag } from "@/app/data/team-flags";
+import { isMatchSideLoser, LOSER_FLAG_CLASS } from "@/app/lib/matchResult";
 import { getTeamDisplayName } from "@/app/data/team-names";
 import { getVenueById, getVenueWhiteLogoSrc } from "@/app/data/venues";
 import { useSmoothHorizontalScroll } from "@/app/hooks/useSmoothHorizontalScroll";
@@ -130,17 +131,22 @@ function isAltVenueWhiteLogo(venueId: string) {
 
 function TeamColumn({
   team,
+  match,
+  side,
   displayName,
   isRtl,
   textClass,
   fontFamily,
 }: {
   team: Team;
+  match: MatchFixture;
+  side: "home" | "away";
   displayName: string;
   isRtl: boolean;
   textClass: string;
   fontFamily: string;
 }) {
+  const isLoser = isMatchSideLoser(match, side);
   return (
     <div
       className="mt-team-column flex min-w-0 max-w-[var(--mt-team-name-max-width)] shrink-0 flex-col items-center overflow-hidden"
@@ -175,7 +181,7 @@ function TeamColumn({
             quality={100}
             draggable={false}
             unoptimized={isRemoteTeamFlag(team.flag)}
-            className="mt-team-flag-img pointer-events-none object-cover select-none"
+            className={`mt-team-flag-img pointer-events-none object-cover select-none${isLoser ? ` ${LOSER_FLAG_CLASS}` : ""}`}
             style={{ borderRadius: "50%" }}
             sizes="(max-width: 1023px) 80px, 120px"
           />
@@ -279,6 +285,8 @@ function MatchCard({
           >
           <TeamColumn
             team={match.home}
+            match={match}
+            side="home"
             displayName={homeName}
             isRtl={isRtl}
             textClass={textClass}
@@ -304,6 +312,8 @@ function MatchCard({
 
           <TeamColumn
             team={match.away}
+            match={match}
+            side="away"
             displayName={awayName}
             isRtl={isRtl}
             textClass={textClass}
