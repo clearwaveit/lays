@@ -11,6 +11,7 @@ import {
   type Team,
 } from "@/app/data/matches";
 import { isRemoteTeamFlag } from "@/app/data/team-flags";
+import { isMatchSideLoser, LOSER_FLAG_CLASS } from "@/app/lib/matchResult";
 import { useBracketZoom } from "@/app/hooks/useBracketZoom";
 import { useTranslations } from "@/app/i18n/useTranslations";
 import Image from "next/image";
@@ -294,18 +295,21 @@ type TooltipState = {
 function BracketFlag({
   team,
   match,
+  side,
   size,
   usePlaceholder = false,
   onSelect,
 }: {
   team: Team;
   match: MatchFixture;
+  side: "home" | "away";
   size: string;
   usePlaceholder?: boolean;
   onSelect: (match: MatchFixture, rect: DOMRect) => void;
 }) {
   const btnRef = useRef<HTMLButtonElement>(null);
   const flagSrc = usePlaceholder ? KNOCKOUT_PLACEHOLDER_FLAG : team.flag;
+  const isLoser = !usePlaceholder && isMatchSideLoser(match, side);
 
   return (
     <button
@@ -331,7 +335,7 @@ function BracketFlag({
         unoptimized={!usePlaceholder && isRemoteTeamFlag(team.flag)}
         className={`pointer-events-none select-none ${
           usePlaceholder ? "object-contain object-center p-[8%]" : "object-cover"
-        }`}
+        } ${isLoser ? LOSER_FLAG_CLASS : ""}`}
         sizes="80px"
       />
     </button>
@@ -371,6 +375,7 @@ function BracketMatchPill({
         <BracketFlag
           team={match.home}
           match={match}
+          side="home"
           size={styles.flag}
           usePlaceholder={usePlaceholderFlags}
           onSelect={onFlagSelect}
@@ -378,6 +383,7 @@ function BracketMatchPill({
         <BracketFlag
           team={match.away}
           match={match}
+          side="away"
           size={styles.flag}
           usePlaceholder={usePlaceholderFlags}
           onSelect={onFlagSelect}

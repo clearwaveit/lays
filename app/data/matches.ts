@@ -18,6 +18,8 @@ type MatchFixtureBase = {
   venueIds?: string[];
 };
 
+export type MatchWinnerSide = "home" | "away";
+
 export type MatchFixture = {
   matchNo: number;
   dateLabel: string;
@@ -26,6 +28,8 @@ export type MatchFixture = {
   home: Team;
   away: Team;
   venueIds?: string[];
+  /** Set in admin when a match is played; losing side flags render grey on the site. */
+  winnerSide?: MatchWinnerSide | null;
 };
 
 export const MATCH_CALENDAR_YEAR = 2026;
