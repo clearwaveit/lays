@@ -26,7 +26,6 @@ import {
 } from "@/app/lib/adminCampaignDraft";
 import { gsap } from "@/app/lib/gsap";
 import { shouldAnimate } from "@/app/lib/motion";
-import { laysFontFamily, laysTextClass } from "@/app/fonts";
 import { useTranslations } from "@/app/i18n/useTranslations";
 import Image from "next/image";
 import Link from "next/link";
@@ -188,11 +187,11 @@ function TeamColumn({
         title={displayName}
       >
         <span
-          className={`${isRtl ? textClass : laysTextClass} block w-full min-w-0 text-center leading-tight text-black ${isRtl ? "" : "uppercase"}`}
+          className={`${textClass} block w-full min-w-0 text-center leading-tight text-black ${isRtl ? "" : "uppercase"}`}
           style={{
             fontSize: "var(--mt-team-name-font-size)",
             fontWeight: 800,
-            fontFamily: isRtl ? fontFamily : laysFontFamily,
+            fontFamily,
             // multiline clamp to 2 lines with ellipsis
             display: "-webkit-box",
             WebkitLineClamp: 2,
@@ -209,7 +208,7 @@ function TeamColumn({
         </span>
         <span
           role="tooltip"
-          className={`${isRtl ? textClass : laysTextClass} pointer-events-none absolute bottom-[calc(100%+6px)] left-1/2 z-30 hidden w-max max-w-[min(240px,70vw)] -translate-x-1/2 rounded-md bg-black px-2 py-1.5 text-center text-[10px] font-normal normal-case leading-snug text-white shadow-lg group-hover/team-name:block`}
+          className={`${textClass} pointer-events-none absolute bottom-[calc(100%+6px)] left-1/2 z-30 hidden w-max max-w-[min(240px,70vw)] -translate-x-1/2 rounded-md bg-black px-2 py-1.5 text-center text-[10px] font-normal normal-case leading-snug text-white shadow-lg group-hover/team-name:block`}
         >
           {displayName}
         </span>
@@ -261,11 +260,11 @@ function MatchCard({
 
         <div className="mt-match-card-content absolute inset-0 z-10 overflow-hidden">
           <p
-            className={`${isRtl ? textClass : laysTextClass} absolute left-1/2 z-20 -translate-x-1/2 text-center font-extrabold leading-none text-black ${isRtl ? "" : "uppercase"}`}
+            className={`${textClass} absolute left-1/2 z-20 -translate-x-1/2 text-center font-extrabold leading-none text-black ${isRtl ? "" : "uppercase"}`}
             style={{
               top: "var(--mt-date-top)",
               fontSize: "var(--mt-date-font-size)",
-              fontFamily: isRtl ? fontFamily : laysFontFamily,
+              fontFamily,
             }}
           >
             {dateDisplay}
@@ -287,7 +286,7 @@ function MatchCard({
           />
 
           <div
-            className={`${laysTextClass} mt-match-time-badge z-20 flex shrink-0 flex-col items-center justify-center text-center uppercase leading-none text-black`}
+            className={`${textClass} mt-match-time-badge z-20 flex shrink-0 flex-col items-center justify-center text-center uppercase leading-none text-black`}
             style={{
               width: "var(--mt-time-badge-width)",
               height: "var(--mt-time-badge-height)",
@@ -295,7 +294,7 @@ function MatchCard({
               borderRadius: scale(6),
               fontSize: "var(--mt-time-badge-font-size)",
               fontWeight: 800,
-              fontFamily: laysFontFamily,
+              fontFamily,
               lineHeight: 1.1,
             }}
           >
@@ -650,7 +649,7 @@ export default function MatchTimings() {
                     href={venue.locationUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={`${laysTextClass} inline-flex shrink-0 items-center justify-center uppercase text-[#E31837] no-underline transition-opacity hover:opacity-90`}
+                    className={`${textClass} inline-flex shrink-0 items-center justify-center uppercase text-[#E31837] no-underline transition-opacity hover:opacity-90`}
                     style={{
                       ...actionBtnStyle,
                       backgroundColor: LOCATION_YELLOW,
@@ -712,7 +711,7 @@ export default function MatchTimings() {
             >
               <Link
                 href="/full-schedule"
-                className={`${laysTextClass} inline-flex shrink-0 items-center justify-center gap-2 uppercase text-white no-underline transition-opacity hover:opacity-90`}
+                className={`${textClass} inline-flex shrink-0 items-center justify-center gap-2 uppercase text-white no-underline transition-opacity hover:opacity-90`}
                 style={{
                   ...actionBtnTextStyle,
                   width: "var(--mt-action-btn-width)",

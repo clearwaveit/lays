@@ -44,3 +44,10 @@ export const mPlus1FontFamily = 'var(--font-m-plus-1), "M PLUS 1", sans-serif';
 
 export const cairoTextClass = `${cairo.className} font-cairo`;
 export const cairoFontFamily = 'var(--font-cairo), "Cairo", sans-serif';
+
+/** Same weights as Lay's UI — extrabold 800, bold 700. */
+export const BRAND_FONT_WEIGHT = {
+  extrabold: 800,
+  bold: 700,
+  regular: 400,
+} as const;

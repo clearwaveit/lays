@@ -1,6 +1,5 @@
 "use client";
 
-import { useCampaignSelection } from "@/app/context/CampaignSelectionContext";
 import { useTranslations } from "@/app/i18n/useTranslations";
 import { usePathname, useRouter } from "next/navigation";
 import { useEffect, useState, type CSSProperties } from "react";
@@ -56,7 +55,6 @@ function NavLinks({
 }) {
   const router = useRouter();
   const pathname = usePathname();
-  const { openWhenToWatchModal } = useCampaignSelection();
   const { t, isRtl, textClass, fontFamily } = useTranslations();
   const isHero = Boolean(heroButtonStyles);
 
@@ -70,7 +68,7 @@ function NavLinks({
     onNavigate?.();
 
     if (action === "when-to-watch") {
-      openWhenToWatchModal();
+      router.push("/timetable");
       return;
     }
 
@@ -85,6 +83,11 @@ function NavLinks({
   };
 
   const prefetchAction = (action: NavAction) => {
+    if (action === "when-to-watch") {
+      router.prefetch("/timetable");
+      return;
+    }
+
     if (action === "where-to-watch") {
       router.prefetch("/where-to-watch");
       return;
@@ -99,14 +102,14 @@ function NavLinks({
     <>
       {navItems.map((link) => {
         const isWhereActive = pathname === "/where-to-watch";
-        const isWhenActive = pathname === "/match-timings";
+        const isWhenActive = pathname === "/timetable";
         const isScheduleActive = pathname === "/full-schedule";
         const active =
           (link.action === "where-to-watch" && isWhereActive) ||
           (link.action === "when-to-watch" && isWhenActive) ||
           (link.action === "full-schedule" && isScheduleActive);
 
-        const baseLinkClassName = `${textClass} cursor-pointer border-none text-center leading-tight no-underline transition-opacity hover:opacity-80 ${isHero ? "font-extrabold tracking-normal" : `${isRtl ? "tracking-normal" : "uppercase tracking-[0.25em]"} hover:opacity-70`} ${linkClassName} ${
+        const baseLinkClassName = `${textClass} cursor-pointer border-none text-center leading-tight no-underline transition-opacity hover:opacity-80 ${isHero ? "font-extrabold tracking-normal" : isRtl ? `${active ? "font-bold" : "font-normal"} tracking-normal` : "uppercase tracking-[0.25em] hover:opacity-70"} ${linkClassName} ${
           active ? "" : "text-black"
         }`;
 
