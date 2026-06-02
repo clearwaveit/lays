@@ -3,14 +3,14 @@
 import SubpageTopBar from "@/app/components/ui/SubpageTopBar";
 import SubpagePageTitle from "@/app/components/ui/SubpagePageTitle";
 import SponsorBadge from "@/app/components/ui/SponsorBadge";
-// import TournamentBracket from "@/app/components/sections/TournamentBracket";
-import FullScheduleMatchGrid from "@/app/components/sections/FullScheduleMatchGrid";
+import TournamentBracket from "@/app/components/sections/TournamentBracket";
 import { useTranslations } from "@/app/i18n/useTranslations";
 import { useGsapScope } from "@/app/hooks/useGsapScope";
 import { animateFullScheduleSection } from "@/app/lib/animations";
 import { useAdminCampaignDraft } from "@/app/lib/adminCampaignDraft";
 import Image from "next/image";
 
+const HEADLINE_RED = "#DF2027";
 const DESIGN_WIDTH = 1600;
 const PAGE_MAX_WIDTH = 1600;
 const pageMaxWidth = `min(100%, ${((PAGE_MAX_WIDTH / DESIGN_WIDTH) * 100).toFixed(4)}vw)`;
@@ -21,18 +21,23 @@ function scale(px: number, minRatio = 0.45) {
 }
 
 const TITLE_OVERLAP_INTO_CONTENT_PX = 24;
-const GRID_MARGIN_PX = 96;
 
 function titleOverlapIntoContent() {
   return scale(-TITLE_OVERLAP_INTO_CONTENT_PX);
 }
 
-function gridMargin() {
-  return scale(GRID_MARGIN_PX);
-}
+const HEADLINE_MARGIN_TOP = scale(100);
+const HEADLINE_WIDTH = scale(558);
+const HEADLINE_LINE1_FONT_SIZE = scale(53.77);
+const HEADLINE_LINE2_FONT_SIZE = scale(89.87);
+const HEADLINE_ROTATE_DEG = -9.87;
+const TROPHY_IMG = "/assets/imgs/trophy.png";
+const TROPHY_WIDTH_PX = 78.65;
+const TROPHY_HEIGHT_PX = 206.44;
+const TROPHY_TOP = scale(367);
 
 export default function FullSchedule() {
-  const { t, textClass, isRtl } = useTranslations();
+  const { t, textClass, isRtl, fontFamily } = useTranslations();
   const adminDraft = useAdminCampaignDraft();
 
   const sectionRef = useGsapScope<HTMLElement>(
@@ -43,7 +48,7 @@ export default function FullSchedule() {
   return (
     <section
       ref={sectionRef}
-      className={`${textClass} relative isolate flex h-full min-h-0 w-full max-w-full flex-1 flex-col overflow-hidden bg-[#f5c400]`}
+      className={`${textClass} relative isolate flex min-h-dvh w-full max-w-full flex-1 flex-col overflow-x-visible overflow-y-visible bg-[#f5c400]`}
       aria-label={t.fullSchedule.pageAria}
     >
       <Image
@@ -55,19 +60,39 @@ export default function FullSchedule() {
         className="object-cover object-center"
       />
 
-      <div className="pointer-events-none absolute inset-0 z-[1]">
+      <div className="pointer-events-none absolute inset-0 z-[1] min-h-dvh min-h-full">
         <Image
-          src="/assets/imgs/overlay-bg-vector-new-1.svg"
+          src="/assets/imgs/overlay-bg-vector-new-1.png"
           alt=""
           fill
           sizes="100vw"
-          className="h-full w-full object-contain object-top"
+          className="h-full w-full object-contain object-center"
         />
       </div>
 
-      <div className="relative z-10 flex min-h-0 flex-1 flex-col overflow-hidden">
+      <div
+        data-gsap-trophy
+        className="pointer-events-none absolute left-1/2 z-[8] -translate-x-1/2 max-[1599px]:top-[clamp(178px,32vw,248px)] max-[1599px]:h-[clamp(54px,13vw,80px)] max-[1599px]:w-[clamp(21px,5vw,30px)] min-[1600px]:z-[15]"
+        style={{
+          top: TROPHY_TOP,
+          width: TROPHY_WIDTH_PX,
+          height: TROPHY_HEIGHT_PX,
+        }}
+      >
+        <Image
+          src={TROPHY_IMG}
+          alt="FIFA World Cup trophy"
+          width={TROPHY_WIDTH_PX}
+          height={TROPHY_HEIGHT_PX}
+          className="h-full w-full object-contain object-bottom"
+          sizes="(max-width: 1599px) 30px, 79px"
+          priority
+        />
+      </div>
+
+      <div className="relative z-10 flex w-full max-w-full flex-col overflow-x-visible overflow-y-visible">
         <div
-          className="mx-auto flex min-h-0 w-full min-w-0 max-w-full flex-1 flex-col overflow-hidden"
+          className="mx-auto flex w-full min-w-0 max-w-full flex-col overflow-x-visible"
           style={{ maxWidth: pageMaxWidth, width: "100%" }}
         >
           <div className="shrink-0 px-[clamp(16px,2.5vw,40px)]">
@@ -82,17 +107,46 @@ export default function FullSchedule() {
             </SubpageTopBar>
           </div>
 
-          <div className="flex min-h-0 flex-1 flex-col overflow-hidden pt-0">
-            <div
-              data-gsap-bracket
-              className="full-schedule-bracket-slot flex min-h-0 flex-1 flex-col overflow-hidden px-[clamp(16px,2.5vw,40px)]"
-              style={{ marginTop: gridMargin(), marginBottom: gridMargin() }}
-            >
-              <FullScheduleMatchGrid matches={adminDraft?.matches} />
-              {/* <TournamentBracket matches={adminDraft?.matches} /> */}
+          <div className="flex w-full flex-1 flex-col items-center overflow-x-visible overflow-y-visible pb-[clamp(100px,12vh,140px)] pt-0">
+            <div className="flex w-full flex-col items-center px-[clamp(16px,2.5vw,40px)]">
+              <h2
+                data-gsap-headline
+                className={`${textClass} shrink-0 text-center font-extrabold uppercase leading-none max-[1599px]:!mt-[clamp(48px,12vw,80px)]`}
+                aria-label={`${t.fullSchedule.headlineLine1} ${t.fullSchedule.headlineLine2}`}
+                style={{
+                  marginTop: HEADLINE_MARGIN_TOP,
+                  marginBottom: scale(8),
+                  width: HEADLINE_WIDTH,
+                  maxWidth: "100%",
+                  fontWeight: 800,
+                  fontFamily,
+                  color: HEADLINE_RED,
+                  transform: `rotate(${HEADLINE_ROTATE_DEG}deg)`,
+                }}
+              >
+                <span
+                  className="block"
+                  style={{ fontSize: HEADLINE_LINE1_FONT_SIZE }}
+                >
+                  {t.fullSchedule.headlineLine1}
+                </span>
+                <span
+                  className="block"
+                  style={{ fontSize: HEADLINE_LINE2_FONT_SIZE }}
+                >
+                  {t.fullSchedule.headlineLine2}
+                </span>
+              </h2>
             </div>
 
-            <div className="shrink-0 px-[clamp(16px,2.5vw,40px)] pb-[clamp(16px,2.5vh,32px)] pt-[clamp(12px,2vh,24px)]">
+            <div
+              data-gsap-bracket
+              className="full-schedule-bracket-slot mb-[clamp(80px,10vh,120px)] flex w-full min-w-0 justify-center self-stretch overflow-visible max-[1599px]:px-0 min-[1600px]:px-[clamp(16px,2.5vw,40px)]"
+            >
+              <TournamentBracket matches={adminDraft?.matches} />
+            </div>
+
+            <div className="px-[clamp(16px,2.5vw,40px)]">
               <SponsorBadge variant="hero" />
             </div>
           </div>

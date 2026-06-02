@@ -24,12 +24,33 @@
   font-family: var(--font-cairo), "Cairo", sans-serif;
 }
 
-html[dir="rtl"] body {
+html[dir="rtl"] body,
+body.site-rtl {
   font-family: var(--font-cairo), "Cairo", sans-serif;
 }
 
-html[dir="ltr"] body {
+html[dir="ltr"] body,
+body.site-ltr {
   font-family: var(--font-lays);
+}
+
+/* Arabic: Cairo everywhere, including elements still using .font-lays */
+html[dir="rtl"] .font-lays,
+html[dir="rtl"] .font-m-plus-1,
+body.site-rtl .font-lays,
+body.site-rtl .font-m-plus-1 {
+  font-family: var(--font-cairo), "Cairo", sans-serif;
+}
+
+/* Match English extrabold/bold weights when using Cairo */
+html[dir="rtl"] .font-extrabold,
+body.site-rtl .font-extrabold {
+  font-weight: 800;
+}
+
+html[dir="rtl"] .font-bold,
+body.site-rtl .font-bold {
+  font-weight: 700;
 }
 
 @media (prefers-color-scheme: dark) {

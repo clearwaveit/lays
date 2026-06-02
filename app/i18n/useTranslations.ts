@@ -1,7 +1,12 @@
 "use client";
 
 import { useLanguage, type Language } from "@/app/context/LanguageContext";
-import { cairoFontFamily, cairoTextClass, laysFontFamily, laysTextClass } from "@/app/fonts";
+import {
+  cairoFontFamily,
+  cairoTextClass,
+  laysFontFamily,
+  laysTextClass,
+} from "@/app/fonts";
 import { useMemo } from "react";
 import { getTranslations } from "./translations";
 

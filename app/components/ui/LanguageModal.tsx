@@ -7,8 +7,6 @@ import {
   cairoTextClass,
   laysFontFamily,
   laysTextClass,
-  mPlus1FontFamily,
-  mPlus1TextClass,
 } from "@/app/fonts";
 import { useGsapModal } from "@/app/hooks/useGsapModal";
 import { useCallback, useEffect, useState } from "react";
@@ -149,16 +147,16 @@ export default function LanguageModal({ open }: LanguageModalProps) {
           </button>
           <button
             type="button"
-            className={`${mPlus1TextClass} box-border flex cursor-pointer items-center justify-center border border-solid border-black bg-white text-black transition-opacity hover:opacity-80`}
+            className={`${cairoTextClass} box-border flex cursor-pointer items-center justify-center border border-solid border-black bg-white text-black transition-opacity hover:opacity-80`}
             style={{
               width: BTN_WIDTH,
               height: BTN_HEIGHT,
               borderRadius: BTN_RADIUS,
               borderWidth: 1,
               borderColor: "#000000",
-              fontFamily: mPlus1FontFamily,
+              fontFamily: cairoFontFamily,
               fontSize: ARABIC_BTN_FONT_SIZE,
-              fontWeight: 400,
+              fontWeight: 800,
             }}
             onClick={() => selectLanguage("ar")}
           >

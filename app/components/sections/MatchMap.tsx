@@ -212,6 +212,10 @@ const TITLE_SUBTITLE_GAP = scale(20);
 /** Extra space on both sides of Arabic subtitle lines only. */
 const SUBTITLE_INLINE_PADDING_AR = scale(16);
 const SUBTITLE_FONT_SIZE = scale(16);
+/** Arabic match-map subtitle — matches hero / design reference */
+const SUBTITLE_FONT_SIZE_AR = "26.28px";
+const SUBTITLE_LINE_HEIGHT_AR = "36.49px";
+const SUBTITLE_FONT_WEIGHT_AR = 800;
 const CITY_FONT_SIZE = scale(57.44);
 const CITY_COLUMNS_MARGIN_TOP = scale(80);
 const VENUE_CARD_GAP_PX = 6;
@@ -574,11 +578,12 @@ export default function MatchMap() {
                   <>
                     <SubpagePageTitle title={t.matchMap.pageTitle} isRtl={isRtl} />
                     <p
-                      className={`${textClass} min-w-0 shrink text-right font-normal leading-snug tracking-normal text-black`}
+                      className={`${textClass} min-w-0 shrink text-right font-extrabold tracking-normal text-black`}
                       style={{
-                        fontSize: SUBTITLE_FONT_SIZE,
+                        fontSize: SUBTITLE_FONT_SIZE_AR,
+                        lineHeight: SUBTITLE_LINE_HEIGHT_AR,
                         fontFamily,
-                        fontWeight: 400,
+                        fontWeight: SUBTITLE_FONT_WEIGHT_AR,
                         letterSpacing: 0,
                         paddingInlineStart: SUBTITLE_INLINE_PADDING_AR,
                         paddingInlineEnd: SUBTITLE_INLINE_PADDING_AR,
