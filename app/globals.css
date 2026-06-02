@@ -24,12 +24,33 @@
   font-family: var(--font-cairo), "Cairo", sans-serif;
 }
 
-html[dir="rtl"] body {
+html[dir="rtl"] body,
+body.site-rtl {
   font-family: var(--font-cairo), "Cairo", sans-serif;
 }
 
-html[dir="ltr"] body {
+html[dir="ltr"] body,
+body.site-ltr {
   font-family: var(--font-lays);
+}
+
+/* Arabic: Cairo everywhere, including elements still using .font-lays */
+html[dir="rtl"] .font-lays,
+html[dir="rtl"] .font-m-plus-1,
+body.site-rtl .font-lays,
+body.site-rtl .font-m-plus-1 {
+  font-family: var(--font-cairo), "Cairo", sans-serif;
+}
+
+/* Match English extrabold/bold weights when using Cairo */
+html[dir="rtl"] .font-extrabold,
+body.site-rtl .font-extrabold {
+  font-weight: 800;
+}
+
+html[dir="rtl"] .font-bold,
+body.site-rtl .font-bold {
+  font-weight: 700;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -406,4 +427,54 @@ body {
     --subpage-back-size: clamp(40px, calc(44 / 1600 * 100vw), 44px);
     --subpage-back-icon: clamp(20px, calc(22 / 1600 * 100vw), 22px);
   }
+}
+
+/* Full schedule grid — 1px lines only (no doubled frame + cell borders) */
+.full-schedule-match-grid-frame {
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.full-schedule-match-grid-inner {
+  display: grid;
+  width: 100%;
+  gap: 0;
+  background: transparent;
+  border-top: 1px solid #df2027;
+  border-left: 1px solid #df2027;
+}
+
+.full-schedule-match-grid-inner > article {
+  box-sizing: border-box;
+  min-width: 0;
+  border-right: 1px solid #df2027;
+  border-bottom: 1px solid #df2027;
+  background: transparent;
+}
+
+.full-schedule-match-grid-scroll {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  overscroll-behavior: contain;
+  scrollbar-width: thin;
+  scrollbar-color: #df2027 rgba(0, 0, 0, 0.14);
+  -ms-overflow-style: scrollbar;
+}
+
+.full-schedule-match-grid-scroll::-webkit-scrollbar {
+  width: 8px;
+}
+
+.full-schedule-match-grid-scroll::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+}
+
+.full-schedule-match-grid-scroll::-webkit-scrollbar-thumb {
+  background: #df2027;
+  border-radius: 4px;
+}
+
+.full-schedule-match-grid-scroll::-webkit-scrollbar-thumb:hover {
+  background: #c41c22;
 }

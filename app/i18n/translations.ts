@@ -41,12 +41,16 @@ export const translations = {
       viewOtherMatchesAtLocation: "VIEW OTHER MATCHES AT THIS LOCATION",
       viewFullSchedule: "VIEW FULL SCHEDULE",
     },
+    timetable: {
+      pageTitle: "Timetable",
+      pageAria: "Match timetable",
+    },
     fullSchedule: {
       pageTitle: "Full Schedule",
       pageAria: "Full schedule — knockout bracket",
       logoAlt: "Full Schedule",
       headlineLine1: "WHO'S STILL",
-      headlineLine2: "IN THE GAME?",
+      headlineLine2: "IN THE GAME",
       datePrefix: "DATE:",
       whereToWatch: "WHERE TO WATCH?",
       zoomIn: "Zoom in",
@@ -55,6 +59,8 @@ export const translations = {
     },
     hero: {
       headlineAlt: "No Lay's No Game",
+      descriptionLine1: "Your Ultimate Football Guide",
+      descriptionLine2: "Find the match. Find the crowd.",
     },
     a11y: {
       goBack: "Go back",
@@ -107,12 +113,16 @@ export const translations = {
       viewOtherMatchesAtLocation: "عرض مباريات أخرى في هذا الموقع",
       viewFullSchedule: "عرض الجدول الكامل",
     },
+    timetable: {
+      pageTitle: "الجدول الزمني",
+      pageAria: "جدول المباريات",
+    },
     fullSchedule: {
       pageTitle: "الجدول الكامل",
       pageAria: "الجدول الكامل — خريطة خروج المغلوب",
       logoAlt: "الجدول الكامل",
-      headlineLine1: "من لا يزال",
-      headlineLine2: "في المنافسة؟",
+      headlineLine1: "من",
+      headlineLine2: "لا يزال في المباراة",
       datePrefix: "التاريخ:",
       whereToWatch: "أين تشاهد؟",
       zoomIn: "تكبير",
@@ -121,6 +131,8 @@ export const translations = {
     },
     hero: {
       headlineAlt: "بدون ليز ما في مباراة",
+      descriptionLine1: "دليلك الشامل لكرة القدم",
+      descriptionLine2: "اعثر على المباراة. اعثر على الحماس.",
     },
     a11y: {
       goBack: "رجوع",

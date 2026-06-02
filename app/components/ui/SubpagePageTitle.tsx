@@ -1,6 +1,6 @@
 "use client";
 
-import { laysFontFamily, laysTextClass } from "@/app/fonts";
+import { useTranslations } from "@/app/i18n/useTranslations";
 
 const DESIGN_WIDTH = 1600;
 const TITLE_COLOR = "#DF2027";
@@ -26,12 +26,14 @@ export default function SubpagePageTitle({
   overlapMargin,
   className = "",
 }: SubpagePageTitleProps) {
+  const { textClass, fontFamily } = useTranslations();
+
   return (
     <h1
-      className={`${laysTextClass} relative z-20 m-0 shrink-0 font-extrabold leading-[0.95] ${isRtl ? "text-right" : "text-left uppercase"} ${className}`}
+      className={`${textClass} relative z-20 m-0 shrink-0 font-extrabold leading-[0.95] ${isRtl ? "text-right" : "text-left uppercase"} ${className}`}
       style={{
         fontSize: TITLE_FONT_SIZE,
-        fontFamily: laysFontFamily,
+        fontFamily,
         fontWeight: 800,
         color: TITLE_COLOR,
         ...(overlapMargin ? { marginBottom: overlapMargin } : undefined),

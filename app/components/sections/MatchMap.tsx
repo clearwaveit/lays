@@ -53,9 +53,13 @@ function scaleFluid(px: number, minRatio = 0.45) {
 const TABLET_MAX_PX = 1023;
 /** Small-card logos 2–4 — fixed height on mobile/tablet */
 const SMALL_CARD_LOGO_MOBILE_HEIGHTS: Record<string, number> = {
-  "bla-bla-dubai": 46,
-  "mist-dubai": 36,
-  "loui-dubai": 36,
+  "anzeera-dubai": 28,
+  "amanos-dubai": 40,
+  "mist-dubai": 44,
+  "lock-stock-jbr-dubai": 52,
+  "lock-stock-business-bay-dubai": 52,
+  "lock-stock-barsha-heights-dubai": 52,
+  "lock-stock-yas-bay-abu-dhabi": 52,
 };
 const smallCardLogoMobileRules = Object.entries(SMALL_CARD_LOGO_MOBILE_HEIGHTS)
   .map(
@@ -111,14 +115,14 @@ const MATCH_MAP_RESPONSIVE_CSS = `
   .match-map .venue-grid {
     width: 100%;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: ${scaleMobileTablet(10, 0.5)};
+    gap: ${scaleMobileTablet(6, 0.5)};
   }
   .match-map .venue-grid > .venue-card--large {
     grid-column: 1 / -1;
   }
   .match-map .venue-stack {
     width: 100%;
-    gap: ${scaleMobileTablet(16)};
+    gap: ${scaleMobileTablet(8)};
   }
   .match-map .map-image-layer {
     width: min(100%, ${scaleMobileTablet(MAP_IMAGE_WIDTH_PX)});
@@ -131,6 +135,13 @@ const MATCH_MAP_RESPONSIVE_CSS = `
     max-height: 58%;
   }
   ${smallCardLogoMobileRules}
+  .match-map .venue-card[data-venue-id="mcgettigans-dubai"] .venue-card-logo,
+  .match-map .venue-card[data-venue-id="mcgettigans-abu-dhabi"] .venue-card-logo {
+    width: auto !important;
+    max-width: 72% !important;
+    max-height: 36px !important;
+    height: auto !important;
+  }
   .match-map .venue-card-subtitle {
     width: auto !important;
     height: auto !important;
@@ -174,10 +185,16 @@ const MATCH_MAP_RESPONSIVE_CSS = `
     border-radius: ${scaleFluid(12.9, 0.6)};
   }
   .match-map .venue-grid {
-    gap: ${scaleFluid(10, 0.5)};
+    gap: ${scaleFluid(6, 0.5)};
   }
   .match-map .venue-stack {
-    gap: ${scaleFluid(16)};
+    gap: ${scaleFluid(8)};
+  }
+  .match-map .venue-card[data-venue-id="mcgettigans-dubai"] .venue-card-logo,
+  .match-map .venue-card[data-venue-id="mcgettigans-abu-dhabi"] .venue-card-logo {
+    width: ${scaleFluid(280, 0.45)} !important;
+    height: auto !important;
+    max-width: 82% !important;
   }
   .match-map .map-image-layer {
     width: ${MAP_IMAGE_WIDTH};
@@ -195,9 +212,15 @@ const TITLE_SUBTITLE_GAP = scale(20);
 /** Extra space on both sides of Arabic subtitle lines only. */
 const SUBTITLE_INLINE_PADDING_AR = scale(16);
 const SUBTITLE_FONT_SIZE = scale(16);
+/** Arabic match-map subtitle — matches hero / design reference */
+const SUBTITLE_FONT_SIZE_AR = "26.28px";
+const SUBTITLE_LINE_HEIGHT_AR = "36.49px";
+const SUBTITLE_FONT_WEIGHT_AR = 800;
 const CITY_FONT_SIZE = scale(57.44);
 const CITY_COLUMNS_MARGIN_TOP = scale(80);
-const DUBAI_CARD_GAP_PX = 12;
+const VENUE_CARD_GAP_PX = 6;
+const MCGETTIGANS_CARD_LOGO_WIDTH = 280;
+const MCGETTIGANS_CARD_LOGO_HEIGHT = 35;
 type Venue = VenueModalData & {
   logoWidth: number;
   logoHeight: number;
@@ -206,58 +229,89 @@ type Venue = VenueModalData & {
 
 const DUBAI_FEATURED: Venue = {
   id: "mcgettigans-dubai",
-  src: "/assets/imgs/company-logo-1-1.svg",
+  src: "/assets/imgs/mcgettigans.svg",
   alt: "McGettigan's",
-  logoWidth: 299.14,
-  logoHeight: 38,
+  logoWidth: MCGETTIGANS_CARD_LOGO_WIDTH,
+  logoHeight: MCGETTIGANS_CARD_LOGO_HEIGHT,
   locationUrl: "https://www.google.com/maps/search/?api=1&query=McGettigan's+Dubai",
 };
 
+/** Grid order: row1 R, row2 L/R, row3 L/R, row4 L (after featured McGettigan's). */
 const DUBAI_VENUES: Venue[] = [
   {
-    id: "bla-bla-dubai",
-    src: "/assets/imgs/company-logo-2.svg",
-    alt: "Bla Bla",
-    logoWidth: 105.07,
-    logoHeight: 92.21,
-    locationUrl: "https://www.google.com/maps/search/?api=1&query=Bla+Bla+Dubai",
+    id: "anzeera-dubai",
+    src: "/assets/imgs/anzeera.svg",
+    alt: "Anzeera",
+    logoWidth: 190,
+    logoHeight: 35,
+    locationUrl: "https://www.google.com/maps/search/?api=1&query=Anzeera+Dubai",
+  },
+  {
+    id: "amanos-dubai",
+    src: "/assets/imgs/amanos.svg",
+    alt: "Amanos",
+    logoWidth: 114,
+    logoHeight: 63,
+    locationUrl: "https://www.google.com/maps/search/?api=1&query=Amanos+Dubai",
   },
   {
     id: "mist-dubai",
-    src: "/assets/imgs/company-logo-3.svg",
+    src: "/assets/imgs/mist.svg",
     alt: "mist",
-    logoWidth: 133.54,
-    logoHeight: 85.63,
+    logoWidth: 120,
+    logoHeight: 77,
     locationUrl: "https://www.google.com/maps/search/?api=1&query=mist+Dubai",
   },
   {
-    id: "loui-dubai",
-    src: "/assets/imgs/company-logo-4.svg",
-    alt: "Loui Restaurant & Cafe",
-    logoWidth: 137.06,
-    logoHeight: 64.21,
+    id: "lock-stock-jbr-dubai",
+    src: "/assets/imgs/jbr.svg",
+    alt: "Lock Stock & Barrel — JBR",
+    logoWidth: 96,
+    logoHeight: 75,
     locationUrl:
-      "https://www.google.com/maps/search/?api=1&query=Loui+Restaurant+Cafe+Dubai",
+      "https://www.google.com/maps/search/?api=1&query=Lock+Stock+%26+Barrel+JBR+Dubai",
   },
   {
-    id: "anzeera-dubai",
-    src: "/assets/imgs/company-logo-5.svg",
-    alt: "Anzeera",
-    logoWidth: 189.13,
-    logoHeight: 34.32,
-    locationUrl: "https://www.google.com/maps/search/?api=1&query=Anzeera+Dubai",
+    id: "lock-stock-business-bay-dubai",
+    src: "/assets/imgs/business-bay.svg",
+    alt: "Lock Stock & Barrel — Business Bay",
+    logoWidth: 96,
+    logoHeight: 75,
+    locationUrl:
+      "https://www.google.com/maps/search/?api=1&query=Lock+Stock+%26+Barrel+Business+Bay+Dubai",
+  },
+  {
+    id: "lock-stock-barsha-heights-dubai",
+    src: "/assets/imgs/barsha-heights.svg",
+    alt: "Lock Stock & Barrel — Barsha Heights",
+    logoWidth: 96,
+    logoHeight: 75,
+    locationUrl:
+      "https://www.google.com/maps/search/?api=1&query=Lock+Stock+%26+Barrel+Barsha+Heights+Dubai",
   },
 ];
 
 const ABU_DHABI_FEATURED: Venue = {
   id: "mcgettigans-abu-dhabi",
-  src: "/assets/imgs/company-logo-1-1.svg",
+  src: "/assets/imgs/mcgettigans.svg",
   alt: "McGettigan's",
-  logoWidth: 299.14,
-  logoHeight: 38,
+  logoWidth: MCGETTIGANS_CARD_LOGO_WIDTH,
+  logoHeight: MCGETTIGANS_CARD_LOGO_HEIGHT,
   locationUrl:
     "https://www.google.com/maps/search/?api=1&query=McGettigan's+Reem+Mall+Abu+Dhabi",
 };
+
+const ABU_DHABI_VENUES: Venue[] = [
+  {
+    id: "lock-stock-yas-bay-abu-dhabi",
+    src: "/assets/imgs/yas-bay.svg",
+    alt: "Lock Stock & Barrel — Yas Bay",
+    logoWidth: 96,
+    logoHeight: 75,
+    locationUrl:
+      "https://www.google.com/maps/search/?api=1&query=Lock+Stock+%26+Barrel+Yas+Bay+Abu+Dhabi",
+  },
+];
 
 function VenueCard({
   id,
@@ -343,16 +397,16 @@ function CityColumn({
 }) {
   const { textClass, fontFamily, isRtl } = useTranslations();
   const hasVenueGrid = Boolean(venues && venues.length > 0);
-  /** Abu Dhabi: featured only (no small-venue grid) */
-  const compact = !hasVenueGrid;
   const cardGapStyle = cardGapPx !== undefined ? { gap: cardGapPx } : undefined;
 
-  const venueGrid = hasVenueGrid ? (
+  const allVenues: Venue[] = hasVenueGrid ? [featured, ...(venues ?? [])] : [featured];
+
+  const venueGrid = (
     <div
       className="venue-grid grid w-full grid-cols-2 justify-items-stretch"
       style={cardGapStyle}
     >
-      {venues!.map((venue) => (
+      {allVenues.map((venue) => (
         <VenueCard
           key={venue.id}
           {...venue}
@@ -360,7 +414,7 @@ function CityColumn({
         />
       ))}
     </div>
-  ) : null;
+  );
 
   return (
     <div
@@ -392,42 +446,12 @@ function CityColumn({
           backgroundColor: PANEL_BG,
         }}
       >
-        <div
-          className={
-            compact
-              ? "venue-grid grid w-full grid-cols-1 justify-items-stretch lg:hidden"
-              : "venue-grid grid w-full grid-cols-2 justify-items-stretch lg:hidden"
-          }
-          style={cardGapStyle}
-        >
-          <VenueCard
-            {...featured}
-            large
-            sizedToContent={compact}
-            className={compact ? "w-full" : "col-span-2 w-full"}
-            onClick={() => onVenueClick(featured)}
-          />
-          {hasVenueGrid
-            ? venues!.map((venue) => (
-                <VenueCard
-                  key={venue.id}
-                  {...venue}
-                  onClick={() => onVenueClick(venue)}
-                />
-              ))
-            : null}
-        </div>
+        <div className="lg:hidden">{venueGrid}</div>
 
         <div
           className="venue-stack mt-[clamp(12px,2vw,20px)] hidden w-full flex-col items-stretch md:mt-[clamp(20px,2vw,30px)] lg:flex"
           style={cardGapStyle}
         >
-          <VenueCard
-            {...featured}
-            large
-            sizedToContent={compact}
-            onClick={() => onVenueClick(featured)}
-          />
           {venueGrid}
         </div>
       </div>
@@ -450,26 +474,22 @@ export default function MatchMap() {
     () => adminDraft?.restaurants.filter((restaurant) => restaurant.enabled) ?? null,
     [adminDraft?.restaurants],
   );
-  const dubaiFeatured = useMemo(
-    () =>
-      visibleRestaurants?.find((restaurant) => restaurant.id === "mcgettigans-dubai") ??
-      DUBAI_FEATURED,
-    [visibleRestaurants],
-  );
-  const dubaiVenues = useMemo(
-    () =>
-      visibleRestaurants
-        ?.filter((restaurant) => restaurant.city === "Dubai" && restaurant.id !== dubaiFeatured.id)
-        .map((restaurant) => ({ ...restaurant, logoWidth: restaurant.logoWidth, logoHeight: restaurant.logoHeight })) ??
-      DUBAI_VENUES,
-    [dubaiFeatured.id, visibleRestaurants],
-  );
-  const abuDhabiFeatured = useMemo(
-    () =>
-      visibleRestaurants?.find((restaurant) => restaurant.city === "Abu Dhabi") ??
-      ABU_DHABI_FEATURED,
-    [visibleRestaurants],
-  );
+  const dubaiFeatured = DUBAI_FEATURED;
+  const dubaiVenues = useMemo(() => {
+    if (!visibleRestaurants) return DUBAI_VENUES;
+    return DUBAI_VENUES.filter((venue) => {
+      const draft = visibleRestaurants.find((r) => r.id === venue.id);
+      return !draft || draft.enabled;
+    });
+  }, [visibleRestaurants]);
+  const abuDhabiFeatured = ABU_DHABI_FEATURED;
+  const abuDhabiVenues = useMemo(() => {
+    if (!visibleRestaurants) return ABU_DHABI_VENUES;
+    return ABU_DHABI_VENUES.filter((venue) => {
+      const draft = visibleRestaurants.find((r) => r.id === venue.id);
+      return !draft || draft.enabled;
+    });
+  }, [visibleRestaurants]);
 
   useEffect(() => {
     if (activeDateLabel) {
@@ -558,11 +578,12 @@ export default function MatchMap() {
                   <>
                     <SubpagePageTitle title={t.matchMap.pageTitle} isRtl={isRtl} />
                     <p
-                      className={`${textClass} min-w-0 shrink text-right font-normal leading-snug tracking-normal text-black`}
+                      className={`${textClass} min-w-0 shrink text-right font-extrabold tracking-normal text-black`}
                       style={{
-                        fontSize: SUBTITLE_FONT_SIZE,
+                        fontSize: SUBTITLE_FONT_SIZE_AR,
+                        lineHeight: SUBTITLE_LINE_HEIGHT_AR,
                         fontFamily,
-                        fontWeight: 400,
+                        fontWeight: SUBTITLE_FONT_WEIGHT_AR,
                         letterSpacing: 0,
                         paddingInlineStart: SUBTITLE_INLINE_PADDING_AR,
                         paddingInlineEnd: SUBTITLE_INLINE_PADDING_AR,
@@ -600,12 +621,14 @@ export default function MatchMap() {
                 city={t.matchMap.dubai}
                 featured={dubaiFeatured}
                 venues={dubaiVenues}
-                cardGapPx={DUBAI_CARD_GAP_PX}
+                cardGapPx={VENUE_CARD_GAP_PX}
                 onVenueClick={handleVenueClick}
               />
               <CityColumn
                 city={t.matchMap.abuDhabi}
                 featured={abuDhabiFeatured}
+                venues={abuDhabiVenues}
+                cardGapPx={VENUE_CARD_GAP_PX}
                 onVenueClick={handleVenueClick}
               />
               </div>

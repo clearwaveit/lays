@@ -68,6 +68,46 @@ export function cityFromVenueId(id: string) {
   return "";
 }
 
+/** Legacy admin/match venue IDs → current roster. */
+const VENUE_ID_MIGRATIONS: Record<string, string> = {
+  "bla-bla-dubai": "amanos-dubai",
+};
+
+const REMOVED_VENUE_IDS = new Set(["loui-dubai"]);
+
+export function migrateVenueId(id: string): string | null {
+  if (REMOVED_VENUE_IDS.has(id)) return null;
+  return VENUE_ID_MIGRATIONS[id] ?? id;
+}
+
+export function migrateVenueIds(ids: string[]): string[] {
+  const migrated = ids
+    .map(migrateVenueId)
+    .filter((id): id is string => Boolean(id));
+  return [...new Set(migrated)];
+}
+
+function buildRestaurantsFromDraft(
+  draftRestaurants: AdminVenue[] | undefined,
+): AdminVenue[] {
+  const draftById = new Map(
+    (draftRestaurants ?? []).map((restaurant) => [restaurant.id, restaurant]),
+  );
+
+  return Object.values(VENUES).map((venue) => {
+    const existing = draftById.get(venue.id);
+    return {
+      ...venue,
+      enabled: existing?.enabled ?? true,
+      city: existing?.city || cityFromVenueId(venue.id),
+      src: sanitizeStoredImageSrc(existing?.src ?? venue.src, venue.src),
+      logoWidth: venue.logoWidth,
+      logoHeight: venue.logoHeight,
+      subtitleImage: existing?.subtitleImage ?? venue.subtitleImage,
+    };
+  });
+}
+
 function matchIdentityKey(match: MatchFixture): string {
   const home = match.home.name.trim().toLowerCase();
   const away = match.away.name.trim().toLowerCase();
@@ -135,19 +175,15 @@ export function initialAdminDraft(): AdminDraft {
 
 export function normalizeAdminDraft(draft: Partial<AdminDraft>): AdminDraft {
   const fallback = initialAdminDraft();
-  const restaurants = (draft.restaurants ?? fallback.restaurants).map((restaurant) => {
-    const fallbackVenue = VENUES[restaurant.id];
-    return {
-      ...restaurant,
-      src: sanitizeStoredImageSrc(restaurant.src, fallbackVenue?.src ?? restaurant.src),
-    };
-  });
+  const restaurants = buildRestaurantsFromDraft(draft.restaurants);
   const allowedVenueIds = new Set(restaurants.map((restaurant) => restaurant.id));
   const syncedMatches = applySourceScheduleToDraftMatches(
     draft.matches ?? fallback.matches,
   );
   const matches = syncedMatches.map((match) => {
-    const venueIds = matchVenueIds(match).filter((id) => allowedVenueIds.has(id));
+    const venueIds = migrateVenueIds(matchVenueIds(match)).filter((id) =>
+      allowedVenueIds.has(id),
+    );
     return {
       ...match,
       dateLabel: normalizeMatchDateLabel(match.dateLabel),

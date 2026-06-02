@@ -26,11 +26,13 @@ function LanguageModalHost() {
 export default function LayoutWrapper({ children }: LayoutWrapperProps) {
   const pathname = usePathname();
   const isAdminPage = pathname.startsWith("/admin");
+  const isFullSchedule = pathname === "/full-schedule";
+  const isTimetable = pathname === "/timetable";
   const isScrollablePage =
     pathname === "/where-to-watch" ||
     pathname === "/match-timings" ||
-    pathname === "/full-schedule";
-  const isFullSchedule = pathname === "/full-schedule";
+    isFullSchedule;
+  const isViewportLockedPage = isTimetable;
 
   if (isAdminPage) {
     return <>{children}</>;
@@ -46,9 +48,11 @@ export default function LayoutWrapper({ children }: LayoutWrapperProps) {
         className={`relative flex min-h-dvh max-w-full flex-col text-[#171717] ${
           isFullSchedule ? "overflow-x-visible" : "overflow-x-hidden"
         } ${
-          isScrollablePage
-            ? ""
-            : "max-lg:h-dvh max-lg:max-h-dvh max-lg:overflow-hidden"
+          isViewportLockedPage
+            ? "h-dvh max-h-dvh overflow-hidden"
+            : isScrollablePage
+              ? ""
+              : "max-lg:h-dvh max-lg:max-h-dvh max-lg:overflow-hidden"
         }`}
       >
         <Header />
@@ -57,16 +61,20 @@ export default function LayoutWrapper({ children }: LayoutWrapperProps) {
           className={`w-full min-w-0 max-w-full flex-1 ${
             isFullSchedule ? "overflow-x-visible" : "overflow-x-hidden"
           } ${
-            isScrollablePage
-              ? "flex min-h-dvh flex-col overflow-y-auto"
-              : "max-lg:min-h-0 max-lg:overflow-hidden"
+            isViewportLockedPage
+              ? "flex min-h-0 flex-col overflow-hidden"
+              : isScrollablePage
+                ? "flex min-h-dvh flex-col overflow-y-auto"
+                : "max-lg:min-h-0 max-lg:overflow-hidden"
           }`}
         >
           <GsapRouteAnimator
             className={
-              isScrollablePage
-                ? "flex min-h-dvh flex-1 flex-col"
-                : "flex min-h-0 flex-1 flex-col max-lg:min-h-0"
+              isViewportLockedPage
+                ? "flex min-h-0 flex-1 flex-col"
+                : isScrollablePage
+                  ? "flex min-h-dvh flex-1 flex-col"
+                  : "flex min-h-0 flex-1 flex-col max-lg:min-h-0"
             }
           >
             {children}

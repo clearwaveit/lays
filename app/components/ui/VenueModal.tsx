@@ -46,7 +46,14 @@ const BTN_FONT_SIZE = scale(BTN_FONT_SIZE_PX, 0.75);
 const MODAL_LOGO_WIDTH = scale(MODAL_LOGO_WIDTH_PX);
 const MODAL_LOGO_HEIGHT = scale(MODAL_LOGO_HEIGHT_PX);
 
-const VENUE_LOGO_ALT_IDS = new Set(["bla-bla-dubai", "mist-dubai", "loui-dubai"]);
+const VENUE_LOGO_ALT_IDS = new Set([
+  "amanos-dubai",
+  "mist-dubai",
+  "lock-stock-jbr-dubai",
+  "lock-stock-business-bay-dubai",
+  "lock-stock-barsha-heights-dubai",
+  "lock-stock-yas-bay-abu-dhabi",
+]);
 
 function isAltVenueModalLogo(venueId: string) {
   return VENUE_LOGO_ALT_IDS.has(venueId);

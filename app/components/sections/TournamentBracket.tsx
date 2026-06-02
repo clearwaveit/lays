@@ -11,7 +11,6 @@ import {
   type Team,
 } from "@/app/data/matches";
 import { isRemoteTeamFlag } from "@/app/data/team-flags";
-import { laysFontFamily, laysTextClass } from "@/app/fonts";
 import { useBracketZoom } from "@/app/hooks/useBracketZoom";
 import { useTranslations } from "@/app/i18n/useTranslations";
 import Image from "next/image";
@@ -466,7 +465,7 @@ function BracketSide({
   );
 }
 
-function BracketMatchTooltip({
+export function BracketMatchTooltip({
   state,
   onClose,
   onWhereToWatch,
@@ -559,10 +558,10 @@ function BracketMatchTooltip({
           aria-hidden
         />
         <p
-          className={`${laysTextClass} mb-3 text-center font-extrabold uppercase text-black`}
+          className={`${textClass} mb-3 text-center font-extrabold uppercase text-black`}
           style={{
             fontSize: scale(14, 0.7),
-            fontFamily: laysFontFamily,
+            fontFamily,
           }}
         >
           {t.fullSchedule.datePrefix}{" "}
@@ -570,7 +569,7 @@ function BracketMatchTooltip({
         </p>
         <button
           type="button"
-          className={`${laysTextClass} w-full cursor-pointer rounded-md border-0 uppercase text-white transition-opacity hover:opacity-90`}
+          className={`${textClass} w-full cursor-pointer rounded-md border-0 uppercase text-white transition-opacity hover:opacity-90`}
           style={{
             ...btnStyle,
             height: scale(48, 0.55),
@@ -600,7 +599,7 @@ function BracketZoomControls({
   canZoomIn: boolean;
   canZoomOut: boolean;
 }) {
-  const { t } = useTranslations();
+  const { t, textClass } = useTranslations();
 
   return (
     <div
@@ -618,7 +617,7 @@ function BracketZoomControls({
       </button>
       <button
         type="button"
-        className={`${laysTextClass} bracket-zoom-btn flex h-9 min-w-[2.75rem] items-center justify-center rounded-full border-0 bg-white px-2 text-[10px] font-extrabold uppercase text-[#DF2027] shadow-sm transition-opacity hover:opacity-90`}
+        className={`${textClass} bracket-zoom-btn flex h-9 min-w-[2.75rem] items-center justify-center rounded-full border-0 bg-white px-2 text-[10px] font-extrabold uppercase text-[#DF2027] shadow-sm transition-opacity hover:opacity-90`}
         aria-label={t.fullSchedule.zoomReset}
         onClick={onReset}
       >

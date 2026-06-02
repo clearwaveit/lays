@@ -17,11 +17,13 @@ export default function Header() {
   const isCampaignSubPage =
     pathname === "/where-to-watch" ||
     pathname === "/match-timings" ||
-    pathname === "/full-schedule";
+    pathname === "/full-schedule" ||
+    pathname === "/timetable";
   const hideHeaderOnPage =
     pathname === "/where-to-watch" ||
     pathname === "/match-timings" ||
-    pathname === "/full-schedule";
+    pathname === "/full-schedule" ||
+    pathname === "/timetable";
 
   const showHomeLanguage = isHome && isReady && hasCompletedOnboarding;
   const showSubpageNav = !isHome;
