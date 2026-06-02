@@ -53,6 +53,8 @@ export const translations = {
     },
     hero: {
       headlineAlt: "No Lay's No Game",
+      descriptionLine1: "Your Ultimate Football Guide",
+      descriptionLine2: "Find the match. Find the crowd.",
     },
     a11y: {
       goBack: "Go back",
@@ -117,6 +119,8 @@ export const translations = {
     },
     hero: {
       headlineAlt: "بدون ليز ما في مباراة",
+      descriptionLine1: "دليلك الشامل لكرة القدم",
+      descriptionLine2: "اعثر على المباراة. اعثر على الحماس.",
     },
     a11y: {
       goBack: "رجوع",

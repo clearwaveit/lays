@@ -36,6 +36,7 @@ export function animateHeroSection(root: HTMLElement, isRtl: boolean) {
   if (!shouldAnimate()) return;
 
   const headline = root.querySelector("[data-gsap-hero-headline]");
+  const description = root.querySelector("[data-gsap-hero-description]");
   const productMobile = root.querySelector("[data-gsap-hero-product-mobile]");
   const productDesktop = root.querySelector("[data-gsap-hero-product-desktop]");
   const sponsor = root.querySelector("[data-gsap-sponsor]");
@@ -49,6 +50,14 @@ export function animateHeroSection(root: HTMLElement, isRtl: boolean) {
       scale: 0.94,
       duration: 0.85,
     });
+  }
+
+  if (description) {
+    tl.from(
+      description,
+      { autoAlpha: 0, y: 20, duration: 0.65 },
+      headline ? "-=0.35" : 0,
+    );
   }
 
   const productX = isRtl ? 48 : -48;

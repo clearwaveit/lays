@@ -17,7 +17,7 @@ import {
 } from "@/app/data/matches";
 import { isRemoteTeamFlag } from "@/app/data/team-flags";
 import { getTeamDisplayName } from "@/app/data/team-names";
-import { getVenueById } from "@/app/data/venues";
+import { getVenueById, getVenueWhiteLogoSrc } from "@/app/data/venues";
 import { useSmoothHorizontalScroll } from "@/app/hooks/useSmoothHorizontalScroll";
 import { animateMatchTimingsSection } from "@/app/lib/animations";
 import {
@@ -115,15 +115,15 @@ const TIME_BADGE_HEIGHT = scale(68);
 const TIME_BADGE_FONT_SIZE = scale(20);
 const TEAM_NAME_FONT_SIZE = scale(20);
 
-/** White logo variants for the red panel (filename typo: comapny). */
-const VENUE_LOGO_ALT_IDS = new Set(["bla-bla-dubai", "mist-dubai", "loui-dubai"]);
-
-function venueWhiteLogoSrc(venue: VenueModalData) {
-  if (venue.src.startsWith("data:")) return venue.src;
-  const logoNum = venue.src.match(/company-logo-(\d+)/)?.[1];
-  if (logoNum) return `/assets/imgs/comapny-logo-${logoNum}-white.svg`;
-  return "/assets/imgs/comapny-logo-1-white.svg";
-}
+/** Taller white logos on the red match-timings panel. */
+const VENUE_LOGO_ALT_IDS = new Set([
+  "amanos-dubai",
+  "mist-dubai",
+  "lock-stock-jbr-dubai",
+  "lock-stock-business-bay-dubai",
+  "lock-stock-barsha-heights-dubai",
+  "lock-stock-yas-bay-abu-dhabi",
+]);
 
 function isAltVenueWhiteLogo(venueId: string) {
   return VENUE_LOGO_ALT_IDS.has(venueId);
@@ -429,6 +429,7 @@ export default function MatchTimings() {
   const venue =
     adminDraft?.restaurants.find((restaurant) => restaurant.id === fallbackVenue.id) ??
     fallbackVenue;
+  const venueWhiteLogo = useMemo(() => getVenueWhiteLogoSrc(venue), [venue]);
   const { setSelectedDate, setSelectedVenueId } = useCampaignSelection();
   const venueMatches = useMemo(() => {
     const sourceMatches = adminDraft?.matches ?? getMatchesSortedChronologically();
@@ -614,11 +615,11 @@ export default function MatchTimings() {
                 <Image
                   data-gsap-venue-logo
                   data-venue-id={venue.id}
-                  src={venueWhiteLogoSrc(venue)}
+                  src={venueWhiteLogo}
                   alt={venue.alt}
                   width={venue.logoWidth}
                   height={venue.logoHeight}
-                  unoptimized={venueWhiteLogoSrc(venue).startsWith("data:")}
+                  unoptimized={venueWhiteLogo.startsWith("data:")}
                   className="h-auto w-auto shrink-0 object-contain"
                   style={{
                     height: isAltVenueWhiteLogo(venue.id)
