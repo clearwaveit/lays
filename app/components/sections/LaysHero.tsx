@@ -10,14 +10,14 @@ import { useTranslations } from "@/app/i18n/useTranslations";
 import Image from "next/image";
 import { useEffect } from "react";
 
-const HERO_HEADLINE_EN = "/assets/imgs/lays-img-2-new.svg";
-const HERO_HEADLINE_AR = "/assets/imgs/lays-img-arabic-2-new.svg";
+const HERO_HEADLINE_EN = "/assets/imgs/lays-img-2-new-1.svg";
+const HERO_HEADLINE_AR = "/assets/imgs/lays-img-arabic-2-new-1.svg";
 const HERO_PRODUCT_EN = "/assets/imgs/lays-img-1.png";
 const HERO_PRODUCT_AR = "/assets/imgs/lays-img-arabic.png";
 
 export default function LaysHero() {
   const { hasCompletedOnboarding, isReady } = useLanguage();
-  const { isRtl, t } = useTranslations();
+  const { isRtl, dir, t, textClass, fontFamily } = useTranslations();
 
   const showHeroNav = isReady && hasCompletedOnboarding;
 
@@ -87,8 +87,8 @@ export default function LaysHero() {
           <div
             className={`relative z-20 flex w-full shrink-0 flex-col justify-center max-lg:order-1 max-lg:px-3 max-md:px-[clamp(16px,2.5vw,40px)] max-md:pt-[clamp(64px,15vh,84px)] max-md:pb-[clamp(10px,2.5vh,20px)] md:max-lg:pt-14 md:max-lg:pb-2 lg:absolute lg:top-1/2 lg:w-auto lg:max-w-none lg:-translate-y-1/2 lg:px-2 lg:pt-0 ${
               isRtl
-                ? "items-center max-lg:items-center lg:left-[64px] lg:right-auto lg:items-start"
-                : "items-center lg:right-[64px] lg:left-auto lg:items-center"
+                ? "items-center lg:left-[64px] lg:right-auto"
+                : "items-center lg:right-[64px] lg:left-auto"
             }`}
           >
             <Image
@@ -103,6 +103,21 @@ export default function LaysHero() {
                 isRtl ? "lg:origin-left" : "lg:w-[47.892vw] lg:origin-right"
               }`}
             />
+
+            <p
+              data-gsap-hero-description
+              dir={dir}
+              className={`${textClass} mx-auto mt-[clamp(10px,1.4vw,20px)] w-full max-w-[min(92vw,36rem)] text-center tracking-normal text-black lg:max-w-[min(47.892vw,36rem)]`}
+              style={{
+                fontFamily,
+                fontSize: "26.28px",
+                fontWeight: 800,
+                lineHeight: "36.49px",
+              }}
+            >
+              <span className="block">{t.hero.descriptionLine1}</span>
+              <span className="block">{t.hero.descriptionLine2}</span>
+            </p>
 
             {showHeroNav ? (
               <CampaignNav

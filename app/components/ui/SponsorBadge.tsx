@@ -4,14 +4,14 @@ import { useTranslations } from "@/app/i18n/useTranslations";
 import Image from "next/image";
 
 const SPONSOR_IMAGE_EN = {
-  src: "/assets/imgs/lays-img-3.svg",
+  src: "/assets/imgs/lays-img-3-new-1.png",
   alt: "Official sponsor of FIFA World Cup",
   width: 140,
   height: 97,
 } as const;
 
 const SPONSOR_IMAGE_AR = {
-  src: "/assets/imgs/lays-img-3-arabic.svg",
+  src: "/assets/imgs/lays-img-3-arabic-new.png",
   alt: "Official sponsor of FIFA World Cup",
   width: 140,
   height: 115,
