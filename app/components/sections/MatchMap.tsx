@@ -51,26 +51,6 @@ function scaleFluid(px: number, minRatio = 0.45) {
 }
 
 const TABLET_MAX_PX = 1023;
-/** Small-card logos 2–4 — fixed height on mobile/tablet */
-const SMALL_CARD_LOGO_MOBILE_HEIGHTS: Record<string, number> = {
-  "anzeera-dubai": 28,
-  "amanos-dubai": 40,
-  "mist-dubai": 44,
-  "lock-stock-jbr-dubai": 52,
-  "lock-stock-business-bay-dubai": 52,
-  "lock-stock-barsha-heights-dubai": 52,
-  "lock-stock-yas-bay-abu-dhabi": 52,
-};
-const smallCardLogoMobileRules = Object.entries(SMALL_CARD_LOGO_MOBILE_HEIGHTS)
-  .map(
-    ([id, height]) => `
-  .match-map .venue-card--small[data-venue-id="${id}"] .venue-card-logo {
-    height: ${height}px !important;
-    max-height: ${height}px !important;
-    width: auto !important;
-  }`,
-  )
-  .join("");
 
 /** Mobile & tablet (≤1023px): scales with screen, 1024px-wide design baseline */
 function scaleMobileTablet(px: number, minRatio = 0.32) {
@@ -84,6 +64,38 @@ const MAP_IMAGE_WIDTH_PX = 1167.68;
 const MAP_IMAGE_HEIGHT_PX = 657.17;
 const MAP_IMAGE_WIDTH = scaleFluid(MAP_IMAGE_WIDTH_PX);
 const MAP_IMAGE_HEIGHT = scaleFluid(MAP_IMAGE_HEIGHT_PX);
+
+const SUBTITLE_FONT_WEIGHT = 700;
+
+/** Title + subtitle row — 625px EN at 1600px+ viewport; Arabic uses full width. */
+const TITLE_BLOCK_WIDTH_EN = scale(625);
+const TITLE_SUBTITLE_GAP = scale(20);
+const SUBTITLE_INLINE_PADDING_AR = scale(16);
+const SUBTITLE_FONT_SIZE = scale(16);
+const SUBTITLE_FONT_SIZE_AR = scale(23, 0.42);
+const SUBTITLE_LINE_HEIGHT_AR = scale(32, 0.42);
+const SUBTITLE_FONT_SIZE_AR_LINE2 = scale(23, 0.42);
+const SUBTITLE_LINE_HEIGHT_AR_LINE2 = scale(32, 0.42);
+const SUBTITLE_FONT_SIZE_EN_MOBILE = scaleMobileTablet(16, 0.5);
+const SUBTITLE_LINE_HEIGHT_EN_MOBILE = scaleMobileTablet(20, 0.5);
+const SUBTITLE_FONT_SIZE_AR_MOBILE = scaleMobileTablet(23, 0.55);
+const SUBTITLE_LINE_HEIGHT_AR_MOBILE = scaleMobileTablet(32, 0.55);
+const SUBTITLE_FONT_WEIGHT_AR = 800;
+
+/** Space above yellow venue panel (city badge sits on top edge). */
+const CITY_COLUMN_PADDING_TOP_EN = scale(32, 0.45);
+const CITY_COLUMN_PADDING_TOP_AR = scale(48, 0.45);
+const CITY_COLUMN_PADDING_TOP_EN_MOBILE = scaleMobileTablet(36, 0.45);
+const CITY_COLUMN_PADDING_TOP_AR_MOBILE = scaleMobileTablet(48, 0.45);
+/** Space inside yellow panel before venue cards (below city badge). */
+const VENUE_PANEL_PADDING_TOP_EN = scale(36);
+const VENUE_PANEL_PADDING_TOP_AR = scale(52);
+const VENUE_PANEL_PADDING_TOP_EN_MOBILE = scaleMobileTablet(40, 0.45);
+const VENUE_PANEL_PADDING_TOP_AR_MOBILE = scaleMobileTablet(48, 0.45);
+const VENUE_CARDS_MARGIN_TOP_EN = scale(14);
+const VENUE_CARDS_MARGIN_TOP_AR = scale(18);
+const VENUE_CARDS_MARGIN_TOP_EN_MOBILE = scaleMobileTablet(16, 0.45);
+const VENUE_CARDS_MARGIN_TOP_AR_MOBILE = scaleMobileTablet(20, 0.45);
 
 const MATCH_MAP_RESPONSIVE_CSS = `
 @media (max-width: ${TABLET_MAX_PX}px) {
@@ -131,16 +143,7 @@ const MATCH_MAP_RESPONSIVE_CSS = `
   .match-map .venue-card-logo {
     width: auto !important;
     height: auto !important;
-    max-width: 88%;
-    max-height: 58%;
-  }
-  ${smallCardLogoMobileRules}
-  .match-map .venue-card[data-venue-id="mcgettigans-dubai"] .venue-card-logo,
-  .match-map .venue-card[data-venue-id="mcgettigans-abu-dhabi"] .venue-card-logo {
-    width: auto !important;
-    max-width: 72% !important;
-    max-height: 36px !important;
-    height: auto !important;
+    object-fit: contain;
   }
   .match-map .venue-card-subtitle {
     width: auto !important;
@@ -153,18 +156,49 @@ const MATCH_MAP_RESPONSIVE_CSS = `
   .match-map .venue-card--sized {
     gap: clamp(6px, 2vw, 10px);
   }
+  .match-map:not([dir="rtl"]) [data-gsap-city] {
+    padding-top: ${CITY_COLUMN_PADDING_TOP_EN_MOBILE} !important;
+  }
   .match-map[dir="rtl"] [data-gsap-city] {
-    padding-top: ${scaleMobileTablet(44, 0.45)};
+    padding-top: ${CITY_COLUMN_PADDING_TOP_AR_MOBILE} !important;
   }
   .match-map[dir="rtl"] .match-map-city-label {
     line-height: 1.2;
   }
-  .match-map[dir="rtl"] .venue-panel {
-    padding-top: ${scaleMobileTablet(32, 0.45)};
+  .match-map .venue-panel {
+    padding-top: ${VENUE_PANEL_PADDING_TOP_EN_MOBILE} !important;
   }
-  .match-map[dir="rtl"] .venue-grid,
-  .match-map[dir="rtl"] .venue-stack {
-    margin-top: ${scaleMobileTablet(14, 0.45)};
+  .match-map[dir="rtl"] .venue-panel {
+    padding-top: ${VENUE_PANEL_PADDING_TOP_AR_MOBILE} !important;
+  }
+  .match-map .venue-panel .venue-grid {
+    margin-top: ${VENUE_CARDS_MARGIN_TOP_EN_MOBILE};
+  }
+  .match-map[dir="rtl"] .venue-panel .venue-grid {
+    margin-top: ${VENUE_CARDS_MARGIN_TOP_AR_MOBILE};
+  }
+  .match-map .match-map-title-block {
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: clamp(8px, 1.5vw, 12px);
+  }
+  .match-map:not([dir="rtl"]) .match-map-subtitle-en,
+  .match-map:not([dir="rtl"]) .match-map-subtitle-en-line2 {
+    width: 100%;
+    font-size: ${SUBTITLE_FONT_SIZE_EN_MOBILE} !important;
+    line-height: ${SUBTITLE_LINE_HEIGHT_EN_MOBILE} !important;
+  }
+  .match-map[dir="rtl"] .match-map-subtitle-ar {
+    width: 100%;
+    font-size: ${SUBTITLE_FONT_SIZE_AR_MOBILE} !important;
+    line-height: ${SUBTITLE_LINE_HEIGHT_AR_MOBILE} !important;
+    padding-inline-start: 0 !important;
+    padding-inline-end: 0 !important;
+  }
+  .match-map[dir="rtl"] .match-map-subtitle-ar-line2 {
+    font-size: ${SUBTITLE_FONT_SIZE_AR_MOBILE} !important;
+    line-height: ${SUBTITLE_LINE_HEIGHT_AR_MOBILE} !important;
   }
 }
 @media (min-width: ${TABLET_MAX_PX + 1}px) {
@@ -203,55 +237,38 @@ const MATCH_MAP_RESPONSIVE_CSS = `
   .match-map .venue-stack {
     gap: ${scaleFluid(8)};
   }
-  .match-map .venue-card[data-venue-id="mcgettigans-dubai"] .venue-card-logo,
-  .match-map .venue-card[data-venue-id="mcgettigans-abu-dhabi"] .venue-card-logo {
-    width: ${scaleFluid(280, 0.45)} !important;
-    height: auto !important;
-    max-width: 82% !important;
-  }
   .match-map .map-image-layer {
     width: ${MAP_IMAGE_WIDTH};
     height: ${MAP_IMAGE_HEIGHT};
     max-width: 100%;
   }
+  .match-map:not([dir="rtl"]) [data-gsap-city] {
+    padding-top: ${CITY_COLUMN_PADDING_TOP_EN} !important;
+  }
   .match-map[dir="rtl"] [data-gsap-city] {
-    padding-top: ${scale(44, 0.45)};
+    padding-top: ${CITY_COLUMN_PADDING_TOP_AR} !important;
   }
   .match-map[dir="rtl"] .match-map-city-label {
     line-height: 1.2;
   }
-  .match-map[dir="rtl"] .venue-panel {
-    padding-top: ${scale(38)};
+  .match-map .venue-panel {
+    padding-top: ${VENUE_PANEL_PADDING_TOP_EN} !important;
   }
-  .match-map[dir="rtl"] .venue-grid,
-  .match-map[dir="rtl"] .venue-stack {
-    margin-top: ${scale(10)};
+  .match-map[dir="rtl"] .venue-panel {
+    padding-top: ${VENUE_PANEL_PADDING_TOP_AR} !important;
+  }
+  .match-map .venue-panel .venue-grid {
+    margin-top: ${VENUE_CARDS_MARGIN_TOP_EN};
+  }
+  .match-map[dir="rtl"] .venue-panel .venue-grid {
+    margin-top: ${VENUE_CARDS_MARGIN_TOP_AR};
   }
 }
 `;
 
-const SUBTITLE_FONT_WEIGHT = 700;
-
-const TITLE_BLOCK_WIDTH_EN = scale(625);
-const TITLE_BLOCK_WIDTH_AR = scale(825);
-/** Horizontal space between page title and subtitle (English). */
-const TITLE_SUBTITLE_GAP = scale(20);
-/** Extra space on both sides of Arabic subtitle lines only. */
-const SUBTITLE_INLINE_PADDING_AR = scale(16);
-const SUBTITLE_FONT_SIZE = scale(16);
-/** Arabic match-map subtitle — matches hero / design reference */
-const SUBTITLE_FONT_SIZE_AR = "23px";
-const SUBTITLE_LINE_HEIGHT_AR = "32px";
-const SUBTITLE_FONT_SIZE_AR_LINE2 = "23px";
-const SUBTITLE_LINE_HEIGHT_AR_LINE2 = "32px";
-const SUBTITLE_FONT_WEIGHT_AR = 800;
 const CITY_FONT_SIZE = scale(57.44);
 const CITY_COLUMNS_MARGIN_TOP_EN = scale(80);
 const CITY_COLUMNS_MARGIN_TOP_AR = scale(96);
-const CITY_COLUMN_PADDING_TOP_EN = scale(28, 0.45);
-const CITY_COLUMN_PADDING_TOP_AR = scale(44, 0.45);
-const VENUE_PANEL_PADDING_TOP_EN = scale(22);
-const VENUE_PANEL_PADDING_TOP_AR = scale(38);
 const CITY_LABEL_PADDING_EN = "clamp(4px, 0.375vw, 6px) clamp(12px, 1.5vw, 24px)";
 const CITY_LABEL_PADDING_AR = "clamp(8px, 0.65vw, 12px) clamp(22px, 2.75vw, 36px)";
 const VENUE_CARD_GAP_PX = 6;
@@ -350,6 +367,73 @@ const ABU_DHABI_VENUES: Venue[] = [
   },
 ];
 
+type VenueLogoSpec = {
+  id: string;
+  logoWidth: number;
+  logoHeight: number;
+  featured?: boolean;
+};
+
+function venueLogoSpecs(): VenueLogoSpec[] {
+  const toSpec = (venue: Venue, featured = false): VenueLogoSpec => ({
+    id: venue.id,
+    logoWidth: venue.logoWidth,
+    logoHeight: venue.logoHeight,
+    featured,
+  });
+
+  return [
+    toSpec(DUBAI_FEATURED, true),
+    ...DUBAI_VENUES.map((venue) => toSpec(venue)),
+    toSpec(ABU_DHABI_FEATURED, true),
+    ...ABU_DHABI_VENUES.map((venue) => toSpec(venue)),
+  ];
+}
+
+function buildVenueLogoMobileCss(specs: VenueLogoSpec[]) {
+  return specs
+    .map(({ id, logoWidth, logoHeight, featured }) => {
+      const maxWidth = featured ? "72%" : "88%";
+      const width = scaleMobileTablet(logoWidth, featured ? 0.45 : 0.4);
+      const maxHeight = scaleMobileTablet(logoHeight, featured ? 0.55 : 0.45);
+
+      return `
+  .match-map .venue-card[data-venue-id="${id}"] .venue-card-logo {
+    width: ${width} !important;
+    height: auto !important;
+    max-width: ${maxWidth} !important;
+    max-height: ${maxHeight} !important;
+  }`;
+    })
+    .join("");
+}
+
+function buildVenueLogoDesktopCss(specs: VenueLogoSpec[]) {
+  return specs
+    .map(({ id, logoWidth, logoHeight, featured }) => {
+      const maxWidth = featured ? "82%" : "88%";
+      const minRatio = featured ? 0.45 : 0.45;
+
+      return `
+  .match-map .venue-card[data-venue-id="${id}"] .venue-card-logo {
+    width: ${scaleFluid(logoWidth, minRatio)} !important;
+    height: auto !important;
+    max-width: ${maxWidth} !important;
+    max-height: ${scaleFluid(logoHeight, minRatio)} !important;
+  }`;
+    })
+    .join("");
+}
+
+const MATCH_MAP_VENUE_LOGO_CSS = `
+@media (max-width: ${TABLET_MAX_PX}px) {
+${buildVenueLogoMobileCss(venueLogoSpecs())}
+}
+@media (min-width: ${TABLET_MAX_PX + 1}px) {
+${buildVenueLogoDesktopCss(venueLogoSpecs())}
+}
+`;
+
 function VenueCard({
   id,
   src,
@@ -367,8 +451,6 @@ function VenueCard({
   sizedToContent?: boolean;
   onClick: () => void;
 }) {
-  const logoMinRatio = large ? 0.55 : 0.45;
-
   return (
     <button
       type="button"
@@ -393,13 +475,9 @@ function VenueCard({
         alt={alt}
         width={Math.round(logoWidth)}
         height={Math.round(logoHeight)}
-        unoptimized={src.startsWith("data:")}
-        className="venue-card-logo pointer-events-none h-auto w-auto max-w-[88%] object-contain lg:max-h-[85%] lg:max-w-[90%]"
-        style={{
-          width: scaleFluid(logoWidth, logoMinRatio),
-          height: scaleFluid(logoHeight, logoMinRatio),
-          maxWidth: "100%",
-        }}
+        unoptimized={src.startsWith("data:") || src.endsWith(".svg")}
+        className="venue-card-logo pointer-events-none h-auto w-auto max-w-full object-contain object-center"
+        sizes="(max-width: 1023px) 45vw, 280px"
       />
       {/* {subtitleImage ? (
         <Image
@@ -453,18 +531,10 @@ function CityColumn({
     </div>
   );
 
-  const cityColumnPaddingTop = isRtl
-    ? CITY_COLUMN_PADDING_TOP_AR
-    : CITY_COLUMN_PADDING_TOP_EN;
-  const venuePanelPaddingTop = isRtl
-    ? VENUE_PANEL_PADDING_TOP_AR
-    : VENUE_PANEL_PADDING_TOP_EN;
-
   return (
     <div
       data-gsap-city
       className="relative flex min-w-0 w-full max-w-full flex-col items-stretch"
-      style={{ paddingTop: cityColumnPaddingTop }}
     >
       <h2
         className={`match-map-city-label ${textClass} absolute left-1/2 z-10 flex -translate-x-1/2 -translate-y-1/2 items-center justify-center border border-solid text-center font-extrabold whitespace-nowrap ${isRtl ? "max-md:top-7 md:top-9 leading-[1.2]" : "max-md:top-5 md:top-6 uppercase leading-none"}`}
@@ -489,17 +559,12 @@ function CityColumn({
           borderColor: BORDER_RED,
           borderWidth: BORDER_WIDTH,
           backgroundColor: PANEL_BG,
-          paddingTop: venuePanelPaddingTop,
         }}
       >
-        <div
-          className={`lg:hidden ${isRtl ? "mt-[clamp(10px,1.5vw,16px)]" : ""}`}
-        >
-          {venueGrid}
-        </div>
+        <div className="lg:hidden">{venueGrid}</div>
 
         <div
-          className={`venue-stack hidden w-full flex-col items-stretch lg:flex ${isRtl ? "mt-[clamp(18px,2.5vw,28px)] md:mt-[clamp(26px,3vw,36px)]" : "mt-[clamp(12px,2vw,20px)] md:mt-[clamp(20px,2vw,30px)]"}`}
+          className="venue-stack hidden w-full flex-col items-stretch lg:flex"
           style={cardGapStyle}
         >
           {venueGrid}
@@ -580,7 +645,11 @@ export default function MatchMap() {
 
   return (
     <>
-      <style dangerouslySetInnerHTML={{ __html: MATCH_MAP_RESPONSIVE_CSS }} />
+      <style
+        dangerouslySetInnerHTML={{
+          __html: `${MATCH_MAP_RESPONSIVE_CSS}${MATCH_MAP_VENUE_LOGO_CSS}`,
+        }}
+      />
       <section
         ref={sectionRef}
         dir={isRtl ? "rtl" : "ltr"}
@@ -619,9 +688,9 @@ export default function MatchMap() {
           >
             <SubpageTopBar brandOnEnd>
               <div
-                className={`${textClass} flex w-fit max-w-full shrink-0 flex-row items-center`}
+                className={`match-map-title-block ${textClass} flex max-w-full shrink-0 flex-row items-center max-lg:flex-col max-lg:items-start ${isRtl ? "w-full" : "w-fit max-lg:w-full"}`}
                 style={{
-                  maxWidth: isRtl ? TITLE_BLOCK_WIDTH_AR : TITLE_BLOCK_WIDTH_EN,
+                  maxWidth: isRtl ? "100%" : TITLE_BLOCK_WIDTH_EN,
                   gap: TITLE_SUBTITLE_GAP,
                 }}
               >
@@ -629,11 +698,10 @@ export default function MatchMap() {
                   <>
                     <SubpagePageTitle title={t.matchMap.pageTitle} isRtl={isRtl} />
                     <p
-                      className={`${textClass} min-w-0 shrink text-right font-extrabold tracking-normal text-black`}
+                      className={`match-map-subtitle-ar ${textClass} min-w-0 shrink text-right font-extrabold tracking-normal text-black`}
                       style={{
                         fontSize: SUBTITLE_FONT_SIZE_AR,
                         lineHeight: SUBTITLE_LINE_HEIGHT_AR,
-                        fontFamily,
                         fontWeight: SUBTITLE_FONT_WEIGHT_AR,
                         letterSpacing: 0,
                         paddingInlineStart: SUBTITLE_INLINE_PADDING_AR,
@@ -642,7 +710,7 @@ export default function MatchMap() {
                     >
                       <span className="block">{t.matchMap.subtitleLine1}</span>
                       <span
-                        className="block"
+                        className="match-map-subtitle-ar-line2 block"
                         style={{
                           fontSize: SUBTITLE_FONT_SIZE_AR_LINE2,
                           lineHeight: SUBTITLE_LINE_HEIGHT_AR_LINE2,
@@ -656,7 +724,7 @@ export default function MatchMap() {
                   <>
                     <SubpagePageTitle title={t.matchMap.pageTitle} isRtl={isRtl} />
                     <p
-                      className={`${mPlus1TextClass} min-w-0 font-bold uppercase leading-tight tracking-normal text-black`}
+                      className={`match-map-subtitle-en ${mPlus1TextClass} min-w-0 shrink font-bold uppercase leading-tight tracking-normal text-black lg:shrink`}
                       style={{
                         fontSize: SUBTITLE_FONT_SIZE,
                         fontFamily: mPlus1FontFamily,
@@ -664,7 +732,10 @@ export default function MatchMap() {
                         letterSpacing: 0,
                       }}
                     >
-                      {t.matchMap.subtitle}
+                      <span className="block">{t.matchMap.subtitleLine1}</span>
+                      <span className="match-map-subtitle-en-line2 block">
+                        {t.matchMap.subtitleLine2}
+                      </span>
                     </p>
                   </>
                 )}

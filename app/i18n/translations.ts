@@ -27,8 +27,8 @@ export const translations = {
     matchMap: {
       pageTitle: "Match Map",
       subtitle: "FIND OUT ALL THE PLACES SHOWING THE MATCH NEAR YOU",
-      subtitleLine1: "",
-      subtitleLine2: "",
+      subtitleLine1: "FIND OUT ALL THE PLACES",
+      subtitleLine2: "SHOWING THE MATCH NEAR YOU",
       logoAlt: "Match Map",
       dubai: "DUBAI",
       abuDhabi: "ABU DHABI",
