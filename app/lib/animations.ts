@@ -288,7 +288,7 @@ export function animateFullScheduleSection(root: HTMLElement) {
         y: 0,
         duration: 0.8,
         ease: EASE_BACK,
-        clearProps: "opacity,visibility",
+        clearProps: "opacity,visibility,transform",
       },
       "-=0.2",
     );

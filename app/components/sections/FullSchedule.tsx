@@ -30,14 +30,17 @@ const HEADLINE_MARGIN_TOP = scale(100);
 const HEADLINE_WIDTH = scale(558);
 const HEADLINE_LINE1_FONT_SIZE = scale(53.77);
 const HEADLINE_LINE2_FONT_SIZE = scale(89.87);
-const HEADLINE_ROTATE_DEG = -9.87;
+/** English — tilts up to the right (counter-clockwise). */
+const HEADLINE_ROTATE_DEG_EN = -9.87;
+/** Arabic mockup — tilts the other way (clockwise, ~12°). */
+const HEADLINE_ROTATE_DEG_AR = 12;
 const TROPHY_IMG = "/assets/imgs/trophy.png";
 const TROPHY_WIDTH_PX = 78.65;
 const TROPHY_HEIGHT_PX = 206.44;
 const TROPHY_TOP = scale(367);
 
 export default function FullSchedule() {
-  const { t, textClass, isRtl, fontFamily } = useTranslations();
+  const { t, textClass, isRtl, dir, fontFamily } = useTranslations();
   const adminDraft = useAdminCampaignDraft();
 
   const sectionRef = useGsapScope<HTMLElement>(
@@ -48,6 +51,7 @@ export default function FullSchedule() {
   return (
     <section
       ref={sectionRef}
+      dir={dir}
       className={`${textClass} relative isolate flex min-h-dvh w-full max-w-full flex-1 flex-col overflow-x-visible overflow-y-visible bg-[#f5c400]`}
       aria-label={t.fullSchedule.pageAria}
     >
@@ -111,7 +115,7 @@ export default function FullSchedule() {
             <div className="flex w-full flex-col items-center px-[clamp(16px,2.5vw,40px)]">
               <h2
                 data-gsap-headline
-                className={`${textClass} shrink-0 text-center font-extrabold uppercase leading-none max-[1599px]:!mt-[clamp(48px,12vw,80px)]`}
+                className={`${textClass} shrink-0 text-center font-extrabold leading-none max-[1599px]:!mt-[clamp(48px,12vw,80px)] ${isRtl ? "" : "uppercase"}`}
                 aria-label={`${t.fullSchedule.headlineLine1} ${t.fullSchedule.headlineLine2}`}
                 style={{
                   marginTop: HEADLINE_MARGIN_TOP,
@@ -121,20 +125,30 @@ export default function FullSchedule() {
                   fontWeight: 800,
                   fontFamily,
                   color: HEADLINE_RED,
-                  transform: `rotate(${HEADLINE_ROTATE_DEG}deg)`,
                 }}
               >
                 <span
-                  className="block"
-                  style={{ fontSize: HEADLINE_LINE1_FONT_SIZE }}
+                  className="inline-block"
+                  dir={isRtl ? "rtl" : "ltr"}
+                  style={{
+                    transform: `rotate(${
+                      isRtl ? HEADLINE_ROTATE_DEG_AR : HEADLINE_ROTATE_DEG_EN
+                    }deg)`,
+                    transformOrigin: "center center",
+                  }}
                 >
-                  {t.fullSchedule.headlineLine1}
-                </span>
-                <span
-                  className="block"
-                  style={{ fontSize: HEADLINE_LINE2_FONT_SIZE }}
-                >
-                  {t.fullSchedule.headlineLine2}
+                  <span
+                    className="block"
+                    style={{ fontSize: HEADLINE_LINE1_FONT_SIZE }}
+                  >
+                    {t.fullSchedule.headlineLine1}
+                  </span>
+                  <span
+                    className="block"
+                    style={{ fontSize: HEADLINE_LINE2_FONT_SIZE }}
+                  >
+                    {t.fullSchedule.headlineLine2}
+                  </span>
                 </span>
               </h2>
             </div>
