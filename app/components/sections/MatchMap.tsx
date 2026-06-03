@@ -27,8 +27,8 @@ import { useEffect, useMemo, useState } from "react";
 const BRAND_RED = "#E31837";
 const BORDER_RED = "#DF2027";
 const PANEL_BG = "#FEE401";
-/** Small cards: white (50% opacity) + 50px backdrop blur */
-const SMALL_CARD_BG = "rgba(255, 255, 255, 0.5)";
+/** Small cards: solid white + 50px backdrop blur */
+const SMALL_CARD_BG = "#ffffff";
 const SMALL_CARD_BACKDROP_BLUR = "blur(50px)";
 const BORDER_WIDTH = 1;
 const CARD_BORDER_RADIUS = 10;
