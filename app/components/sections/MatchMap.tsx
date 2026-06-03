@@ -27,8 +27,8 @@ import { useEffect, useMemo, useState } from "react";
 const BRAND_RED = "#E31837";
 const BORDER_RED = "#DF2027";
 const PANEL_BG = "#FEE401";
-/** Small cards: white (50% opacity) + 50px backdrop blur */
-const SMALL_CARD_BG = "rgba(255, 255, 255, 0.5)";
+/** Small cards: solid white + 50px backdrop blur */
+const SMALL_CARD_BG = "#ffffff";
 const SMALL_CARD_BACKDROP_BLUR = "blur(50px)";
 const BORDER_WIDTH = 1;
 const CARD_BORDER_RADIUS = 10;
@@ -206,15 +206,15 @@ const MATCH_MAP_RESPONSIVE_CSS = `
 
 const SUBTITLE_FONT_WEIGHT = 700;
 
-const TITLE_BLOCK_WIDTH = scale(625);
+const TITLE_BLOCK_WIDTH = scale(825);
 /** Horizontal space between page title and subtitle (English). */
 const TITLE_SUBTITLE_GAP = scale(20);
 /** Extra space on both sides of Arabic subtitle lines only. */
 const SUBTITLE_INLINE_PADDING_AR = scale(16);
 const SUBTITLE_FONT_SIZE = scale(16);
 /** Arabic match-map subtitle — matches hero / design reference */
-const SUBTITLE_FONT_SIZE_AR = "26.28px";
-const SUBTITLE_LINE_HEIGHT_AR = "36.49px";
+const SUBTITLE_FONT_SIZE_AR = "23px";
+const SUBTITLE_LINE_HEIGHT_AR = "32px";
 const SUBTITLE_FONT_SIZE_AR_LINE2 = "23px";
 const SUBTITLE_LINE_HEIGHT_AR_LINE2 = "32px";
 const SUBTITLE_FONT_WEIGHT_AR = 800;
