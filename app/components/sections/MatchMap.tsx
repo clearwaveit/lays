@@ -67,9 +67,8 @@ const MAP_IMAGE_HEIGHT = scaleFluid(MAP_IMAGE_HEIGHT_PX);
 
 const SUBTITLE_FONT_WEIGHT = 700;
 
-/** Title + subtitle row — 625px EN / 825px AR at 1600px+ viewport (caps at design px). */
+/** Title + subtitle row — 625px EN at 1600px+ viewport; Arabic uses full width. */
 const TITLE_BLOCK_WIDTH_EN = scale(625);
-const TITLE_BLOCK_WIDTH_AR = scale(825);
 const TITLE_SUBTITLE_GAP = scale(20);
 const SUBTITLE_INLINE_PADDING_AR = scale(16);
 const SUBTITLE_FONT_SIZE = scale(16);
@@ -689,9 +688,9 @@ export default function MatchMap() {
           >
             <SubpageTopBar brandOnEnd>
               <div
-                className={`match-map-title-block ${textClass} flex w-fit max-w-full shrink-0 flex-row items-center max-lg:w-full max-lg:flex-col max-lg:items-start`}
+                className={`match-map-title-block ${textClass} flex max-w-full shrink-0 flex-row items-center max-lg:flex-col max-lg:items-start ${isRtl ? "w-full" : "w-fit max-lg:w-full"}`}
                 style={{
-                  maxWidth: isRtl ? TITLE_BLOCK_WIDTH_AR : TITLE_BLOCK_WIDTH_EN,
+                  maxWidth: isRtl ? "100%" : TITLE_BLOCK_WIDTH_EN,
                   gap: TITLE_SUBTITLE_GAP,
                 }}
               >
