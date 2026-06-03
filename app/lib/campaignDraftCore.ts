@@ -35,8 +35,8 @@ export const ADMIN_DRAFT_STORAGE_KEY = "lays-admin-draft-v1";
 
 export const DEFAULT_TRACKING: TrackingSettings = {
   googleTagManagerId: "",
-  googleAnalyticsId: "",
-  microsoftClarityId: "",
+  googleAnalyticsId: "G-PQDKX0GZQJ",
+  microsoftClarityId: "x15621wldl",
 };
 
 export function allVenueIds() {
@@ -139,6 +139,10 @@ export function applySourceScheduleToDraftMatches(
         venueIds: matchVenueIds(source),
       };
     }
+    const winnerSide =
+      draft.winnerSide === "home" || draft.winnerSide === "away"
+        ? draft.winnerSide
+        : undefined;
     return {
       ...source,
       dateLabel: normalizeMatchDateLabel(draft.dateLabel),
@@ -153,6 +157,7 @@ export function applySourceScheduleToDraftMatches(
         flag: sanitizeStoredImageSrc(draft.away.flag, source.away.flag),
       },
       venueIds: matchVenueIds(draft),
+      winnerSide,
     };
   });
 }
@@ -184,10 +189,15 @@ export function normalizeAdminDraft(draft: Partial<AdminDraft>): AdminDraft {
     const venueIds = migrateVenueIds(matchVenueIds(match)).filter((id) =>
       allowedVenueIds.has(id),
     );
+    const winnerSide =
+      match.winnerSide === "home" || match.winnerSide === "away"
+        ? match.winnerSide
+        : undefined;
     return {
       ...match,
       dateLabel: normalizeMatchDateLabel(match.dateLabel),
       venueIds: venueIds.length > 0 ? venueIds : restaurants.map((restaurant) => restaurant.id),
+      winnerSide,
     };
   });
   const teams = (draft.teams ?? uniqueTeamsFromMatches(matches)).map((team) => ({

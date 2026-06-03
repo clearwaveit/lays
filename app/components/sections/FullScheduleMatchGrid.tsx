@@ -13,6 +13,7 @@ import {
   type Team,
 } from "@/app/data/matches";
 import { isRemoteTeamFlag } from "@/app/data/team-flags";
+import { isMatchSideLoser, LOSER_FLAG_CLASS } from "@/app/lib/matchResult";
 import { getTeamDisplayName } from "@/app/data/team-names";
 import { UAE_SCHEDULE } from "@/app/data/uae-schedule";
 import { useTranslations } from "@/app/i18n/useTranslations";
@@ -136,14 +137,19 @@ function formatScheduleGridDate(
 
 function ScheduleFlag({
   team,
+  match,
+  side,
   usePlaceholder,
   className,
 }: {
   team: Team;
+  match: MatchFixture;
+  side: "home" | "away";
   usePlaceholder: boolean;
   className?: string;
 }) {
   const flagSrc = usePlaceholder ? KNOCKOUT_PLACEHOLDER_FLAG : team.flag;
+  const isLoser = !usePlaceholder && isMatchSideLoser(match, side);
 
   return (
     <span
@@ -160,7 +166,7 @@ function ScheduleFlag({
         className={
           usePlaceholder
             ? "h-full w-full object-contain object-center p-0.5"
-            : "h-full w-full object-cover"
+            : `h-full w-full object-cover${isLoser ? ` ${LOSER_FLAG_CLASS}` : ""}`
         }
       />
     </span>
@@ -224,6 +230,8 @@ function ScheduleMatchCard({
           >
             <ScheduleFlag
               team={match.home}
+              match={match}
+              side="home"
               usePlaceholder={homePlaceholder}
               className="h-[18px] w-[28px]"
             />
@@ -239,6 +247,8 @@ function ScheduleMatchCard({
           >
             <ScheduleFlag
               team={match.away}
+              match={match}
+              side="away"
               usePlaceholder={awayPlaceholder}
               className="h-[18px] w-[28px]"
             />
