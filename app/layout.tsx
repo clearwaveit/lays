@@ -31,9 +31,15 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} ${lays.variable} ${mPlus1.variable} ${cairo.variable} h-full antialiased`}
     >
       <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="anonymous"
+        />
         <CampaignTracking />
       </head>
-      <body className="flex min-h-dvh flex-col">
+      <body className={`flex min-h-dvh flex-col ${lays.className}`}>
         <LayoutWrapper>{children}</LayoutWrapper>
       </body>
     </html>

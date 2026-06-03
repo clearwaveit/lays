@@ -32,6 +32,9 @@ export const cairo = Cairo({
   variable: "--font-cairo",
   subsets: ["arabic", "latin"],
   weight: ["400", "700", "800"],
+  display: "swap",
+  preload: true,
+  adjustFontFallback: true,
 });
 
 /** Tailwind + inline style helper */
