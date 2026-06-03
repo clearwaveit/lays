@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import CampaignTracking from "./components/CampaignTracking";
 import LayoutWrapper from "./components/LayoutWrapper";
 import { cairo, lays, mPlus1 } from "./fonts";
 import "./globals.css";
@@ -29,6 +30,9 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} ${lays.variable} ${mPlus1.variable} ${cairo.variable} h-full antialiased`}
     >
+      <head>
+        <CampaignTracking />
+      </head>
       <body className="flex min-h-dvh flex-col">
         <LayoutWrapper>{children}</LayoutWrapper>
       </body>

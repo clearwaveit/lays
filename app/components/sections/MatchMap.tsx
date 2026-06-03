@@ -235,7 +235,8 @@ const DUBAI_FEATURED: Venue = {
   alt: "McGettigan's",
   logoWidth: MCGETTIGANS_CARD_LOGO_WIDTH,
   logoHeight: MCGETTIGANS_CARD_LOGO_HEIGHT,
-  locationUrl: "https://www.google.com/maps/search/?api=1&query=McGettigan's+Dubai",
+  locationUrl:
+    "https://www.google.com/maps/place/Bla+Bla+By+McGettigan's/@25.0743008,55.1292212,17z/data=!4m6!3m5!1s0x3e5f13c4132ac0c9:0x499ffd04a5bb6fe0!8m2!3d25.0743397!4d55.1292427!16s%2Fg%2F11ll4zzfsk?entry=ttu",
 };
 
 /** Grid order: row1 R, row2 L/R, row3 L/R, row4 L (after featured McGettigan's). */
@@ -275,12 +276,12 @@ const DUBAI_VENUES: Venue[] = [
   },
   {
     id: "lock-stock-business-bay-dubai",
-    src: "/assets/imgs/business-bay.svg",
-    alt: "Lock Stock & Barrel — Business Bay",
+    src: "/assets/imgs/the-garden.svg",
+    alt: "The Garden Project",
     logoWidth: 96,
     logoHeight: 75,
     locationUrl:
-      "https://www.google.com/maps/search/?api=1&query=Lock+Stock+%26+Barrel+Business+Bay+Dubai",
+      "https://www.google.com/maps/place/The+Garden+Project/@25.067661,55.1616195,17z/data=!3m1!4b1!4m6!3m5!1s0x3e5f6d9554750e63:0xf9035ead0f86eae6!8m2!3d25.067661!4d55.1616195!16s%2Fg%2F11yq931q81?entry=ttu",
   },
   {
     id: "lock-stock-barsha-heights-dubai",
@@ -510,7 +511,8 @@ export default function MatchMap() {
   }, [venueParam, visibleRestaurants, setSelectedVenueId]);
 
   const handleVenueClick = (venue: VenueModalData) => {
-    setSelectedVenue(venue);
+    const fromDraft = visibleRestaurants?.find((restaurant) => restaurant.id === venue.id);
+    setSelectedVenue(fromDraft ?? venue);
     setSelectedVenueId(venue.id);
 
     const params = new URLSearchParams();

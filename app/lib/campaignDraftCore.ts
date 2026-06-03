@@ -35,8 +35,8 @@ export const ADMIN_DRAFT_STORAGE_KEY = "lays-admin-draft-v1";
 
 export const DEFAULT_TRACKING: TrackingSettings = {
   googleTagManagerId: "",
-  googleAnalyticsId: "",
-  microsoftClarityId: "",
+  googleAnalyticsId: "G-PQDKX0GZQJ",
+  microsoftClarityId: "x15621wldl",
 };
 
 export function allVenueIds() {

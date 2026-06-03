@@ -782,7 +782,7 @@ function AdminDashboard() {
               <div className="grid gap-5">
                 <SectionHeader
                   title="Tracking"
-                  description="Store tracking IDs here as a draft. The frontend integration can later inject these through the layout once IDs and consent rules are confirmed."
+                  description="Tracking IDs for reference. Google Analytics and Microsoft Clarity are loaded site-wide from the root layout."
                 />
                 <div className="grid gap-3 md:grid-cols-3">
                   <Field
