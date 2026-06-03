@@ -153,6 +153,19 @@ const MATCH_MAP_RESPONSIVE_CSS = `
   .match-map .venue-card--sized {
     gap: clamp(6px, 2vw, 10px);
   }
+  .match-map[dir="rtl"] [data-gsap-city] {
+    padding-top: ${scaleMobileTablet(44, 0.45)};
+  }
+  .match-map[dir="rtl"] .match-map-city-label {
+    line-height: 1.2;
+  }
+  .match-map[dir="rtl"] .venue-panel {
+    padding-top: ${scaleMobileTablet(32, 0.45)};
+  }
+  .match-map[dir="rtl"] .venue-grid,
+  .match-map[dir="rtl"] .venue-stack {
+    margin-top: ${scaleMobileTablet(14, 0.45)};
+  }
 }
 @media (min-width: ${TABLET_MAX_PX + 1}px) {
   .match-map .venue-card {
@@ -201,12 +214,26 @@ const MATCH_MAP_RESPONSIVE_CSS = `
     height: ${MAP_IMAGE_HEIGHT};
     max-width: 100%;
   }
+  .match-map[dir="rtl"] [data-gsap-city] {
+    padding-top: ${scale(44, 0.45)};
+  }
+  .match-map[dir="rtl"] .match-map-city-label {
+    line-height: 1.2;
+  }
+  .match-map[dir="rtl"] .venue-panel {
+    padding-top: ${scale(38)};
+  }
+  .match-map[dir="rtl"] .venue-grid,
+  .match-map[dir="rtl"] .venue-stack {
+    margin-top: ${scale(10)};
+  }
 }
 `;
 
 const SUBTITLE_FONT_WEIGHT = 700;
 
-const TITLE_BLOCK_WIDTH = scale(825);
+const TITLE_BLOCK_WIDTH_EN = scale(625);
+const TITLE_BLOCK_WIDTH_AR = scale(825);
 /** Horizontal space between page title and subtitle (English). */
 const TITLE_SUBTITLE_GAP = scale(20);
 /** Extra space on both sides of Arabic subtitle lines only. */
@@ -219,7 +246,14 @@ const SUBTITLE_FONT_SIZE_AR_LINE2 = "23px";
 const SUBTITLE_LINE_HEIGHT_AR_LINE2 = "32px";
 const SUBTITLE_FONT_WEIGHT_AR = 800;
 const CITY_FONT_SIZE = scale(57.44);
-const CITY_COLUMNS_MARGIN_TOP = scale(80);
+const CITY_COLUMNS_MARGIN_TOP_EN = scale(80);
+const CITY_COLUMNS_MARGIN_TOP_AR = scale(96);
+const CITY_COLUMN_PADDING_TOP_EN = scale(28, 0.45);
+const CITY_COLUMN_PADDING_TOP_AR = scale(44, 0.45);
+const VENUE_PANEL_PADDING_TOP_EN = scale(22);
+const VENUE_PANEL_PADDING_TOP_AR = scale(38);
+const CITY_LABEL_PADDING_EN = "clamp(4px, 0.375vw, 6px) clamp(12px, 1.5vw, 24px)";
+const CITY_LABEL_PADDING_AR = "clamp(8px, 0.65vw, 12px) clamp(22px, 2.75vw, 36px)";
 const VENUE_CARD_GAP_PX = 6;
 const MCGETTIGANS_CARD_LOGO_WIDTH = 280;
 const MCGETTIGANS_CARD_LOGO_HEIGHT = 35;
@@ -419,14 +453,21 @@ function CityColumn({
     </div>
   );
 
+  const cityColumnPaddingTop = isRtl
+    ? CITY_COLUMN_PADDING_TOP_AR
+    : CITY_COLUMN_PADDING_TOP_EN;
+  const venuePanelPaddingTop = isRtl
+    ? VENUE_PANEL_PADDING_TOP_AR
+    : VENUE_PANEL_PADDING_TOP_EN;
+
   return (
     <div
       data-gsap-city
       className="relative flex min-w-0 w-full max-w-full flex-col items-stretch"
-      style={{ paddingTop: scale(28, 0.45) }}
+      style={{ paddingTop: cityColumnPaddingTop }}
     >
       <h2
-        className={`${textClass} absolute left-1/2 md:top-6 z-10 -translate-x-1/2 -translate-y-1/2 border border-solid text-center font-extrabold leading-none whitespace-nowrap ${isRtl ? "" : "uppercase"}`}
+        className={`match-map-city-label ${textClass} absolute left-1/2 z-10 flex -translate-x-1/2 -translate-y-1/2 items-center justify-center border border-solid text-center font-extrabold whitespace-nowrap ${isRtl ? "max-md:top-7 md:top-9 leading-[1.2]" : "max-md:top-5 md:top-6 uppercase leading-none"}`}
         style={{
           color: BRAND_RED,
           fontSize: CITY_FONT_SIZE,
@@ -435,7 +476,8 @@ function CityColumn({
           borderWidth: BORDER_WIDTH,
           borderRadius: scale(6, 0.5),
           backgroundColor: PANEL_BG,
-          padding: "clamp(4px, 0.375vw, 6px) clamp(12px, 1.5vw, 24px)",
+          padding: isRtl ? CITY_LABEL_PADDING_AR : CITY_LABEL_PADDING_EN,
+          boxSizing: "border-box",
         }}
       >
         {city}
@@ -447,12 +489,17 @@ function CityColumn({
           borderColor: BORDER_RED,
           borderWidth: BORDER_WIDTH,
           backgroundColor: PANEL_BG,
+          paddingTop: venuePanelPaddingTop,
         }}
       >
-        <div className="lg:hidden">{venueGrid}</div>
+        <div
+          className={`lg:hidden ${isRtl ? "mt-[clamp(10px,1.5vw,16px)]" : ""}`}
+        >
+          {venueGrid}
+        </div>
 
         <div
-          className="venue-stack mt-[clamp(12px,2vw,20px)] hidden w-full flex-col items-stretch md:mt-[clamp(20px,2vw,30px)] lg:flex"
+          className={`venue-stack hidden w-full flex-col items-stretch lg:flex ${isRtl ? "mt-[clamp(18px,2.5vw,28px)] md:mt-[clamp(26px,3vw,36px)]" : "mt-[clamp(12px,2vw,20px)] md:mt-[clamp(20px,2vw,30px)]"}`}
           style={cardGapStyle}
         >
           {venueGrid}
@@ -574,7 +621,7 @@ export default function MatchMap() {
               <div
                 className={`${textClass} flex w-fit max-w-full shrink-0 flex-row items-center`}
                 style={{
-                  maxWidth: TITLE_BLOCK_WIDTH,
+                  maxWidth: isRtl ? TITLE_BLOCK_WIDTH_AR : TITLE_BLOCK_WIDTH_EN,
                   gap: TITLE_SUBTITLE_GAP,
                 }}
               >
@@ -627,7 +674,9 @@ export default function MatchMap() {
             <div className="flex w-full flex-1 flex-col pb-[clamp(100px,12vh,140px)] pt-[clamp(12px,2vw,24px)]">
             <div
               className="grid w-full grid-cols-1 items-start gap-y-[clamp(32px,6vw,48px)] lg:grid-cols-2 lg:items-start lg:gap-x-[40px] lg:gap-y-0"
-              style={{ marginTop: CITY_COLUMNS_MARGIN_TOP }}
+              style={{
+                marginTop: isRtl ? CITY_COLUMNS_MARGIN_TOP_AR : CITY_COLUMNS_MARGIN_TOP_EN,
+              }}
             >
               <CityColumn
                 city={t.matchMap.dubai}
