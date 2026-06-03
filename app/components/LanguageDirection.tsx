@@ -1,5 +1,6 @@
 "use client";
 
+import { cairo } from "@/app/fonts";
 import { useLanguage } from "@/app/context/LanguageContext";
 import { useEffect } from "react";
 
@@ -16,6 +17,7 @@ export default function LanguageDirection() {
     html.dir = isRtl ? "rtl" : "ltr";
     document.body.classList.toggle("site-rtl", isRtl);
     document.body.classList.toggle("site-ltr", !isRtl);
+    document.body.classList.toggle(cairo.className, isRtl);
   }, [language, isReady]);
 
   return null;
