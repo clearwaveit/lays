@@ -1,6 +1,7 @@
 "use client";
 
 import type { MatchFixture, MatchWinnerSide } from "@/app/data/matches";
+import { inferWinnerSideFromScores } from "@/app/lib/matchResult";
 import { parseMatchDateLabel } from "@/app/data/matches";
 import {
   ADMIN_DRAFT_STORAGE_KEY,
@@ -129,6 +130,62 @@ function WinnerField({
         <option value="away">{awayName} wins</option>
       </select>
     </label>
+  );
+}
+
+function parseScoreFieldValue(value: string): number | undefined {
+  const trimmed = value.trim();
+  if (trimmed === "") return undefined;
+  const parsed = Number.parseInt(trimmed, 10);
+  if (!Number.isFinite(parsed) || parsed < 0 || parsed > 99) return undefined;
+  return parsed;
+}
+
+function buildMatchScorePatch(
+  match: MatchFixture,
+  side: "home" | "away",
+  raw: string,
+): Partial<MatchFixture> {
+  const homeScore =
+    side === "home" ? parseScoreFieldValue(raw) : match.homeScore ?? undefined;
+  const awayScore =
+    side === "away" ? parseScoreFieldValue(raw) : match.awayScore ?? undefined;
+  const patch: Partial<MatchFixture> = { homeScore, awayScore };
+  const inferred = inferWinnerSideFromScores(homeScore, awayScore);
+  if (inferred) patch.winnerSide = inferred;
+  return patch;
+}
+
+function MatchScoreFields({
+  homeName,
+  awayName,
+  homeScore,
+  awayScore,
+  onHomeScoreChange,
+  onAwayScoreChange,
+}: {
+  homeName: string;
+  awayName: string;
+  homeScore?: number | null;
+  awayScore?: number | null;
+  onHomeScoreChange: (raw: string) => void;
+  onAwayScoreChange: (raw: string) => void;
+}) {
+  return (
+    <div className="grid gap-2 sm:grid-cols-2">
+      <Field
+        label={`${homeName} goals`}
+        value={homeScore ?? ""}
+        onChange={onHomeScoreChange}
+        type="number"
+      />
+      <Field
+        label={`${awayName} goals`}
+        value={awayScore ?? ""}
+        onChange={onAwayScoreChange}
+        type="number"
+      />
+    </div>
   );
 }
 
@@ -518,9 +575,30 @@ function AdminDashboard() {
                         >
                           Delete
                         </button>
-                        <div className="xl:col-span-6">
+                        <div className="grid gap-3 xl:col-span-6">
+                          <p className="text-xs font-semibold uppercase tracking-[0.12em] text-slate-500">
+                            Score (shown on timetable when both goals are set)
+                          </p>
+                          <MatchScoreFields
+                            homeName={match.home.name}
+                            awayName={match.away.name}
+                            homeScore={match.homeScore}
+                            awayScore={match.awayScore}
+                            onHomeScoreChange={(raw) =>
+                              updateMatch(
+                                realIndex,
+                                buildMatchScorePatch(match, "home", raw),
+                              )
+                            }
+                            onAwayScoreChange={(raw) =>
+                              updateMatch(
+                                realIndex,
+                                buildMatchScorePatch(match, "away", raw),
+                              )
+                            }
+                          />
                           <WinnerField
-                            label="Match result (loser flag shows grey on site)"
+                            label="Winner (loser flag & name show grey on site)"
                             homeName={match.home.name}
                             awayName={match.away.name}
                             value={match.winnerSide}
@@ -728,7 +806,7 @@ function AdminDashboard() {
               <div className="grid gap-5">
                 <SectionHeader
                   title="Schedule"
-                  description="Grouped by round and date. Set the winner here to grey the losing team's flag on the public site."
+                  description="Grouped by round and date. Set scores and winner; scores appear on the timetable, loser flag and name show grey."
                 />
                 <div className="grid gap-3">
                   {scheduleGroups.map(([group, matches]) => (
@@ -742,7 +820,7 @@ function AdminDashboard() {
                           return (
                             <div
                               key={`${group}-${match.matchNo}-${match.time}-${match.home.name}-${match.away.name}`}
-                              className="grid gap-2 rounded-md bg-slate-50 px-3 py-2 sm:grid-cols-[minmax(0,1fr)_minmax(180px,240px)] sm:items-center"
+                              className="grid gap-3 rounded-md bg-slate-50 px-3 py-3"
                             >
                               <div className="flex flex-wrap items-center gap-2 text-sm">
                                 <span className="text-xs font-bold text-slate-400">
@@ -756,17 +834,37 @@ function AdminDashboard() {
                                 <span>{match.away.name}</span>
                               </div>
                               {realIndex >= 0 ? (
-                                <WinnerField
-                                  label="Winner"
-                                  homeName={match.home.name}
-                                  awayName={match.away.name}
-                                  value={match.winnerSide}
-                                  onChange={(winnerSide) =>
-                                    updateMatch(realIndex, {
-                                      winnerSide: winnerSide ?? undefined,
-                                    })
-                                  }
-                                />
+                                <>
+                                  <MatchScoreFields
+                                    homeName={match.home.name}
+                                    awayName={match.away.name}
+                                    homeScore={match.homeScore}
+                                    awayScore={match.awayScore}
+                                    onHomeScoreChange={(raw) =>
+                                      updateMatch(
+                                        realIndex,
+                                        buildMatchScorePatch(match, "home", raw),
+                                      )
+                                    }
+                                    onAwayScoreChange={(raw) =>
+                                      updateMatch(
+                                        realIndex,
+                                        buildMatchScorePatch(match, "away", raw),
+                                      )
+                                    }
+                                  />
+                                  <WinnerField
+                                    label="Winner"
+                                    homeName={match.home.name}
+                                    awayName={match.away.name}
+                                    value={match.winnerSide}
+                                    onChange={(winnerSide) =>
+                                      updateMatch(realIndex, {
+                                        winnerSide: winnerSide ?? undefined,
+                                      })
+                                    }
+                                  />
+                                </>
                               ) : null}
                             </div>
                           );

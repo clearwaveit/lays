@@ -16,7 +16,7 @@ const TEAM_NAMES_AR: Record<string, string> = {
   Croatia: "كرواتيا",
   Curaçao: "كوراساو",
   Czechia: "التشيك",
-  "Côte d'Ivoire": "كوت ديفوار",
+  "Ivory Coast": "كوت ديفوار",
   Ecuador: "الإكوادور",
   Egypt: "مصر",
   England: "إنجلترا",
