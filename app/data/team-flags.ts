@@ -14,7 +14,7 @@ const TEAM_ISO_CODES: Record<string, string> = {
   Croatia: "hr",
   Curaçao: "cw",
   Czechia: "cz",
-  "Côte d'Ivoire": "ci",
+  "Ivory Coast": "ci",
   Ecuador: "ec",
   Egypt: "eg",
   England: "gb-eng",
@@ -50,7 +50,7 @@ const TEAM_ISO_CODES: Record<string, string> = {
   Uzbekistan: "uz",
 };
 
-const PLACEHOLDER_FLAG = "/assets/imgs/football.png";
+export const PLACEHOLDER_TEAM_FLAG = "/assets/imgs/football.png";
 /** Width requested from flagcdn (2× max card flag size for retina). */
 const FLAG_CDN_SIZE = 320;
 
@@ -65,15 +65,32 @@ function isPlaceholderTeamName(name: string): boolean {
 
 export function getTeamFlagSrc(teamName: string): string {
   if (isPlaceholderTeamName(teamName)) {
-    return PLACEHOLDER_FLAG;
+    return PLACEHOLDER_TEAM_FLAG;
   }
 
   const iso = TEAM_ISO_CODES[teamName];
   if (!iso) {
-    return PLACEHOLDER_FLAG;
+    return PLACEHOLDER_TEAM_FLAG;
   }
 
   return `https://flagcdn.com/w${FLAG_CDN_SIZE}/${iso}.png`;
+}
+
+export function isPlaceholderTeamFlag(flagSrc: string): boolean {
+  return flagSrc.trim() === PLACEHOLDER_TEAM_FLAG;
+}
+
+/** Prefer a real flag over a persisted football placeholder when merging draft data. */
+export function resolveTeamFlag(stored: string, fallback: string): string {
+  const resolved = stored.trim();
+  if (
+    isPlaceholderTeamFlag(resolved) &&
+    fallback.trim() &&
+    !isPlaceholderTeamFlag(fallback)
+  ) {
+    return fallback;
+  }
+  return resolved || fallback;
 }
 
 export function isRemoteTeamFlag(flagSrc: string): boolean {

@@ -30,6 +30,10 @@ export type MatchFixture = {
   venueIds?: string[];
   /** Set in admin when a match is played; losing side flags render grey on the site. */
   winnerSide?: MatchWinnerSide | null;
+  /** Manual full-time score (home). Shown on timetable when both scores are set. */
+  homeScore?: number | null;
+  /** Manual full-time score (away). Shown on timetable when both scores are set. */
+  awayScore?: number | null;
 };
 
 export const MATCH_CALENDAR_YEAR = 2026;
@@ -102,7 +106,7 @@ const MATCH_FIXTURES: MatchFixtureBase[] = [
   },
   {
     matchNo: 9,
-    home: team("Côte d\\'Ivoire"),
+    home: team("Ivory Coast"),
     away: team("Ecuador"),
   },
   {
@@ -218,7 +222,7 @@ const MATCH_FIXTURES: MatchFixtureBase[] = [
   {
     matchNo: 33,
     home: team("Germany"),
-    away: team("Côte d\\'Ivoire"),
+    away: team("Ivory Coast"),
   },
   {
     matchNo: 34,
@@ -328,7 +332,7 @@ const MATCH_FIXTURES: MatchFixtureBase[] = [
   {
     matchNo: 55,
     home: team("Curaçao"),
-    away: team("Côte d\\'Ivoire"),
+    away: team("Ivory Coast"),
   },
   {
     matchNo: 56,
