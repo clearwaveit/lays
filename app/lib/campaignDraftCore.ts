@@ -54,6 +54,19 @@ export function isMatchAssignedToVenue(match: MatchFixture, venueId: string) {
   return matchVenueIds(match).includes(venueId);
 }
 
+export function isVenueEnabled(
+  venueId: string,
+  restaurants: AdminVenue[] | undefined,
+): boolean {
+  if (!restaurants) return true;
+  const restaurant = restaurants.find((entry) => entry.id === venueId);
+  return restaurant?.enabled ?? true;
+}
+
+export function getEnabledRestaurants(restaurants: AdminVenue[]): AdminVenue[] {
+  return restaurants.filter((restaurant) => restaurant.enabled);
+}
+
 export function uniqueTeamsFromMatches(matches: MatchFixture[]): AdminTeam[] {
   const teams = new Map<string, AdminTeam>();
   for (const match of matches) {
@@ -195,12 +208,15 @@ export function normalizeAdminDraft(draft: Partial<AdminDraft>): AdminDraft {
   const fallback = initialAdminDraft();
   const restaurants = buildRestaurantsFromDraft(draft.restaurants);
   const allowedVenueIds = new Set(restaurants.map((restaurant) => restaurant.id));
+  const enabledVenueIds = new Set(
+    restaurants.filter((restaurant) => restaurant.enabled).map((restaurant) => restaurant.id),
+  );
   const syncedMatches = applySourceScheduleToDraftMatches(
     draft.matches ?? fallback.matches,
   );
   const matches = syncedMatches.map((match) => {
-    const venueIds = migrateVenueIds(matchVenueIds(match)).filter((id) =>
-      allowedVenueIds.has(id),
+    const venueIds = migrateVenueIds(matchVenueIds(match)).filter(
+      (id) => allowedVenueIds.has(id) && enabledVenueIds.has(id),
     );
     const winnerSide =
       match.winnerSide === "home" || match.winnerSide === "away"
@@ -211,7 +227,10 @@ export function normalizeAdminDraft(draft: Partial<AdminDraft>): AdminDraft {
     return {
       ...match,
       dateLabel: normalizeMatchDateLabel(match.dateLabel),
-      venueIds: venueIds.length > 0 ? venueIds : restaurants.map((restaurant) => restaurant.id),
+      venueIds:
+        venueIds.length > 0
+          ? venueIds
+          : getEnabledRestaurants(restaurants).map((restaurant) => restaurant.id),
       winnerSide,
       homeScore,
       awayScore,

@@ -25,6 +25,7 @@ import {
   isMatchAssignedToVenue,
   useAdminCampaignDraft,
 } from "@/app/lib/adminCampaignDraft";
+import { isVenueEnabled } from "@/app/lib/campaignDraftCore";
 import { gsap } from "@/app/lib/gsap";
 import { shouldAnimate } from "@/app/lib/motion";
 import { useTranslations } from "@/app/i18n/useTranslations";
@@ -435,15 +436,31 @@ export default function MatchTimings() {
   const adminDraft = useAdminCampaignDraft();
   const activeDateLabel = resolveDateLabelFromParam(dateParam, adminDraft?.matches);
   const fallbackVenue = getVenueById(venueId);
-  const venue =
-    adminDraft?.restaurants.find((restaurant) => restaurant.id === fallbackVenue.id) ??
-    fallbackVenue;
-  const venueWhiteLogo = useMemo(() => getVenueWhiteLogoSrc(venue), [venue]);
+  const venue = useMemo(() => {
+    const fromDraft = adminDraft?.restaurants.find(
+      (restaurant) => restaurant.id === fallbackVenue.id,
+    );
+    if (fromDraft && !fromDraft.enabled) return null;
+    return fromDraft ?? fallbackVenue;
+  }, [adminDraft?.restaurants, fallbackVenue]);
+
+  useEffect(() => {
+    if (!venueId || !adminDraft?.restaurants) return;
+    if (!isVenueEnabled(venueId, adminDraft.restaurants)) {
+      router.replace("/where-to-watch");
+    }
+  }, [venueId, adminDraft?.restaurants, router]);
+
+  const venueWhiteLogo = useMemo(
+    () => (venue ? getVenueWhiteLogoSrc(venue) : ""),
+    [venue],
+  );
   const { setSelectedDate, setSelectedVenueId } = useCampaignSelection();
   const venueMatches = useMemo(() => {
+    if (!venue) return [];
     const sourceMatches = adminDraft?.matches ?? getMatchesSortedChronologically();
     return sourceMatches.filter((match) => isMatchAssignedToVenue(match, venue.id));
-  }, [adminDraft?.matches, venue.id]);
+  }, [adminDraft?.matches, venue]);
 
   const displayMatches = useMemo(
     () =>
@@ -455,8 +472,8 @@ export default function MatchTimings() {
 
   useEffect(() => {
     if (activeDateLabel) setSelectedDate(activeDateLabel);
-    if (venueId) setSelectedVenueId(venueId);
-  }, [activeDateLabel, venueId, setSelectedDate, setSelectedVenueId]);
+    if (venueId && venue) setSelectedVenueId(venueId);
+  }, [activeDateLabel, venueId, venue, setSelectedDate, setSelectedVenueId]);
 
   const actionBtnTextStyle = {
     fontSize: "var(--mt-action-btn-font-size)",
@@ -511,6 +528,7 @@ export default function MatchTimings() {
   const showOtherMatchesButton = activeDateLabel !== null;
 
   const handleViewOtherMatches = () => {
+    if (!venue) return;
     setSelectedDate(null);
     router.push(`/match-timings?venue=${encodeURIComponent(venue.id)}`);
   };
@@ -541,7 +559,9 @@ export default function MatchTimings() {
       ctx.revert();
       setEntranceDone(false);
     };
-  }, [venue.id, isRtl]);
+  }, [venue?.id, isRtl]);
+
+  if (!venue) return null;
 
   return (
     <section

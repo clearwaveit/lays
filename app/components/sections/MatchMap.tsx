@@ -19,6 +19,7 @@ import { resolveDateLabelFromParam } from "@/app/data/matches";
 import { getVenueById } from "@/app/data/venues";
 import { useGsapScope } from "@/app/hooks/useGsapScope";
 import { useAdminCampaignDraft } from "@/app/lib/adminCampaignDraft";
+import { isVenueEnabled, type AdminVenue } from "@/app/lib/campaignDraftCore";
 import { animateMatchMapSection } from "@/app/lib/animations";
 import Image from "next/image";
 import { useRouter, useSearchParams } from "next/navigation";
@@ -300,15 +301,14 @@ const DUBAI_VENUES: Venue[] = [
     logoHeight: 35,
     locationUrl: "https://www.google.com/maps/search/?api=1&query=Anzeera+Dubai",
   },
-  // Temporarily hidden on Where to Watch — restore when Amanos Dubai is live again.
-  // {
-  //   id: "amanos-dubai",
-  //   src: "/assets/imgs/amanos.svg",
-  //   alt: "Amanos",
-  //   logoWidth: 114,
-  //   logoHeight: 63,
-  //   locationUrl: "https://www.google.com/maps/search/?api=1&query=Amanos+Dubai",
-  // },
+  {
+    id: "amanos-dubai",
+    src: "/assets/imgs/amanos.svg",
+    alt: "Amanos",
+    logoWidth: 114,
+    logoHeight: 63,
+    locationUrl: "https://www.google.com/maps/search/?api=1&query=Amanos+Dubai",
+  },
   {
     id: "mist-dubai",
     src: "/assets/imgs/mist.svg",
@@ -457,7 +457,7 @@ function VenueCard({
       type="button"
       data-venue-id={id}
       onClick={onClick}
-      className={`venue-card box-border flex min-w-0 cursor-pointer flex-col items-center justify-center overflow-hidden border border-solid px-3 py-4 text-left transition-transform hover:scale-[1.02] active:scale-[0.99] lg:shrink-0 lg:px-0 lg:py-0 w-full max-w-full ${large ? "venue-card--large" : "venue-card--small"} ${sizedToContent ? "venue-card--sized" : ""} ${className}`}
+      className={`venue-card group box-border flex min-w-0 cursor-pointer flex-col items-center justify-center overflow-hidden border border-solid px-3 py-4 text-left lg:shrink-0 lg:px-0 lg:py-0 w-full max-w-full ${large ? "venue-card--large" : "venue-card--small"} ${sizedToContent ? "venue-card--sized" : ""} ${className}`}
       style={{
         borderRadius: CARD_BORDER_RADIUS,
         borderColor: BORDER_RED,
@@ -471,6 +471,7 @@ function VenueCard({
             }),
       }}
     >
+      <div className="flex w-full flex-col items-center justify-center transition-transform duration-200 ease-out group-hover:scale-[1.02] group-active:scale-[0.99]">
       <Image
         src={src}
         alt={alt}
@@ -494,8 +495,17 @@ function VenueCard({
           }}
         />
       ) : null} */}
+      </div>
     </button>
   );
+}
+
+function filterStaticVenuesByDraft(
+  venues: Venue[],
+  restaurants: AdminVenue[] | undefined,
+): Venue[] {
+  if (!restaurants) return venues;
+  return venues.filter((venue) => isVenueEnabled(venue.id, restaurants));
 }
 
 function CityColumn({
@@ -506,16 +516,20 @@ function CityColumn({
   onVenueClick,
 }: {
   city: string;
-  featured: Venue;
-  venues?: Venue[];
+  featured: Venue | null;
+  venues: Venue[];
   cardGapPx?: number;
   onVenueClick: (venue: VenueModalData) => void;
 }) {
   const { textClass, fontFamily, isRtl } = useTranslations();
-  const hasVenueGrid = Boolean(venues && venues.length > 0);
   const cardGapStyle = cardGapPx !== undefined ? { gap: cardGapPx } : undefined;
 
-  const allVenues: Venue[] = hasVenueGrid ? [featured, ...(venues ?? [])] : [featured];
+  const allVenues: Venue[] = [
+    ...(featured ? [featured] : []),
+    ...venues,
+  ];
+
+  if (allVenues.length === 0) return null;
 
   const venueGrid = (
     <div
@@ -586,26 +600,21 @@ export default function MatchMap() {
   const { setSelectedDate, setSelectedVenueId } = useCampaignSelection();
   const [selectedVenue, setSelectedVenue] = useState<VenueModalData | null>(null);
   const [activeDate, setActiveDate] = useState<string | null>(null);
-  const visibleRestaurants = useMemo(
-    () => adminDraft?.restaurants.filter((restaurant) => restaurant.enabled) ?? null,
-    [adminDraft?.restaurants],
+  const draftRestaurants = adminDraft?.restaurants;
+  const dubaiFeatured = isVenueEnabled(DUBAI_FEATURED.id, draftRestaurants)
+    ? DUBAI_FEATURED
+    : null;
+  const dubaiVenues = useMemo(
+    () => filterStaticVenuesByDraft(DUBAI_VENUES, draftRestaurants),
+    [draftRestaurants],
   );
-  const dubaiFeatured = DUBAI_FEATURED;
-  const dubaiVenues = useMemo(() => {
-    if (!visibleRestaurants) return DUBAI_VENUES;
-    return DUBAI_VENUES.filter((venue) => {
-      const draft = visibleRestaurants.find((r) => r.id === venue.id);
-      return !draft || draft.enabled;
-    });
-  }, [visibleRestaurants]);
-  const abuDhabiFeatured = ABU_DHABI_FEATURED;
-  const abuDhabiVenues = useMemo(() => {
-    if (!visibleRestaurants) return ABU_DHABI_VENUES;
-    return ABU_DHABI_VENUES.filter((venue) => {
-      const draft = visibleRestaurants.find((r) => r.id === venue.id);
-      return !draft || draft.enabled;
-    });
-  }, [visibleRestaurants]);
+  const abuDhabiFeatured = isVenueEnabled(ABU_DHABI_FEATURED.id, draftRestaurants)
+    ? ABU_DHABI_FEATURED
+    : null;
+  const abuDhabiVenues = useMemo(
+    () => filterStaticVenuesByDraft(ABU_DHABI_VENUES, draftRestaurants),
+    [draftRestaurants],
+  );
 
   useEffect(() => {
     if (activeDateLabel) {
@@ -616,15 +625,20 @@ export default function MatchMap() {
 
   useEffect(() => {
     if (!venueParam) return;
+    if (!isVenueEnabled(venueParam, draftRestaurants)) {
+      setSelectedVenue(null);
+      return;
+    }
     const venue =
-      visibleRestaurants?.find((restaurant) => restaurant.id === venueParam) ??
+      draftRestaurants?.find((restaurant) => restaurant.id === venueParam) ??
       getVenueById(venueParam);
     setSelectedVenue(venue);
     setSelectedVenueId(venue.id);
-  }, [venueParam, visibleRestaurants, setSelectedVenueId]);
+  }, [venueParam, draftRestaurants, setSelectedVenueId]);
 
   const handleVenueClick = (venue: VenueModalData) => {
-    const fromDraft = visibleRestaurants?.find((restaurant) => restaurant.id === venue.id);
+    if (!isVenueEnabled(venue.id, draftRestaurants)) return;
+    const fromDraft = draftRestaurants?.find((restaurant) => restaurant.id === venue.id);
     setSelectedVenue(fromDraft ?? venue);
     setSelectedVenueId(venue.id);
 
