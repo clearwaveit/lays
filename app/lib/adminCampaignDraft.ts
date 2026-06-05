@@ -14,6 +14,8 @@ export {
   cityFromVenueId,
   initialAdminDraft,
   isMatchAssignedToVenue,
+  isVenueEnabled,
+  getEnabledRestaurants,
   matchVenueIds,
   normalizeAdminDraft,
   uniqueTeamsFromMatches,
@@ -104,16 +106,24 @@ export function useAdminCampaignDraft() {
   useEffect(() => {
     let cancelled = false;
 
-    fetchCampaignDraft()
-      .then((apiDraft) => {
-        if (cancelled) return;
-        setDraft(apiDraft);
-        window.localStorage.setItem(CAMPAIGN_DRAFT_STORAGE_KEY, JSON.stringify(apiDraft));
-      })
-      .catch(() => {
-        if (!cancelled) setDraft(readCampaignDraftFromStorage());
-      });
+    const loadDraft = () =>
+      fetchCampaignDraft()
+        .then((apiDraft) => {
+          if (cancelled) return;
+          setDraft(apiDraft);
+          window.localStorage.setItem(CAMPAIGN_DRAFT_STORAGE_KEY, JSON.stringify(apiDraft));
+        })
+        .catch(() => {
+          if (!cancelled) setDraft(readCampaignDraftFromStorage());
+        });
 
+    loadDraft();
+
+    const onFocus = () => {
+      loadDraft();
+    };
+
+    window.addEventListener("focus", onFocus);
     const onStorage = (event: StorageEvent) => {
       if (
         event.key === CAMPAIGN_DRAFT_STORAGE_KEY ||
@@ -126,6 +136,7 @@ export function useAdminCampaignDraft() {
     window.addEventListener("storage", onStorage);
     return () => {
       cancelled = true;
+      window.removeEventListener("focus", onFocus);
       window.removeEventListener("storage", onStorage);
     };
   }, []);
