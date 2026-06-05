@@ -148,6 +148,7 @@ export function animateMatchMapSection(root: HTMLElement) {
         duration: 0.5,
         stagger: 0.06,
         ease: EASE_BACK,
+        clearProps: "transform",
       },
       cityIndex === 0 ? "-=0.35" : "-=0.5",
     );
