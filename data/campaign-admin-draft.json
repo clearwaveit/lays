@@ -2907,7 +2907,7 @@
       "logoWidth": 114,
       "logoHeight": 63,
       "locationUrl": "https://www.google.com/maps/search/?api=1&query=Amanos+Dubai",
-      "enabled": true,
+      "enabled": false,
       "city": "Dubai"
     },
     {
