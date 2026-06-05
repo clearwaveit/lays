@@ -3,8 +3,9 @@ import {
   normalizeMatchDateLabel,
   type MatchFixture,
 } from "@/app/data/matches";
-import { getTeamFlagSrc } from "@/app/data/team-flags";
+import { getTeamFlagSrc, resolveTeamFlag } from "@/app/data/team-flags";
 import { VENUES } from "@/app/data/venues";
+import { normalizeMatchScore } from "@/app/lib/matchResult";
 import { sanitizeStoredImageSrc } from "@/app/lib/sanitizeImageSrc";
 import type { VenueModalData } from "@/app/components/ui/VenueModal";
 
@@ -143,6 +144,8 @@ export function applySourceScheduleToDraftMatches(
       draft.winnerSide === "home" || draft.winnerSide === "away"
         ? draft.winnerSide
         : undefined;
+    const homeScore = normalizeMatchScore(draft.homeScore);
+    const awayScore = normalizeMatchScore(draft.awayScore);
     return {
       ...source,
       dateLabel: normalizeMatchDateLabel(draft.dateLabel),
@@ -150,14 +153,24 @@ export function applySourceScheduleToDraftMatches(
       timeSuffix: draft.timeSuffix || source.timeSuffix,
       home: {
         ...draft.home,
-        flag: sanitizeStoredImageSrc(draft.home.flag, source.home.flag),
+        name: source.home.name,
+        flag: resolveTeamFlag(
+          sanitizeStoredImageSrc(draft.home.flag, source.home.flag),
+          source.home.flag,
+        ),
       },
       away: {
         ...draft.away,
-        flag: sanitizeStoredImageSrc(draft.away.flag, source.away.flag),
+        name: source.away.name,
+        flag: resolveTeamFlag(
+          sanitizeStoredImageSrc(draft.away.flag, source.away.flag),
+          source.away.flag,
+        ),
       },
       venueIds: matchVenueIds(draft),
       winnerSide,
+      homeScore,
+      awayScore,
     };
   });
 }
@@ -193,16 +206,23 @@ export function normalizeAdminDraft(draft: Partial<AdminDraft>): AdminDraft {
       match.winnerSide === "home" || match.winnerSide === "away"
         ? match.winnerSide
         : undefined;
+    const homeScore = normalizeMatchScore(match.homeScore);
+    const awayScore = normalizeMatchScore(match.awayScore);
     return {
       ...match,
       dateLabel: normalizeMatchDateLabel(match.dateLabel),
       venueIds: venueIds.length > 0 ? venueIds : restaurants.map((restaurant) => restaurant.id),
       winnerSide,
+      homeScore,
+      awayScore,
     };
   });
   const teams = (draft.teams ?? uniqueTeamsFromMatches(matches)).map((team) => ({
     ...team,
-    flag: sanitizeStoredImageSrc(team.flag, getTeamFlagSrc(team.name) ?? team.flag),
+    flag: resolveTeamFlag(
+      sanitizeStoredImageSrc(team.flag, getTeamFlagSrc(team.name) ?? team.flag),
+      getTeamFlagSrc(team.name),
+    ),
   }));
 
   return {

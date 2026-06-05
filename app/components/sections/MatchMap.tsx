@@ -300,14 +300,15 @@ const DUBAI_VENUES: Venue[] = [
     logoHeight: 35,
     locationUrl: "https://www.google.com/maps/search/?api=1&query=Anzeera+Dubai",
   },
-  {
-    id: "amanos-dubai",
-    src: "/assets/imgs/amanos.svg",
-    alt: "Amanos",
-    logoWidth: 114,
-    logoHeight: 63,
-    locationUrl: "https://www.google.com/maps/search/?api=1&query=Amanos+Dubai",
-  },
+  // Temporarily hidden on Where to Watch — restore when Amanos Dubai is live again.
+  // {
+  //   id: "amanos-dubai",
+  //   src: "/assets/imgs/amanos.svg",
+  //   alt: "Amanos",
+  //   logoWidth: 114,
+  //   logoHeight: 63,
+  //   locationUrl: "https://www.google.com/maps/search/?api=1&query=Amanos+Dubai",
+  // },
   {
     id: "mist-dubai",
     src: "/assets/imgs/mist.svg",

@@ -228,8 +228,8 @@
     {
       "matchNo": 9,
       "home": {
-        "name": "Côte d\\'Ivoire",
-        "flag": "/assets/imgs/football.png"
+        "name": "Ivory Coast",
+        "flag": "https://flagcdn.com/w320/ci.png"
       },
       "away": {
         "name": "Ecuador",
@@ -803,8 +803,8 @@
         "flag": "https://flagcdn.com/w320/de.png"
       },
       "away": {
-        "name": "Côte d\\'Ivoire",
-        "flag": "/assets/imgs/football.png"
+        "name": "Ivory Coast",
+        "flag": "https://flagcdn.com/w320/ci.png"
       },
       "dateLabel": "2026-06-21",
       "time": "00:00",
@@ -1345,8 +1345,8 @@
         "flag": "https://flagcdn.com/w320/cw.png"
       },
       "away": {
-        "name": "Côte d\\'Ivoire",
-        "flag": "/assets/imgs/football.png"
+        "name": "Ivory Coast",
+        "flag": "https://flagcdn.com/w320/ci.png"
       },
       "dateLabel": "2026-06-26",
       "time": "00:00",
@@ -2459,7 +2459,7 @@
       "flag": "https://flagcdn.com/w160/cd.png"
     },
     {
-      "name": "Côte d'Ivoire",
+      "name": "Ivory Coast",
       "flag": "https://flagcdn.com/w160/ci.png"
     },
     {
@@ -2907,7 +2907,7 @@
       "logoWidth": 114,
       "logoHeight": 63,
       "locationUrl": "https://www.google.com/maps/search/?api=1&query=Amanos+Dubai",
-      "enabled": true,
+      "enabled": false,
       "city": "Dubai"
     },
     {
