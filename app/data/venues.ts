@@ -7,6 +7,9 @@ export const REEM_MALL_SUBTITLE: VenueSubtitleImage = {
   alt: "Reem Mall – Abu Dhabi",
 };
 
+export const LOUI_JUMEIRAH_PARK_LOCATION_URL =
+  "https://www.google.com/maps/search/?api=1&query=Loui+Restaurant+%26+Cafe+Jumeirah+Park,+Pavilion+Mall,+Al+Worood+1+St,+Jumeirah+Park,+Dubai,+United+Arab+Emirates";
+
 export const VENUES: Record<string, VenueModalData> = {
   "mcgettigans-dubai": {
     id: "mcgettigans-dubai",
@@ -52,6 +55,14 @@ export const VENUES: Record<string, VenueModalData> = {
     logoWidth: 120,
     logoHeight: 77,
     locationUrl: "https://www.google.com/maps/search/?api=1&query=mist+Dubai",
+  },
+  "loui-dubai": {
+    id: "loui-dubai",
+    src: "/assets/imgs/loui.svg",
+    alt: "Loui Restaurant & Cafe Jumeirah Park",
+    logoWidth: 127,
+    logoHeight: 60,
+    locationUrl: LOUI_JUMEIRAH_PARK_LOCATION_URL,
   },
   "lock-stock-jbr-dubai": {
     id: "lock-stock-jbr-dubai",
@@ -106,4 +117,20 @@ export function getVenueWhiteLogoSrc(venue: VenueModalData): string {
 export function getVenueById(id: string | null): VenueModalData {
   if (id && VENUES[id]) return VENUES[id];
   return VENUES["mcgettigans-dubai"];
+}
+
+/** Merge API/admin venue fields with canonical name + map link from `VENUES`. */
+export function resolveVenueDetails(
+  venue: VenueModalData | null | undefined,
+): VenueModalData {
+  if (!venue) return getVenueById(null);
+  const canonical = VENUES[venue.id];
+  if (!canonical) return venue;
+  return {
+    ...venue,
+    alt: canonical.alt,
+    locationUrl: canonical.locationUrl,
+    logoWidth: canonical.logoWidth,
+    logoHeight: canonical.logoHeight,
+  };
 }

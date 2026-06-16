@@ -279,13 +279,19 @@ body {
     margin-right: 0;
   }
 
-  /* White venue logos 2–4 (company-logo-2/3/4 white) — responsive height */
+  /* White venue logos — taller mark on red panel */
   .match-timings-section [data-gsap-venue-logo][data-venue-id="bla-bla-dubai"],
   .match-timings-section [data-gsap-venue-logo][data-venue-id="mist-dubai"],
   .match-timings-section [data-gsap-venue-logo][data-venue-id="loui-dubai"] {
     height: var(--mt-venue-logo-height-alt) !important;
     width: auto !important;
     max-height: none;
+  }
+
+  /* Loui — white mark boost on red panel */
+  .match-timings-section [data-gsap-venue-logo][data-venue-id="loui-dubai"] {
+    filter: brightness(1.2) contrast(1.15);
+    opacity: 1;
   }
 
   /* Match cards: circular flag + rounded shadow */
@@ -384,10 +390,11 @@ body {
     height: clamp(112px, 9.75vw, 156px) !important;
   }
 
-  /* Logo 4 (Loui) — wider mark; slightly smaller on desktop */
+  /* Loui Restaurant & Cafe — wider mark in venue modal */
   .venue-modal-logo--alt[data-venue-id="loui-dubai"] {
     height: clamp(84px, 6.75vw, 108px) !important;
     max-width: 86% !important;
+    filter: brightness(1.15) contrast(1.1);
   }
 
   .venue-modal--alt {

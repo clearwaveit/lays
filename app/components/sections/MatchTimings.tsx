@@ -18,7 +18,7 @@ import {
 import { isRemoteTeamFlag } from "@/app/data/team-flags";
 import { isMatchSideLoser, LOSER_FLAG_CLASS } from "@/app/lib/matchResult";
 import { getTeamDisplayName } from "@/app/data/team-names";
-import { getVenueById, getVenueWhiteLogoSrc } from "@/app/data/venues";
+import { getVenueById, getVenueWhiteLogoSrc, resolveVenueDetails } from "@/app/data/venues";
 import { useSmoothHorizontalScroll } from "@/app/hooks/useSmoothHorizontalScroll";
 import { animateMatchTimingsSection } from "@/app/lib/animations";
 import {
@@ -120,6 +120,7 @@ const TEAM_NAME_FONT_SIZE = scale(20);
 const VENUE_LOGO_ALT_IDS = new Set([
   "amanos-dubai",
   "mist-dubai",
+  "loui-dubai",
   "lock-stock-jbr-dubai",
   "lock-stock-business-bay-dubai",
   "lock-stock-barsha-heights-dubai",
@@ -441,7 +442,7 @@ export default function MatchTimings() {
       (restaurant) => restaurant.id === fallbackVenue.id,
     );
     if (fromDraft && !fromDraft.enabled) return null;
-    return fromDraft ?? fallbackVenue;
+    return resolveVenueDetails(fromDraft ?? fallbackVenue);
   }, [adminDraft?.restaurants, fallbackVenue]);
 
   useEffect(() => {
