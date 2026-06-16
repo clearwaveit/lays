@@ -16,11 +16,17 @@
       "venueIds": [
         "anzeera-dubai",
         "mist-dubai",
-        "lock-stock-jbr-dubai",
         "lock-stock-business-bay-dubai",
         "lock-stock-barsha-heights-dubai",
-        "lock-stock-yas-bay-abu-dhabi"
-      ]
+        "lock-stock-yas-bay-abu-dhabi",
+        "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "loui-dubai",
+        "lock-stock-jbr-dubai"
+      ],
+      "winnerSide": "home",
+      "homeScore": 2,
+      "awayScore": 1
     },
     {
       "matchNo": 1,
@@ -38,11 +44,17 @@
       "venueIds": [
         "anzeera-dubai",
         "mist-dubai",
-        "lock-stock-jbr-dubai",
         "lock-stock-business-bay-dubai",
         "lock-stock-barsha-heights-dubai",
-        "lock-stock-yas-bay-abu-dhabi"
-      ]
+        "lock-stock-yas-bay-abu-dhabi",
+        "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "loui-dubai",
+        "lock-stock-jbr-dubai"
+      ],
+      "winnerSide": "home",
+      "homeScore": 2,
+      "awayScore": 0
     },
     {
       "matchNo": 4,
@@ -60,11 +72,17 @@
       "venueIds": [
         "anzeera-dubai",
         "mist-dubai",
-        "lock-stock-jbr-dubai",
         "lock-stock-business-bay-dubai",
         "lock-stock-barsha-heights-dubai",
-        "lock-stock-yas-bay-abu-dhabi"
-      ]
+        "lock-stock-yas-bay-abu-dhabi",
+        "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "loui-dubai",
+        "lock-stock-jbr-dubai"
+      ],
+      "winnerSide": "home",
+      "homeScore": 4,
+      "awayScore": 1
     },
     {
       "matchNo": 3,
@@ -82,11 +100,16 @@
       "venueIds": [
         "anzeera-dubai",
         "mist-dubai",
-        "lock-stock-jbr-dubai",
         "lock-stock-business-bay-dubai",
         "lock-stock-barsha-heights-dubai",
-        "lock-stock-yas-bay-abu-dhabi"
-      ]
+        "lock-stock-yas-bay-abu-dhabi",
+        "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "loui-dubai",
+        "lock-stock-jbr-dubai"
+      ],
+      "homeScore": 1,
+      "awayScore": 1
     },
     {
       "matchNo": 7,
@@ -104,11 +127,16 @@
       "venueIds": [
         "anzeera-dubai",
         "mist-dubai",
-        "lock-stock-jbr-dubai",
         "lock-stock-business-bay-dubai",
         "lock-stock-barsha-heights-dubai",
-        "lock-stock-yas-bay-abu-dhabi"
-      ]
+        "lock-stock-yas-bay-abu-dhabi",
+        "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "loui-dubai",
+        "lock-stock-jbr-dubai"
+      ],
+      "homeScore": 1,
+      "awayScore": 1
     },
     {
       "matchNo": 5,
@@ -126,11 +154,17 @@
       "venueIds": [
         "anzeera-dubai",
         "mist-dubai",
-        "lock-stock-jbr-dubai",
         "lock-stock-business-bay-dubai",
         "lock-stock-barsha-heights-dubai",
-        "lock-stock-yas-bay-abu-dhabi"
-      ]
+        "lock-stock-yas-bay-abu-dhabi",
+        "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "loui-dubai",
+        "lock-stock-jbr-dubai"
+      ],
+      "winnerSide": "away",
+      "homeScore": 0,
+      "awayScore": 1
     },
     {
       "matchNo": 6,
@@ -148,11 +182,17 @@
       "venueIds": [
         "anzeera-dubai",
         "mist-dubai",
-        "lock-stock-jbr-dubai",
         "lock-stock-business-bay-dubai",
         "lock-stock-barsha-heights-dubai",
-        "lock-stock-yas-bay-abu-dhabi"
-      ]
+        "lock-stock-yas-bay-abu-dhabi",
+        "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "loui-dubai",
+        "lock-stock-jbr-dubai"
+      ],
+      "winnerSide": "home",
+      "homeScore": 2,
+      "awayScore": 0
     },
     {
       "matchNo": 8,
@@ -170,11 +210,16 @@
       "venueIds": [
         "anzeera-dubai",
         "mist-dubai",
-        "lock-stock-jbr-dubai",
         "lock-stock-business-bay-dubai",
         "lock-stock-barsha-heights-dubai",
-        "lock-stock-yas-bay-abu-dhabi"
-      ]
+        "lock-stock-yas-bay-abu-dhabi",
+        "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "loui-dubai",
+        "lock-stock-jbr-dubai"
+      ],
+      "homeScore": 1,
+      "awayScore": 1
     },
     {
       "matchNo": 11,
@@ -192,11 +237,16 @@
       "venueIds": [
         "anzeera-dubai",
         "mist-dubai",
-        "lock-stock-jbr-dubai",
         "lock-stock-business-bay-dubai",
         "lock-stock-barsha-heights-dubai",
-        "lock-stock-yas-bay-abu-dhabi"
-      ]
+        "lock-stock-yas-bay-abu-dhabi",
+        "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "loui-dubai",
+        "lock-stock-jbr-dubai"
+      ],
+      "homeScore": 2,
+      "awayScore": 2
     },
     {
       "matchNo": 9,
@@ -214,11 +264,17 @@
       "venueIds": [
         "anzeera-dubai",
         "mist-dubai",
-        "lock-stock-jbr-dubai",
         "lock-stock-business-bay-dubai",
         "lock-stock-barsha-heights-dubai",
-        "lock-stock-yas-bay-abu-dhabi"
-      ]
+        "lock-stock-yas-bay-abu-dhabi",
+        "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "loui-dubai",
+        "lock-stock-jbr-dubai"
+      ],
+      "winnerSide": "home",
+      "homeScore": 1,
+      "awayScore": 0
     },
     {
       "matchNo": 12,
@@ -236,11 +292,17 @@
       "venueIds": [
         "anzeera-dubai",
         "mist-dubai",
-        "lock-stock-jbr-dubai",
         "lock-stock-business-bay-dubai",
         "lock-stock-barsha-heights-dubai",
-        "lock-stock-yas-bay-abu-dhabi"
-      ]
+        "lock-stock-yas-bay-abu-dhabi",
+        "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "loui-dubai",
+        "lock-stock-jbr-dubai"
+      ],
+      "winnerSide": "home",
+      "homeScore": 5,
+      "awayScore": 1
     },
     {
       "matchNo": 10,
@@ -258,11 +320,17 @@
       "venueIds": [
         "anzeera-dubai",
         "mist-dubai",
-        "lock-stock-jbr-dubai",
         "lock-stock-business-bay-dubai",
         "lock-stock-barsha-heights-dubai",
-        "lock-stock-yas-bay-abu-dhabi"
-      ]
+        "lock-stock-yas-bay-abu-dhabi",
+        "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "loui-dubai",
+        "lock-stock-jbr-dubai"
+      ],
+      "winnerSide": "home",
+      "homeScore": 7,
+      "awayScore": 1
     },
     {
       "matchNo": 13,
@@ -280,11 +348,16 @@
       "venueIds": [
         "anzeera-dubai",
         "mist-dubai",
-        "lock-stock-jbr-dubai",
         "lock-stock-business-bay-dubai",
         "lock-stock-barsha-heights-dubai",
-        "lock-stock-yas-bay-abu-dhabi"
-      ]
+        "lock-stock-yas-bay-abu-dhabi",
+        "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "loui-dubai",
+        "lock-stock-jbr-dubai"
+      ],
+      "homeScore": 1,
+      "awayScore": 1
     },
     {
       "matchNo": 15,
@@ -302,11 +375,16 @@
       "venueIds": [
         "anzeera-dubai",
         "mist-dubai",
-        "lock-stock-jbr-dubai",
         "lock-stock-business-bay-dubai",
         "lock-stock-barsha-heights-dubai",
-        "lock-stock-yas-bay-abu-dhabi"
-      ]
+        "lock-stock-yas-bay-abu-dhabi",
+        "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "loui-dubai",
+        "lock-stock-jbr-dubai"
+      ],
+      "homeScore": 2,
+      "awayScore": 2
     },
     {
       "matchNo": 14,
@@ -324,11 +402,16 @@
       "venueIds": [
         "anzeera-dubai",
         "mist-dubai",
-        "lock-stock-jbr-dubai",
         "lock-stock-business-bay-dubai",
         "lock-stock-barsha-heights-dubai",
-        "lock-stock-yas-bay-abu-dhabi"
-      ]
+        "lock-stock-yas-bay-abu-dhabi",
+        "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "loui-dubai",
+        "lock-stock-jbr-dubai"
+      ],
+      "homeScore": 0,
+      "awayScore": 0
     },
     {
       "matchNo": 16,
@@ -346,11 +429,16 @@
       "venueIds": [
         "anzeera-dubai",
         "mist-dubai",
-        "lock-stock-jbr-dubai",
         "lock-stock-business-bay-dubai",
         "lock-stock-barsha-heights-dubai",
-        "lock-stock-yas-bay-abu-dhabi"
-      ]
+        "lock-stock-yas-bay-abu-dhabi",
+        "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "loui-dubai",
+        "lock-stock-jbr-dubai"
+      ],
+      "homeScore": 1,
+      "awayScore": 1
     },
     {
       "matchNo": 18,
@@ -368,10 +456,13 @@
       "venueIds": [
         "anzeera-dubai",
         "mist-dubai",
-        "lock-stock-jbr-dubai",
         "lock-stock-business-bay-dubai",
         "lock-stock-barsha-heights-dubai",
-        "lock-stock-yas-bay-abu-dhabi"
+        "lock-stock-yas-bay-abu-dhabi",
+        "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "loui-dubai",
+        "lock-stock-jbr-dubai"
       ]
     },
     {
@@ -390,10 +481,13 @@
       "venueIds": [
         "anzeera-dubai",
         "mist-dubai",
-        "lock-stock-jbr-dubai",
         "lock-stock-business-bay-dubai",
         "lock-stock-barsha-heights-dubai",
-        "lock-stock-yas-bay-abu-dhabi"
+        "lock-stock-yas-bay-abu-dhabi",
+        "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "loui-dubai",
+        "lock-stock-jbr-dubai"
       ]
     },
     {
@@ -412,10 +506,13 @@
       "venueIds": [
         "anzeera-dubai",
         "mist-dubai",
-        "lock-stock-jbr-dubai",
         "lock-stock-business-bay-dubai",
         "lock-stock-barsha-heights-dubai",
-        "lock-stock-yas-bay-abu-dhabi"
+        "lock-stock-yas-bay-abu-dhabi",
+        "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "loui-dubai",
+        "lock-stock-jbr-dubai"
       ]
     },
     {
@@ -434,10 +531,13 @@
       "venueIds": [
         "anzeera-dubai",
         "mist-dubai",
-        "lock-stock-jbr-dubai",
         "lock-stock-business-bay-dubai",
         "lock-stock-barsha-heights-dubai",
-        "lock-stock-yas-bay-abu-dhabi"
+        "lock-stock-yas-bay-abu-dhabi",
+        "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "loui-dubai",
+        "lock-stock-jbr-dubai"
       ]
     },
     {
@@ -456,10 +556,13 @@
       "venueIds": [
         "anzeera-dubai",
         "mist-dubai",
-        "lock-stock-jbr-dubai",
         "lock-stock-business-bay-dubai",
         "lock-stock-barsha-heights-dubai",
-        "lock-stock-yas-bay-abu-dhabi"
+        "lock-stock-yas-bay-abu-dhabi",
+        "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "loui-dubai",
+        "lock-stock-jbr-dubai"
       ]
     },
     {
@@ -478,10 +581,13 @@
       "venueIds": [
         "anzeera-dubai",
         "mist-dubai",
-        "lock-stock-jbr-dubai",
         "lock-stock-business-bay-dubai",
         "lock-stock-barsha-heights-dubai",
-        "lock-stock-yas-bay-abu-dhabi"
+        "lock-stock-yas-bay-abu-dhabi",
+        "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "loui-dubai",
+        "lock-stock-jbr-dubai"
       ]
     },
     {
@@ -500,10 +606,13 @@
       "venueIds": [
         "anzeera-dubai",
         "mist-dubai",
-        "lock-stock-jbr-dubai",
         "lock-stock-business-bay-dubai",
         "lock-stock-barsha-heights-dubai",
-        "lock-stock-yas-bay-abu-dhabi"
+        "lock-stock-yas-bay-abu-dhabi",
+        "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "loui-dubai",
+        "lock-stock-jbr-dubai"
       ]
     },
     {
@@ -522,10 +631,13 @@
       "venueIds": [
         "anzeera-dubai",
         "mist-dubai",
-        "lock-stock-jbr-dubai",
         "lock-stock-business-bay-dubai",
         "lock-stock-barsha-heights-dubai",
-        "lock-stock-yas-bay-abu-dhabi"
+        "lock-stock-yas-bay-abu-dhabi",
+        "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "loui-dubai",
+        "lock-stock-jbr-dubai"
       ]
     },
     {
@@ -544,10 +656,13 @@
       "venueIds": [
         "anzeera-dubai",
         "mist-dubai",
-        "lock-stock-jbr-dubai",
         "lock-stock-business-bay-dubai",
         "lock-stock-barsha-heights-dubai",
-        "lock-stock-yas-bay-abu-dhabi"
+        "lock-stock-yas-bay-abu-dhabi",
+        "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "loui-dubai",
+        "lock-stock-jbr-dubai"
       ]
     },
     {
@@ -566,10 +681,13 @@
       "venueIds": [
         "anzeera-dubai",
         "mist-dubai",
-        "lock-stock-jbr-dubai",
         "lock-stock-business-bay-dubai",
         "lock-stock-barsha-heights-dubai",
-        "lock-stock-yas-bay-abu-dhabi"
+        "lock-stock-yas-bay-abu-dhabi",
+        "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "loui-dubai",
+        "lock-stock-jbr-dubai"
       ]
     },
     {
@@ -588,10 +706,13 @@
       "venueIds": [
         "anzeera-dubai",
         "mist-dubai",
-        "lock-stock-jbr-dubai",
         "lock-stock-business-bay-dubai",
         "lock-stock-barsha-heights-dubai",
-        "lock-stock-yas-bay-abu-dhabi"
+        "lock-stock-yas-bay-abu-dhabi",
+        "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "loui-dubai",
+        "lock-stock-jbr-dubai"
       ]
     },
     {
@@ -609,7 +730,12 @@
       "timeSuffix": "GST",
       "venueIds": [
         "mist-dubai",
-        "anzeera-dubai"
+        "anzeera-dubai",
+        "mcgettigans-dubai",
+        "loui-dubai",
+        "lock-stock-jbr-dubai",
+        "lock-stock-business-bay-dubai",
+        "lock-stock-barsha-heights-dubai"
       ]
     },
     {
@@ -628,10 +754,13 @@
       "venueIds": [
         "anzeera-dubai",
         "mist-dubai",
-        "lock-stock-jbr-dubai",
         "lock-stock-business-bay-dubai",
         "lock-stock-barsha-heights-dubai",
-        "lock-stock-yas-bay-abu-dhabi"
+        "lock-stock-yas-bay-abu-dhabi",
+        "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "loui-dubai",
+        "lock-stock-jbr-dubai"
       ]
     },
     {
@@ -650,10 +779,13 @@
       "venueIds": [
         "anzeera-dubai",
         "mist-dubai",
-        "lock-stock-jbr-dubai",
         "lock-stock-business-bay-dubai",
         "lock-stock-barsha-heights-dubai",
-        "lock-stock-yas-bay-abu-dhabi"
+        "lock-stock-yas-bay-abu-dhabi",
+        "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "loui-dubai",
+        "lock-stock-jbr-dubai"
       ]
     },
     {
@@ -672,10 +804,13 @@
       "venueIds": [
         "anzeera-dubai",
         "mist-dubai",
-        "lock-stock-jbr-dubai",
         "lock-stock-business-bay-dubai",
         "lock-stock-barsha-heights-dubai",
-        "lock-stock-yas-bay-abu-dhabi"
+        "lock-stock-yas-bay-abu-dhabi",
+        "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "loui-dubai",
+        "lock-stock-jbr-dubai"
       ]
     },
     {
@@ -694,10 +829,13 @@
       "venueIds": [
         "anzeera-dubai",
         "mist-dubai",
-        "lock-stock-jbr-dubai",
         "lock-stock-business-bay-dubai",
         "lock-stock-barsha-heights-dubai",
-        "lock-stock-yas-bay-abu-dhabi"
+        "lock-stock-yas-bay-abu-dhabi",
+        "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "loui-dubai",
+        "lock-stock-jbr-dubai"
       ]
     },
     {
@@ -715,7 +853,12 @@
       "timeSuffix": "GST",
       "venueIds": [
         "mist-dubai",
-        "anzeera-dubai"
+        "anzeera-dubai",
+        "mcgettigans-dubai",
+        "loui-dubai",
+        "lock-stock-jbr-dubai",
+        "lock-stock-business-bay-dubai",
+        "lock-stock-barsha-heights-dubai"
       ]
     },
     {
@@ -734,10 +877,13 @@
       "venueIds": [
         "anzeera-dubai",
         "mist-dubai",
-        "lock-stock-jbr-dubai",
         "lock-stock-business-bay-dubai",
         "lock-stock-barsha-heights-dubai",
-        "lock-stock-yas-bay-abu-dhabi"
+        "lock-stock-yas-bay-abu-dhabi",
+        "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "loui-dubai",
+        "lock-stock-jbr-dubai"
       ]
     },
     {
@@ -756,10 +902,13 @@
       "venueIds": [
         "anzeera-dubai",
         "mist-dubai",
-        "lock-stock-jbr-dubai",
         "lock-stock-business-bay-dubai",
         "lock-stock-barsha-heights-dubai",
-        "lock-stock-yas-bay-abu-dhabi"
+        "lock-stock-yas-bay-abu-dhabi",
+        "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "loui-dubai",
+        "lock-stock-jbr-dubai"
       ]
     },
     {
@@ -778,10 +927,13 @@
       "venueIds": [
         "anzeera-dubai",
         "mist-dubai",
-        "lock-stock-jbr-dubai",
         "lock-stock-business-bay-dubai",
         "lock-stock-barsha-heights-dubai",
-        "lock-stock-yas-bay-abu-dhabi"
+        "lock-stock-yas-bay-abu-dhabi",
+        "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "loui-dubai",
+        "lock-stock-jbr-dubai"
       ]
     },
     {
@@ -800,10 +952,13 @@
       "venueIds": [
         "anzeera-dubai",
         "mist-dubai",
-        "lock-stock-jbr-dubai",
         "lock-stock-business-bay-dubai",
         "lock-stock-barsha-heights-dubai",
-        "lock-stock-yas-bay-abu-dhabi"
+        "lock-stock-yas-bay-abu-dhabi",
+        "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "loui-dubai",
+        "lock-stock-jbr-dubai"
       ]
     },
     {
@@ -822,10 +977,13 @@
       "venueIds": [
         "anzeera-dubai",
         "mist-dubai",
-        "lock-stock-jbr-dubai",
         "lock-stock-business-bay-dubai",
         "lock-stock-barsha-heights-dubai",
-        "lock-stock-yas-bay-abu-dhabi"
+        "lock-stock-yas-bay-abu-dhabi",
+        "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "loui-dubai",
+        "lock-stock-jbr-dubai"
       ]
     },
     {
@@ -844,10 +1002,13 @@
       "venueIds": [
         "anzeera-dubai",
         "mist-dubai",
-        "lock-stock-jbr-dubai",
         "lock-stock-business-bay-dubai",
         "lock-stock-barsha-heights-dubai",
-        "lock-stock-yas-bay-abu-dhabi"
+        "lock-stock-yas-bay-abu-dhabi",
+        "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "loui-dubai",
+        "lock-stock-jbr-dubai"
       ]
     },
     {
@@ -866,10 +1027,13 @@
       "venueIds": [
         "anzeera-dubai",
         "mist-dubai",
-        "lock-stock-jbr-dubai",
         "lock-stock-business-bay-dubai",
         "lock-stock-barsha-heights-dubai",
-        "lock-stock-yas-bay-abu-dhabi"
+        "lock-stock-yas-bay-abu-dhabi",
+        "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "loui-dubai",
+        "lock-stock-jbr-dubai"
       ]
     },
     {
@@ -888,10 +1052,13 @@
       "venueIds": [
         "anzeera-dubai",
         "mist-dubai",
-        "lock-stock-jbr-dubai",
         "lock-stock-business-bay-dubai",
         "lock-stock-barsha-heights-dubai",
-        "lock-stock-yas-bay-abu-dhabi"
+        "lock-stock-yas-bay-abu-dhabi",
+        "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "loui-dubai",
+        "lock-stock-jbr-dubai"
       ]
     },
     {
@@ -910,10 +1077,13 @@
       "venueIds": [
         "anzeera-dubai",
         "mist-dubai",
-        "lock-stock-jbr-dubai",
         "lock-stock-business-bay-dubai",
         "lock-stock-barsha-heights-dubai",
-        "lock-stock-yas-bay-abu-dhabi"
+        "lock-stock-yas-bay-abu-dhabi",
+        "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "loui-dubai",
+        "lock-stock-jbr-dubai"
       ]
     },
     {
@@ -931,7 +1101,12 @@
       "timeSuffix": "GST",
       "venueIds": [
         "mist-dubai",
-        "anzeera-dubai"
+        "anzeera-dubai",
+        "mcgettigans-dubai",
+        "loui-dubai",
+        "lock-stock-jbr-dubai",
+        "lock-stock-business-bay-dubai",
+        "lock-stock-barsha-heights-dubai"
       ]
     },
     {
@@ -950,10 +1125,13 @@
       "venueIds": [
         "anzeera-dubai",
         "mist-dubai",
-        "lock-stock-jbr-dubai",
         "lock-stock-business-bay-dubai",
         "lock-stock-barsha-heights-dubai",
-        "lock-stock-yas-bay-abu-dhabi"
+        "lock-stock-yas-bay-abu-dhabi",
+        "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "loui-dubai",
+        "lock-stock-jbr-dubai"
       ]
     },
     {
@@ -972,10 +1150,13 @@
       "venueIds": [
         "anzeera-dubai",
         "mist-dubai",
-        "lock-stock-jbr-dubai",
         "lock-stock-business-bay-dubai",
         "lock-stock-barsha-heights-dubai",
-        "lock-stock-yas-bay-abu-dhabi"
+        "lock-stock-yas-bay-abu-dhabi",
+        "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "loui-dubai",
+        "lock-stock-jbr-dubai"
       ]
     },
     {
@@ -994,10 +1175,13 @@
       "venueIds": [
         "anzeera-dubai",
         "mist-dubai",
-        "lock-stock-jbr-dubai",
         "lock-stock-business-bay-dubai",
         "lock-stock-barsha-heights-dubai",
-        "lock-stock-yas-bay-abu-dhabi"
+        "lock-stock-yas-bay-abu-dhabi",
+        "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "loui-dubai",
+        "lock-stock-jbr-dubai"
       ]
     },
     {
@@ -1016,10 +1200,13 @@
       "venueIds": [
         "anzeera-dubai",
         "mist-dubai",
-        "lock-stock-jbr-dubai",
         "lock-stock-business-bay-dubai",
         "lock-stock-barsha-heights-dubai",
-        "lock-stock-yas-bay-abu-dhabi"
+        "lock-stock-yas-bay-abu-dhabi",
+        "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "loui-dubai",
+        "lock-stock-jbr-dubai"
       ]
     },
     {
@@ -1038,10 +1225,13 @@
       "venueIds": [
         "anzeera-dubai",
         "mist-dubai",
-        "lock-stock-jbr-dubai",
         "lock-stock-business-bay-dubai",
         "lock-stock-barsha-heights-dubai",
-        "lock-stock-yas-bay-abu-dhabi"
+        "lock-stock-yas-bay-abu-dhabi",
+        "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "loui-dubai",
+        "lock-stock-jbr-dubai"
       ]
     },
     {
@@ -1060,10 +1250,13 @@
       "venueIds": [
         "anzeera-dubai",
         "mist-dubai",
-        "lock-stock-jbr-dubai",
         "lock-stock-business-bay-dubai",
         "lock-stock-barsha-heights-dubai",
-        "lock-stock-yas-bay-abu-dhabi"
+        "lock-stock-yas-bay-abu-dhabi",
+        "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "loui-dubai",
+        "lock-stock-jbr-dubai"
       ]
     },
     {
@@ -1082,10 +1275,13 @@
       "venueIds": [
         "anzeera-dubai",
         "mist-dubai",
-        "lock-stock-jbr-dubai",
         "lock-stock-business-bay-dubai",
         "lock-stock-barsha-heights-dubai",
-        "lock-stock-yas-bay-abu-dhabi"
+        "lock-stock-yas-bay-abu-dhabi",
+        "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "loui-dubai",
+        "lock-stock-jbr-dubai"
       ]
     },
     {
@@ -1104,10 +1300,13 @@
       "venueIds": [
         "anzeera-dubai",
         "mist-dubai",
-        "lock-stock-jbr-dubai",
         "lock-stock-business-bay-dubai",
         "lock-stock-barsha-heights-dubai",
-        "lock-stock-yas-bay-abu-dhabi"
+        "lock-stock-yas-bay-abu-dhabi",
+        "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "loui-dubai",
+        "lock-stock-jbr-dubai"
       ]
     },
     {
@@ -1126,10 +1325,13 @@
       "venueIds": [
         "anzeera-dubai",
         "mist-dubai",
-        "lock-stock-jbr-dubai",
         "lock-stock-business-bay-dubai",
         "lock-stock-barsha-heights-dubai",
-        "lock-stock-yas-bay-abu-dhabi"
+        "lock-stock-yas-bay-abu-dhabi",
+        "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "loui-dubai",
+        "lock-stock-jbr-dubai"
       ]
     },
     {
@@ -1148,10 +1350,13 @@
       "venueIds": [
         "anzeera-dubai",
         "mist-dubai",
-        "lock-stock-jbr-dubai",
         "lock-stock-business-bay-dubai",
         "lock-stock-barsha-heights-dubai",
-        "lock-stock-yas-bay-abu-dhabi"
+        "lock-stock-yas-bay-abu-dhabi",
+        "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "loui-dubai",
+        "lock-stock-jbr-dubai"
       ]
     },
     {
@@ -1170,10 +1375,13 @@
       "venueIds": [
         "anzeera-dubai",
         "mist-dubai",
-        "lock-stock-jbr-dubai",
         "lock-stock-business-bay-dubai",
         "lock-stock-barsha-heights-dubai",
-        "lock-stock-yas-bay-abu-dhabi"
+        "lock-stock-yas-bay-abu-dhabi",
+        "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "loui-dubai",
+        "lock-stock-jbr-dubai"
       ]
     },
     {
@@ -1192,10 +1400,13 @@
       "venueIds": [
         "anzeera-dubai",
         "mist-dubai",
-        "lock-stock-jbr-dubai",
         "lock-stock-business-bay-dubai",
         "lock-stock-barsha-heights-dubai",
-        "lock-stock-yas-bay-abu-dhabi"
+        "lock-stock-yas-bay-abu-dhabi",
+        "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "loui-dubai",
+        "lock-stock-jbr-dubai"
       ]
     },
     {
@@ -1214,10 +1425,13 @@
       "venueIds": [
         "anzeera-dubai",
         "mist-dubai",
-        "lock-stock-jbr-dubai",
         "lock-stock-business-bay-dubai",
         "lock-stock-barsha-heights-dubai",
-        "lock-stock-yas-bay-abu-dhabi"
+        "lock-stock-yas-bay-abu-dhabi",
+        "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "loui-dubai",
+        "lock-stock-jbr-dubai"
       ]
     },
     {
@@ -1236,10 +1450,13 @@
       "venueIds": [
         "anzeera-dubai",
         "mist-dubai",
-        "lock-stock-jbr-dubai",
         "lock-stock-business-bay-dubai",
         "lock-stock-barsha-heights-dubai",
-        "lock-stock-yas-bay-abu-dhabi"
+        "lock-stock-yas-bay-abu-dhabi",
+        "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "loui-dubai",
+        "lock-stock-jbr-dubai"
       ]
     },
     {
@@ -1258,10 +1475,13 @@
       "venueIds": [
         "anzeera-dubai",
         "mist-dubai",
-        "lock-stock-jbr-dubai",
         "lock-stock-business-bay-dubai",
         "lock-stock-barsha-heights-dubai",
-        "lock-stock-yas-bay-abu-dhabi"
+        "lock-stock-yas-bay-abu-dhabi",
+        "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "loui-dubai",
+        "lock-stock-jbr-dubai"
       ]
     },
     {
@@ -1280,10 +1500,13 @@
       "venueIds": [
         "anzeera-dubai",
         "mist-dubai",
-        "lock-stock-jbr-dubai",
         "lock-stock-business-bay-dubai",
         "lock-stock-barsha-heights-dubai",
-        "lock-stock-yas-bay-abu-dhabi"
+        "lock-stock-yas-bay-abu-dhabi",
+        "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "loui-dubai",
+        "lock-stock-jbr-dubai"
       ]
     },
     {
@@ -1302,10 +1525,13 @@
       "venueIds": [
         "anzeera-dubai",
         "mist-dubai",
-        "lock-stock-jbr-dubai",
         "lock-stock-business-bay-dubai",
         "lock-stock-barsha-heights-dubai",
-        "lock-stock-yas-bay-abu-dhabi"
+        "lock-stock-yas-bay-abu-dhabi",
+        "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "loui-dubai",
+        "lock-stock-jbr-dubai"
       ]
     },
     {
@@ -1323,7 +1549,12 @@
       "timeSuffix": "GST",
       "venueIds": [
         "mist-dubai",
-        "anzeera-dubai"
+        "anzeera-dubai",
+        "mcgettigans-dubai",
+        "loui-dubai",
+        "lock-stock-jbr-dubai",
+        "lock-stock-business-bay-dubai",
+        "lock-stock-barsha-heights-dubai"
       ]
     },
     {
@@ -1341,7 +1572,12 @@
       "timeSuffix": "GST",
       "venueIds": [
         "mist-dubai",
-        "anzeera-dubai"
+        "anzeera-dubai",
+        "mcgettigans-dubai",
+        "loui-dubai",
+        "lock-stock-jbr-dubai",
+        "lock-stock-business-bay-dubai",
+        "lock-stock-barsha-heights-dubai"
       ]
     },
     {
@@ -1359,7 +1595,12 @@
       "timeSuffix": "GST",
       "venueIds": [
         "mist-dubai",
-        "anzeera-dubai"
+        "anzeera-dubai",
+        "mcgettigans-dubai",
+        "loui-dubai",
+        "lock-stock-jbr-dubai",
+        "lock-stock-business-bay-dubai",
+        "lock-stock-barsha-heights-dubai"
       ]
     },
     {
@@ -1377,7 +1618,12 @@
       "timeSuffix": "GST",
       "venueIds": [
         "mist-dubai",
-        "anzeera-dubai"
+        "anzeera-dubai",
+        "mcgettigans-dubai",
+        "loui-dubai",
+        "lock-stock-jbr-dubai",
+        "lock-stock-business-bay-dubai",
+        "lock-stock-barsha-heights-dubai"
       ]
     },
     {
@@ -1395,7 +1641,12 @@
       "timeSuffix": "GST",
       "venueIds": [
         "mist-dubai",
-        "anzeera-dubai"
+        "anzeera-dubai",
+        "mcgettigans-dubai",
+        "loui-dubai",
+        "lock-stock-jbr-dubai",
+        "lock-stock-business-bay-dubai",
+        "lock-stock-barsha-heights-dubai"
       ]
     },
     {
@@ -1413,7 +1664,12 @@
       "timeSuffix": "GST",
       "venueIds": [
         "mist-dubai",
-        "anzeera-dubai"
+        "anzeera-dubai",
+        "mcgettigans-dubai",
+        "loui-dubai",
+        "lock-stock-jbr-dubai",
+        "lock-stock-business-bay-dubai",
+        "lock-stock-barsha-heights-dubai"
       ]
     },
     {
@@ -1431,7 +1687,12 @@
       "timeSuffix": "GST",
       "venueIds": [
         "mist-dubai",
-        "anzeera-dubai"
+        "anzeera-dubai",
+        "mcgettigans-dubai",
+        "loui-dubai",
+        "lock-stock-jbr-dubai",
+        "lock-stock-business-bay-dubai",
+        "lock-stock-barsha-heights-dubai"
       ]
     },
     {
@@ -1449,7 +1710,12 @@
       "timeSuffix": "GST",
       "venueIds": [
         "mist-dubai",
-        "anzeera-dubai"
+        "anzeera-dubai",
+        "mcgettigans-dubai",
+        "loui-dubai",
+        "lock-stock-jbr-dubai",
+        "lock-stock-business-bay-dubai",
+        "lock-stock-barsha-heights-dubai"
       ]
     },
     {
@@ -1467,7 +1733,12 @@
       "timeSuffix": "GST",
       "venueIds": [
         "mist-dubai",
-        "anzeera-dubai"
+        "anzeera-dubai",
+        "mcgettigans-dubai",
+        "loui-dubai",
+        "lock-stock-jbr-dubai",
+        "lock-stock-business-bay-dubai",
+        "lock-stock-barsha-heights-dubai"
       ]
     },
     {
@@ -1485,7 +1756,12 @@
       "timeSuffix": "GST",
       "venueIds": [
         "mist-dubai",
-        "anzeera-dubai"
+        "anzeera-dubai",
+        "mcgettigans-dubai",
+        "loui-dubai",
+        "lock-stock-jbr-dubai",
+        "lock-stock-business-bay-dubai",
+        "lock-stock-barsha-heights-dubai"
       ]
     },
     {
@@ -1503,7 +1779,12 @@
       "timeSuffix": "GST",
       "venueIds": [
         "mist-dubai",
-        "anzeera-dubai"
+        "anzeera-dubai",
+        "mcgettigans-dubai",
+        "loui-dubai",
+        "lock-stock-jbr-dubai",
+        "lock-stock-business-bay-dubai",
+        "lock-stock-barsha-heights-dubai"
       ]
     },
     {
@@ -1521,7 +1802,12 @@
       "timeSuffix": "GST",
       "venueIds": [
         "mist-dubai",
-        "anzeera-dubai"
+        "anzeera-dubai",
+        "mcgettigans-dubai",
+        "loui-dubai",
+        "lock-stock-jbr-dubai",
+        "lock-stock-business-bay-dubai",
+        "lock-stock-barsha-heights-dubai"
       ]
     },
     {
@@ -1539,7 +1825,12 @@
       "timeSuffix": "GST",
       "venueIds": [
         "mist-dubai",
-        "anzeera-dubai"
+        "anzeera-dubai",
+        "mcgettigans-dubai",
+        "loui-dubai",
+        "lock-stock-jbr-dubai",
+        "lock-stock-business-bay-dubai",
+        "lock-stock-barsha-heights-dubai"
       ]
     },
     {
@@ -1557,7 +1848,12 @@
       "timeSuffix": "GST",
       "venueIds": [
         "mist-dubai",
-        "anzeera-dubai"
+        "anzeera-dubai",
+        "mcgettigans-dubai",
+        "loui-dubai",
+        "lock-stock-jbr-dubai",
+        "lock-stock-business-bay-dubai",
+        "lock-stock-barsha-heights-dubai"
       ]
     },
     {
@@ -1575,7 +1871,12 @@
       "timeSuffix": "GST",
       "venueIds": [
         "mist-dubai",
-        "anzeera-dubai"
+        "anzeera-dubai",
+        "mcgettigans-dubai",
+        "loui-dubai",
+        "lock-stock-jbr-dubai",
+        "lock-stock-business-bay-dubai",
+        "lock-stock-barsha-heights-dubai"
       ]
     },
     {
@@ -1593,7 +1894,12 @@
       "timeSuffix": "GST",
       "venueIds": [
         "mist-dubai",
-        "anzeera-dubai"
+        "anzeera-dubai",
+        "mcgettigans-dubai",
+        "loui-dubai",
+        "lock-stock-jbr-dubai",
+        "lock-stock-business-bay-dubai",
+        "lock-stock-barsha-heights-dubai"
       ]
     },
     {
@@ -1611,7 +1917,12 @@
       "timeSuffix": "GST",
       "venueIds": [
         "mist-dubai",
-        "anzeera-dubai"
+        "anzeera-dubai",
+        "mcgettigans-dubai",
+        "loui-dubai",
+        "lock-stock-jbr-dubai",
+        "lock-stock-business-bay-dubai",
+        "lock-stock-barsha-heights-dubai"
       ]
     },
     {
@@ -1629,7 +1940,12 @@
       "timeSuffix": "GST",
       "venueIds": [
         "mist-dubai",
-        "anzeera-dubai"
+        "anzeera-dubai",
+        "mcgettigans-dubai",
+        "loui-dubai",
+        "lock-stock-jbr-dubai",
+        "lock-stock-business-bay-dubai",
+        "lock-stock-barsha-heights-dubai"
       ]
     },
     {
@@ -1647,7 +1963,12 @@
       "timeSuffix": "GST",
       "venueIds": [
         "mist-dubai",
-        "anzeera-dubai"
+        "anzeera-dubai",
+        "mcgettigans-dubai",
+        "loui-dubai",
+        "lock-stock-jbr-dubai",
+        "lock-stock-business-bay-dubai",
+        "lock-stock-barsha-heights-dubai"
       ]
     },
     {
@@ -1665,7 +1986,12 @@
       "timeSuffix": "GST",
       "venueIds": [
         "mist-dubai",
-        "anzeera-dubai"
+        "anzeera-dubai",
+        "mcgettigans-dubai",
+        "loui-dubai",
+        "lock-stock-jbr-dubai",
+        "lock-stock-business-bay-dubai",
+        "lock-stock-barsha-heights-dubai"
       ]
     },
     {
@@ -1683,7 +2009,12 @@
       "timeSuffix": "GST",
       "venueIds": [
         "mist-dubai",
-        "anzeera-dubai"
+        "anzeera-dubai",
+        "mcgettigans-dubai",
+        "loui-dubai",
+        "lock-stock-jbr-dubai",
+        "lock-stock-business-bay-dubai",
+        "lock-stock-barsha-heights-dubai"
       ]
     },
     {
@@ -1701,7 +2032,12 @@
       "timeSuffix": "GST",
       "venueIds": [
         "mist-dubai",
-        "anzeera-dubai"
+        "anzeera-dubai",
+        "mcgettigans-dubai",
+        "loui-dubai",
+        "lock-stock-jbr-dubai",
+        "lock-stock-business-bay-dubai",
+        "lock-stock-barsha-heights-dubai"
       ]
     },
     {
@@ -1719,7 +2055,12 @@
       "timeSuffix": "GST",
       "venueIds": [
         "mist-dubai",
-        "anzeera-dubai"
+        "anzeera-dubai",
+        "mcgettigans-dubai",
+        "loui-dubai",
+        "lock-stock-jbr-dubai",
+        "lock-stock-business-bay-dubai",
+        "lock-stock-barsha-heights-dubai"
       ]
     },
     {
@@ -1737,7 +2078,12 @@
       "timeSuffix": "GST",
       "venueIds": [
         "mist-dubai",
-        "anzeera-dubai"
+        "anzeera-dubai",
+        "mcgettigans-dubai",
+        "loui-dubai",
+        "lock-stock-jbr-dubai",
+        "lock-stock-business-bay-dubai",
+        "lock-stock-barsha-heights-dubai"
       ]
     },
     {
@@ -1755,7 +2101,12 @@
       "timeSuffix": "GST",
       "venueIds": [
         "mist-dubai",
-        "anzeera-dubai"
+        "anzeera-dubai",
+        "mcgettigans-dubai",
+        "loui-dubai",
+        "lock-stock-jbr-dubai",
+        "lock-stock-business-bay-dubai",
+        "lock-stock-barsha-heights-dubai"
       ]
     },
     {
@@ -1773,7 +2124,12 @@
       "timeSuffix": "GST",
       "venueIds": [
         "mist-dubai",
-        "anzeera-dubai"
+        "anzeera-dubai",
+        "mcgettigans-dubai",
+        "loui-dubai",
+        "lock-stock-jbr-dubai",
+        "lock-stock-business-bay-dubai",
+        "lock-stock-barsha-heights-dubai"
       ]
     },
     {
@@ -1791,7 +2147,12 @@
       "timeSuffix": "GST",
       "venueIds": [
         "mist-dubai",
-        "anzeera-dubai"
+        "anzeera-dubai",
+        "mcgettigans-dubai",
+        "loui-dubai",
+        "lock-stock-jbr-dubai",
+        "lock-stock-business-bay-dubai",
+        "lock-stock-barsha-heights-dubai"
       ]
     },
     {
@@ -1809,7 +2170,12 @@
       "timeSuffix": "GST",
       "venueIds": [
         "mist-dubai",
-        "anzeera-dubai"
+        "anzeera-dubai",
+        "mcgettigans-dubai",
+        "loui-dubai",
+        "lock-stock-jbr-dubai",
+        "lock-stock-business-bay-dubai",
+        "lock-stock-barsha-heights-dubai"
       ]
     },
     {
@@ -1827,7 +2193,12 @@
       "timeSuffix": "GST",
       "venueIds": [
         "mist-dubai",
-        "anzeera-dubai"
+        "anzeera-dubai",
+        "mcgettigans-dubai",
+        "loui-dubai",
+        "lock-stock-jbr-dubai",
+        "lock-stock-business-bay-dubai",
+        "lock-stock-barsha-heights-dubai"
       ]
     },
     {
@@ -1845,7 +2216,12 @@
       "timeSuffix": "GST",
       "venueIds": [
         "mist-dubai",
-        "anzeera-dubai"
+        "anzeera-dubai",
+        "mcgettigans-dubai",
+        "loui-dubai",
+        "lock-stock-jbr-dubai",
+        "lock-stock-business-bay-dubai",
+        "lock-stock-barsha-heights-dubai"
       ]
     },
     {
@@ -1863,7 +2239,12 @@
       "timeSuffix": "GST",
       "venueIds": [
         "mist-dubai",
-        "anzeera-dubai"
+        "anzeera-dubai",
+        "mcgettigans-dubai",
+        "loui-dubai",
+        "lock-stock-jbr-dubai",
+        "lock-stock-business-bay-dubai",
+        "lock-stock-barsha-heights-dubai"
       ]
     },
     {
@@ -1881,7 +2262,12 @@
       "timeSuffix": "GST",
       "venueIds": [
         "mist-dubai",
-        "anzeera-dubai"
+        "anzeera-dubai",
+        "mcgettigans-dubai",
+        "loui-dubai",
+        "lock-stock-jbr-dubai",
+        "lock-stock-business-bay-dubai",
+        "lock-stock-barsha-heights-dubai"
       ]
     },
     {
@@ -1899,7 +2285,12 @@
       "timeSuffix": "GST",
       "venueIds": [
         "mist-dubai",
-        "anzeera-dubai"
+        "anzeera-dubai",
+        "mcgettigans-dubai",
+        "loui-dubai",
+        "lock-stock-jbr-dubai",
+        "lock-stock-business-bay-dubai",
+        "lock-stock-barsha-heights-dubai"
       ]
     },
     {
@@ -1917,7 +2308,12 @@
       "timeSuffix": "GST",
       "venueIds": [
         "mist-dubai",
-        "anzeera-dubai"
+        "anzeera-dubai",
+        "mcgettigans-dubai",
+        "loui-dubai",
+        "lock-stock-jbr-dubai",
+        "lock-stock-business-bay-dubai",
+        "lock-stock-barsha-heights-dubai"
       ]
     },
     {
@@ -1935,7 +2331,12 @@
       "timeSuffix": "GST",
       "venueIds": [
         "mist-dubai",
-        "anzeera-dubai"
+        "anzeera-dubai",
+        "mcgettigans-dubai",
+        "loui-dubai",
+        "lock-stock-jbr-dubai",
+        "lock-stock-business-bay-dubai",
+        "lock-stock-barsha-heights-dubai"
       ]
     },
     {
@@ -1953,7 +2354,12 @@
       "timeSuffix": "GST",
       "venueIds": [
         "mist-dubai",
-        "anzeera-dubai"
+        "anzeera-dubai",
+        "mcgettigans-dubai",
+        "loui-dubai",
+        "lock-stock-jbr-dubai",
+        "lock-stock-business-bay-dubai",
+        "lock-stock-barsha-heights-dubai"
       ]
     },
     {
@@ -1971,7 +2377,12 @@
       "timeSuffix": "GST",
       "venueIds": [
         "mist-dubai",
-        "anzeera-dubai"
+        "anzeera-dubai",
+        "mcgettigans-dubai",
+        "loui-dubai",
+        "lock-stock-jbr-dubai",
+        "lock-stock-business-bay-dubai",
+        "lock-stock-barsha-heights-dubai"
       ]
     },
     {
@@ -1989,7 +2400,12 @@
       "timeSuffix": "GST",
       "venueIds": [
         "mist-dubai",
-        "anzeera-dubai"
+        "anzeera-dubai",
+        "mcgettigans-dubai",
+        "loui-dubai",
+        "lock-stock-jbr-dubai",
+        "lock-stock-business-bay-dubai",
+        "lock-stock-barsha-heights-dubai"
       ]
     },
     {
@@ -2007,7 +2423,12 @@
       "timeSuffix": "GST",
       "venueIds": [
         "mist-dubai",
-        "anzeera-dubai"
+        "anzeera-dubai",
+        "mcgettigans-dubai",
+        "loui-dubai",
+        "lock-stock-jbr-dubai",
+        "lock-stock-business-bay-dubai",
+        "lock-stock-barsha-heights-dubai"
       ]
     },
     {
@@ -2025,7 +2446,12 @@
       "timeSuffix": "GST",
       "venueIds": [
         "mist-dubai",
-        "anzeera-dubai"
+        "anzeera-dubai",
+        "mcgettigans-dubai",
+        "loui-dubai",
+        "lock-stock-jbr-dubai",
+        "lock-stock-business-bay-dubai",
+        "lock-stock-barsha-heights-dubai"
       ]
     },
     {
@@ -2043,7 +2469,12 @@
       "timeSuffix": "GST",
       "venueIds": [
         "mist-dubai",
-        "anzeera-dubai"
+        "anzeera-dubai",
+        "mcgettigans-dubai",
+        "loui-dubai",
+        "lock-stock-jbr-dubai",
+        "lock-stock-business-bay-dubai",
+        "lock-stock-barsha-heights-dubai"
       ]
     },
     {
@@ -2061,7 +2492,12 @@
       "timeSuffix": "GST",
       "venueIds": [
         "mist-dubai",
-        "anzeera-dubai"
+        "anzeera-dubai",
+        "mcgettigans-dubai",
+        "loui-dubai",
+        "lock-stock-jbr-dubai",
+        "lock-stock-business-bay-dubai",
+        "lock-stock-barsha-heights-dubai"
       ]
     },
     {
@@ -2079,7 +2515,12 @@
       "timeSuffix": "GST",
       "venueIds": [
         "mist-dubai",
-        "anzeera-dubai"
+        "anzeera-dubai",
+        "mcgettigans-dubai",
+        "loui-dubai",
+        "lock-stock-jbr-dubai",
+        "lock-stock-business-bay-dubai",
+        "lock-stock-barsha-heights-dubai"
       ]
     },
     {
@@ -2097,7 +2538,12 @@
       "timeSuffix": "GST",
       "venueIds": [
         "mist-dubai",
-        "anzeera-dubai"
+        "anzeera-dubai",
+        "mcgettigans-dubai",
+        "loui-dubai",
+        "lock-stock-jbr-dubai",
+        "lock-stock-business-bay-dubai",
+        "lock-stock-barsha-heights-dubai"
       ]
     }
   ],
@@ -2605,6 +3051,16 @@
       "logoWidth": 120,
       "logoHeight": 77,
       "locationUrl": "https://www.google.com/maps/search/?api=1&query=mist+Dubai",
+      "enabled": true,
+      "city": "Dubai"
+    },
+    {
+      "id": "loui-dubai",
+      "src": "/assets/imgs/loui.svg",
+      "alt": "Loui Restaurant & Cafe Jumeirah Park",
+      "logoWidth": 127,
+      "logoHeight": 60,
+      "locationUrl": "https://www.google.com/maps/search/?api=1&query=Loui+Restaurant+%26+Cafe+Jumeirah+Park,+Pavilion+Mall,+Al+Worood+1+St,+Jumeirah+Park,+Dubai,+United+Arab+Emirates",
       "enabled": true,
       "city": "Dubai"
     },

@@ -16,7 +16,7 @@ import {
 import { useTranslations } from "@/app/i18n/useTranslations";
 import { useCampaignSelection } from "@/app/context/CampaignSelectionContext";
 import { resolveDateLabelFromParam } from "@/app/data/matches";
-import { getVenueById } from "@/app/data/venues";
+import { getVenueById, LOUI_JUMEIRAH_PARK_LOCATION_URL, resolveVenueDetails } from "@/app/data/venues";
 import { useGsapScope } from "@/app/hooks/useGsapScope";
 import { useAdminCampaignDraft } from "@/app/lib/adminCampaignDraft";
 import { isVenueEnabled, type AdminVenue } from "@/app/lib/campaignDraftCore";
@@ -316,6 +316,14 @@ const DUBAI_VENUES: Venue[] = [
     logoWidth: 120,
     logoHeight: 77,
     locationUrl: "https://www.google.com/maps/search/?api=1&query=mist+Dubai",
+  },
+  {
+    id: "loui-dubai",
+    src: "/assets/imgs/loui.svg",
+    alt: "Loui Restaurant & Cafe Jumeirah Park",
+    logoWidth: 127,
+    logoHeight: 60,
+    locationUrl: LOUI_JUMEIRAH_PARK_LOCATION_URL,
   },
   {
     id: "lock-stock-jbr-dubai",
@@ -629,9 +637,10 @@ export default function MatchMap() {
       setSelectedVenue(null);
       return;
     }
-    const venue =
+    const venue = resolveVenueDetails(
       draftRestaurants?.find((restaurant) => restaurant.id === venueParam) ??
-      getVenueById(venueParam);
+        getVenueById(venueParam),
+    );
     setSelectedVenue(venue);
     setSelectedVenueId(venue.id);
   }, [venueParam, draftRestaurants, setSelectedVenueId]);
@@ -639,7 +648,7 @@ export default function MatchMap() {
   const handleVenueClick = (venue: VenueModalData) => {
     if (!isVenueEnabled(venue.id, draftRestaurants)) return;
     const fromDraft = draftRestaurants?.find((restaurant) => restaurant.id === venue.id);
-    setSelectedVenue(fromDraft ?? venue);
+    setSelectedVenue(resolveVenueDetails(fromDraft ?? venue));
     setSelectedVenueId(venue.id);
 
     const params = new URLSearchParams();

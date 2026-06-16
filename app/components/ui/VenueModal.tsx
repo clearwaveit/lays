@@ -49,6 +49,7 @@ const MODAL_LOGO_HEIGHT = scale(MODAL_LOGO_HEIGHT_PX);
 const VENUE_LOGO_ALT_IDS = new Set([
   "amanos-dubai",
   "mist-dubai",
+  "loui-dubai",
   "lock-stock-jbr-dubai",
   "lock-stock-business-bay-dubai",
   "lock-stock-barsha-heights-dubai",
