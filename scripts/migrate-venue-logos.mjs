@@ -3,8 +3,8 @@ import { readFileSync, writeFileSync } from "node:fs";
 const path = "data/campaign-admin-draft.json";
 const data = JSON.parse(readFileSync(path, "utf8"));
 
-const VENUE_ID_MIGRATIONS = { "bla-bla-dubai": "amanos-dubai" };
-const REMOVED = new Set(["loui-dubai"]);
+const VENUE_ID_MIGRATIONS = { "bla-bla-dubai": "amanos-dubai", "luoi-dubai": "loui-dubai" };
+const REMOVED = new Set();
 
 function migrateVenueId(id) {
   if (REMOVED.has(id)) return null;
@@ -73,6 +73,17 @@ const restaurants = [
     logoWidth: 120,
     logoHeight: 77,
     locationUrl: "https://www.google.com/maps/search/?api=1&query=mist+Dubai",
+    enabled: true,
+    city: "Dubai",
+  },
+  {
+    id: "loui-dubai",
+    src: "/assets/imgs/loui.svg",
+    alt: "Loui Restaurant & Cafe Jumeirah Park",
+    logoWidth: 127,
+    logoHeight: 60,
+    locationUrl:
+      "https://www.google.com/maps/search/?api=1&query=Loui+Restaurant+%26+Cafe+Jumeirah+Park,+Pavilion+Mall,+Al+Worood+1+St,+Jumeirah+Park,+Dubai,+United+Arab+Emirates",
     enabled: true,
     city: "Dubai",
   },

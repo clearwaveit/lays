@@ -85,9 +85,10 @@ export function cityFromVenueId(id: string) {
 /** Legacy admin/match venue IDs → current roster. */
 const VENUE_ID_MIGRATIONS: Record<string, string> = {
   "bla-bla-dubai": "amanos-dubai",
+  "luoi-dubai": "loui-dubai",
 };
 
-const REMOVED_VENUE_IDS = new Set(["loui-dubai"]);
+const REMOVED_VENUE_IDS = new Set<string>();
 
 export function migrateVenueId(id: string): string | null {
   if (REMOVED_VENUE_IDS.has(id)) return null;
@@ -99,6 +100,28 @@ export function migrateVenueIds(ids: string[]): string[] {
     .map(migrateVenueId)
     .filter((id): id is string => Boolean(id));
   return [...new Set(migrated)];
+}
+
+/** Add enabled venues for cities already assigned to a match (e.g. new Dubai restaurant). */
+function augmentMatchVenueIds(
+  venueIds: string[],
+  restaurants: AdminVenue[],
+): string[] {
+  const merged = new Set(migrateVenueIds(venueIds));
+  const citiesPresent = new Set<string>(
+    [...merged]
+      .map((id) => cityFromVenueId(id))
+      .filter((city) => city.length > 0),
+  );
+
+  for (const restaurant of restaurants) {
+    if (!restaurant.enabled) continue;
+    const city = restaurant.city || cityFromVenueId(restaurant.id);
+    if (!city.length || !citiesPresent.has(city)) continue;
+    merged.add(restaurant.id);
+  }
+
+  return [...merged];
 }
 
 function buildRestaurantsFromDraft(
@@ -114,6 +137,8 @@ function buildRestaurantsFromDraft(
       ...venue,
       enabled: existing?.enabled ?? true,
       city: existing?.city || cityFromVenueId(venue.id),
+      alt: venue.alt,
+      locationUrl: venue.locationUrl,
       src: sanitizeStoredImageSrc(existing?.src ?? venue.src, venue.src),
       logoWidth: venue.logoWidth,
       logoHeight: venue.logoHeight,
@@ -215,7 +240,7 @@ export function normalizeAdminDraft(draft: Partial<AdminDraft>): AdminDraft {
     draft.matches ?? fallback.matches,
   );
   const matches = syncedMatches.map((match) => {
-    const venueIds = migrateVenueIds(matchVenueIds(match)).filter(
+    const venueIds = augmentMatchVenueIds(matchVenueIds(match), restaurants).filter(
       (id) => allowedVenueIds.has(id) && enabledVenueIds.has(id),
     );
     const winnerSide =
