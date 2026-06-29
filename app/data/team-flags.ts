@@ -57,6 +57,7 @@ const FLAG_CDN_SIZE = 320;
 function isPlaceholderTeamName(name: string): boolean {
   const normalized = name.trim();
   return (
+    normalized === "TBD" ||
     normalized.startsWith("Group ") ||
     normalized.startsWith("Winner Match ") ||
     normalized.startsWith("Runner-up Match ")

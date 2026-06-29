@@ -2,9 +2,17 @@
 
 import type { MatchFixture, MatchWinnerSide } from "@/app/data/matches";
 import { inferWinnerSideFromScores } from "@/app/lib/matchResult";
-import { parseMatchDateLabel } from "@/app/data/matches";
+import {
+  buildMatchTeamOptions,
+  ensureTeamInRegistry,
+  isKnockoutMatchNo,
+  isKnockoutPlaceholderTeamName,
+  matchRoundLabel,
+  resolveAdminMatchTeam,
+} from "@/app/lib/matchTeamAdmin";
 import {
   ADMIN_DRAFT_STORAGE_KEY,
+  CAMPAIGN_DRAFT_UPDATED_EVENT,
   type AdminDraft,
   type AdminTeam,
   type AdminVenue,
@@ -18,7 +26,16 @@ import {
 } from "@/app/lib/adminCampaignDraft";
 import { useEffect, useMemo, useState } from "react";
 
-type AdminTab = "overview" | "matches" | "teams" | "restaurants" | "schedule" | "tracking";
+type AdminTab =
+  | "overview"
+  | "matches"
+  | "knockout"
+  | "teams"
+  | "restaurants"
+  | "schedule"
+  | "tracking";
+
+type MatchStageFilter = "all" | "group" | "knockout";
 
 const emptyMatch: MatchFixture = {
   matchNo: 0,
@@ -29,17 +46,6 @@ const emptyMatch: MatchFixture = {
   away: { name: "Team B", flag: "/assets/imgs/football.png" },
   venueIds: allVenueIds(),
 };
-
-function stageForMatch(match: MatchFixture) {
-  const { month, day } = parseMatchDateLabel(match.dateLabel);
-  if (month === 6) {
-    if (day >= 19) return "Final";
-    if (day >= 14) return "Semi-final";
-    if (day >= 9) return "Quarter-final";
-  }
-  if (month === 6 || (month === 5 && day >= 28)) return "Knockout";
-  return "Group / Round of 32";
-}
 
 function statLabel(value: number, label: string) {
   return `${value.toLocaleString()} ${label}`;
@@ -189,6 +195,80 @@ function MatchScoreFields({
   );
 }
 
+function MatchTeamField({
+  label,
+  team,
+  teams,
+  onChange,
+}: {
+  label: string;
+  team: AdminTeam;
+  teams: AdminTeam[];
+  onChange: (team: AdminTeam) => void;
+}) {
+  const options = useMemo(() => buildMatchTeamOptions(teams), [teams]);
+  const isCustom =
+    team.name.trim() !== "" && !options.includes(team.name.trim());
+
+  return (
+    <div className="grid gap-2">
+      <label className="grid gap-1 text-xs font-semibold uppercase tracking-[0.12em] text-slate-500">
+        {label}
+        <select
+          value={isCustom ? "__custom__" : team.name}
+          onChange={(event) => {
+            const next = event.target.value;
+            if (next === "__custom__") return;
+            onChange(resolveAdminMatchTeam(next, teams));
+          }}
+          className="h-10 rounded-md border border-slate-200 bg-white px-3 text-sm font-medium normal-case tracking-normal text-slate-950 outline-none transition focus:border-red-500 focus:ring-2 focus:ring-red-100"
+        >
+          <optgroup label="Placeholders">
+            <option value="TBD">TBD</option>
+            {options
+              .filter((name) => isKnockoutPlaceholderTeamName(name) && name !== "TBD")
+              .map((name) => (
+                <option key={name} value={name}>
+                  {name}
+                </option>
+              ))}
+          </optgroup>
+          <optgroup label="Qualified teams">
+            {options
+              .filter((name) => !isKnockoutPlaceholderTeamName(name))
+              .map((name) => (
+                <option key={name} value={name}>
+                  {name}
+                </option>
+              ))}
+          </optgroup>
+          <option value="__custom__">Custom name...</option>
+        </select>
+      </label>
+      {isCustom ? (
+        <input
+          type="text"
+          value={team.name}
+          onChange={(event) =>
+            onChange(resolveAdminMatchTeam(event.target.value, teams))
+          }
+          placeholder="Type team name"
+          className="h-10 rounded-md border border-slate-200 bg-white px-3 text-sm font-medium text-slate-950 outline-none transition focus:border-red-500 focus:ring-2 focus:ring-red-100"
+        />
+      ) : null}
+      <div className="flex items-center gap-2 text-xs text-slate-500">
+        <img
+          key={`${team.name}-${team.flag}`}
+          src={team.flag}
+          alt=""
+          className="size-6 rounded-full border border-slate-200 object-cover"
+        />
+        <span className="truncate">{team.flag}</span>
+      </div>
+    </div>
+  );
+}
+
 function SectionHeader({
   title,
   description,
@@ -212,6 +292,7 @@ function AdminDashboard() {
   const [isSaving, setIsSaving] = useState(false);
   const [saveError, setSaveError] = useState<string | null>(null);
   const [matchQuery, setMatchQuery] = useState("");
+  const [matchStageFilter, setMatchStageFilter] = useState<MatchStageFilter>("all");
   const [teamQuery, setTeamQuery] = useState("");
   const [restaurantQuery, setRestaurantQuery] = useState("");
   const [lastSavedAt, setLastSavedAt] = useState<string | null>(null);
@@ -264,6 +345,7 @@ function AdminDashboard() {
       setSavedDraft(saved);
       window.localStorage.setItem(ADMIN_DRAFT_STORAGE_KEY, JSON.stringify(saved));
       persistCampaignDraftToStorage(saved);
+      window.dispatchEvent(new Event(CAMPAIGN_DRAFT_UPDATED_EVENT));
       setLastSavedAt(new Date().toLocaleTimeString());
     } catch {
       setSaveError("Could not save draft. Please try again.");
@@ -284,12 +366,43 @@ function AdminDashboard() {
 
   const filteredMatches = useMemo(() => {
     const query = matchQuery.trim().toLowerCase();
-    if (!query) return draft.matches;
-    return draft.matches.filter((match) =>
-      `${match.dateLabel} ${match.time} ${match.home.name} ${match.away.name}`
-        .includes(query),
-    );
-  }, [draft.matches, matchQuery]);
+    return draft.matches.filter((match) => {
+      if (matchStageFilter === "knockout" && !isKnockoutMatchNo(match.matchNo)) {
+        return false;
+      }
+      if (matchStageFilter === "group" && isKnockoutMatchNo(match.matchNo)) {
+        return false;
+      }
+      if (!query) return true;
+      const round = matchRoundLabel(match.matchNo).toLowerCase();
+      return `${match.matchNo} ${round} ${match.dateLabel} ${match.time} ${match.home.name} ${match.away.name}`
+        .toLowerCase()
+        .includes(query);
+    });
+  }, [draft.matches, matchQuery, matchStageFilter]);
+
+  const knockoutGroups = useMemo(() => {
+    const groups = new Map<string, MatchFixture[]>();
+    for (const match of draft.matches) {
+      if (!isKnockoutMatchNo(match.matchNo)) continue;
+      const round = matchRoundLabel(match.matchNo);
+      groups.set(round, [...(groups.get(round) ?? []), match]);
+    }
+    for (const [, matches] of groups) {
+      matches.sort((a, b) => a.matchNo - b.matchNo);
+    }
+    const roundOrder = [
+      "Round of 32",
+      "Round of 16",
+      "Quarter-final",
+      "Semi-final",
+      "Third place",
+      "Final",
+    ];
+    return roundOrder
+      .filter((round) => groups.has(round))
+      .map((round) => [round, groups.get(round)!] as const);
+  }, [draft.matches]);
 
   const filteredTeams = useMemo(() => {
     const query = teamQuery.trim().toLowerCase();
@@ -308,41 +421,44 @@ function AdminDashboard() {
   const scheduleGroups = useMemo(() => {
     const groups = new Map<string, MatchFixture[]>();
     for (const match of draft.matches) {
-      const key = `${stageForMatch(match)} / ${match.dateLabel}`;
+      const key = `${matchRoundLabel(match.matchNo)} / ${match.dateLabel}`;
       groups.set(key, [...(groups.get(key) ?? []), match]);
     }
     return [...groups.entries()];
   }, [draft.matches]);
 
-  const updateMatch = (index: number, patch: Partial<MatchFixture>) => {
+  const updateMatchByNo = (matchNo: number, patch: Partial<MatchFixture>) => {
     setDraft((current) => ({
       ...current,
-      matches: current.matches.map((match, matchIndex) =>
-        matchIndex === index ? { ...match, ...patch } : match,
+      matches: current.matches.map((match) =>
+        match.matchNo === matchNo ? { ...match, ...patch } : match,
       ),
     }));
   };
 
-  const updateMatchTeam = (
-    index: number,
+  const assignMatchTeamByNo = (
+    matchNo: number,
     side: "home" | "away",
-    patch: Partial<AdminTeam>,
+    team: AdminTeam,
   ) => {
-    setDraft((current) => ({
-      ...current,
-      matches: current.matches.map((match, matchIndex) =>
-        matchIndex === index
-          ? { ...match, [side]: { ...match[side], ...patch } }
-          : match,
-      ),
-    }));
+    setDraft((current) => {
+      const resolved = resolveAdminMatchTeam(team.name, current.teams);
+      const teams = ensureTeamInRegistry(current.teams, resolved);
+      return {
+        ...current,
+        teams,
+        matches: current.matches.map((match) =>
+          match.matchNo === matchNo ? { ...match, [side]: resolved } : match,
+        ),
+      };
+    });
   };
 
-  const updateMatchVenue = (index: number, venueId: string, checked: boolean) => {
+  const updateMatchVenueByNo = (matchNo: number, venueId: string, checked: boolean) => {
     setDraft((current) => ({
       ...current,
-      matches: current.matches.map((match, matchIndex) => {
-        if (matchIndex !== index) return match;
+      matches: current.matches.map((match) => {
+        if (match.matchNo !== matchNo) return match;
         const currentVenueIds = matchVenueIds(match);
         const venueIds = checked
           ? [...new Set([...currentVenueIds, venueId])]
@@ -373,6 +489,7 @@ function AdminDashboard() {
   const tabs: { id: AdminTab; label: string }[] = [
     { id: "overview", label: "Overview" },
     { id: "matches", label: "Matches" },
+    { id: "knockout", label: "Knockout Bracket" },
     { id: "teams", label: "Teams" },
     { id: "restaurants", label: "Restaurants" },
     { id: "schedule", label: "Schedule" },
@@ -507,10 +624,32 @@ function AdminDashboard() {
             {activeTab === "matches" ? (
               <div className="grid gap-5">
                 <div className="flex flex-col gap-3 lg:flex-row lg:items-end lg:justify-between">
-                  <SectionHeader
-                    title="Matches"
-                    description="Edit match date, time, teams, winner (for grey loser flags on the site), and restaurants."
-                  />
+                <SectionHeader
+                  title="Matches"
+                  description="Edit match date, time, teams, winner, and restaurants. Use the team picker to assign qualified teams or placeholders (TBD, Winner Match #)."
+                />
+                <div className="flex flex-wrap gap-2">
+                  {(
+                    [
+                      ["all", "All matches"],
+                      ["group", "Group stage"],
+                      ["knockout", "Knockout only"],
+                    ] as const
+                  ).map(([value, label]) => (
+                    <button
+                      key={value}
+                      type="button"
+                      onClick={() => setMatchStageFilter(value)}
+                      className={`h-9 rounded-md px-3 text-sm font-bold transition ${
+                        matchStageFilter === value
+                          ? "bg-red-600 text-white"
+                          : "border border-slate-200 bg-white text-slate-700 hover:bg-slate-50"
+                      }`}
+                    >
+                      {label}
+                    </button>
+                  ))}
+                </div>
                   <button
                     type="button"
                     onClick={() =>
@@ -526,18 +665,18 @@ function AdminDashboard() {
                 </div>
                 <Field label="Search matches" value={matchQuery} onChange={setMatchQuery} />
                 <div className="grid gap-3">
-                  {filteredMatches.slice(0, 60).map((match) => {
-                    const realIndex = draft.matches.indexOf(match);
+                  {filteredMatches.map((match) => {
+                    const matchNo = match.matchNo;
                     return (
                       <article
-                        key={`${realIndex}-${match.dateLabel}-${match.time}`}
+                        key={`${matchNo}-${match.dateLabel}-${match.time}`}
                         className="grid gap-3 rounded-lg border border-slate-200 p-4 xl:grid-cols-[72px_120px_110px_1fr_1fr_84px]"
                       >
                         <Field
                           label="Match #"
                           value={match.matchNo || ""}
                           onChange={(value) =>
-                            updateMatch(realIndex, {
+                            updateMatchByNo(matchNo, {
                               matchNo: Number.parseInt(value, 10) || 0,
                             })
                           }
@@ -546,29 +685,33 @@ function AdminDashboard() {
                         <Field
                           label="Date"
                           value={match.dateLabel}
-                          onChange={(value) => updateMatch(realIndex, { dateLabel: value })}
+                          onChange={(value) => updateMatchByNo(matchNo, { dateLabel: value })}
                         />
                         <Field
                           label="Time"
                           value={match.time}
-                          onChange={(value) => updateMatch(realIndex, { time: value })}
+                          onChange={(value) => updateMatchByNo(matchNo, { time: value })}
                         />
-                        <Field
+                        <MatchTeamField
                           label="Home"
-                          value={match.home.name}
-                          onChange={(value) => updateMatchTeam(realIndex, "home", { name: value })}
+                          team={match.home}
+                          teams={draft.teams}
+                          onChange={(team) => assignMatchTeamByNo(matchNo, "home", team)}
                         />
-                        <Field
+                        <MatchTeamField
                           label="Away"
-                          value={match.away.name}
-                          onChange={(value) => updateMatchTeam(realIndex, "away", { name: value })}
+                          team={match.away}
+                          teams={draft.teams}
+                          onChange={(team) => assignMatchTeamByNo(matchNo, "away", team)}
                         />
                         <button
                           type="button"
                           onClick={() =>
                             setDraft((current) => ({
                               ...current,
-                              matches: current.matches.filter((_, index) => index !== realIndex),
+                              matches: current.matches.filter(
+                                (entry) => entry.matchNo !== matchNo,
+                              ),
                             }))
                           }
                           className="h-10 self-end rounded-md border border-red-200 bg-red-50 text-sm font-bold text-red-700 transition hover:bg-red-100"
@@ -585,14 +728,14 @@ function AdminDashboard() {
                             homeScore={match.homeScore}
                             awayScore={match.awayScore}
                             onHomeScoreChange={(raw) =>
-                              updateMatch(
-                                realIndex,
+                              updateMatchByNo(
+                                matchNo,
                                 buildMatchScorePatch(match, "home", raw),
                               )
                             }
                             onAwayScoreChange={(raw) =>
-                              updateMatch(
-                                realIndex,
+                              updateMatchByNo(
+                                matchNo,
                                 buildMatchScorePatch(match, "away", raw),
                               )
                             }
@@ -603,7 +746,9 @@ function AdminDashboard() {
                             awayName={match.away.name}
                             value={match.winnerSide}
                             onChange={(winnerSide) =>
-                              updateMatch(realIndex, { winnerSide: winnerSide ?? undefined })
+                              updateMatchByNo(matchNo, {
+                                winnerSide: winnerSide ?? undefined,
+                              })
                             }
                           />
                         </div>
@@ -615,8 +760,10 @@ function AdminDashboard() {
                             <button
                               type="button"
                               onClick={() =>
-                                updateMatch(realIndex, {
-                                  venueIds: draft.restaurants.map((restaurant) => restaurant.id),
+                                updateMatchByNo(matchNo, {
+                                  venueIds: draft.restaurants.map(
+                                    (restaurant) => restaurant.id,
+                                  ),
                                 })
                               }
                               className="text-xs font-bold text-red-600 hover:text-red-700"
@@ -627,15 +774,15 @@ function AdminDashboard() {
                           <div className="grid gap-2 sm:grid-cols-2 xl:grid-cols-3">
                             {draft.restaurants.map((restaurant) => (
                               <label
-                                key={`${realIndex}-${restaurant.id}`}
+                                key={`${matchNo}-${restaurant.id}`}
                                 className="flex items-center gap-2 rounded-md border border-slate-200 bg-slate-50 px-3 py-2 text-sm font-bold text-slate-700"
                               >
                                 <input
                                   type="checkbox"
                                   checked={matchVenueIds(match).includes(restaurant.id)}
                                   onChange={(event) =>
-                                    updateMatchVenue(
-                                      realIndex,
+                                    updateMatchVenueByNo(
+                                      matchNo,
                                       restaurant.id,
                                       event.target.checked,
                                     )
@@ -656,12 +803,124 @@ function AdminDashboard() {
               </div>
             ) : null}
 
+            {activeTab === "knockout" ? (
+              <div className="grid gap-5">
+                <SectionHeader
+                  title="Knockout Bracket"
+                  description="Update teams as they qualify — pick a country, TBD, or Winner Match #. Changes appear on the timetable after you save."
+                />
+                <div className="rounded-lg border border-blue-200 bg-blue-50 p-4 text-sm leading-6 text-blue-950">
+                  When a team qualifies on the official FIFA site, select it here for that
+                  match slot. Use <strong>TBD</strong> when the opponent is not decided yet.
+                  Use <strong>Winner Match #</strong> for slots that still depend on an earlier
+                  knockout result.
+                </div>
+                <div className="grid gap-4">
+                  {knockoutGroups.map(([round, matches]) => (
+                    <details key={round} className="rounded-lg border border-slate-200 p-4" open>
+                      <summary className="cursor-pointer text-sm font-black text-slate-950">
+                        {round} ({matches.length})
+                      </summary>
+                      <div className="mt-4 grid gap-4">
+                        {matches.map((match) => {
+                          const matchNo = match.matchNo;
+                          return (
+                            <article
+                              key={`knockout-${matchNo}`}
+                              className="grid gap-3 rounded-lg border border-slate-200 bg-slate-50 p-4 lg:grid-cols-[88px_1fr_1fr]"
+                            >
+                              <div>
+                                <p className="text-xs font-bold uppercase tracking-[0.12em] text-slate-400">
+                                  Match
+                                </p>
+                                <p className="text-2xl font-black text-slate-950">
+                                  {matchNo}
+                                </p>
+                                <p className="mt-1 text-xs font-semibold text-slate-500">
+                                  {match.dateLabel}
+                                </p>
+                                <p className="text-xs font-semibold text-slate-500">
+                                  {match.time} {match.timeSuffix}
+                                </p>
+                              </div>
+                              <MatchTeamField
+                                label="Home"
+                                team={match.home}
+                                teams={draft.teams}
+                                onChange={(team) =>
+                                  assignMatchTeamByNo(matchNo, "home", team)
+                                }
+                              />
+                              <MatchTeamField
+                                label="Away"
+                                team={match.away}
+                                teams={draft.teams}
+                                onChange={(team) =>
+                                  assignMatchTeamByNo(matchNo, "away", team)
+                                }
+                              />
+                              <div className="grid gap-3 lg:col-span-3">
+                                <MatchScoreFields
+                                  homeName={match.home.name}
+                                  awayName={match.away.name}
+                                  homeScore={match.homeScore}
+                                  awayScore={match.awayScore}
+                                  onHomeScoreChange={(raw) =>
+                                    updateMatchByNo(
+                                      matchNo,
+                                      buildMatchScorePatch(match, "home", raw),
+                                    )
+                                  }
+                                  onAwayScoreChange={(raw) =>
+                                    updateMatchByNo(
+                                      matchNo,
+                                      buildMatchScorePatch(match, "away", raw),
+                                    )
+                                  }
+                                />
+                                <WinnerField
+                                  label="Winner"
+                                  homeName={match.home.name}
+                                  awayName={match.away.name}
+                                  value={match.winnerSide}
+                                  onChange={(winnerSide) =>
+                                    updateMatchByNo(matchNo, {
+                                      winnerSide: winnerSide ?? undefined,
+                                    })
+                                  }
+                                />
+                              </div>
+                            </article>
+                          );
+                        })}
+                      </div>
+                    </details>
+                  ))}
+                </div>
+              </div>
+            ) : null}
+
             {activeTab === "teams" ? (
               <div className="grid gap-5">
                 <SectionHeader
                   title="Teams"
-                  description="Manage country/team names and flag image URLs used across match cards and the schedule."
+                  description="Manage country names and flag URLs. New teams are added automatically when you pick them in Knockout Bracket."
                 />
+                <button
+                  type="button"
+                  onClick={() =>
+                    setDraft((current) => ({
+                      ...current,
+                      teams: ensureTeamInRegistry(current.teams, {
+                        name: "New Team",
+                        flag: "/assets/imgs/football.png",
+                      }),
+                    }))
+                  }
+                  className="h-11 w-fit rounded-md bg-red-600 px-4 text-sm font-bold text-white transition hover:bg-red-700"
+                >
+                  Add Team
+                </button>
                 <Field label="Search teams" value={teamQuery} onChange={setTeamQuery} />
                 <div className="grid gap-3 md:grid-cols-2">
                   {filteredTeams.map((team) => {
@@ -816,56 +1075,75 @@ function AdminDashboard() {
                       </summary>
                       <div className="mt-3 grid gap-2">
                         {matches.map((match) => {
-                          const realIndex = draft.matches.indexOf(match);
+                          const matchNo = match.matchNo;
                           return (
                             <div
-                              key={`${group}-${match.matchNo}-${match.time}-${match.home.name}-${match.away.name}`}
+                              key={`${group}-${matchNo}-${match.time}-${match.home.name}-${match.away.name}`}
                               className="grid gap-3 rounded-md bg-slate-50 px-3 py-3"
                             >
                               <div className="flex flex-wrap items-center gap-2 text-sm">
                                 <span className="text-xs font-bold text-slate-400">
-                                  #{match.matchNo}
+                                  #{matchNo}
                                 </span>
                                 <span className="font-black">
                                   {match.time} {match.timeSuffix}
                                 </span>
-                                <span>{match.home.name}</span>
-                                <span className="text-slate-400">vs</span>
-                                <span>{match.away.name}</span>
                               </div>
-                              {realIndex >= 0 ? (
-                                <>
-                                  <MatchScoreFields
-                                    homeName={match.home.name}
-                                    awayName={match.away.name}
-                                    homeScore={match.homeScore}
-                                    awayScore={match.awayScore}
-                                    onHomeScoreChange={(raw) =>
-                                      updateMatch(
-                                        realIndex,
-                                        buildMatchScorePatch(match, "home", raw),
-                                      )
-                                    }
-                                    onAwayScoreChange={(raw) =>
-                                      updateMatch(
-                                        realIndex,
-                                        buildMatchScorePatch(match, "away", raw),
-                                      )
+                              {isKnockoutMatchNo(matchNo) ? (
+                                <div className="grid gap-3 md:grid-cols-2">
+                                  <MatchTeamField
+                                    label="Home"
+                                    team={match.home}
+                                    teams={draft.teams}
+                                    onChange={(team) =>
+                                      assignMatchTeamByNo(matchNo, "home", team)
                                     }
                                   />
-                                  <WinnerField
-                                    label="Winner"
-                                    homeName={match.home.name}
-                                    awayName={match.away.name}
-                                    value={match.winnerSide}
-                                    onChange={(winnerSide) =>
-                                      updateMatch(realIndex, {
-                                        winnerSide: winnerSide ?? undefined,
-                                      })
+                                  <MatchTeamField
+                                    label="Away"
+                                    team={match.away}
+                                    teams={draft.teams}
+                                    onChange={(team) =>
+                                      assignMatchTeamByNo(matchNo, "away", team)
                                     }
                                   />
-                                </>
-                              ) : null}
+                                </div>
+                              ) : (
+                                <div className="flex flex-wrap items-center gap-2 text-sm">
+                                  <span>{match.home.name}</span>
+                                  <span className="text-slate-400">vs</span>
+                                  <span>{match.away.name}</span>
+                                </div>
+                              )}
+                              <MatchScoreFields
+                                homeName={match.home.name}
+                                awayName={match.away.name}
+                                homeScore={match.homeScore}
+                                awayScore={match.awayScore}
+                                onHomeScoreChange={(raw) =>
+                                  updateMatchByNo(
+                                    matchNo,
+                                    buildMatchScorePatch(match, "home", raw),
+                                  )
+                                }
+                                onAwayScoreChange={(raw) =>
+                                  updateMatchByNo(
+                                    matchNo,
+                                    buildMatchScorePatch(match, "away", raw),
+                                  )
+                                }
+                              />
+                              <WinnerField
+                                label="Winner"
+                                homeName={match.home.name}
+                                awayName={match.away.name}
+                                value={match.winnerSide}
+                                onChange={(winnerSide) =>
+                                  updateMatchByNo(matchNo, {
+                                    winnerSide: winnerSide ?? undefined,
+                                  })
+                                }
+                              />
                             </div>
                           );
                         })}

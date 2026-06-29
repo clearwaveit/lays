@@ -53,6 +53,8 @@ const TEAM_NAMES_AR: Record<string, string> = {
 };
 
 function translatePlaceholderTeamName(name: string): string {
+  if (name === "TBD") return "يُحدد لاحقاً";
+
   const winner = name.match(/^Winner Match (\d+)$/);
   if (winner) return `فائز المباراة ${winner[1]}`;
 
