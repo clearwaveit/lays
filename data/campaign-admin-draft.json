@@ -14,15 +14,16 @@
       "time": "06:00",
       "timeSuffix": "GST",
       "venueIds": [
-        "anzeera-dubai",
-        "mist-dubai",
-        "lock-stock-business-bay-dubai",
-        "lock-stock-barsha-heights-dubai",
-        "lock-stock-yas-bay-abu-dhabi",
         "mcgettigans-dubai",
         "mcgettigans-abu-dhabi",
+        "anzeera-dubai",
+        "amanos-dubai",
+        "mist-dubai",
         "loui-dubai",
-        "lock-stock-jbr-dubai"
+        "lock-stock-jbr-dubai",
+        "lock-stock-business-bay-dubai",
+        "lock-stock-barsha-heights-dubai",
+        "lock-stock-yas-bay-abu-dhabi"
       ],
       "winnerSide": "home",
       "homeScore": 2,
@@ -42,15 +43,16 @@
       "time": "23:00",
       "timeSuffix": "GST",
       "venueIds": [
-        "anzeera-dubai",
-        "mist-dubai",
-        "lock-stock-business-bay-dubai",
-        "lock-stock-barsha-heights-dubai",
-        "lock-stock-yas-bay-abu-dhabi",
         "mcgettigans-dubai",
         "mcgettigans-abu-dhabi",
+        "anzeera-dubai",
+        "amanos-dubai",
+        "mist-dubai",
         "loui-dubai",
-        "lock-stock-jbr-dubai"
+        "lock-stock-jbr-dubai",
+        "lock-stock-business-bay-dubai",
+        "lock-stock-barsha-heights-dubai",
+        "lock-stock-yas-bay-abu-dhabi"
       ],
       "winnerSide": "home",
       "homeScore": 2,
@@ -70,15 +72,16 @@
       "time": "05:00",
       "timeSuffix": "GST",
       "venueIds": [
-        "anzeera-dubai",
-        "mist-dubai",
-        "lock-stock-business-bay-dubai",
-        "lock-stock-barsha-heights-dubai",
-        "lock-stock-yas-bay-abu-dhabi",
         "mcgettigans-dubai",
         "mcgettigans-abu-dhabi",
+        "anzeera-dubai",
+        "amanos-dubai",
+        "mist-dubai",
         "loui-dubai",
-        "lock-stock-jbr-dubai"
+        "lock-stock-jbr-dubai",
+        "lock-stock-business-bay-dubai",
+        "lock-stock-barsha-heights-dubai",
+        "lock-stock-yas-bay-abu-dhabi"
       ],
       "winnerSide": "home",
       "homeScore": 4,
@@ -98,15 +101,16 @@
       "time": "23:00",
       "timeSuffix": "GST",
       "venueIds": [
-        "anzeera-dubai",
-        "mist-dubai",
-        "lock-stock-business-bay-dubai",
-        "lock-stock-barsha-heights-dubai",
-        "lock-stock-yas-bay-abu-dhabi",
         "mcgettigans-dubai",
         "mcgettigans-abu-dhabi",
+        "anzeera-dubai",
+        "amanos-dubai",
+        "mist-dubai",
         "loui-dubai",
-        "lock-stock-jbr-dubai"
+        "lock-stock-jbr-dubai",
+        "lock-stock-business-bay-dubai",
+        "lock-stock-barsha-heights-dubai",
+        "lock-stock-yas-bay-abu-dhabi"
       ],
       "homeScore": 1,
       "awayScore": 1
@@ -125,15 +129,16 @@
       "time": "02:00",
       "timeSuffix": "GST",
       "venueIds": [
-        "anzeera-dubai",
-        "mist-dubai",
-        "lock-stock-business-bay-dubai",
-        "lock-stock-barsha-heights-dubai",
-        "lock-stock-yas-bay-abu-dhabi",
         "mcgettigans-dubai",
         "mcgettigans-abu-dhabi",
+        "anzeera-dubai",
+        "amanos-dubai",
+        "mist-dubai",
         "loui-dubai",
-        "lock-stock-jbr-dubai"
+        "lock-stock-jbr-dubai",
+        "lock-stock-business-bay-dubai",
+        "lock-stock-barsha-heights-dubai",
+        "lock-stock-yas-bay-abu-dhabi"
       ],
       "homeScore": 1,
       "awayScore": 1
@@ -152,15 +157,16 @@
       "time": "05:00",
       "timeSuffix": "GST",
       "venueIds": [
-        "anzeera-dubai",
-        "mist-dubai",
-        "lock-stock-business-bay-dubai",
-        "lock-stock-barsha-heights-dubai",
-        "lock-stock-yas-bay-abu-dhabi",
         "mcgettigans-dubai",
         "mcgettigans-abu-dhabi",
+        "anzeera-dubai",
+        "amanos-dubai",
+        "mist-dubai",
         "loui-dubai",
-        "lock-stock-jbr-dubai"
+        "lock-stock-jbr-dubai",
+        "lock-stock-business-bay-dubai",
+        "lock-stock-barsha-heights-dubai",
+        "lock-stock-yas-bay-abu-dhabi"
       ],
       "winnerSide": "away",
       "homeScore": 0,
@@ -180,15 +186,16 @@
       "time": "08:00",
       "timeSuffix": "GST",
       "venueIds": [
-        "anzeera-dubai",
-        "mist-dubai",
-        "lock-stock-business-bay-dubai",
-        "lock-stock-barsha-heights-dubai",
-        "lock-stock-yas-bay-abu-dhabi",
         "mcgettigans-dubai",
         "mcgettigans-abu-dhabi",
+        "anzeera-dubai",
+        "amanos-dubai",
+        "mist-dubai",
         "loui-dubai",
-        "lock-stock-jbr-dubai"
+        "lock-stock-jbr-dubai",
+        "lock-stock-business-bay-dubai",
+        "lock-stock-barsha-heights-dubai",
+        "lock-stock-yas-bay-abu-dhabi"
       ],
       "winnerSide": "home",
       "homeScore": 2,
@@ -208,15 +215,16 @@
       "time": "23:00",
       "timeSuffix": "GST",
       "venueIds": [
-        "anzeera-dubai",
-        "mist-dubai",
-        "lock-stock-business-bay-dubai",
-        "lock-stock-barsha-heights-dubai",
-        "lock-stock-yas-bay-abu-dhabi",
         "mcgettigans-dubai",
         "mcgettigans-abu-dhabi",
+        "anzeera-dubai",
+        "amanos-dubai",
+        "mist-dubai",
         "loui-dubai",
-        "lock-stock-jbr-dubai"
+        "lock-stock-jbr-dubai",
+        "lock-stock-business-bay-dubai",
+        "lock-stock-barsha-heights-dubai",
+        "lock-stock-yas-bay-abu-dhabi"
       ],
       "homeScore": 1,
       "awayScore": 1
@@ -235,15 +243,16 @@
       "time": "00:00",
       "timeSuffix": "GST",
       "venueIds": [
-        "anzeera-dubai",
-        "mist-dubai",
-        "lock-stock-business-bay-dubai",
-        "lock-stock-barsha-heights-dubai",
-        "lock-stock-yas-bay-abu-dhabi",
         "mcgettigans-dubai",
         "mcgettigans-abu-dhabi",
+        "anzeera-dubai",
+        "amanos-dubai",
+        "mist-dubai",
         "loui-dubai",
-        "lock-stock-jbr-dubai"
+        "lock-stock-jbr-dubai",
+        "lock-stock-business-bay-dubai",
+        "lock-stock-barsha-heights-dubai",
+        "lock-stock-yas-bay-abu-dhabi"
       ],
       "homeScore": 2,
       "awayScore": 2
@@ -262,15 +271,16 @@
       "time": "03:00",
       "timeSuffix": "GST",
       "venueIds": [
-        "anzeera-dubai",
-        "mist-dubai",
-        "lock-stock-business-bay-dubai",
-        "lock-stock-barsha-heights-dubai",
-        "lock-stock-yas-bay-abu-dhabi",
         "mcgettigans-dubai",
         "mcgettigans-abu-dhabi",
+        "anzeera-dubai",
+        "amanos-dubai",
+        "mist-dubai",
         "loui-dubai",
-        "lock-stock-jbr-dubai"
+        "lock-stock-jbr-dubai",
+        "lock-stock-business-bay-dubai",
+        "lock-stock-barsha-heights-dubai",
+        "lock-stock-yas-bay-abu-dhabi"
       ],
       "winnerSide": "home",
       "homeScore": 1,
@@ -290,15 +300,16 @@
       "time": "06:00",
       "timeSuffix": "GST",
       "venueIds": [
-        "anzeera-dubai",
-        "mist-dubai",
-        "lock-stock-business-bay-dubai",
-        "lock-stock-barsha-heights-dubai",
-        "lock-stock-yas-bay-abu-dhabi",
         "mcgettigans-dubai",
         "mcgettigans-abu-dhabi",
+        "anzeera-dubai",
+        "amanos-dubai",
+        "mist-dubai",
         "loui-dubai",
-        "lock-stock-jbr-dubai"
+        "lock-stock-jbr-dubai",
+        "lock-stock-business-bay-dubai",
+        "lock-stock-barsha-heights-dubai",
+        "lock-stock-yas-bay-abu-dhabi"
       ],
       "winnerSide": "home",
       "homeScore": 5,
@@ -318,15 +329,16 @@
       "time": "21:00",
       "timeSuffix": "GST",
       "venueIds": [
-        "anzeera-dubai",
-        "mist-dubai",
-        "lock-stock-business-bay-dubai",
-        "lock-stock-barsha-heights-dubai",
-        "lock-stock-yas-bay-abu-dhabi",
         "mcgettigans-dubai",
         "mcgettigans-abu-dhabi",
+        "anzeera-dubai",
+        "amanos-dubai",
+        "mist-dubai",
         "loui-dubai",
-        "lock-stock-jbr-dubai"
+        "lock-stock-jbr-dubai",
+        "lock-stock-business-bay-dubai",
+        "lock-stock-barsha-heights-dubai",
+        "lock-stock-yas-bay-abu-dhabi"
       ],
       "winnerSide": "home",
       "homeScore": 7,
@@ -346,15 +358,16 @@
       "time": "02:00",
       "timeSuffix": "GST",
       "venueIds": [
-        "anzeera-dubai",
-        "mist-dubai",
-        "lock-stock-business-bay-dubai",
-        "lock-stock-barsha-heights-dubai",
-        "lock-stock-yas-bay-abu-dhabi",
         "mcgettigans-dubai",
         "mcgettigans-abu-dhabi",
+        "anzeera-dubai",
+        "amanos-dubai",
+        "mist-dubai",
         "loui-dubai",
-        "lock-stock-jbr-dubai"
+        "lock-stock-jbr-dubai",
+        "lock-stock-business-bay-dubai",
+        "lock-stock-barsha-heights-dubai",
+        "lock-stock-yas-bay-abu-dhabi"
       ],
       "homeScore": 1,
       "awayScore": 1
@@ -373,15 +386,16 @@
       "time": "05:00",
       "timeSuffix": "GST",
       "venueIds": [
-        "anzeera-dubai",
-        "mist-dubai",
-        "lock-stock-business-bay-dubai",
-        "lock-stock-barsha-heights-dubai",
-        "lock-stock-yas-bay-abu-dhabi",
         "mcgettigans-dubai",
         "mcgettigans-abu-dhabi",
+        "anzeera-dubai",
+        "amanos-dubai",
+        "mist-dubai",
         "loui-dubai",
-        "lock-stock-jbr-dubai"
+        "lock-stock-jbr-dubai",
+        "lock-stock-business-bay-dubai",
+        "lock-stock-barsha-heights-dubai",
+        "lock-stock-yas-bay-abu-dhabi"
       ],
       "homeScore": 2,
       "awayScore": 2
@@ -400,15 +414,16 @@
       "time": "20:00",
       "timeSuffix": "GST",
       "venueIds": [
-        "anzeera-dubai",
-        "mist-dubai",
-        "lock-stock-business-bay-dubai",
-        "lock-stock-barsha-heights-dubai",
-        "lock-stock-yas-bay-abu-dhabi",
         "mcgettigans-dubai",
         "mcgettigans-abu-dhabi",
+        "anzeera-dubai",
+        "amanos-dubai",
+        "mist-dubai",
         "loui-dubai",
-        "lock-stock-jbr-dubai"
+        "lock-stock-jbr-dubai",
+        "lock-stock-business-bay-dubai",
+        "lock-stock-barsha-heights-dubai",
+        "lock-stock-yas-bay-abu-dhabi"
       ],
       "homeScore": 0,
       "awayScore": 0
@@ -427,15 +442,16 @@
       "time": "23:00",
       "timeSuffix": "GST",
       "venueIds": [
-        "anzeera-dubai",
-        "mist-dubai",
-        "lock-stock-business-bay-dubai",
-        "lock-stock-barsha-heights-dubai",
-        "lock-stock-yas-bay-abu-dhabi",
         "mcgettigans-dubai",
         "mcgettigans-abu-dhabi",
+        "anzeera-dubai",
+        "amanos-dubai",
+        "mist-dubai",
         "loui-dubai",
-        "lock-stock-jbr-dubai"
+        "lock-stock-jbr-dubai",
+        "lock-stock-business-bay-dubai",
+        "lock-stock-barsha-heights-dubai",
+        "lock-stock-yas-bay-abu-dhabi"
       ],
       "homeScore": 1,
       "awayScore": 1
@@ -454,16 +470,20 @@
       "time": "02:00",
       "timeSuffix": "GST",
       "venueIds": [
-        "anzeera-dubai",
-        "mist-dubai",
-        "lock-stock-business-bay-dubai",
-        "lock-stock-barsha-heights-dubai",
-        "lock-stock-yas-bay-abu-dhabi",
         "mcgettigans-dubai",
         "mcgettigans-abu-dhabi",
+        "anzeera-dubai",
+        "amanos-dubai",
+        "mist-dubai",
         "loui-dubai",
-        "lock-stock-jbr-dubai"
-      ]
+        "lock-stock-jbr-dubai",
+        "lock-stock-business-bay-dubai",
+        "lock-stock-barsha-heights-dubai",
+        "lock-stock-yas-bay-abu-dhabi"
+      ],
+      "winnerSide": "away",
+      "homeScore": 1,
+      "awayScore": 4
     },
     {
       "matchNo": 19,
@@ -479,16 +499,20 @@
       "time": "05:00",
       "timeSuffix": "GST",
       "venueIds": [
-        "anzeera-dubai",
-        "mist-dubai",
-        "lock-stock-business-bay-dubai",
-        "lock-stock-barsha-heights-dubai",
-        "lock-stock-yas-bay-abu-dhabi",
         "mcgettigans-dubai",
         "mcgettigans-abu-dhabi",
+        "anzeera-dubai",
+        "amanos-dubai",
+        "mist-dubai",
         "loui-dubai",
-        "lock-stock-jbr-dubai"
-      ]
+        "lock-stock-jbr-dubai",
+        "lock-stock-business-bay-dubai",
+        "lock-stock-barsha-heights-dubai",
+        "lock-stock-yas-bay-abu-dhabi"
+      ],
+      "winnerSide": "home",
+      "homeScore": 3,
+      "awayScore": 0
     },
     {
       "matchNo": 20,
@@ -504,16 +528,20 @@
       "time": "08:00",
       "timeSuffix": "GST",
       "venueIds": [
-        "anzeera-dubai",
-        "mist-dubai",
-        "lock-stock-business-bay-dubai",
-        "lock-stock-barsha-heights-dubai",
-        "lock-stock-yas-bay-abu-dhabi",
         "mcgettigans-dubai",
         "mcgettigans-abu-dhabi",
+        "anzeera-dubai",
+        "amanos-dubai",
+        "mist-dubai",
         "loui-dubai",
-        "lock-stock-jbr-dubai"
-      ]
+        "lock-stock-jbr-dubai",
+        "lock-stock-business-bay-dubai",
+        "lock-stock-barsha-heights-dubai",
+        "lock-stock-yas-bay-abu-dhabi"
+      ],
+      "winnerSide": "home",
+      "homeScore": 3,
+      "awayScore": 1
     },
     {
       "matchNo": 17,
@@ -529,16 +557,20 @@
       "time": "23:00",
       "timeSuffix": "GST",
       "venueIds": [
-        "anzeera-dubai",
-        "mist-dubai",
-        "lock-stock-business-bay-dubai",
-        "lock-stock-barsha-heights-dubai",
-        "lock-stock-yas-bay-abu-dhabi",
         "mcgettigans-dubai",
         "mcgettigans-abu-dhabi",
+        "anzeera-dubai",
+        "amanos-dubai",
+        "mist-dubai",
         "loui-dubai",
-        "lock-stock-jbr-dubai"
-      ]
+        "lock-stock-jbr-dubai",
+        "lock-stock-business-bay-dubai",
+        "lock-stock-barsha-heights-dubai",
+        "lock-stock-yas-bay-abu-dhabi"
+      ],
+      "winnerSide": "home",
+      "homeScore": 3,
+      "awayScore": 1
     },
     {
       "matchNo": 22,
@@ -554,16 +586,20 @@
       "time": "00:00",
       "timeSuffix": "GST",
       "venueIds": [
-        "anzeera-dubai",
-        "mist-dubai",
-        "lock-stock-business-bay-dubai",
-        "lock-stock-barsha-heights-dubai",
-        "lock-stock-yas-bay-abu-dhabi",
         "mcgettigans-dubai",
         "mcgettigans-abu-dhabi",
+        "anzeera-dubai",
+        "amanos-dubai",
+        "mist-dubai",
         "loui-dubai",
-        "lock-stock-jbr-dubai"
-      ]
+        "lock-stock-jbr-dubai",
+        "lock-stock-business-bay-dubai",
+        "lock-stock-barsha-heights-dubai",
+        "lock-stock-yas-bay-abu-dhabi"
+      ],
+      "winnerSide": "home",
+      "homeScore": 4,
+      "awayScore": 2
     },
     {
       "matchNo": 21,
@@ -579,16 +615,20 @@
       "time": "03:00",
       "timeSuffix": "GST",
       "venueIds": [
-        "anzeera-dubai",
-        "mist-dubai",
-        "lock-stock-business-bay-dubai",
-        "lock-stock-barsha-heights-dubai",
-        "lock-stock-yas-bay-abu-dhabi",
         "mcgettigans-dubai",
         "mcgettigans-abu-dhabi",
+        "anzeera-dubai",
+        "amanos-dubai",
+        "mist-dubai",
         "loui-dubai",
-        "lock-stock-jbr-dubai"
-      ]
+        "lock-stock-jbr-dubai",
+        "lock-stock-business-bay-dubai",
+        "lock-stock-barsha-heights-dubai",
+        "lock-stock-yas-bay-abu-dhabi"
+      ],
+      "winnerSide": "home",
+      "homeScore": 1,
+      "awayScore": 0
     },
     {
       "matchNo": 24,
@@ -604,16 +644,20 @@
       "time": "06:00",
       "timeSuffix": "GST",
       "venueIds": [
-        "anzeera-dubai",
-        "mist-dubai",
-        "lock-stock-business-bay-dubai",
-        "lock-stock-barsha-heights-dubai",
-        "lock-stock-yas-bay-abu-dhabi",
         "mcgettigans-dubai",
         "mcgettigans-abu-dhabi",
+        "anzeera-dubai",
+        "amanos-dubai",
+        "mist-dubai",
         "loui-dubai",
-        "lock-stock-jbr-dubai"
-      ]
+        "lock-stock-jbr-dubai",
+        "lock-stock-business-bay-dubai",
+        "lock-stock-barsha-heights-dubai",
+        "lock-stock-yas-bay-abu-dhabi"
+      ],
+      "winnerSide": "away",
+      "homeScore": 1,
+      "awayScore": 3
     },
     {
       "matchNo": 23,
@@ -629,16 +673,19 @@
       "time": "21:00",
       "timeSuffix": "GST",
       "venueIds": [
-        "anzeera-dubai",
-        "mist-dubai",
-        "lock-stock-business-bay-dubai",
-        "lock-stock-barsha-heights-dubai",
-        "lock-stock-yas-bay-abu-dhabi",
         "mcgettigans-dubai",
         "mcgettigans-abu-dhabi",
+        "anzeera-dubai",
+        "amanos-dubai",
+        "mist-dubai",
         "loui-dubai",
-        "lock-stock-jbr-dubai"
-      ]
+        "lock-stock-jbr-dubai",
+        "lock-stock-business-bay-dubai",
+        "lock-stock-barsha-heights-dubai",
+        "lock-stock-yas-bay-abu-dhabi"
+      ],
+      "homeScore": 1,
+      "awayScore": 1
     },
     {
       "matchNo": 27,
@@ -654,16 +701,20 @@
       "time": "02:00",
       "timeSuffix": "GST",
       "venueIds": [
-        "anzeera-dubai",
-        "mist-dubai",
-        "lock-stock-business-bay-dubai",
-        "lock-stock-barsha-heights-dubai",
-        "lock-stock-yas-bay-abu-dhabi",
         "mcgettigans-dubai",
         "mcgettigans-abu-dhabi",
+        "anzeera-dubai",
+        "amanos-dubai",
+        "mist-dubai",
         "loui-dubai",
-        "lock-stock-jbr-dubai"
-      ]
+        "lock-stock-jbr-dubai",
+        "lock-stock-business-bay-dubai",
+        "lock-stock-barsha-heights-dubai",
+        "lock-stock-yas-bay-abu-dhabi"
+      ],
+      "winnerSide": "home",
+      "homeScore": 6,
+      "awayScore": 0
     },
     {
       "matchNo": 28,
@@ -679,16 +730,20 @@
       "time": "05:00",
       "timeSuffix": "GST",
       "venueIds": [
-        "anzeera-dubai",
-        "mist-dubai",
-        "lock-stock-business-bay-dubai",
-        "lock-stock-barsha-heights-dubai",
-        "lock-stock-yas-bay-abu-dhabi",
         "mcgettigans-dubai",
         "mcgettigans-abu-dhabi",
+        "anzeera-dubai",
+        "amanos-dubai",
+        "mist-dubai",
         "loui-dubai",
-        "lock-stock-jbr-dubai"
-      ]
+        "lock-stock-jbr-dubai",
+        "lock-stock-business-bay-dubai",
+        "lock-stock-barsha-heights-dubai",
+        "lock-stock-yas-bay-abu-dhabi"
+      ],
+      "winnerSide": "home",
+      "homeScore": 1,
+      "awayScore": 0
     },
     {
       "matchNo": 25,
@@ -704,16 +759,19 @@
       "time": "20:00",
       "timeSuffix": "GST",
       "venueIds": [
-        "anzeera-dubai",
-        "mist-dubai",
-        "lock-stock-business-bay-dubai",
-        "lock-stock-barsha-heights-dubai",
-        "lock-stock-yas-bay-abu-dhabi",
         "mcgettigans-dubai",
         "mcgettigans-abu-dhabi",
+        "anzeera-dubai",
+        "amanos-dubai",
+        "mist-dubai",
         "loui-dubai",
-        "lock-stock-jbr-dubai"
-      ]
+        "lock-stock-jbr-dubai",
+        "lock-stock-business-bay-dubai",
+        "lock-stock-barsha-heights-dubai",
+        "lock-stock-yas-bay-abu-dhabi"
+      ],
+      "homeScore": 1,
+      "awayScore": 1
     },
     {
       "matchNo": 26,
@@ -729,14 +787,20 @@
       "time": "23:00",
       "timeSuffix": "GST",
       "venueIds": [
-        "mist-dubai",
-        "anzeera-dubai",
         "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "anzeera-dubai",
+        "amanos-dubai",
+        "mist-dubai",
         "loui-dubai",
         "lock-stock-jbr-dubai",
         "lock-stock-business-bay-dubai",
-        "lock-stock-barsha-heights-dubai"
-      ]
+        "lock-stock-barsha-heights-dubai",
+        "lock-stock-yas-bay-abu-dhabi"
+      ],
+      "winnerSide": "home",
+      "homeScore": 4,
+      "awayScore": 1
     },
     {
       "matchNo": 30,
@@ -752,16 +816,20 @@
       "time": "02:00",
       "timeSuffix": "GST",
       "venueIds": [
-        "anzeera-dubai",
-        "mist-dubai",
-        "lock-stock-business-bay-dubai",
-        "lock-stock-barsha-heights-dubai",
-        "lock-stock-yas-bay-abu-dhabi",
         "mcgettigans-dubai",
         "mcgettigans-abu-dhabi",
+        "anzeera-dubai",
+        "amanos-dubai",
+        "mist-dubai",
         "loui-dubai",
-        "lock-stock-jbr-dubai"
-      ]
+        "lock-stock-jbr-dubai",
+        "lock-stock-business-bay-dubai",
+        "lock-stock-barsha-heights-dubai",
+        "lock-stock-yas-bay-abu-dhabi"
+      ],
+      "winnerSide": "away",
+      "homeScore": 0,
+      "awayScore": 1
     },
     {
       "matchNo": 29,
@@ -777,16 +845,20 @@
       "time": "04:30",
       "timeSuffix": "GST",
       "venueIds": [
-        "anzeera-dubai",
-        "mist-dubai",
-        "lock-stock-business-bay-dubai",
-        "lock-stock-barsha-heights-dubai",
-        "lock-stock-yas-bay-abu-dhabi",
         "mcgettigans-dubai",
         "mcgettigans-abu-dhabi",
+        "anzeera-dubai",
+        "amanos-dubai",
+        "mist-dubai",
         "loui-dubai",
-        "lock-stock-jbr-dubai"
-      ]
+        "lock-stock-jbr-dubai",
+        "lock-stock-business-bay-dubai",
+        "lock-stock-barsha-heights-dubai",
+        "lock-stock-yas-bay-abu-dhabi"
+      ],
+      "winnerSide": "home",
+      "homeScore": 3,
+      "awayScore": 0
     },
     {
       "matchNo": 31,
@@ -802,16 +874,20 @@
       "time": "07:00",
       "timeSuffix": "GST",
       "venueIds": [
-        "anzeera-dubai",
-        "mist-dubai",
-        "lock-stock-business-bay-dubai",
-        "lock-stock-barsha-heights-dubai",
-        "lock-stock-yas-bay-abu-dhabi",
         "mcgettigans-dubai",
         "mcgettigans-abu-dhabi",
+        "anzeera-dubai",
+        "amanos-dubai",
+        "mist-dubai",
         "loui-dubai",
-        "lock-stock-jbr-dubai"
-      ]
+        "lock-stock-jbr-dubai",
+        "lock-stock-business-bay-dubai",
+        "lock-stock-barsha-heights-dubai",
+        "lock-stock-yas-bay-abu-dhabi"
+      ],
+      "winnerSide": "away",
+      "homeScore": 0,
+      "awayScore": 1
     },
     {
       "matchNo": 32,
@@ -827,16 +903,20 @@
       "time": "23:00",
       "timeSuffix": "GST",
       "venueIds": [
-        "anzeera-dubai",
-        "mist-dubai",
-        "lock-stock-business-bay-dubai",
-        "lock-stock-barsha-heights-dubai",
-        "lock-stock-yas-bay-abu-dhabi",
         "mcgettigans-dubai",
         "mcgettigans-abu-dhabi",
+        "anzeera-dubai",
+        "amanos-dubai",
+        "mist-dubai",
         "loui-dubai",
-        "lock-stock-jbr-dubai"
-      ]
+        "lock-stock-jbr-dubai",
+        "lock-stock-business-bay-dubai",
+        "lock-stock-barsha-heights-dubai",
+        "lock-stock-yas-bay-abu-dhabi"
+      ],
+      "winnerSide": "home",
+      "homeScore": 2,
+      "awayScore": 0
     },
     {
       "matchNo": 33,
@@ -852,14 +932,20 @@
       "time": "00:00",
       "timeSuffix": "GST",
       "venueIds": [
-        "mist-dubai",
-        "anzeera-dubai",
         "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "anzeera-dubai",
+        "amanos-dubai",
+        "mist-dubai",
         "loui-dubai",
         "lock-stock-jbr-dubai",
         "lock-stock-business-bay-dubai",
-        "lock-stock-barsha-heights-dubai"
-      ]
+        "lock-stock-barsha-heights-dubai",
+        "lock-stock-yas-bay-abu-dhabi"
+      ],
+      "winnerSide": "home",
+      "homeScore": 2,
+      "awayScore": 1
     },
     {
       "matchNo": 34,
@@ -875,16 +961,19 @@
       "time": "04:00",
       "timeSuffix": "GST",
       "venueIds": [
-        "anzeera-dubai",
-        "mist-dubai",
-        "lock-stock-business-bay-dubai",
-        "lock-stock-barsha-heights-dubai",
-        "lock-stock-yas-bay-abu-dhabi",
         "mcgettigans-dubai",
         "mcgettigans-abu-dhabi",
+        "anzeera-dubai",
+        "amanos-dubai",
+        "mist-dubai",
         "loui-dubai",
-        "lock-stock-jbr-dubai"
-      ]
+        "lock-stock-jbr-dubai",
+        "lock-stock-business-bay-dubai",
+        "lock-stock-barsha-heights-dubai",
+        "lock-stock-yas-bay-abu-dhabi"
+      ],
+      "homeScore": 0,
+      "awayScore": 0
     },
     {
       "matchNo": 36,
@@ -900,16 +989,20 @@
       "time": "08:00",
       "timeSuffix": "GST",
       "venueIds": [
-        "anzeera-dubai",
-        "mist-dubai",
-        "lock-stock-business-bay-dubai",
-        "lock-stock-barsha-heights-dubai",
-        "lock-stock-yas-bay-abu-dhabi",
         "mcgettigans-dubai",
         "mcgettigans-abu-dhabi",
+        "anzeera-dubai",
+        "amanos-dubai",
+        "mist-dubai",
         "loui-dubai",
-        "lock-stock-jbr-dubai"
-      ]
+        "lock-stock-jbr-dubai",
+        "lock-stock-business-bay-dubai",
+        "lock-stock-barsha-heights-dubai",
+        "lock-stock-yas-bay-abu-dhabi"
+      ],
+      "winnerSide": "away",
+      "homeScore": 0,
+      "awayScore": 4
     },
     {
       "matchNo": 35,
@@ -925,16 +1018,20 @@
       "time": "21:00",
       "timeSuffix": "GST",
       "venueIds": [
-        "anzeera-dubai",
-        "mist-dubai",
-        "lock-stock-business-bay-dubai",
-        "lock-stock-barsha-heights-dubai",
-        "lock-stock-yas-bay-abu-dhabi",
         "mcgettigans-dubai",
         "mcgettigans-abu-dhabi",
+        "anzeera-dubai",
+        "amanos-dubai",
+        "mist-dubai",
         "loui-dubai",
-        "lock-stock-jbr-dubai"
-      ]
+        "lock-stock-jbr-dubai",
+        "lock-stock-business-bay-dubai",
+        "lock-stock-barsha-heights-dubai",
+        "lock-stock-yas-bay-abu-dhabi"
+      ],
+      "winnerSide": "home",
+      "homeScore": 5,
+      "awayScore": 1
     },
     {
       "matchNo": 37,
@@ -950,16 +1047,19 @@
       "time": "02:00",
       "timeSuffix": "GST",
       "venueIds": [
-        "anzeera-dubai",
-        "mist-dubai",
-        "lock-stock-business-bay-dubai",
-        "lock-stock-barsha-heights-dubai",
-        "lock-stock-yas-bay-abu-dhabi",
         "mcgettigans-dubai",
         "mcgettigans-abu-dhabi",
+        "anzeera-dubai",
+        "amanos-dubai",
+        "mist-dubai",
         "loui-dubai",
-        "lock-stock-jbr-dubai"
-      ]
+        "lock-stock-jbr-dubai",
+        "lock-stock-business-bay-dubai",
+        "lock-stock-barsha-heights-dubai",
+        "lock-stock-yas-bay-abu-dhabi"
+      ],
+      "homeScore": 2,
+      "awayScore": 2
     },
     {
       "matchNo": 40,
@@ -975,16 +1075,20 @@
       "time": "05:00",
       "timeSuffix": "GST",
       "venueIds": [
-        "anzeera-dubai",
-        "mist-dubai",
-        "lock-stock-business-bay-dubai",
-        "lock-stock-barsha-heights-dubai",
-        "lock-stock-yas-bay-abu-dhabi",
         "mcgettigans-dubai",
         "mcgettigans-abu-dhabi",
+        "anzeera-dubai",
+        "amanos-dubai",
+        "mist-dubai",
         "loui-dubai",
-        "lock-stock-jbr-dubai"
-      ]
+        "lock-stock-jbr-dubai",
+        "lock-stock-business-bay-dubai",
+        "lock-stock-barsha-heights-dubai",
+        "lock-stock-yas-bay-abu-dhabi"
+      ],
+      "winnerSide": "away",
+      "homeScore": 1,
+      "awayScore": 3
     },
     {
       "matchNo": 38,
@@ -1000,16 +1104,20 @@
       "time": "20:00",
       "timeSuffix": "GST",
       "venueIds": [
-        "anzeera-dubai",
-        "mist-dubai",
-        "lock-stock-business-bay-dubai",
-        "lock-stock-barsha-heights-dubai",
-        "lock-stock-yas-bay-abu-dhabi",
         "mcgettigans-dubai",
         "mcgettigans-abu-dhabi",
+        "anzeera-dubai",
+        "amanos-dubai",
+        "mist-dubai",
         "loui-dubai",
-        "lock-stock-jbr-dubai"
-      ]
+        "lock-stock-jbr-dubai",
+        "lock-stock-business-bay-dubai",
+        "lock-stock-barsha-heights-dubai",
+        "lock-stock-yas-bay-abu-dhabi"
+      ],
+      "winnerSide": "home",
+      "homeScore": 4,
+      "awayScore": 0
     },
     {
       "matchNo": 39,
@@ -1025,16 +1133,19 @@
       "time": "23:00",
       "timeSuffix": "GST",
       "venueIds": [
-        "anzeera-dubai",
-        "mist-dubai",
-        "lock-stock-business-bay-dubai",
-        "lock-stock-barsha-heights-dubai",
-        "lock-stock-yas-bay-abu-dhabi",
         "mcgettigans-dubai",
         "mcgettigans-abu-dhabi",
+        "anzeera-dubai",
+        "amanos-dubai",
+        "mist-dubai",
         "loui-dubai",
-        "lock-stock-jbr-dubai"
-      ]
+        "lock-stock-jbr-dubai",
+        "lock-stock-business-bay-dubai",
+        "lock-stock-barsha-heights-dubai",
+        "lock-stock-yas-bay-abu-dhabi"
+      ],
+      "homeScore": 0,
+      "awayScore": 0
     },
     {
       "matchNo": 42,
@@ -1050,16 +1161,20 @@
       "time": "01:00",
       "timeSuffix": "GST",
       "venueIds": [
-        "anzeera-dubai",
-        "mist-dubai",
-        "lock-stock-business-bay-dubai",
-        "lock-stock-barsha-heights-dubai",
-        "lock-stock-yas-bay-abu-dhabi",
         "mcgettigans-dubai",
         "mcgettigans-abu-dhabi",
+        "anzeera-dubai",
+        "amanos-dubai",
+        "mist-dubai",
         "loui-dubai",
-        "lock-stock-jbr-dubai"
-      ]
+        "lock-stock-jbr-dubai",
+        "lock-stock-business-bay-dubai",
+        "lock-stock-barsha-heights-dubai",
+        "lock-stock-yas-bay-abu-dhabi"
+      ],
+      "winnerSide": "home",
+      "homeScore": 3,
+      "awayScore": 0
     },
     {
       "matchNo": 41,
@@ -1075,16 +1190,20 @@
       "time": "04:00",
       "timeSuffix": "GST",
       "venueIds": [
-        "anzeera-dubai",
-        "mist-dubai",
-        "lock-stock-business-bay-dubai",
-        "lock-stock-barsha-heights-dubai",
-        "lock-stock-yas-bay-abu-dhabi",
         "mcgettigans-dubai",
         "mcgettigans-abu-dhabi",
+        "anzeera-dubai",
+        "amanos-dubai",
+        "mist-dubai",
         "loui-dubai",
-        "lock-stock-jbr-dubai"
-      ]
+        "lock-stock-jbr-dubai",
+        "lock-stock-business-bay-dubai",
+        "lock-stock-barsha-heights-dubai",
+        "lock-stock-yas-bay-abu-dhabi"
+      ],
+      "winnerSide": "home",
+      "homeScore": 3,
+      "awayScore": 2
     },
     {
       "matchNo": 44,
@@ -1100,14 +1219,20 @@
       "time": "07:00",
       "timeSuffix": "GST",
       "venueIds": [
-        "mist-dubai",
-        "anzeera-dubai",
         "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "anzeera-dubai",
+        "amanos-dubai",
+        "mist-dubai",
         "loui-dubai",
         "lock-stock-jbr-dubai",
         "lock-stock-business-bay-dubai",
-        "lock-stock-barsha-heights-dubai"
-      ]
+        "lock-stock-barsha-heights-dubai",
+        "lock-stock-yas-bay-abu-dhabi"
+      ],
+      "winnerSide": "away",
+      "homeScore": 1,
+      "awayScore": 2
     },
     {
       "matchNo": 43,
@@ -1123,16 +1248,20 @@
       "time": "21:00",
       "timeSuffix": "GST",
       "venueIds": [
-        "anzeera-dubai",
-        "mist-dubai",
-        "lock-stock-business-bay-dubai",
-        "lock-stock-barsha-heights-dubai",
-        "lock-stock-yas-bay-abu-dhabi",
         "mcgettigans-dubai",
         "mcgettigans-abu-dhabi",
+        "anzeera-dubai",
+        "amanos-dubai",
+        "mist-dubai",
         "loui-dubai",
-        "lock-stock-jbr-dubai"
-      ]
+        "lock-stock-jbr-dubai",
+        "lock-stock-business-bay-dubai",
+        "lock-stock-barsha-heights-dubai",
+        "lock-stock-yas-bay-abu-dhabi"
+      ],
+      "winnerSide": "home",
+      "homeScore": 2,
+      "awayScore": 0
     },
     {
       "matchNo": 45,
@@ -1148,16 +1277,19 @@
       "time": "00:00",
       "timeSuffix": "GST",
       "venueIds": [
-        "anzeera-dubai",
-        "mist-dubai",
-        "lock-stock-business-bay-dubai",
-        "lock-stock-barsha-heights-dubai",
-        "lock-stock-yas-bay-abu-dhabi",
         "mcgettigans-dubai",
         "mcgettigans-abu-dhabi",
+        "anzeera-dubai",
+        "amanos-dubai",
+        "mist-dubai",
         "loui-dubai",
-        "lock-stock-jbr-dubai"
-      ]
+        "lock-stock-jbr-dubai",
+        "lock-stock-business-bay-dubai",
+        "lock-stock-barsha-heights-dubai",
+        "lock-stock-yas-bay-abu-dhabi"
+      ],
+      "homeScore": 0,
+      "awayScore": 0
     },
     {
       "matchNo": 46,
@@ -1173,16 +1305,20 @@
       "time": "03:00",
       "timeSuffix": "GST",
       "venueIds": [
-        "anzeera-dubai",
-        "mist-dubai",
-        "lock-stock-business-bay-dubai",
-        "lock-stock-barsha-heights-dubai",
-        "lock-stock-yas-bay-abu-dhabi",
         "mcgettigans-dubai",
         "mcgettigans-abu-dhabi",
+        "anzeera-dubai",
+        "amanos-dubai",
+        "mist-dubai",
         "loui-dubai",
-        "lock-stock-jbr-dubai"
-      ]
+        "lock-stock-jbr-dubai",
+        "lock-stock-business-bay-dubai",
+        "lock-stock-barsha-heights-dubai",
+        "lock-stock-yas-bay-abu-dhabi"
+      ],
+      "winnerSide": "away",
+      "homeScore": 0,
+      "awayScore": 1
     },
     {
       "matchNo": 48,
@@ -1198,16 +1334,20 @@
       "time": "06:00",
       "timeSuffix": "GST",
       "venueIds": [
-        "anzeera-dubai",
-        "mist-dubai",
-        "lock-stock-business-bay-dubai",
-        "lock-stock-barsha-heights-dubai",
-        "lock-stock-yas-bay-abu-dhabi",
         "mcgettigans-dubai",
         "mcgettigans-abu-dhabi",
+        "anzeera-dubai",
+        "amanos-dubai",
+        "mist-dubai",
         "loui-dubai",
-        "lock-stock-jbr-dubai"
-      ]
+        "lock-stock-jbr-dubai",
+        "lock-stock-business-bay-dubai",
+        "lock-stock-barsha-heights-dubai",
+        "lock-stock-yas-bay-abu-dhabi"
+      ],
+      "winnerSide": "home",
+      "homeScore": 1,
+      "awayScore": 0
     },
     {
       "matchNo": 47,
@@ -1223,16 +1363,20 @@
       "time": "21:00",
       "timeSuffix": "GST",
       "venueIds": [
-        "anzeera-dubai",
-        "mist-dubai",
-        "lock-stock-business-bay-dubai",
-        "lock-stock-barsha-heights-dubai",
-        "lock-stock-yas-bay-abu-dhabi",
         "mcgettigans-dubai",
         "mcgettigans-abu-dhabi",
+        "anzeera-dubai",
+        "amanos-dubai",
+        "mist-dubai",
         "loui-dubai",
-        "lock-stock-jbr-dubai"
-      ]
+        "lock-stock-jbr-dubai",
+        "lock-stock-business-bay-dubai",
+        "lock-stock-barsha-heights-dubai",
+        "lock-stock-yas-bay-abu-dhabi"
+      ],
+      "winnerSide": "home",
+      "homeScore": 2,
+      "awayScore": 1
     },
     {
       "matchNo": 49,
@@ -1248,16 +1392,20 @@
       "time": "02:00",
       "timeSuffix": "GST",
       "venueIds": [
-        "anzeera-dubai",
-        "mist-dubai",
-        "lock-stock-business-bay-dubai",
-        "lock-stock-barsha-heights-dubai",
-        "lock-stock-yas-bay-abu-dhabi",
         "mcgettigans-dubai",
         "mcgettigans-abu-dhabi",
+        "anzeera-dubai",
+        "amanos-dubai",
+        "mist-dubai",
         "loui-dubai",
-        "lock-stock-jbr-dubai"
-      ]
+        "lock-stock-jbr-dubai",
+        "lock-stock-business-bay-dubai",
+        "lock-stock-barsha-heights-dubai",
+        "lock-stock-yas-bay-abu-dhabi"
+      ],
+      "winnerSide": "away",
+      "homeScore": 0,
+      "awayScore": 3
     },
     {
       "matchNo": 50,
@@ -1273,16 +1421,20 @@
       "time": "02:00",
       "timeSuffix": "GST",
       "venueIds": [
-        "anzeera-dubai",
-        "mist-dubai",
-        "lock-stock-business-bay-dubai",
-        "lock-stock-barsha-heights-dubai",
-        "lock-stock-yas-bay-abu-dhabi",
         "mcgettigans-dubai",
         "mcgettigans-abu-dhabi",
+        "anzeera-dubai",
+        "amanos-dubai",
+        "mist-dubai",
         "loui-dubai",
-        "lock-stock-jbr-dubai"
-      ]
+        "lock-stock-jbr-dubai",
+        "lock-stock-business-bay-dubai",
+        "lock-stock-barsha-heights-dubai",
+        "lock-stock-yas-bay-abu-dhabi"
+      ],
+      "winnerSide": "home",
+      "homeScore": 4,
+      "awayScore": 2
     },
     {
       "matchNo": 53,
@@ -1298,16 +1450,20 @@
       "time": "05:00",
       "timeSuffix": "GST",
       "venueIds": [
-        "anzeera-dubai",
-        "mist-dubai",
-        "lock-stock-business-bay-dubai",
-        "lock-stock-barsha-heights-dubai",
-        "lock-stock-yas-bay-abu-dhabi",
         "mcgettigans-dubai",
         "mcgettigans-abu-dhabi",
+        "anzeera-dubai",
+        "amanos-dubai",
+        "mist-dubai",
         "loui-dubai",
-        "lock-stock-jbr-dubai"
-      ]
+        "lock-stock-jbr-dubai",
+        "lock-stock-business-bay-dubai",
+        "lock-stock-barsha-heights-dubai",
+        "lock-stock-yas-bay-abu-dhabi"
+      ],
+      "winnerSide": "away",
+      "homeScore": 0,
+      "awayScore": 3
     },
     {
       "matchNo": 54,
@@ -1323,16 +1479,20 @@
       "time": "05:00",
       "timeSuffix": "GST",
       "venueIds": [
-        "anzeera-dubai",
-        "mist-dubai",
-        "lock-stock-business-bay-dubai",
-        "lock-stock-barsha-heights-dubai",
-        "lock-stock-yas-bay-abu-dhabi",
         "mcgettigans-dubai",
         "mcgettigans-abu-dhabi",
+        "anzeera-dubai",
+        "amanos-dubai",
+        "mist-dubai",
         "loui-dubai",
-        "lock-stock-jbr-dubai"
-      ]
+        "lock-stock-jbr-dubai",
+        "lock-stock-business-bay-dubai",
+        "lock-stock-barsha-heights-dubai",
+        "lock-stock-yas-bay-abu-dhabi"
+      ],
+      "winnerSide": "home",
+      "homeScore": 1,
+      "awayScore": 0
     },
     {
       "matchNo": 51,
@@ -1348,16 +1508,20 @@
       "time": "23:00",
       "timeSuffix": "GST",
       "venueIds": [
-        "anzeera-dubai",
-        "mist-dubai",
-        "lock-stock-business-bay-dubai",
-        "lock-stock-barsha-heights-dubai",
-        "lock-stock-yas-bay-abu-dhabi",
         "mcgettigans-dubai",
         "mcgettigans-abu-dhabi",
+        "anzeera-dubai",
+        "amanos-dubai",
+        "mist-dubai",
         "loui-dubai",
-        "lock-stock-jbr-dubai"
-      ]
+        "lock-stock-jbr-dubai",
+        "lock-stock-business-bay-dubai",
+        "lock-stock-barsha-heights-dubai",
+        "lock-stock-yas-bay-abu-dhabi"
+      ],
+      "winnerSide": "home",
+      "homeScore": 2,
+      "awayScore": 1
     },
     {
       "matchNo": 52,
@@ -1373,16 +1537,20 @@
       "time": "23:00",
       "timeSuffix": "GST",
       "venueIds": [
-        "anzeera-dubai",
-        "mist-dubai",
-        "lock-stock-business-bay-dubai",
-        "lock-stock-barsha-heights-dubai",
-        "lock-stock-yas-bay-abu-dhabi",
         "mcgettigans-dubai",
         "mcgettigans-abu-dhabi",
+        "anzeera-dubai",
+        "amanos-dubai",
+        "mist-dubai",
         "loui-dubai",
-        "lock-stock-jbr-dubai"
-      ]
+        "lock-stock-jbr-dubai",
+        "lock-stock-business-bay-dubai",
+        "lock-stock-barsha-heights-dubai",
+        "lock-stock-yas-bay-abu-dhabi"
+      ],
+      "winnerSide": "home",
+      "homeScore": 3,
+      "awayScore": 1
     },
     {
       "matchNo": 55,
@@ -1398,16 +1566,20 @@
       "time": "00:00",
       "timeSuffix": "GST",
       "venueIds": [
-        "anzeera-dubai",
-        "mist-dubai",
-        "lock-stock-business-bay-dubai",
-        "lock-stock-barsha-heights-dubai",
-        "lock-stock-yas-bay-abu-dhabi",
         "mcgettigans-dubai",
         "mcgettigans-abu-dhabi",
+        "anzeera-dubai",
+        "amanos-dubai",
+        "mist-dubai",
         "loui-dubai",
-        "lock-stock-jbr-dubai"
-      ]
+        "lock-stock-jbr-dubai",
+        "lock-stock-business-bay-dubai",
+        "lock-stock-barsha-heights-dubai",
+        "lock-stock-yas-bay-abu-dhabi"
+      ],
+      "winnerSide": "away",
+      "homeScore": 0,
+      "awayScore": 2
     },
     {
       "matchNo": 56,
@@ -1423,16 +1595,20 @@
       "time": "00:00",
       "timeSuffix": "GST",
       "venueIds": [
-        "anzeera-dubai",
-        "mist-dubai",
-        "lock-stock-business-bay-dubai",
-        "lock-stock-barsha-heights-dubai",
-        "lock-stock-yas-bay-abu-dhabi",
         "mcgettigans-dubai",
         "mcgettigans-abu-dhabi",
+        "anzeera-dubai",
+        "amanos-dubai",
+        "mist-dubai",
         "loui-dubai",
-        "lock-stock-jbr-dubai"
-      ]
+        "lock-stock-jbr-dubai",
+        "lock-stock-business-bay-dubai",
+        "lock-stock-barsha-heights-dubai",
+        "lock-stock-yas-bay-abu-dhabi"
+      ],
+      "winnerSide": "home",
+      "homeScore": 2,
+      "awayScore": 1
     },
     {
       "matchNo": 57,
@@ -1448,16 +1624,19 @@
       "time": "03:00",
       "timeSuffix": "GST",
       "venueIds": [
-        "anzeera-dubai",
-        "mist-dubai",
-        "lock-stock-business-bay-dubai",
-        "lock-stock-barsha-heights-dubai",
-        "lock-stock-yas-bay-abu-dhabi",
         "mcgettigans-dubai",
         "mcgettigans-abu-dhabi",
+        "anzeera-dubai",
+        "amanos-dubai",
+        "mist-dubai",
         "loui-dubai",
-        "lock-stock-jbr-dubai"
-      ]
+        "lock-stock-jbr-dubai",
+        "lock-stock-business-bay-dubai",
+        "lock-stock-barsha-heights-dubai",
+        "lock-stock-yas-bay-abu-dhabi"
+      ],
+      "homeScore": 1,
+      "awayScore": 1
     },
     {
       "matchNo": 58,
@@ -1473,16 +1652,20 @@
       "time": "03:00",
       "timeSuffix": "GST",
       "venueIds": [
-        "anzeera-dubai",
-        "mist-dubai",
-        "lock-stock-business-bay-dubai",
-        "lock-stock-barsha-heights-dubai",
-        "lock-stock-yas-bay-abu-dhabi",
         "mcgettigans-dubai",
         "mcgettigans-abu-dhabi",
+        "anzeera-dubai",
+        "amanos-dubai",
+        "mist-dubai",
         "loui-dubai",
-        "lock-stock-jbr-dubai"
-      ]
+        "lock-stock-jbr-dubai",
+        "lock-stock-business-bay-dubai",
+        "lock-stock-barsha-heights-dubai",
+        "lock-stock-yas-bay-abu-dhabi"
+      ],
+      "winnerSide": "away",
+      "homeScore": 1,
+      "awayScore": 3
     },
     {
       "matchNo": 59,
@@ -1498,16 +1681,20 @@
       "time": "06:00",
       "timeSuffix": "GST",
       "venueIds": [
-        "anzeera-dubai",
-        "mist-dubai",
-        "lock-stock-business-bay-dubai",
-        "lock-stock-barsha-heights-dubai",
-        "lock-stock-yas-bay-abu-dhabi",
         "mcgettigans-dubai",
         "mcgettigans-abu-dhabi",
+        "anzeera-dubai",
+        "amanos-dubai",
+        "mist-dubai",
         "loui-dubai",
-        "lock-stock-jbr-dubai"
-      ]
+        "lock-stock-jbr-dubai",
+        "lock-stock-business-bay-dubai",
+        "lock-stock-barsha-heights-dubai",
+        "lock-stock-yas-bay-abu-dhabi"
+      ],
+      "winnerSide": "home",
+      "homeScore": 3,
+      "awayScore": 2
     },
     {
       "matchNo": 60,
@@ -1523,16 +1710,19 @@
       "time": "06:00",
       "timeSuffix": "GST",
       "venueIds": [
-        "anzeera-dubai",
-        "mist-dubai",
-        "lock-stock-business-bay-dubai",
-        "lock-stock-barsha-heights-dubai",
-        "lock-stock-yas-bay-abu-dhabi",
         "mcgettigans-dubai",
         "mcgettigans-abu-dhabi",
+        "anzeera-dubai",
+        "amanos-dubai",
+        "mist-dubai",
         "loui-dubai",
-        "lock-stock-jbr-dubai"
-      ]
+        "lock-stock-jbr-dubai",
+        "lock-stock-business-bay-dubai",
+        "lock-stock-barsha-heights-dubai",
+        "lock-stock-yas-bay-abu-dhabi"
+      ],
+      "homeScore": 0,
+      "awayScore": 0
     },
     {
       "matchNo": 65,
@@ -1548,14 +1738,19 @@
       "time": "04:00",
       "timeSuffix": "GST",
       "venueIds": [
-        "mist-dubai",
-        "anzeera-dubai",
         "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "anzeera-dubai",
+        "amanos-dubai",
+        "mist-dubai",
         "loui-dubai",
         "lock-stock-jbr-dubai",
         "lock-stock-business-bay-dubai",
-        "lock-stock-barsha-heights-dubai"
-      ]
+        "lock-stock-barsha-heights-dubai",
+        "lock-stock-yas-bay-abu-dhabi"
+      ],
+      "homeScore": 0,
+      "awayScore": 0
     },
     {
       "matchNo": 66,
@@ -1571,14 +1766,20 @@
       "time": "04:00",
       "timeSuffix": "GST",
       "venueIds": [
-        "mist-dubai",
-        "anzeera-dubai",
         "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "anzeera-dubai",
+        "amanos-dubai",
+        "mist-dubai",
         "loui-dubai",
         "lock-stock-jbr-dubai",
         "lock-stock-business-bay-dubai",
-        "lock-stock-barsha-heights-dubai"
-      ]
+        "lock-stock-barsha-heights-dubai",
+        "lock-stock-yas-bay-abu-dhabi"
+      ],
+      "winnerSide": "away",
+      "homeScore": 0,
+      "awayScore": 1
     },
     {
       "matchNo": 63,
@@ -1594,14 +1795,19 @@
       "time": "07:00",
       "timeSuffix": "GST",
       "venueIds": [
-        "mist-dubai",
-        "anzeera-dubai",
         "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "anzeera-dubai",
+        "amanos-dubai",
+        "mist-dubai",
         "loui-dubai",
         "lock-stock-jbr-dubai",
         "lock-stock-business-bay-dubai",
-        "lock-stock-barsha-heights-dubai"
-      ]
+        "lock-stock-barsha-heights-dubai",
+        "lock-stock-yas-bay-abu-dhabi"
+      ],
+      "homeScore": 1,
+      "awayScore": 1
     },
     {
       "matchNo": 64,
@@ -1617,14 +1823,20 @@
       "time": "07:00",
       "timeSuffix": "GST",
       "venueIds": [
-        "mist-dubai",
-        "anzeera-dubai",
         "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "anzeera-dubai",
+        "amanos-dubai",
+        "mist-dubai",
         "loui-dubai",
         "lock-stock-jbr-dubai",
         "lock-stock-business-bay-dubai",
-        "lock-stock-barsha-heights-dubai"
-      ]
+        "lock-stock-barsha-heights-dubai",
+        "lock-stock-yas-bay-abu-dhabi"
+      ],
+      "winnerSide": "away",
+      "homeScore": 1,
+      "awayScore": 5
     },
     {
       "matchNo": 61,
@@ -1640,14 +1852,20 @@
       "time": "23:00",
       "timeSuffix": "GST",
       "venueIds": [
-        "mist-dubai",
-        "anzeera-dubai",
         "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "anzeera-dubai",
+        "amanos-dubai",
+        "mist-dubai",
         "loui-dubai",
         "lock-stock-jbr-dubai",
         "lock-stock-business-bay-dubai",
-        "lock-stock-barsha-heights-dubai"
-      ]
+        "lock-stock-barsha-heights-dubai",
+        "lock-stock-yas-bay-abu-dhabi"
+      ],
+      "winnerSide": "away",
+      "homeScore": 1,
+      "awayScore": 4
     },
     {
       "matchNo": 62,
@@ -1663,14 +1881,20 @@
       "time": "23:00",
       "timeSuffix": "GST",
       "venueIds": [
-        "mist-dubai",
-        "anzeera-dubai",
         "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "anzeera-dubai",
+        "amanos-dubai",
+        "mist-dubai",
         "loui-dubai",
         "lock-stock-jbr-dubai",
         "lock-stock-business-bay-dubai",
-        "lock-stock-barsha-heights-dubai"
-      ]
+        "lock-stock-barsha-heights-dubai",
+        "lock-stock-yas-bay-abu-dhabi"
+      ],
+      "winnerSide": "home",
+      "homeScore": 5,
+      "awayScore": 0
     },
     {
       "matchNo": 67,
@@ -1686,14 +1910,20 @@
       "time": "01:00",
       "timeSuffix": "GST",
       "venueIds": [
-        "mist-dubai",
-        "anzeera-dubai",
         "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "anzeera-dubai",
+        "amanos-dubai",
+        "mist-dubai",
         "loui-dubai",
         "lock-stock-jbr-dubai",
         "lock-stock-business-bay-dubai",
-        "lock-stock-barsha-heights-dubai"
-      ]
+        "lock-stock-barsha-heights-dubai",
+        "lock-stock-yas-bay-abu-dhabi"
+      ],
+      "winnerSide": "away",
+      "homeScore": 0,
+      "awayScore": 2
     },
     {
       "matchNo": 68,
@@ -1709,14 +1939,20 @@
       "time": "01:00",
       "timeSuffix": "GST",
       "venueIds": [
-        "mist-dubai",
-        "anzeera-dubai",
         "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "anzeera-dubai",
+        "amanos-dubai",
+        "mist-dubai",
         "loui-dubai",
         "lock-stock-jbr-dubai",
         "lock-stock-business-bay-dubai",
-        "lock-stock-barsha-heights-dubai"
-      ]
+        "lock-stock-barsha-heights-dubai",
+        "lock-stock-yas-bay-abu-dhabi"
+      ],
+      "winnerSide": "home",
+      "homeScore": 2,
+      "awayScore": 1
     },
     {
       "matchNo": 71,
@@ -1732,14 +1968,20 @@
       "time": "03:30",
       "timeSuffix": "GST",
       "venueIds": [
-        "mist-dubai",
-        "anzeera-dubai",
         "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "anzeera-dubai",
+        "amanos-dubai",
+        "mist-dubai",
         "loui-dubai",
         "lock-stock-jbr-dubai",
         "lock-stock-business-bay-dubai",
-        "lock-stock-barsha-heights-dubai"
-      ]
+        "lock-stock-barsha-heights-dubai",
+        "lock-stock-yas-bay-abu-dhabi"
+      ],
+      "winnerSide": "home",
+      "homeScore": 1,
+      "awayScore": 0
     },
     {
       "matchNo": 72,
@@ -1755,14 +1997,20 @@
       "time": "03:30",
       "timeSuffix": "GST",
       "venueIds": [
-        "mist-dubai",
-        "anzeera-dubai",
         "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "anzeera-dubai",
+        "amanos-dubai",
+        "mist-dubai",
         "loui-dubai",
         "lock-stock-jbr-dubai",
         "lock-stock-business-bay-dubai",
-        "lock-stock-barsha-heights-dubai"
-      ]
+        "lock-stock-barsha-heights-dubai",
+        "lock-stock-yas-bay-abu-dhabi"
+      ],
+      "winnerSide": "home",
+      "homeScore": 3,
+      "awayScore": 1
     },
     {
       "matchNo": 69,
@@ -1778,14 +2026,19 @@
       "time": "06:00",
       "timeSuffix": "GST",
       "venueIds": [
-        "mist-dubai",
-        "anzeera-dubai",
         "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "anzeera-dubai",
+        "amanos-dubai",
+        "mist-dubai",
         "loui-dubai",
         "lock-stock-jbr-dubai",
         "lock-stock-business-bay-dubai",
-        "lock-stock-barsha-heights-dubai"
-      ]
+        "lock-stock-barsha-heights-dubai",
+        "lock-stock-yas-bay-abu-dhabi"
+      ],
+      "homeScore": 3,
+      "awayScore": 3
     },
     {
       "matchNo": 70,
@@ -1801,404 +2054,465 @@
       "time": "06:00",
       "timeSuffix": "GST",
       "venueIds": [
-        "mist-dubai",
-        "anzeera-dubai",
         "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "anzeera-dubai",
+        "amanos-dubai",
+        "mist-dubai",
         "loui-dubai",
         "lock-stock-jbr-dubai",
         "lock-stock-business-bay-dubai",
-        "lock-stock-barsha-heights-dubai"
-      ]
+        "lock-stock-barsha-heights-dubai",
+        "lock-stock-yas-bay-abu-dhabi"
+      ],
+      "winnerSide": "away",
+      "homeScore": 1,
+      "awayScore": 3
     },
     {
       "matchNo": 73,
       "home": {
-        "name": "Group A runners-up",
-        "flag": "/assets/imgs/football.png"
+        "name": "South Africa",
+        "flag": "https://flagcdn.com/w320/za.png"
       },
       "away": {
-        "name": "Group B runners-up",
-        "flag": "/assets/imgs/football.png"
+        "name": "Canada",
+        "flag": "https://flagcdn.com/w320/ca.png"
       },
       "dateLabel": "2026-06-28",
       "time": "23:00",
       "timeSuffix": "GST",
       "venueIds": [
-        "mist-dubai",
-        "anzeera-dubai",
         "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "anzeera-dubai",
+        "amanos-dubai",
+        "mist-dubai",
         "loui-dubai",
         "lock-stock-jbr-dubai",
         "lock-stock-business-bay-dubai",
-        "lock-stock-barsha-heights-dubai"
-      ]
+        "lock-stock-barsha-heights-dubai",
+        "lock-stock-yas-bay-abu-dhabi"
+      ],
+      "winnerSide": "away",
+      "homeScore": 0,
+      "awayScore": 1
     },
     {
       "matchNo": 76,
       "home": {
-        "name": "Group C winners",
-        "flag": "/assets/imgs/football.png"
+        "name": "Brazil",
+        "flag": "https://flagcdn.com/w320/br.png"
       },
       "away": {
-        "name": "Group F runners-up",
-        "flag": "/assets/imgs/football.png"
+        "name": "Japan",
+        "flag": "https://flagcdn.com/w320/jp.png"
       },
       "dateLabel": "2026-06-29",
       "time": "21:00",
       "timeSuffix": "GST",
       "venueIds": [
-        "mist-dubai",
-        "anzeera-dubai",
         "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "anzeera-dubai",
+        "amanos-dubai",
+        "mist-dubai",
         "loui-dubai",
         "lock-stock-jbr-dubai",
         "lock-stock-business-bay-dubai",
-        "lock-stock-barsha-heights-dubai"
-      ]
+        "lock-stock-barsha-heights-dubai",
+        "lock-stock-yas-bay-abu-dhabi"
+      ],
+      "winnerSide": "home"
     },
     {
       "matchNo": 74,
       "home": {
-        "name": "Group E winners",
-        "flag": "/assets/imgs/football.png"
+        "name": "Germany",
+        "flag": "https://flagcdn.com/w320/de.png"
       },
       "away": {
-        "name": "Group A/B/C/D/F third place",
-        "flag": "/assets/imgs/football.png"
+        "name": "Paraguay",
+        "flag": "https://flagcdn.com/w320/py.png"
       },
       "dateLabel": "2026-06-30",
       "time": "00:30",
       "timeSuffix": "GST",
       "venueIds": [
-        "mist-dubai",
-        "anzeera-dubai",
         "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "anzeera-dubai",
+        "amanos-dubai",
+        "mist-dubai",
         "loui-dubai",
         "lock-stock-jbr-dubai",
         "lock-stock-business-bay-dubai",
-        "lock-stock-barsha-heights-dubai"
+        "lock-stock-barsha-heights-dubai",
+        "lock-stock-yas-bay-abu-dhabi"
       ]
     },
     {
       "matchNo": 75,
       "home": {
-        "name": "Group F winners",
-        "flag": "/assets/imgs/football.png"
+        "name": "Netherlands",
+        "flag": "https://flagcdn.com/w320/nl.png"
       },
       "away": {
-        "name": "Group C runners-up",
-        "flag": "/assets/imgs/football.png"
+        "name": "Morocco",
+        "flag": "https://flagcdn.com/w320/ma.png"
       },
       "dateLabel": "2026-06-30",
       "time": "05:00",
       "timeSuffix": "GST",
       "venueIds": [
-        "mist-dubai",
-        "anzeera-dubai",
         "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "anzeera-dubai",
+        "amanos-dubai",
+        "mist-dubai",
         "loui-dubai",
         "lock-stock-jbr-dubai",
         "lock-stock-business-bay-dubai",
-        "lock-stock-barsha-heights-dubai"
+        "lock-stock-barsha-heights-dubai",
+        "lock-stock-yas-bay-abu-dhabi"
       ]
     },
     {
       "matchNo": 78,
       "home": {
-        "name": "Group E runners-up",
-        "flag": "/assets/imgs/football.png"
+        "name": "Ivory Coast",
+        "flag": "https://flagcdn.com/w320/ci.png"
       },
       "away": {
-        "name": "Group I runners-up",
-        "flag": "/assets/imgs/football.png"
+        "name": "Norway",
+        "flag": "https://flagcdn.com/w320/no.png"
       },
       "dateLabel": "2026-06-30",
       "time": "21:00",
       "timeSuffix": "GST",
       "venueIds": [
-        "mist-dubai",
-        "anzeera-dubai",
         "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "anzeera-dubai",
+        "amanos-dubai",
+        "mist-dubai",
         "loui-dubai",
         "lock-stock-jbr-dubai",
         "lock-stock-business-bay-dubai",
-        "lock-stock-barsha-heights-dubai"
+        "lock-stock-barsha-heights-dubai",
+        "lock-stock-yas-bay-abu-dhabi"
       ]
     },
     {
       "matchNo": 77,
       "home": {
-        "name": "Group I winners",
-        "flag": "/assets/imgs/football.png"
+        "name": "France",
+        "flag": "https://flagcdn.com/w320/fr.png"
       },
       "away": {
-        "name": "Group C/D/F/G/H third place",
-        "flag": "/assets/imgs/football.png"
+        "name": "Sweden",
+        "flag": "https://flagcdn.com/w320/se.png"
       },
       "dateLabel": "2026-07-01",
       "time": "01:00",
       "timeSuffix": "GST",
       "venueIds": [
-        "mist-dubai",
-        "anzeera-dubai",
         "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "anzeera-dubai",
+        "amanos-dubai",
+        "mist-dubai",
         "loui-dubai",
         "lock-stock-jbr-dubai",
         "lock-stock-business-bay-dubai",
-        "lock-stock-barsha-heights-dubai"
+        "lock-stock-barsha-heights-dubai",
+        "lock-stock-yas-bay-abu-dhabi"
       ]
     },
     {
       "matchNo": 79,
       "home": {
-        "name": "Group A winners",
-        "flag": "/assets/imgs/football.png"
+        "name": "Mexico",
+        "flag": "https://flagcdn.com/w320/mx.png"
       },
       "away": {
-        "name": "Group C/E/F/H/I third place",
-        "flag": "/assets/imgs/football.png"
+        "name": "Ecuador",
+        "flag": "https://flagcdn.com/w320/ec.png"
       },
       "dateLabel": "2026-07-01",
       "time": "05:00",
       "timeSuffix": "GST",
       "venueIds": [
-        "mist-dubai",
-        "anzeera-dubai",
         "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "anzeera-dubai",
+        "amanos-dubai",
+        "mist-dubai",
         "loui-dubai",
         "lock-stock-jbr-dubai",
         "lock-stock-business-bay-dubai",
-        "lock-stock-barsha-heights-dubai"
+        "lock-stock-barsha-heights-dubai",
+        "lock-stock-yas-bay-abu-dhabi"
       ]
     },
     {
       "matchNo": 80,
       "home": {
-        "name": "Group L winners",
-        "flag": "/assets/imgs/football.png"
+        "name": "England",
+        "flag": "https://flagcdn.com/w320/gb-eng.png"
       },
       "away": {
-        "name": "Group E/H/I/J/K third place",
-        "flag": "/assets/imgs/football.png"
+        "name": "Congo DR",
+        "flag": "https://flagcdn.com/w320/cd.png"
       },
       "dateLabel": "2026-07-01",
       "time": "20:00",
       "timeSuffix": "GST",
       "venueIds": [
-        "mist-dubai",
-        "anzeera-dubai",
         "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "anzeera-dubai",
+        "amanos-dubai",
+        "mist-dubai",
         "loui-dubai",
         "lock-stock-jbr-dubai",
         "lock-stock-business-bay-dubai",
-        "lock-stock-barsha-heights-dubai"
+        "lock-stock-barsha-heights-dubai",
+        "lock-stock-yas-bay-abu-dhabi"
       ]
     },
     {
       "matchNo": 82,
       "home": {
-        "name": "Group G winners",
-        "flag": "/assets/imgs/football.png"
+        "name": "Belgium",
+        "flag": "https://flagcdn.com/w320/be.png"
       },
       "away": {
-        "name": "Group A/E/H/I/J third place",
-        "flag": "/assets/imgs/football.png"
+        "name": "Senegal",
+        "flag": "https://flagcdn.com/w320/sn.png"
       },
       "dateLabel": "2026-07-02",
       "time": "00:00",
       "timeSuffix": "GST",
       "venueIds": [
-        "mist-dubai",
-        "anzeera-dubai",
         "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "anzeera-dubai",
+        "amanos-dubai",
+        "mist-dubai",
         "loui-dubai",
         "lock-stock-jbr-dubai",
         "lock-stock-business-bay-dubai",
-        "lock-stock-barsha-heights-dubai"
+        "lock-stock-barsha-heights-dubai",
+        "lock-stock-yas-bay-abu-dhabi"
       ]
     },
     {
       "matchNo": 81,
       "home": {
-        "name": "Group D winners",
-        "flag": "/assets/imgs/football.png"
+        "name": "USA",
+        "flag": "https://flagcdn.com/w320/us.png"
       },
       "away": {
-        "name": "Group B/E/F/I/J third place",
-        "flag": "/assets/imgs/football.png"
+        "name": "Bosnia and Herzegovina",
+        "flag": "https://flagcdn.com/w320/ba.png"
       },
       "dateLabel": "2026-07-02",
       "time": "04:00",
       "timeSuffix": "GST",
       "venueIds": [
-        "mist-dubai",
-        "anzeera-dubai",
         "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "anzeera-dubai",
+        "amanos-dubai",
+        "mist-dubai",
         "loui-dubai",
         "lock-stock-jbr-dubai",
         "lock-stock-business-bay-dubai",
-        "lock-stock-barsha-heights-dubai"
+        "lock-stock-barsha-heights-dubai",
+        "lock-stock-yas-bay-abu-dhabi"
       ]
     },
     {
       "matchNo": 84,
       "home": {
-        "name": "Group H winners",
-        "flag": "/assets/imgs/football.png"
+        "name": "Spain",
+        "flag": "https://flagcdn.com/w320/es.png"
       },
       "away": {
-        "name": "Group J runners-up",
-        "flag": "/assets/imgs/football.png"
+        "name": "Austria",
+        "flag": "https://flagcdn.com/w320/at.png"
       },
       "dateLabel": "2026-07-02",
       "time": "23:00",
       "timeSuffix": "GST",
       "venueIds": [
-        "mist-dubai",
-        "anzeera-dubai",
         "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "anzeera-dubai",
+        "amanos-dubai",
+        "mist-dubai",
         "loui-dubai",
         "lock-stock-jbr-dubai",
         "lock-stock-business-bay-dubai",
-        "lock-stock-barsha-heights-dubai"
+        "lock-stock-barsha-heights-dubai",
+        "lock-stock-yas-bay-abu-dhabi"
       ]
     },
     {
       "matchNo": 83,
       "home": {
-        "name": "Group K runners-up",
-        "flag": "/assets/imgs/football.png"
+        "name": "Portugal",
+        "flag": "https://flagcdn.com/w320/pt.png"
       },
       "away": {
-        "name": "Group L runners-up",
-        "flag": "/assets/imgs/football.png"
+        "name": "Croatia",
+        "flag": "https://flagcdn.com/w320/hr.png"
       },
       "dateLabel": "2026-07-03",
       "time": "03:00",
       "timeSuffix": "GST",
       "venueIds": [
-        "mist-dubai",
-        "anzeera-dubai",
         "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "anzeera-dubai",
+        "amanos-dubai",
+        "mist-dubai",
         "loui-dubai",
         "lock-stock-jbr-dubai",
         "lock-stock-business-bay-dubai",
-        "lock-stock-barsha-heights-dubai"
+        "lock-stock-barsha-heights-dubai",
+        "lock-stock-yas-bay-abu-dhabi"
       ]
     },
     {
       "matchNo": 85,
       "home": {
-        "name": "Group B winners",
-        "flag": "/assets/imgs/football.png"
+        "name": "Switzerland",
+        "flag": "https://flagcdn.com/w320/ch.png"
       },
       "away": {
-        "name": "Group E/F/G/I/J third place",
-        "flag": "/assets/imgs/football.png"
+        "name": "Algeria",
+        "flag": "https://flagcdn.com/w320/dz.png"
       },
       "dateLabel": "2026-07-03",
       "time": "07:00",
       "timeSuffix": "GST",
       "venueIds": [
-        "mist-dubai",
-        "anzeera-dubai",
         "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "anzeera-dubai",
+        "amanos-dubai",
+        "mist-dubai",
         "loui-dubai",
         "lock-stock-jbr-dubai",
         "lock-stock-business-bay-dubai",
-        "lock-stock-barsha-heights-dubai"
+        "lock-stock-barsha-heights-dubai",
+        "lock-stock-yas-bay-abu-dhabi"
       ]
     },
     {
       "matchNo": 88,
       "home": {
-        "name": "Group D runners-up",
-        "flag": "/assets/imgs/football.png"
+        "name": "Australia",
+        "flag": "https://flagcdn.com/w320/au.png"
       },
       "away": {
-        "name": "Group G runners-up",
-        "flag": "/assets/imgs/football.png"
+        "name": "Egypt",
+        "flag": "https://flagcdn.com/w320/eg.png"
       },
       "dateLabel": "2026-07-03",
       "time": "22:00",
       "timeSuffix": "GST",
       "venueIds": [
-        "mist-dubai",
-        "anzeera-dubai",
         "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "anzeera-dubai",
+        "amanos-dubai",
+        "mist-dubai",
         "loui-dubai",
         "lock-stock-jbr-dubai",
         "lock-stock-business-bay-dubai",
-        "lock-stock-barsha-heights-dubai"
+        "lock-stock-barsha-heights-dubai",
+        "lock-stock-yas-bay-abu-dhabi"
       ]
     },
     {
       "matchNo": 86,
       "home": {
-        "name": "Group J winners",
-        "flag": "/assets/imgs/football.png"
+        "name": "Argentina",
+        "flag": "https://flagcdn.com/w320/ar.png"
       },
       "away": {
-        "name": "Group H runners-up",
-        "flag": "/assets/imgs/football.png"
+        "name": "Cabo Verde",
+        "flag": "https://flagcdn.com/w320/cv.png"
       },
       "dateLabel": "2026-07-04",
       "time": "02:00",
       "timeSuffix": "GST",
       "venueIds": [
-        "mist-dubai",
-        "anzeera-dubai",
         "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "anzeera-dubai",
+        "amanos-dubai",
+        "mist-dubai",
         "loui-dubai",
         "lock-stock-jbr-dubai",
         "lock-stock-business-bay-dubai",
-        "lock-stock-barsha-heights-dubai"
+        "lock-stock-barsha-heights-dubai",
+        "lock-stock-yas-bay-abu-dhabi"
       ]
     },
     {
       "matchNo": 87,
       "home": {
-        "name": "Group K winners",
-        "flag": "/assets/imgs/football.png"
+        "name": "Colombia",
+        "flag": "https://flagcdn.com/w320/co.png"
       },
       "away": {
-        "name": "Group D/E/I/J/L third place",
-        "flag": "/assets/imgs/football.png"
+        "name": "Ghana",
+        "flag": "https://flagcdn.com/w320/gh.png"
       },
       "dateLabel": "2026-07-04",
       "time": "05:30",
       "timeSuffix": "GST",
       "venueIds": [
-        "mist-dubai",
-        "anzeera-dubai",
         "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "anzeera-dubai",
+        "amanos-dubai",
+        "mist-dubai",
         "loui-dubai",
         "lock-stock-jbr-dubai",
         "lock-stock-business-bay-dubai",
-        "lock-stock-barsha-heights-dubai"
+        "lock-stock-barsha-heights-dubai",
+        "lock-stock-yas-bay-abu-dhabi"
       ]
     },
     {
       "matchNo": 90,
       "home": {
-        "name": "Winner Match 73",
-        "flag": "/assets/imgs/football.png"
+        "name": "Canada",
+        "flag": "https://flagcdn.com/w320/ca.png"
       },
       "away": {
-        "name": "Winner Match 75",
+        "name": "TBD",
         "flag": "/assets/imgs/football.png"
       },
       "dateLabel": "2026-07-04",
       "time": "21:00",
       "timeSuffix": "GST",
       "venueIds": [
-        "mist-dubai",
-        "anzeera-dubai",
         "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "anzeera-dubai",
+        "amanos-dubai",
+        "mist-dubai",
         "loui-dubai",
         "lock-stock-jbr-dubai",
         "lock-stock-business-bay-dubai",
-        "lock-stock-barsha-heights-dubai"
+        "lock-stock-barsha-heights-dubai",
+        "lock-stock-yas-bay-abu-dhabi"
       ]
     },
     {
@@ -2215,13 +2529,16 @@
       "time": "01:00",
       "timeSuffix": "GST",
       "venueIds": [
-        "mist-dubai",
-        "anzeera-dubai",
         "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "anzeera-dubai",
+        "amanos-dubai",
+        "mist-dubai",
         "loui-dubai",
         "lock-stock-jbr-dubai",
         "lock-stock-business-bay-dubai",
-        "lock-stock-barsha-heights-dubai"
+        "lock-stock-barsha-heights-dubai",
+        "lock-stock-yas-bay-abu-dhabi"
       ]
     },
     {
@@ -2238,13 +2555,16 @@
       "time": "00:00",
       "timeSuffix": "GST",
       "venueIds": [
-        "mist-dubai",
-        "anzeera-dubai",
         "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "anzeera-dubai",
+        "amanos-dubai",
+        "mist-dubai",
         "loui-dubai",
         "lock-stock-jbr-dubai",
         "lock-stock-business-bay-dubai",
-        "lock-stock-barsha-heights-dubai"
+        "lock-stock-barsha-heights-dubai",
+        "lock-stock-yas-bay-abu-dhabi"
       ]
     },
     {
@@ -2261,13 +2581,16 @@
       "time": "04:00",
       "timeSuffix": "GST",
       "venueIds": [
-        "mist-dubai",
-        "anzeera-dubai",
         "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "anzeera-dubai",
+        "amanos-dubai",
+        "mist-dubai",
         "loui-dubai",
         "lock-stock-jbr-dubai",
         "lock-stock-business-bay-dubai",
-        "lock-stock-barsha-heights-dubai"
+        "lock-stock-barsha-heights-dubai",
+        "lock-stock-yas-bay-abu-dhabi"
       ]
     },
     {
@@ -2284,13 +2607,16 @@
       "time": "23:00",
       "timeSuffix": "GST",
       "venueIds": [
-        "mist-dubai",
-        "anzeera-dubai",
         "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "anzeera-dubai",
+        "amanos-dubai",
+        "mist-dubai",
         "loui-dubai",
         "lock-stock-jbr-dubai",
         "lock-stock-business-bay-dubai",
-        "lock-stock-barsha-heights-dubai"
+        "lock-stock-barsha-heights-dubai",
+        "lock-stock-yas-bay-abu-dhabi"
       ]
     },
     {
@@ -2307,13 +2633,16 @@
       "time": "04:00",
       "timeSuffix": "GST",
       "venueIds": [
-        "mist-dubai",
-        "anzeera-dubai",
         "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "anzeera-dubai",
+        "amanos-dubai",
+        "mist-dubai",
         "loui-dubai",
         "lock-stock-jbr-dubai",
         "lock-stock-business-bay-dubai",
-        "lock-stock-barsha-heights-dubai"
+        "lock-stock-barsha-heights-dubai",
+        "lock-stock-yas-bay-abu-dhabi"
       ]
     },
     {
@@ -2330,13 +2659,16 @@
       "time": "20:00",
       "timeSuffix": "GST",
       "venueIds": [
-        "mist-dubai",
-        "anzeera-dubai",
         "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "anzeera-dubai",
+        "amanos-dubai",
+        "mist-dubai",
         "loui-dubai",
         "lock-stock-jbr-dubai",
         "lock-stock-business-bay-dubai",
-        "lock-stock-barsha-heights-dubai"
+        "lock-stock-barsha-heights-dubai",
+        "lock-stock-yas-bay-abu-dhabi"
       ]
     },
     {
@@ -2353,13 +2685,16 @@
       "time": "00:00",
       "timeSuffix": "GST",
       "venueIds": [
-        "mist-dubai",
-        "anzeera-dubai",
         "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "anzeera-dubai",
+        "amanos-dubai",
+        "mist-dubai",
         "loui-dubai",
         "lock-stock-jbr-dubai",
         "lock-stock-business-bay-dubai",
-        "lock-stock-barsha-heights-dubai"
+        "lock-stock-barsha-heights-dubai",
+        "lock-stock-yas-bay-abu-dhabi"
       ]
     },
     {
@@ -2376,13 +2711,16 @@
       "time": "00:00",
       "timeSuffix": "GST",
       "venueIds": [
-        "mist-dubai",
-        "anzeera-dubai",
         "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "anzeera-dubai",
+        "amanos-dubai",
+        "mist-dubai",
         "loui-dubai",
         "lock-stock-jbr-dubai",
         "lock-stock-business-bay-dubai",
-        "lock-stock-barsha-heights-dubai"
+        "lock-stock-barsha-heights-dubai",
+        "lock-stock-yas-bay-abu-dhabi"
       ]
     },
     {
@@ -2399,13 +2737,16 @@
       "time": "23:00",
       "timeSuffix": "GST",
       "venueIds": [
-        "mist-dubai",
-        "anzeera-dubai",
         "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "anzeera-dubai",
+        "amanos-dubai",
+        "mist-dubai",
         "loui-dubai",
         "lock-stock-jbr-dubai",
         "lock-stock-business-bay-dubai",
-        "lock-stock-barsha-heights-dubai"
+        "lock-stock-barsha-heights-dubai",
+        "lock-stock-yas-bay-abu-dhabi"
       ]
     },
     {
@@ -2422,13 +2763,16 @@
       "time": "01:00",
       "timeSuffix": "GST",
       "venueIds": [
-        "mist-dubai",
-        "anzeera-dubai",
         "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "anzeera-dubai",
+        "amanos-dubai",
+        "mist-dubai",
         "loui-dubai",
         "lock-stock-jbr-dubai",
         "lock-stock-business-bay-dubai",
-        "lock-stock-barsha-heights-dubai"
+        "lock-stock-barsha-heights-dubai",
+        "lock-stock-yas-bay-abu-dhabi"
       ]
     },
     {
@@ -2445,13 +2789,16 @@
       "time": "05:00",
       "timeSuffix": "GST",
       "venueIds": [
-        "mist-dubai",
-        "anzeera-dubai",
         "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "anzeera-dubai",
+        "amanos-dubai",
+        "mist-dubai",
         "loui-dubai",
         "lock-stock-jbr-dubai",
         "lock-stock-business-bay-dubai",
-        "lock-stock-barsha-heights-dubai"
+        "lock-stock-barsha-heights-dubai",
+        "lock-stock-yas-bay-abu-dhabi"
       ]
     },
     {
@@ -2468,13 +2815,16 @@
       "time": "23:00",
       "timeSuffix": "GST",
       "venueIds": [
-        "mist-dubai",
-        "anzeera-dubai",
         "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "anzeera-dubai",
+        "amanos-dubai",
+        "mist-dubai",
         "loui-dubai",
         "lock-stock-jbr-dubai",
         "lock-stock-business-bay-dubai",
-        "lock-stock-barsha-heights-dubai"
+        "lock-stock-barsha-heights-dubai",
+        "lock-stock-yas-bay-abu-dhabi"
       ]
     },
     {
@@ -2491,13 +2841,16 @@
       "time": "23:00",
       "timeSuffix": "GST",
       "venueIds": [
-        "mist-dubai",
-        "anzeera-dubai",
         "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "anzeera-dubai",
+        "amanos-dubai",
+        "mist-dubai",
         "loui-dubai",
         "lock-stock-jbr-dubai",
         "lock-stock-business-bay-dubai",
-        "lock-stock-barsha-heights-dubai"
+        "lock-stock-barsha-heights-dubai",
+        "lock-stock-yas-bay-abu-dhabi"
       ]
     },
     {
@@ -2514,13 +2867,16 @@
       "time": "01:00",
       "timeSuffix": "GST",
       "venueIds": [
-        "mist-dubai",
-        "anzeera-dubai",
         "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "anzeera-dubai",
+        "amanos-dubai",
+        "mist-dubai",
         "loui-dubai",
         "lock-stock-jbr-dubai",
         "lock-stock-business-bay-dubai",
-        "lock-stock-barsha-heights-dubai"
+        "lock-stock-barsha-heights-dubai",
+        "lock-stock-yas-bay-abu-dhabi"
       ]
     },
     {
@@ -2537,288 +2893,163 @@
       "time": "23:00",
       "timeSuffix": "GST",
       "venueIds": [
-        "mist-dubai",
-        "anzeera-dubai",
         "mcgettigans-dubai",
+        "mcgettigans-abu-dhabi",
+        "anzeera-dubai",
+        "amanos-dubai",
+        "mist-dubai",
         "loui-dubai",
         "lock-stock-jbr-dubai",
         "lock-stock-business-bay-dubai",
-        "lock-stock-barsha-heights-dubai"
+        "lock-stock-barsha-heights-dubai",
+        "lock-stock-yas-bay-abu-dhabi"
       ]
     }
   ],
   "teams": [
     {
       "name": "Algeria",
-      "flag": "https://flagcdn.com/w160/dz.png"
+      "flag": "https://flagcdn.com/w320/dz.png"
     },
     {
       "name": "Argentina",
-      "flag": "https://flagcdn.com/w160/ar.png"
+      "flag": "https://flagcdn.com/w320/ar.png"
     },
     {
       "name": "Australia",
-      "flag": "https://flagcdn.com/w160/au.png"
+      "flag": "https://flagcdn.com/w320/au.png"
     },
     {
       "name": "Austria",
-      "flag": "https://flagcdn.com/w160/at.png"
+      "flag": "https://flagcdn.com/w320/at.png"
     },
     {
       "name": "Belgium",
-      "flag": "https://flagcdn.com/w160/be.png"
+      "flag": "https://flagcdn.com/w320/be.png"
     },
     {
       "name": "Bosnia and Herzegovina",
-      "flag": "https://flagcdn.com/w160/ba.png"
+      "flag": "https://flagcdn.com/w320/ba.png"
     },
     {
       "name": "Brazil",
-      "flag": "https://flagcdn.com/w160/br.png"
+      "flag": "https://flagcdn.com/w320/br.png"
     },
     {
       "name": "Cabo Verde",
-      "flag": "https://flagcdn.com/w160/cv.png"
+      "flag": "https://flagcdn.com/w320/cv.png"
     },
     {
       "name": "Canada",
-      "flag": "https://flagcdn.com/w160/ca.png"
+      "flag": "https://flagcdn.com/w320/ca.png"
     },
     {
       "name": "Colombia",
-      "flag": "https://flagcdn.com/w160/co.png"
+      "flag": "https://flagcdn.com/w320/co.png"
     },
     {
       "name": "Congo DR",
-      "flag": "https://flagcdn.com/w160/cd.png"
-    },
-    {
-      "name": "Ivory Coast",
-      "flag": "https://flagcdn.com/w160/ci.png"
+      "flag": "https://flagcdn.com/w320/cd.png"
     },
     {
       "name": "Croatia",
-      "flag": "https://flagcdn.com/w160/hr.png"
+      "flag": "https://flagcdn.com/w320/hr.png"
     },
     {
       "name": "Curaçao",
-      "flag": "https://flagcdn.com/w160/cw.png"
+      "flag": "https://flagcdn.com/w320/cw.png"
     },
     {
       "name": "Czechia",
-      "flag": "https://flagcdn.com/w160/cz.png"
+      "flag": "https://flagcdn.com/w320/cz.png"
     },
     {
       "name": "Ecuador",
-      "flag": "https://flagcdn.com/w160/ec.png"
+      "flag": "https://flagcdn.com/w320/ec.png"
     },
     {
       "name": "Egypt",
-      "flag": "https://flagcdn.com/w160/eg.png"
+      "flag": "https://flagcdn.com/w320/eg.png"
     },
     {
       "name": "England",
-      "flag": "https://flagcdn.com/w160/gb-eng.png"
+      "flag": "https://flagcdn.com/w320/gb-eng.png"
     },
     {
       "name": "France",
-      "flag": "https://flagcdn.com/w160/fr.png"
+      "flag": "https://flagcdn.com/w320/fr.png"
     },
     {
       "name": "Germany",
-      "flag": "https://flagcdn.com/w160/de.png"
+      "flag": "https://flagcdn.com/w320/de.png"
     },
     {
       "name": "Ghana",
-      "flag": "https://flagcdn.com/w160/gh.png"
-    },
-    {
-      "name": "Group A runners-up",
-      "flag": "/assets/imgs/football.png"
-    },
-    {
-      "name": "Group A winners",
-      "flag": "/assets/imgs/football.png"
-    },
-    {
-      "name": "Group A/B/C/D/F third place",
-      "flag": "/assets/imgs/football.png"
-    },
-    {
-      "name": "Group A/E/H/I/J third place",
-      "flag": "/assets/imgs/football.png"
-    },
-    {
-      "name": "Group B runners-up",
-      "flag": "/assets/imgs/football.png"
-    },
-    {
-      "name": "Group B winners",
-      "flag": "/assets/imgs/football.png"
-    },
-    {
-      "name": "Group B/E/F/I/J third place",
-      "flag": "/assets/imgs/football.png"
-    },
-    {
-      "name": "Group C runners-up",
-      "flag": "/assets/imgs/football.png"
-    },
-    {
-      "name": "Group C winners",
-      "flag": "/assets/imgs/football.png"
-    },
-    {
-      "name": "Group C/D/F/G/H third place",
-      "flag": "/assets/imgs/football.png"
-    },
-    {
-      "name": "Group C/E/F/H/I third place",
-      "flag": "/assets/imgs/football.png"
-    },
-    {
-      "name": "Group D runners-up",
-      "flag": "/assets/imgs/football.png"
-    },
-    {
-      "name": "Group D winners",
-      "flag": "/assets/imgs/football.png"
-    },
-    {
-      "name": "Group D/E/I/J/L third place",
-      "flag": "/assets/imgs/football.png"
-    },
-    {
-      "name": "Group E runners-up",
-      "flag": "/assets/imgs/football.png"
-    },
-    {
-      "name": "Group E winners",
-      "flag": "/assets/imgs/football.png"
-    },
-    {
-      "name": "Group E/F/G/I/J third place",
-      "flag": "/assets/imgs/football.png"
-    },
-    {
-      "name": "Group E/H/I/J/K third place",
-      "flag": "/assets/imgs/football.png"
-    },
-    {
-      "name": "Group F runners-up",
-      "flag": "/assets/imgs/football.png"
-    },
-    {
-      "name": "Group F winners",
-      "flag": "/assets/imgs/football.png"
-    },
-    {
-      "name": "Group G runners-up",
-      "flag": "/assets/imgs/football.png"
-    },
-    {
-      "name": "Group G winners",
-      "flag": "/assets/imgs/football.png"
-    },
-    {
-      "name": "Group H runners-up",
-      "flag": "/assets/imgs/football.png"
-    },
-    {
-      "name": "Group H winners",
-      "flag": "/assets/imgs/football.png"
-    },
-    {
-      "name": "Group I runners-up",
-      "flag": "/assets/imgs/football.png"
-    },
-    {
-      "name": "Group I winners",
-      "flag": "/assets/imgs/football.png"
-    },
-    {
-      "name": "Group J runners-up",
-      "flag": "/assets/imgs/football.png"
-    },
-    {
-      "name": "Group J winners",
-      "flag": "/assets/imgs/football.png"
-    },
-    {
-      "name": "Group K runners-up",
-      "flag": "/assets/imgs/football.png"
-    },
-    {
-      "name": "Group K winners",
-      "flag": "/assets/imgs/football.png"
-    },
-    {
-      "name": "Group L runners-up",
-      "flag": "/assets/imgs/football.png"
-    },
-    {
-      "name": "Group L winners",
-      "flag": "/assets/imgs/football.png"
+      "flag": "https://flagcdn.com/w320/gh.png"
     },
     {
       "name": "Haiti",
-      "flag": "https://flagcdn.com/w160/ht.png"
+      "flag": "https://flagcdn.com/w320/ht.png"
     },
     {
       "name": "IR Iran",
-      "flag": "https://flagcdn.com/w160/ir.png"
+      "flag": "https://flagcdn.com/w320/ir.png"
     },
     {
       "name": "Iraq",
-      "flag": "https://flagcdn.com/w160/iq.png"
+      "flag": "https://flagcdn.com/w320/iq.png"
+    },
+    {
+      "name": "Ivory Coast",
+      "flag": "https://flagcdn.com/w320/ci.png"
     },
     {
       "name": "Japan",
-      "flag": "https://flagcdn.com/w160/jp.png"
+      "flag": "https://flagcdn.com/w320/jp.png"
     },
     {
       "name": "Jordan",
-      "flag": "https://flagcdn.com/w160/jo.png"
+      "flag": "https://flagcdn.com/w320/jo.png"
     },
     {
       "name": "Korea Republic",
-      "flag": "https://flagcdn.com/w160/kr.png"
+      "flag": "https://flagcdn.com/w320/kr.png"
     },
     {
       "name": "Mexico",
-      "flag": "https://flagcdn.com/w160/mx.png"
+      "flag": "https://flagcdn.com/w320/mx.png"
     },
     {
       "name": "Morocco",
-      "flag": "https://flagcdn.com/w160/ma.png"
+      "flag": "https://flagcdn.com/w320/ma.png"
     },
     {
       "name": "Netherlands",
-      "flag": "https://flagcdn.com/w160/nl.png"
+      "flag": "https://flagcdn.com/w320/nl.png"
     },
     {
       "name": "New Zealand",
-      "flag": "https://flagcdn.com/w160/nz.png"
+      "flag": "https://flagcdn.com/w320/nz.png"
     },
     {
       "name": "Norway",
-      "flag": "https://flagcdn.com/w160/no.png"
+      "flag": "https://flagcdn.com/w320/no.png"
     },
     {
       "name": "Panama",
-      "flag": "https://flagcdn.com/w160/pa.png"
+      "flag": "https://flagcdn.com/w320/pa.png"
     },
     {
       "name": "Paraguay",
-      "flag": "https://flagcdn.com/w160/py.png"
+      "flag": "https://flagcdn.com/w320/py.png"
     },
     {
       "name": "Portugal",
-      "flag": "https://flagcdn.com/w160/pt.png"
+      "flag": "https://flagcdn.com/w320/pt.png"
     },
     {
       "name": "Qatar",
-      "flag": "https://flagcdn.com/w160/qa.png"
+      "flag": "https://flagcdn.com/w320/qa.png"
     },
     {
       "name": "Runner-up Match 101",
@@ -2830,51 +3061,55 @@
     },
     {
       "name": "Saudi Arabia",
-      "flag": "https://flagcdn.com/w160/sa.png"
+      "flag": "https://flagcdn.com/w320/sa.png"
     },
     {
       "name": "Scotland",
-      "flag": "https://flagcdn.com/w160/gb-sct.png"
+      "flag": "https://flagcdn.com/w320/gb-sct.png"
     },
     {
       "name": "Senegal",
-      "flag": "https://flagcdn.com/w160/sn.png"
+      "flag": "https://flagcdn.com/w320/sn.png"
     },
     {
       "name": "South Africa",
-      "flag": "https://flagcdn.com/w160/za.png"
+      "flag": "https://flagcdn.com/w320/za.png"
     },
     {
       "name": "Spain",
-      "flag": "https://flagcdn.com/w160/es.png"
+      "flag": "https://flagcdn.com/w320/es.png"
     },
     {
       "name": "Sweden",
-      "flag": "https://flagcdn.com/w160/se.png"
+      "flag": "https://flagcdn.com/w320/se.png"
     },
     {
       "name": "Switzerland",
-      "flag": "https://flagcdn.com/w160/ch.png"
+      "flag": "https://flagcdn.com/w320/ch.png"
+    },
+    {
+      "name": "TBD",
+      "flag": "/assets/imgs/football.png"
     },
     {
       "name": "Tunisia",
-      "flag": "https://flagcdn.com/w160/tn.png"
+      "flag": "https://flagcdn.com/w320/tn.png"
     },
     {
       "name": "Türkiye",
-      "flag": "https://flagcdn.com/w160/tr.png"
+      "flag": "https://flagcdn.com/w320/tr.png"
     },
     {
       "name": "Uruguay",
-      "flag": "https://flagcdn.com/w160/uy.png"
+      "flag": "https://flagcdn.com/w320/uy.png"
     },
     {
       "name": "USA",
-      "flag": "https://flagcdn.com/w160/us.png"
+      "flag": "https://flagcdn.com/w320/us.png"
     },
     {
       "name": "Uzbekistan",
-      "flag": "https://flagcdn.com/w160/uz.png"
+      "flag": "https://flagcdn.com/w320/uz.png"
     },
     {
       "name": "Winner Match 100",
@@ -2889,15 +3124,7 @@
       "flag": "/assets/imgs/football.png"
     },
     {
-      "name": "Winner Match 73",
-      "flag": "/assets/imgs/football.png"
-    },
-    {
       "name": "Winner Match 74",
-      "flag": "/assets/imgs/football.png"
-    },
-    {
-      "name": "Winner Match 75",
       "flag": "/assets/imgs/football.png"
     },
     {
@@ -3041,7 +3268,7 @@
       "logoWidth": 114,
       "logoHeight": 63,
       "locationUrl": "https://www.google.com/maps/search/?api=1&query=Amanos+Dubai",
-      "enabled": false,
+      "enabled": true,
       "city": "Dubai"
     },
     {
@@ -3107,7 +3334,7 @@
   ],
   "tracking": {
     "googleTagManagerId": "",
-    "googleAnalyticsId": "",
-    "microsoftClarityId": ""
+    "googleAnalyticsId": "G-PQDKX0GZQJ",
+    "microsoftClarityId": "x15621wldl"
   }
 }

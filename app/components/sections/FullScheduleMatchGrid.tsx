@@ -105,6 +105,7 @@ type TooltipState = {
 
 function isPlaceholderTeam(name: string) {
   return (
+    name === "TBD" ||
     name.startsWith("Group ") ||
     name.startsWith("Winner ") ||
     name.startsWith("Runner-up ")
@@ -116,6 +117,11 @@ function shouldUsePlaceholderFlag(teamName: string) {
 }
 
 function getMatchGroupLabel(match: MatchFixture): string {
+  const round = ROUND_BY_MATCH_NO.get(match.matchNo);
+  if (round && round !== "Group Stage") {
+    return round;
+  }
+
   const groupFromName = match.home.name.match(/^Group ([A-L])\b/i);
   if (groupFromName) return `Group ${groupFromName[1]?.toUpperCase()}`;
 
@@ -126,7 +132,7 @@ function getMatchGroupLabel(match: MatchFixture): string {
     return "Group Stage";
   }
 
-  return ROUND_BY_MATCH_NO.get(match.matchNo) ?? "Knockout";
+  return round ?? "Knockout";
 }
 
 function formatScheduleGridDate(

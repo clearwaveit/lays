@@ -5,7 +5,8 @@ import {
 } from "@/app/data/matches";
 import { getTeamFlagSrc, resolveTeamFlag } from "@/app/data/team-flags";
 import { VENUES } from "@/app/data/venues";
-import { normalizeMatchScore } from "@/app/lib/matchResult";
+import { hasMatchScore, normalizeMatchScore } from "@/app/lib/matchResult";
+import { isKnockoutPlaceholderTeamName } from "@/app/lib/matchTeamAdmin";
 import { sanitizeStoredImageSrc } from "@/app/lib/sanitizeImageSrc";
 import type { VenueModalData } from "@/app/components/ui/VenueModal";
 
@@ -33,6 +34,7 @@ export type AdminDraft = {
 };
 
 export const ADMIN_DRAFT_STORAGE_KEY = "lays-admin-draft-v1";
+export const CAMPAIGN_DRAFT_UPDATED_EVENT = "lays-campaign-updated";
 
 export const DEFAULT_TRACKING: TrackingSettings = {
   googleTagManagerId: "",
@@ -155,23 +157,59 @@ function matchIdentityKey(match: MatchFixture): string {
 
 function findDraftMatchForSource(
   source: MatchFixture,
-  draftMatches: MatchFixture[],
+  draftByMatchNo: Map<number, MatchFixture>,
 ): MatchFixture | undefined {
-  if (source.matchNo) {
-    const byMatchNo = draftMatches.find((match) => match.matchNo === source.matchNo);
+  const sourceNo = Number(source.matchNo);
+  if (Number.isFinite(sourceNo) && sourceNo > 0) {
+    const byMatchNo = draftByMatchNo.get(sourceNo);
     if (byMatchNo) return byMatchNo;
   }
 
   const sourceKey = matchIdentityKey(source);
-  return draftMatches.find((match) => matchIdentityKey(match) === sourceKey);
+  return [...draftByMatchNo.values()].find(
+    (match) => matchIdentityKey(match) === sourceKey,
+  );
+}
+
+function indexDraftMatchesByNo(draftMatches: MatchFixture[]): Map<number, MatchFixture> {
+  const byNo = new Map<number, MatchFixture>();
+  for (const match of draftMatches) {
+    const matchNo = Number(match.matchNo);
+    if (!Number.isFinite(matchNo) || matchNo <= 0) continue;
+    const existing = byNo.get(matchNo);
+    if (!existing) {
+      byNo.set(matchNo, match);
+      continue;
+    }
+    if (hasMatchScore(match) && !hasMatchScore(existing)) {
+      byNo.set(matchNo, match);
+    }
+  }
+  return byNo;
+}
+
+function resolveDraftMatchTeam(team: AdminTeam): AdminTeam {
+  const name = team.name.trim();
+  const defaultFlag = getTeamFlagSrc(name);
+  if (name === "TBD" || isKnockoutPlaceholderTeamName(name)) {
+    return { name, flag: defaultFlag };
+  }
+  return {
+    name,
+    flag: resolveTeamFlag(
+      sanitizeStoredImageSrc(team.flag, defaultFlag),
+      defaultFlag,
+    ),
+  };
 }
 
 /** Merge admin-edited match fields onto the current MATCHES roster. */
 export function applySourceScheduleToDraftMatches(
   draftMatches: MatchFixture[],
 ): MatchFixture[] {
+  const draftByMatchNo = indexDraftMatchesByNo(draftMatches);
   return MATCHES.map((source) => {
-    const draft = findDraftMatchForSource(source, draftMatches);
+    const draft = findDraftMatchForSource(source, draftByMatchNo);
     if (!draft) {
       return {
         ...source,
@@ -189,22 +227,8 @@ export function applySourceScheduleToDraftMatches(
       dateLabel: normalizeMatchDateLabel(draft.dateLabel),
       time: draft.time,
       timeSuffix: draft.timeSuffix || source.timeSuffix,
-      home: {
-        ...draft.home,
-        name: source.home.name,
-        flag: resolveTeamFlag(
-          sanitizeStoredImageSrc(draft.home.flag, source.home.flag),
-          source.home.flag,
-        ),
-      },
-      away: {
-        ...draft.away,
-        name: source.away.name,
-        flag: resolveTeamFlag(
-          sanitizeStoredImageSrc(draft.away.flag, source.away.flag),
-          source.away.flag,
-        ),
-      },
+      home: resolveDraftMatchTeam(draft.home),
+      away: resolveDraftMatchTeam(draft.away),
       venueIds: matchVenueIds(draft),
       winnerSide,
       homeScore,

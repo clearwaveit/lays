@@ -2,6 +2,7 @@
 
 import {
   ADMIN_DRAFT_STORAGE_KEY,
+  CAMPAIGN_DRAFT_UPDATED_EVENT,
   type AdminDraft,
   normalizeAdminDraft,
 } from "@/app/lib/campaignDraftCore";
@@ -9,6 +10,7 @@ import { useEffect, useState } from "react";
 
 export {
   ADMIN_DRAFT_STORAGE_KEY,
+  CAMPAIGN_DRAFT_UPDATED_EVENT,
   DEFAULT_TRACKING,
   allVenueIds,
   cityFromVenueId,
@@ -134,10 +136,15 @@ export function useAdminCampaignDraft() {
     };
 
     window.addEventListener("storage", onStorage);
+    const onCampaignUpdated = () => {
+      loadDraft();
+    };
+    window.addEventListener(CAMPAIGN_DRAFT_UPDATED_EVENT, onCampaignUpdated);
     return () => {
       cancelled = true;
       window.removeEventListener("focus", onFocus);
       window.removeEventListener("storage", onStorage);
+      window.removeEventListener(CAMPAIGN_DRAFT_UPDATED_EVENT, onCampaignUpdated);
     };
   }, []);
 
